@@ -1,0 +1,32 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+#myJumbotron{
+	padding: 20px;
+	background: linear-gradient(57deg,#03b8a5,#0b999f);
+}
+
+#myName{
+	color: white;
+	font-weight:bold;
+}
+
+#myLinks{
+	color: white;
+}
+
+#skills span{
+	font-family:cursive;
+}
+
+#proj_image{
+	background-size:cover; 
+}
+#proj_name{
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-family: cursive;
+}
