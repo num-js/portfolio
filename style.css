@@ -23,6 +23,11 @@
 	font-weight:bold;
 }
 
+#frameworks li{
+	font-family: 'Handlee', cursive;
+	
+}
+
 #proj_image{
 	background-size:cover; 
 }
