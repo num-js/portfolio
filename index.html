@@ -97,14 +97,55 @@
 					  		<!-- 2nd Row Start -->
 					  	<div class="row">
 					  		<span style="padding-left: 25px;"> </span>
-					  		<div id="proj_image" class="col-lg-5 jumbotron" style=" padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/learnhtmlnjs.jpg');">
+							  
+					  		<div data-toggle="modal" data-target="#project_details" id="proj_image" class="col-lg-5 jumbotron" style=" padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/learnhtmlnjs.jpg'); cursor: pointer;">
 					  			<br><br><br>
 					  			<h4 id="proj_name">LearnHTMLnJS</h4>
 					  			<div style="text-align: center; padding-top: 20px;">
-					  				<a class="btn btn-info" href="https://mdnmnahmed.github.io/learnhtmlnjs" target="_BLANK">View</a>
+					  				<!-- <a class="btn btn-info" href="https://mdnmnahmed.github.io/learnhtmlnjs" target="_BLANK">View</a> -->
 					  				<br><br>
 					  			</div>
 					  		</div>
+
+					  			<!-- Modal Body Start-->
+							<div class="modal" id="project_details">
+								<br>
+								<br>
+								<center>
+								<div align="center" class="col-lg-4 col-sm-10 jumbotron" style="padding:10px; background: linear-gradient(132deg,orange,green);">
+									<button class="close" data-dismiss="modal"> &times;</button>
+
+									<h3 align="center"><u>Add Expenses</u></h3>
+									<hr>
+									<form method="POST" class="form" id="fupForm">
+										<div align="left"><label>Date</label></div>
+										<input class="form-control" type="date" name="date" id="date">
+
+										<div align="left"><label>Time</label></div>
+										<input class="form-control" type="time" name="time" id="time" id="time">
+
+										<div align="left"><label>Expenses</label></div>
+										<input class="form-control" type="text" name="expenses" id="expenses" placeholder="Expenses" required>
+
+										<div align="left"><label>Amount</label></div>
+										<input class="form-control" type="number" name="amount" id="amount" placeholder="Amount" required>
+
+										<div align="left"><label>Others</label></div>
+										<input class="form-control" type="text" name="others" id="others" placeholder="Others">
+
+										<br>
+										<div align="right">
+											<button class="btn btn-info" type="button" id="insert">Save</button>
+											<button class="btn btn-danger" type="button" data-dismiss="modal">Close</button>
+										</div>
+									</form>
+								</div>
+								</center>					     
+							</div>
+					  			<!-- Modal Body End-->
+
+
+
 					  		<span style="padding-left: 80px;"> </span>
 					  		<!-- <div id="proj_image" class="col-5 jumbotron" style=" padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0.5,0.5), rgba(0,0,0.5,0.5)),url('images/budgetcontrol.jpg');">
 					  			<br><br><br>
