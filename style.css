@@ -3,6 +3,10 @@
 	margin: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #myJumbotron{
 	padding: 20px;
 	background: linear-gradient(57deg,#03b8a5,#0b999f);
