@@ -9,6 +9,7 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -75,7 +76,7 @@
 					  			<!-- 1st Row Start-->
 					  	<div class="row">
 					  		<span style="padding-left: 25px;"> </span>
-					  		<div id="proj_image" class="col-lg-5 jumbotron" style="padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/codingtest.jpg');">
+					  		<div data-toggle="modal" data-target="#CodingTest" id="proj_image" class="col-lg-5 jumbotron" style="padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/codingtest.jpg');">
 					  			<br><br><br>
 					  			<h4 id="proj_name">&lt;CodingTest/></h4>
 					  			<div style="text-align: center; padding-top: 20px;">
@@ -83,8 +84,61 @@
 					  				<br><br>
 					  			</div>
 					  		</div>
+
+
+					  			<!--<CodingTest/> Modal Body Start-->
+							<div class="modal" id="CodingTest">
+								<br>
+								<center>
+								<div align="center" class="col-lg-4 col-sm-10 jumbotron" style="padding:10px; background: linear-gradient(57deg,#0b999f,#03b8a5);">
+									<button class="close" data-dismiss="modal"> &times;</button>
+
+									<h3 align="center"><u class="text-white" id="proj_name">&lt;CodingTest/></u></h3>
+									<hr>
+									<div align="left">
+									<span style="font-weight: bold">About Project:</span> LearnHTMLnJS is only a Front End Project, Where we can Learn HTML, CSS & JavaScript very Easily.
+									</div>
+									<hr>
+									<h5 class="bg-dark text-danger text-center">Used Technology</h5>
+									<div align="left" style="padding-left: 20px" id="skills">
+									  <ul>
+									   <li><h5 class="text-white">Front End</h5></li>
+									  
+										<span>HTML</span><br>
+										<span>CSS</span><br>
+										<span>JavaScript</span><br>
+											<div style="padding-left:50px;">
+												<ul id="frameworks" style="margin: 0px; list-style-type:square;">
+													<li>jQuery</li>
+													<li>AJAX</li>
+												</ul>
+											</div>
+									   <li><h5 class="text-white">Back End</h5></li>
+
+										<span>PHP</span>
+											<div style="padding-left:40px">
+												<ul id="frameworks" style="margin: 0px; list-style-type:square;">
+													<!--<li>CodeIgniter</li>-->
+												</ul>
+											</div>
+										<span>DataBase</span>
+											<div style="padding-left:40px">
+												<ul id="frameworks" style="margin: 0px; list-style-type:square;">
+													<li>MySQL</li>
+												</ul>
+											</div>
+									  </ul>
+									</div>
+									<br>
+									<a class="btn btn-light" href="https://mdnmnahmed.github.io/learnhtmlnjs" target="_BLANK">View Demo <i class="fa fa-desktop"></i></a>
+									<a class="btn btn-dark" href="https://github.com/mdnmnahmed/learnhtmlnjs" target="_BLANK">View Code <i class="fa fa-github"></i></a>
+								</div>
+								</center>					     
+							</div>
+					  			<!--<CodingTest/> Modal Body End-->
+
 					  		<span style="padding-left: 60px;"> </span>
-					  		<div id="proj_image" class="col-lg-5 jumbotron" style=" padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0.5,0.5), rgba(0,0,0.5,0.5)),url('images/budgetcontrol.jpg');">
+					  		<div data-toggle="modal" data-target="#BudgetControl" id="proj_image" class="col-lg-5 jumbotron" style=" padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0.5,0.5), rgba(0,0,0.5,0.5)),url('images/budgetcontrol.jpg');">
 					  			<br><br><br>
 					  			<h4 id="proj_name">Budget Control</h4>
 					  			<div style="text-align: center; padding-top: 20px;">
@@ -98,51 +152,49 @@
 					  	<div class="row">
 					  		<span style="padding-left: 25px;"> </span>
 							  
-					  		<div data-toggle="modal" data-target="#project_details" id="proj_image" class="col-lg-5 jumbotron" style=" padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/learnhtmlnjs.jpg'); cursor: pointer;">
+					  		<div data-toggle="modal" data-target="#LearnHTMLnJS" id="proj_image" class="col-lg-5 jumbotron" style=" padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/learnhtmlnjs.jpg'); cursor: pointer;">
 					  			<br><br><br>
 					  			<h4 id="proj_name">LearnHTMLnJS</h4>
 					  			<div style="text-align: center; padding-top: 20px;">
-					  				<!-- <a class="btn btn-info" href="https://mdnmnahmed.github.io/learnhtmlnjs" target="_BLANK">View</a> -->
 					  				<br><br>
 					  			</div>
 					  		</div>
 
-					  			<!-- Modal Body Start-->
-							<div class="modal" id="project_details">
-								<br>
+					  			<!--LearnHTMLnJS Modal Body Start-->
+							<div class="modal" id="LearnHTMLnJS">
 								<br>
 								<center>
-								<div align="center" class="col-lg-4 col-sm-10 jumbotron" style="padding:10px; background: linear-gradient(132deg,orange,green);">
+								<div align="center" class="col-lg-4 col-sm-10 jumbotron" style="padding:10px; background: linear-gradient(57deg,#0b999f,#03b8a5);">
 									<button class="close" data-dismiss="modal"> &times;</button>
 
-									<h3 align="center"><u>Add Expenses</u></h3>
+									<h3 align="center"><u class="text-white" id="proj_name">LearnHTMLnJS</u></h3>
 									<hr>
-									<form method="POST" class="form" id="fupForm">
-										<div align="left"><label>Date</label></div>
-										<input class="form-control" type="date" name="date" id="date">
-
-										<div align="left"><label>Time</label></div>
-										<input class="form-control" type="time" name="time" id="time" id="time">
-
-										<div align="left"><label>Expenses</label></div>
-										<input class="form-control" type="text" name="expenses" id="expenses" placeholder="Expenses" required>
-
-										<div align="left"><label>Amount</label></div>
-										<input class="form-control" type="number" name="amount" id="amount" placeholder="Amount" required>
-
-										<div align="left"><label>Others</label></div>
-										<input class="form-control" type="text" name="others" id="others" placeholder="Others">
-
-										<br>
-										<div align="right">
-											<button class="btn btn-info" type="button" id="insert">Save</button>
-											<button class="btn btn-danger" type="button" data-dismiss="modal">Close</button>
-										</div>
-									</form>
+									<div align="left">
+									<span style="font-weight: bold">About Project:</span> LearnHTMLnJS is only a Front End Project, Where we can Learn HTML, CSS & JavaScript very Easily.
+									</div>
+									<hr>
+									<h5 class="bg-dark text-danger text-center">Used Technology</h5>
+									<div align="left" style="padding-left: 20px" id="skills">
+									  <ul>
+									   <li><strong class="text-white">Front End </strong>(only)</li>
+									  
+										<span>HTML</span><br>
+										<span>CSS</span><br>
+										<span>JavaScript</span><br>
+											<div style="padding-left:50px;">
+												<ul id="frameworks" style="margin: 0px; list-style-type:square;">
+													<li>jQuery</li>
+													<li>AJAX</li>
+												</ul>
+											</div>
+									  </ul>
+									</div>
+									<a class="btn btn-light" href="https://mdnmnahmed.github.io/learnhtmlnjs" target="_BLANK">View Demo <i class="fa fa-desktop"></i></a>
+									<a class="btn btn-dark" href="https://github.com/mdnmnahmed/learnhtmlnjs" target="_BLANK">View Code <i class="fa fa-github"></i></a>
 								</div>
 								</center>					     
 							</div>
-					  			<!-- Modal Body End-->
+					  			<!--LearnHTMLnJS Modal Body End-->
 
 
 
