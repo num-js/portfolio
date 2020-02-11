@@ -9,8 +9,8 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Handlee&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -18,7 +18,17 @@
 		<div class="jumbotron" id="myJumbotron">
 			<div class="row">
 				<div class="col-lg-3 jumbotron" style="padding:0px; margin:0px; background: linear-gradient(57deg,#0b999f,#03b8a5);">
-					<h3 id="myName"><u>Numan Ahmed</u></h3>
+					<center>
+					<h4 id="myName"><u style="font-family: 'Nosifer', cursive;">Numan Ahmed</u></h4>
+					<img align="center" src="images/myPic.jpg" alt="numan ahmed" class="rounded-circle"  height="220">
+					<br>
+					<div style="margin-top: 5px;"> 
+				   	<a target="_blank" href="mailto:mdnmnahmed@gmail.com"><i class="btn btn-dark btn-sm fa fa-2x fa-google"></i></a>
+				   	<a target="_blank" href="https://github.com/mdnmnahmed"><i class="btn btn-dark btn-sm fa fa-2x fa-github"></i></a>
+				   	<a target="_blank" href="https://www.linkedin.com/in/numan-ahmed-0b590219a/"><i class="btn btn-dark btn-sm fa fa-2x fa-linkedin"></i></a>
+				   	<a href="tel:7001959252"><i class="btn btn-dark btn-sm fa fa-2x fa-phone"></i></a>
+				   	</div>
+					</center>
 					<hr>
 					<div align="center">
 						<a id="myLinks" href="mailto:mdnmnahmed@gmail.com" target="_BLANK">mdnmnahmed@gmail.com</a><br>
@@ -28,48 +38,18 @@
 						<a id="">Address:Kolkata-49,WestBengal,INDIA</a>
 					</div>
 					<hr>
-					<div>
-						<h5 class="bg-dark text-danger text-center">SKILLS</h5>
-						<div style="padding-left: 20px" id="skills">
-							<span>C++</span><br>
-							<span>HTML</span><br>
-							<span>CSS</span><br>
-								<div style="padding-left:40px">
-									<ul id="frameworks" style="margin: 0px; list-style-type:square;">
-										<li>Bootstrap 4</li>
-									</ul>
-								</div>
-							<span>JavaScript</span><br>
-								<div style="padding-left:40px;">
-									<ul id="frameworks" style="margin: 0px; list-style-type:square;">
-										<li>jQuery</li>
-										<li>AJAX</li>
-										<li><strong>NodeJS </strong>[basics only]</li>
-										<!--<li><strong>ExpressJS</strong></li>-->
-									</ul>
-								</div>
-							<span>PHP</span>
-								<div style="padding-left:40px">
-									<ul id="frameworks" style="margin: 0px; list-style-type:square;">
-										<!--<li>CodeIgniter</li>-->
-									</ul>
-								</div>
-							<span>DataBase</span>
-								<div style="padding-left:40px">
-									<ul id="frameworks" style="margin: 0px; list-style-type:square;">
-										<li>MySQL</li>
-										<li>MongoDB</li>
-									</ul>
-								</div>
-						</div>
-						<br>
-					</div>
+					<br>
+					<br>
 				</div>
 				<div class="col jumbotron" style="padding:0px; padding-left:10px;  margin:0px; background: linear-gradient(57deg,#0b999f,#03b8a5);">
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs">
 					  <li class="nav-item">
-					    <a style="color:black" class="nav-link active" data-toggle="tab" href="#projects">Projects</a>
+					    <a style="color:black" class="nav-link active" data-toggle="tab" href="#skillsTab">Skills</a>
+					  </li>
+					  <li class="nav-item">
+					    <a style="color:black" class="nav-link" data-toggle="tab" href="#projects"> 
+					    	Projects </a>
 					  </li>
 					  <li class="nav-item">
 					    <a style="color:black" class="nav-link" data-toggle="tab" href="#academics">Academics</a>
@@ -78,7 +58,174 @@
 					<br>
 					<!-- Tab panes -->
 					<div class="tab-content">
-					  <div class="tab-pane container active" id="projects">
+					  			<!-- Skills Tab-->
+					  <div class="tab-pane container active" id="skillsTab">
+						
+					<div>
+						<h5 class="bg-dark text-danger text-center">SKILLS</h5>
+						<div id="skills">
+							<div class="row">
+								<div class="col">
+									<span>C++</span>
+								</div>
+								<div class="col">
+									<div class="progress">
+									    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:70%">C++</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<span>HTML</span>
+								</div>
+								<div class="col">
+									<div class="progress">
+									    <div class="progress-bar progress-bar-striped progress-bar bg-success" style="width:90%">HTML</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<span>CSS</span>
+								</div>
+								<div class="col">
+									<div class="progress">
+									    <div class="progress-bar progress-bar-striped progress-bar bg-warning" style="width:40%">CSS</div>
+									</div>
+								</div>
+							</div>
+								<div style="padding-left:40px">
+									<div class="row">
+										<div class="col">
+											<ul id="frameworks" style="margin: 0px; list-style-type:square;">
+												<li>Bootstrap 4</li>
+											</ul>
+										</div>
+										<div class="col">
+											<div class="progress">
+											    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:60%">Bootstrap 4</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							<div class="row">
+								<div class="col">
+									<span>JavaScript</span>
+								</div>
+								<div class="col">
+									<div class="progress">
+									    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:75%">JavaScript</div>
+									</div>
+								</div>
+							</div>
+								<div style="padding-left:40px">
+									<div class="row">
+										<div class="col">
+											<ul id="frameworks" style="margin: 0px; list-style-type:square;">
+												<li>jQuery</li>
+											</ul>
+										</div>
+										<div class="col">
+											<div class="progress">
+											    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:60%">jQuery</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style="padding-left:40px">
+									<div class="row">
+										<div class="col">
+											<ul id="frameworks" style="margin: 0px; list-style-type:square;">
+												<li>Ajax</li>
+											</ul>
+										</div>
+										<div class="col">
+											<div class="progress">
+											    <div class="progress-bar progress-bar-striped progress-bar bg-primary" style="width:50%">Ajax</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style="padding-left:40px">
+									<div class="row">
+										<div class="col">
+											<ul id="frameworks" style="margin: 0px; list-style-type:square;">
+												<li><strong>NodeJS</strong></li>
+											</ul>
+										</div>
+										<div class="col">
+											<div class="progress">
+											    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:30%">NodeJS</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style="padding-left:40px">
+									<div class="row">
+										<div class="col">
+											<ul id="frameworks" style="margin: 0px; list-style-type:square;">
+												<li><strong>ExpressJS</strong></li>
+											</ul>
+										</div>
+										<div class="col">
+											<div class="progress">
+											    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" style="width:25%">ExpressJS</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							<div class="row">
+								<div class="col">
+									<span>PHP</span>
+								</div>
+								<div class="col">
+									<div class="progress">
+									    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:80%">PHP</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col">
+									<span>DataBase</span>
+								</div>
+							</div>
+								<div style="padding-left:40px">
+									<div class="row">
+										<div class="col">
+											<ul id="frameworks" style="margin: 0px; list-style-type:square;">
+												<li>MySQL</li>
+											</ul>
+										</div>
+										<div class="col">
+											<div class="progress">
+											    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:80%">MySQL</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div style="padding-left:40px">
+									<div class="row">
+										<div class="col">
+											<ul id="frameworks" style="margin: 0px; list-style-type:square;">
+												<li>MongoDB</li>
+											</ul>
+										</div>
+										<div class="col">
+											<div class="progress">
+											    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" style="width:40%">MongoDB</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+					</div>		
+					  </div>		<!-- Skills Tab End -->
+
+							<!-- Projects Tab-->
+					  <div class="tab-pane container fade" id="projects">
 					  			<!-- 1st Row Start-->
 					  	<div class="row">
 					  		<span style="padding-left: 25px;"> </span>
@@ -267,7 +414,7 @@
 					  		<!-- 2nd Row End -->
 
 					  </div>
-					  			<!-- Education -->
+					  			<!-- Education Tab-->
 					  <div class="tab-pane container fade" id="academics">
 						<div>
 							<h5 class="bg-dark text-white text-center">BACHELOR OF COMPUTER APPLICATION (BCA)</h5>
@@ -318,6 +465,7 @@
 					        <a href="cv/cv.pdf" download class="btn btn-warning" target="_BLANK">Download CV</a>
 				   		</div>
 					  </div>
+
 					</div>
 				</div>
 			</div>
