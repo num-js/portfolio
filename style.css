@@ -2,6 +2,9 @@
 	padding: 0px;
 	margin: 0px;
 }
+html{
+	height: 100vh;
+}
 
 html {
   scroll-behavior: smooth;
@@ -24,7 +27,8 @@ html {
 
 #skills span{
 	font-family: 'Handlee', cursive;
-	font-weight:bold;
+	/*font-weight:bold;*/
+	font-size: 25px;
 }
 
 #frameworks li{
