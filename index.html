@@ -10,10 +10,12 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Akronim&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<br>
 	<div class="col-12 container" style="margin-top: 20px;">
 		<div class="jumbotron" id="myJumbotron">
 			<div class="row">
@@ -23,22 +25,21 @@
 					<img align="center" src="images/myPic.jpg" alt="numan ahmed" class="rounded-circle"  height="220">
 					<br>
 					<div style="margin-top: 5px;"> 
-				   	<a target="_blank" href="mailto:mdnmnahmed@gmail.com"><i class="btn btn-dark btn-sm fa fa-2x fa-google"></i></a>
-				   	<a target="_blank" href="https://github.com/mdnmnahmed"><i class="btn btn-dark btn-sm fa fa-2x fa-github"></i></a>
-				   	<a target="_blank" href="https://www.linkedin.com/in/numan-ahmed-0b590219a/"><i class="btn btn-dark btn-sm fa fa-2x fa-linkedin"></i></a>
-				   	<a href="tel:7001959252"><i class="btn btn-dark btn-sm fa fa-2x fa-phone"></i></a>
+						<a target="_blank" href="mailto:mdnmnahmed@gmail.com"><i class="btn btn-dark btn-sm fa fa-2x fa-google"></i></a>
+						<a target="_blank" href="https://github.com/mdnmnahmed"><i class="btn btn-dark btn-sm fa fa-2x fa-github"></i></a>
+						<a target="_blank" href="https://www.linkedin.com/in/numan-ahmed-0b590219a/"><i class="btn btn-dark btn-sm fa fa-2x fa-linkedin"></i></a>
+						<a href="tel:7001959252"><i class="btn btn-dark btn-sm fa fa-2x fa-phone"></i></a>
 				   	</div>
 					</center>
 					<hr>
 					<div align="center">
-						<a id="myLinks" href="mailto:mdnmnahmed@gmail.com" target="_BLANK">mdnmnahmed@gmail.com</a><br>
-						<a id="myLinks" href="https://github.com/mdnmnahmed" target="_BLANK">github.com/mdnmnahmed</a><br>
-						<a id="myLinks" href="https://www.linkedin.com/in/numan-ahmed-0b590219a/" target="_BLANK">linkedin.com/in/numan-ahmed</a><br>
-						<a id="myLinks" class="mobilesOnly" href="tel:7001959252">Mobile No: +917001959252</a><br>
-						<a id="">Address:Kolkata-49,WestBengal,INDIA</a>
+						Gmail: <a id="myLinks" href="mailto:mdnmnahmed@gmail.com" target="_BLANK">mdnmnahmed@gmail.com</a><br>
+						Mobile No: <a id="myLinks" class="mobilesOnly" href="tel:7001959252">+917001959252</a><br>
+						Address: <a class="text-white">Kolkata-49,WestBengal,INDIA</a>
+						<hr>
+						<a href="cv/cv.pdf" download class="btn btn-warning" target="_BLANK">Download CV</a>
+						<br>
 					</div>
-					<hr>
-					<br>
 					<br>
 				</div>
 				<div class="col jumbotron" style="padding:0px; padding-left:10px;  margin:0px; background: linear-gradient(57deg,#0b999f,#03b8a5);">
@@ -66,11 +67,21 @@
 						<div id="skills">
 							<div class="row">
 								<div class="col">
+									<span>C</span>
+								</div>
+								<div class="col">
+									<div class="progress">
+									    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:70%">C</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
 									<span>C++</span>
 								</div>
 								<div class="col">
 									<div class="progress">
-									    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:70%">C++</div>
+									    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:65%">C++</div>
 									</div>
 								</div>
 							</div>
@@ -211,6 +222,7 @@
 										<div class="col">
 											<ul id="frameworks" style="margin: 0px; list-style-type:square;">
 												<li>MongoDB</li>
+												<br>
 											</ul>
 										</div>
 										<div class="col">
@@ -229,14 +241,83 @@
 					  			<!-- 1st Row Start-->
 					  	<div class="row">
 					  		<span style="padding-left: 25px;"> </span>
-					  		<div data-toggle="modal" data-target="#CodingTest" id="proj_image" class="col-lg-5 jumbotron" style="padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/codingtest.jpg'); cursor: pointer;">
+					  		
+								  
+
+								  <!-- {CodingPosts} Starts -->
+					  		<div data-toggle="modal" data-target="#CodingPosts" id="proj_image" class="col-lg-5 jumbotron" style="padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/codingposts.jpg'); cursor: pointer;">
 					  			<br><br><br><br>
-					  			<h4 id="proj_name">&lt;CodingTest/></h4>
+					  			<h4 id="proj_name">{CodingPosts}</h4>
 					  			<br><br>
 					  		</div>
 
+					  			<!--{CodingPosts} Modal Body Start-->
+							<div class="modal" id="CodingPosts">
+								<br>
+								<center>
+								<div align="center" class="col-lg-4 col-sm-10 jumbotron" style="padding:10px; background: linear-gradient(57deg,#0b999f,#03b8a5);">
+									<button class="close" data-dismiss="modal"> &times;</button>
 
-					  			<!--<CodingTest/> Modal Body Start-->
+									<h3 align="center"><u class="text-white" id="proj_name">{CodingPosts}</u></h3>
+									<hr>
+									<div align="left">
+									<span style="font-weight: bold">About Project:</span> CodingPosts is a website where anyone can write posts upon Programming & Coding Skills Skils. 
+									</div>
+									<h5 class="bg-dark text-danger text-center">Used Technology</h5>
+									<div align="left" style="padding-left: 20px" id="usedTechnology">
+									  <ul>
+									   <li class="text-white"><h5><strong><u>Front End</u></strong></h5></li>
+									  
+										<span>HTML</span><br>
+										<span>CSS</span><br>
+											<div style="padding-left:40px">
+												<ul id="usedTechnology_frameworks" style="margin: 0px; list-style-type:square;">
+													<li>Bootstrap 4</li>
+												</ul>
+											</div>
+										<span><b>EJS-Template Engine</b></span><br>
+											
+											
+									   <li class="text-white"><h5><strong><u>Back End</u></strong></h5></li>
+
+										<span>NodeJS</span> <br>
+										<span>ExpressJS</span>
+											<div style="padding-left:40px">
+												<ul id="usedTechnology_frameworks" style="margin: 0px; list-style-type:square;">
+													<li>Body Parser</li>
+													<li>Mongoose</li>
+													<li>bcryptjs (Password Encription)</li>
+													<li>Multer (Save Image)</li>
+													<li>Express-Session</li>
+												</ul>
+											</div>
+										<span>DataBase</span>
+											<div style="padding-left:40px">
+												<ul id="usedTechnology_frameworks" style="margin: 0px; list-style-type:square;">
+													<li>MongoDB</li>
+												</ul>
+											</div>
+									  </ul>
+									</div>
+									<a class="btn btn-light" href="https://coding-posts.herokuapp.com/" target="_BLANK">View Demo <i class="fa fa-desktop"></i></a>
+									<a class="btn btn-dark" href="https://github.com/mdnmnahmed/CodingPosts" target="_BLANK">View Code <i class="fa fa-github"></i></a>
+								</div>
+								</center>					     
+							</div>
+								  <!--{CodingPosts} Modal Body End-->
+								  
+
+
+
+								  <!--<CodingTest/> Main Start-->
+								<span style="padding-left: 60px;"> </span>
+							<div data-toggle="modal" data-target="#CodingTest" id="proj_image" class="col-lg-5 jumbotron" style="padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/codingtest.jpg'); cursor: pointer;">
+								<br><br><br><br>
+								<h4 id="proj_name">&lt;CodingTest/></h4>
+								<br><br>
+							</div>
+  
+								<!--<CodingTest/> Modal Body Start-->
 							<div class="modal" id="CodingTest">
 								<br>
 								<center>
@@ -250,9 +331,9 @@
 									</div>
 									<h5 class="bg-dark text-danger text-center">Used Technology</h5>
 									<div align="left" style="padding-left: 20px" id="skills">
-									  <ul>
-									   <li><h5 class="text-white"><strong>Front End</strong></h5></li>
-									  
+									<ul>
+										<li><h5 class="text-white"><strong>Front End</strong></h5></li>
+									
 										<span>HTML</span><br>
 										<span>CSS</span><br>
 											<div style="padding-left:40px">
@@ -267,7 +348,7 @@
 													<li>AJAX</li>
 												</ul>
 											</div>
-									   <li><h5 class="text-white"><strong>Back End</strong></h5></li>
+										<li><h5 class="text-white"><strong>Back End</strong></h5></li>
 
 										<span>PHP</span>
 											<div style="padding-left:40px">
@@ -281,16 +362,24 @@
 													<li>MySQL</li>
 												</ul>
 											</div>
-									  </ul>
+									</ul>
 									</div>
 									<a class="btn btn-light" href="http://www.codingtest.byethost31.com" target="_BLANK">View Demo <i class="fa fa-desktop"></i></a>
 									<a class="btn btn-dark" href="https://github.com/mdnmnahmed/-CodingTest-" target="_BLANK">View Code <i class="fa fa-github"></i></a>
 								</div>
 								</center>					     
 							</div>
-					  			<!--<CodingTest/> Modal Body End-->
+								<!--<CodingTest/> Modal Body End-->
+  
 
-					  		<span style="padding-left: 60px;"> </span>
+					  	</div>
+					  		<!-- 1st Row End -->
+					  		<!-- 2nd Row Start -->
+					  	<div class="row">
+					  		<span style="padding-left: 25px;"> </span>
+							  
+							
+					  		
 					  		<div data-toggle="modal" data-target="#BudgetControl" id="proj_image" class="col-lg-5 jumbotron" style="padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0.5,0.5), rgba(0,0,0.5,0.5)),url('images/budgetcontrol.jpg'); cursor: pointer;">
 					  			<br><br><br><br>
 					  			<h4 id="proj_name">Budget Control</h4>
@@ -351,12 +440,8 @@
 							</div>
 					  			<!--Budget Control Modal Body End-->
 
-					  	</div>
-					  		<!-- 1st Row End -->
-					  		<!-- 2nd Row Start -->
-					  	<div class="row">
-					  		<span style="padding-left: 25px;"> </span>
-							  
+
+							<span style="padding-left: 60px;"> </span>
 					  		<div data-toggle="modal" data-target="#LearnHTMLnJS" id="proj_image" class="col-lg-5 jumbotron" style=" padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/learnhtmlnjs.jpg'); cursor: pointer;">
 					  			<br><br><br><br>
 					  			<h4 id="proj_name">LearnHTMLnJS</h4>
