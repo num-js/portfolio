@@ -25,15 +25,29 @@ html {
 	color: white;
 }
 
+
 #skills span{
-	font-family: 'Handlee', cursive;
-	/*font-weight:bold;*/
+	/* font-family: 'Handlee', cursive; */
+	font-weight:bold;
 	font-size: 25px;
+	color: white;
 }
 
 #frameworks li{
 	font-family: 'Handlee', cursive;
 	
+}
+
+
+
+
+	/* Project */
+#usedTechnology span{
+	font-size: 20px;
+}
+
+#usedTechnology_frameworks li{
+	font-family: cursive;
 }
 
 #proj_image{
@@ -42,6 +56,6 @@ html {
 #proj_name{
 	color: white;
 	text-align: center;
-	font-weight: bold;
-	font-family: cursive;
+	/* font-weight: bold; */
+	font-family: 'akronim', cursive;
 }
