@@ -12,6 +12,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Akronim&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js">
+	
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -37,7 +40,7 @@
 						Mobile No: <a id="myLinks" class="mobilesOnly" href="tel:7001959252">+917001959252</a><br>
 						Address: <a class="text-white">Kolkata-49,WestBengal,INDIA</a>
 						<hr>
-						<a href="cv/cv.pdf" download class="btn btn-warning" target="_BLANK">Download CV</a>
+						<a href="cv/cv.pdf" download class="btn btn-light" target="_BLANK">Download CV</a>
 						<br>
 					</div>
 					<br>
@@ -71,7 +74,6 @@
 								</div>
 								<div class="col">
 									<div class="progress">
-									    <br>
 									    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" style="width:70%">C</div>
 									</div>
 								</div>
@@ -123,9 +125,9 @@
 
 							<div class="row">
 								<div class="col">
-									<span>JavaScript</span>
+									<span>JavaScript <i class="fab fa-js"></i> </span>
 								</div>
-								<div class="col" style="padding-top: 10px;">
+								<div class="col">
 									<div class="progress">
 									    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width:75%">JavaScript</div>
 									</div>
@@ -441,64 +443,78 @@
 					  			<!--Budget Control Modal Body End-->
 
 
+								<!--Movie_Searcher Start-->
 							<span style="padding-left: 60px;"> </span>
-					  		<div data-toggle="modal" data-target="#LearnHTMLnJS" id="proj_image" class="col-lg-5 jumbotron" style=" padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/learnhtmlnjs.jpg'); cursor: pointer;">
+					  		<div data-toggle="modal" data-target="#Movie_Searcher" id="proj_image" class="col-lg-5 jumbotron" style=" padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url('images/movie searcher.jpg'); cursor: pointer;">
 					  			<br><br><br><br>
-					  			<h4 id="proj_name">LearnHTMLnJS</h4>
+					  			<h4 id="proj_name"><i class="fa fa-sm fa-film" aria-hidden="true"></i> Movie Searcher <i class="fa fa-sm fa-film" aria-hidden="true"></i>
 					  			<br><br>
 					  		</div>
 
-					  			<!--LearnHTMLnJS Modal Body Start-->
-							<div class="modal" id="LearnHTMLnJS">
+					  			<!--Movie_Searcher Modal Body Start-->
+							<div class="modal" id="Movie_Searcher">
 								<br>
 								<center>
 								<div align="center" class="col-lg-4 col-sm-10 jumbotron" style="padding:10px; background: linear-gradient(57deg,#0b999f,#03b8a5);">
 									<button class="close" data-dismiss="modal"> &times;</button>
 
-									<h3 align="center"><u class="text-white" id="proj_name">LearnHTMLnJS</u></h3>
+									<h3 align="center"><u class="text-white" id="proj_name"><i class="fa fa-sm fa-film" aria-hidden="true"></i> Movie Searcher <i class="fa fa-sm fa-film" aria-hidden="true"></i></u></h3>
 									<hr>
 									<div align="left">
-									<span style="font-weight: bold">About Project:</span> LearnHTMLnJS is only a Front End Project, Where we can Learn HTML, CSS & JavaScript very Easily.
+									<span style="font-weight: bold">About Project:</span> Movie Searcher is a website where we can search Movies and see details about the Movie. Movie Searcher website is written in NodeJS and Data retrived using API (TMDB).
 									</div>
 									<hr>
 									<h5 class="bg-dark text-danger text-center">Used Technology</h5>
 									<div align="left" style="padding-left: 20px" id="usedTechnology">
 									  <ul>
-										<li class="text-white"><h5><strong><u>Front End</u></strong> (only)</h5></li>
+									   <li class="text-white"><h5><strong><u>Front End</u></strong></h5></li>
 									  
 										<span>HTML</span><br>
 										<span>CSS</span><br>
-										<span>JavaScript</span><br>
-											<div style="padding-left:50px;">
+											<div style="padding-left:40px">
 												<ul id="usedTechnology_frameworks" style="margin: 0px; list-style-type:square;">
-													<li>jQuery</li>
+													<li>Bootstrap 4</li>
+												</ul>
+											</div>
+										<span><b>EJS-Template Engine</b></span><br>
 											
+											
+									   <li class="text-white"><h5><strong><u>Back End</u></strong></h5></li>
+
+										<span>NodeJS</span> <br>
+										<span>ExpressJS</span>
+											<div style="padding-left:40px">
+												<ul id="usedTechnology_frameworks" style="margin: 0px; list-style-type:square;">
+													<li>Path</li>
+													<li>Request</li>
+												</ul>
+											</div>
+										<span>API</span>
+											<div style="padding-left:40px">
+												<ul id="usedTechnology_frameworks" style="margin: 0px; list-style-type:square;">
+													<li>TMDB (The Movie DB)</li>
 												</ul>
 											</div>
 									  </ul>
 									</div>
-									<a class="btn btn-light" href="https://mdnmnahmed.github.io/learnhtmlnjs" target="_BLANK">View Demo <i class="fa fa-desktop"></i></a>
-									<a class="btn btn-dark" href="https://github.com/mdnmnahmed/learnhtmlnjs" target="_BLANK">View Code <i class="fa fa-github"></i></a>
+									<a class="btn btn-light" href="https://movie-searcher-tmdb.herokuapp.com/" target="_BLANK">View Demo <i class="fa fa-desktop"></i></a>
+									<a class="btn btn-dark" href="https://github.com/mdnmnahmed/MovieSearcher" target="_BLANK">View Code <i class="fa fa-github"></i></a>
 								</div>
 								</center>					     
 							</div>
 					  			<!--LearnHTMLnJS Modal Body End-->
 
-
-
-					  		<span style="padding-left: 80px;"> </span>
-					  		<!-- <div id="proj_image" class="col-5 jumbotron" style=" padding: 0px; background-image:linear-gradient(to bottom, rgba(0,0,0.5,0.5), rgba(0,0,0.5,0.5)),url('images/budgetcontrol.jpg');">
-					  			<br><br><br>
-					  			<h4 id="proj_name">Budget Control</h4>
-					  			<div style="text-align: center; padding-top: 20px;">
-					  				<a class="btn btn-info" href="http://www.budgetcontrol.byethost7.com/" target="_BLANK">View</a>
-					  				<br><br>
-					  			</div>
-					  		</div> -->
-					  	</div>
-					  		<!-- 2nd Row End -->
+					  	</div> <!--	row -->
+							  <!-- 2nd Row End -->
+							  
+							  <center><a href="" class="btn btn-light">More small Projects</a></center>
 
 					  </div>
+
+					  
+
+
+
 					  			<!-- Education Tab-->
 					  <div class="tab-pane container fade" id="academics">
 						<div>
