@@ -1,66 +1,223 @@
 *{
-	padding: 0px;
-	margin: 0px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+
 html{
+	scroll-behavior: smooth;
+}
+
+body{
+	background: linear-gradient(#7abea7, #5cbce7);
+}
+
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+p{
+	font-size: 0.9rem;
+	line-height: 1.6;
+	font-weight: 400;
+	color: #606060;
+}
+
+.header{
+	width: 100%;
 	height: 100vh;
+	background-image: linear-gradient(rgba(0,168,255,0.3), rgba(0,168,255,0.3)), url('images/bg-8.jpg');  /*(rgba(0,0,0,0.3), rgba(0,168,255,0.3)), url('images/bg-8.jpg'); */
+	background-repeat: no-repeat;
+	background-size: 100% 100%; 
+	clip-path: polygon(100% 0%, 100% 85%, 50% 100%, 0 85%, 0 0);
+	position: relative;
 }
 
-html {
-  scroll-behavior: smooth;
+.header:before{
+	content: "";
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+	opacity: .3;
+	z-index: -1;
+	background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
 }
 
-#myJumbotron{
-	padding: 20px;
-	background: linear-gradient(57deg,#03b8a5,#0b999f);
+.navbar:before{
+	content: "";
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+	opacity: .3;
+	z-index: -1;
+	/* background: linear-gradient(to right, #1e5799 0%, #3ccdbb 0%, #16c9f6 100%); */
+	background: black;
 }
 
-#myName{
-	color: white;
-	font-weight:bold;
-	font-family: 'Seymour One', sans-serif;
-}
-
-#myLinks{
-	color: white;
-}
-
-
-#skills span{
-	/* font-family: 'Handlee', cursive; */
-	font-weight:bold;
-	font-size: 25px;
-	color: white;
-}
-
-#frameworks li{
-	font-family: 'Handlee', cursive;
-	
+.nav-item a{
+	color: #fff!important;
+	font-weight: bold; 
 }
 
 
-
-
-	/* Project */
-#usedTechnology span{
-	font-size: 20px;
-}
-
-#usedTechnology_frameworks li{
-	font-family: cursive;
-}
-
-#proj_image{
-	background-size:cover; 
-}
-#proj_name{
+.header-section{
+	width: 100%;
+	height: inherit;
 	color: white;
 	text-align: center;
-	/* font-weight: bold; */
-	font-family: 'akronim', cursive;
+	position: relative;
 }
 
-#proj_backend{
+.center-div{
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+
+.header-buttons a{
+	border: 1px solid #fff;
+	border-radius: 100px;
+	margin: 0 5px;
+	padding: 12px 35px;
+	outline: none;
 	color: white;
-	font-family: cursive;
+	font-size: 1rem;
+	font-weight: 1.4;
+	text-align: center;
+}
+
+.header-buttons a:hover{
+	color: #50d1c0;
+	background: #fff;
+	text-decoration: none;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+
+.center-div p{
+	font-size: 1.3rem;
+	padding: 10px 0 20px 0;
+	color: white;
+}
+
+.projects{
+	width: 100%;
+	/* height: 100vh; */
+	padding-top: 40px;
+	position: relative;
+}
+
+.projects:before{
+	content: "";
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+	z-index: -1;
+	background: linear-gradient(157deg, #3ccdbcc0 50%, rgba(16, 151, 135, 0.664) 0%);
+}
+
+
+.projects-div div{
+	padding: 5px;
+}
+
+
+
+.skills{
+	padding-top: 40px;
+	position: relative;
+	background: linear-gradient(-157deg, rgba(16, 151, 135, 0.664) 50%, #3ccdbcc0 0%);
+}
+
+.skills:before{
+	content: "";
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+	z-index: -1;
+	/* background: linear-gradient(160deg, #3ccdbcc0 55%, #3ccdbc57 0%); */
+}
+
+
+.academics{
+	padding-top: 40px;
+	padding-bottom: 18px;
+	position: relative;
+	background: linear-gradient(-157deg, rgba(16, 151, 135, 0.664) 50%, #3ccdbcc0 0%);
+}
+
+.contact{
+	padding: 40px;
+	position: relative;
+	background: linear-gradient(-157deg, rgba(16, 151, 135, 0.664) 50%, #3ccdbcc0 0%);
+}
+
+
+.contact-buttons a{
+	border: 1px solid #fff;
+	border-radius: 100px;
+	margin: 0 5px;
+	padding: 12px 18px;
+	outline: none;
+	color: white;
+	font-size: 1rem;
+	font-weight: 1.4;
+	text-align: center;
+}
+
+.contact-buttons a:hover{
+	color: #50d1c0;
+	background: #fff;
+	text-decoration: none;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+}
+
+.page-footer{
+	background: linear-gradient(-157deg, rgba(16, 151, 135, 0.664) 50%, #3ccdbcc0 0%);
+}
+
+#goToTopBtn{
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 40px;
+	z-index: 99;
+	border: none;
+	color: white;
+	background: black;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#goToTopBtn:hover{
+	background: #606060;
+	cursor: pointer;
+}
+
+
+
+
+
+			/* Projects */
+.projectTitle{
+	font-family: akronim;
+	font-size: 30px;
 }
