@@ -156,18 +156,39 @@ p{
 	/* background: linear-gradient(160deg, #3ccdbcc0 55%, #3ccdbc57 0%); */
 }
 
+.certifications{
+	/* padding-top: 40px; */
+	padding-bottom: 18px;
+	/* position: relative; */
+	background: linear-gradient(157deg, rgba(16, 151, 135, 0.664) 50%, #3ccdbcc0 0%);
+}
+.certifications-sub-div{
+	background: linear-gradient(-157deg, rgba(16, 151, 135, 0.664) 50%, #3ccdbcc0 0%);
+
+}
+
 
 .academics{
-	padding-top: 40px;
+	/* padding-top: 40px; */
 	padding-bottom: 18px;
 	position: relative;
 	background: linear-gradient(-157deg, rgba(16, 151, 135, 0.664) 50%, #3ccdbcc0 0%);
 }
+.academics-sub-div{
+	background: linear-gradient(157deg, rgba(16, 151, 135, 0.664) 50%, #3ccdbcc0 0%);
+
+}
+
+
+
 
 .contact{
 	padding: 40px;
 	position: relative;
 	background: linear-gradient(-157deg, rgba(16, 151, 135, 0.664) 50%, #3ccdbcc0 0%);
+}
+.contact-sub-div{
+	background: linear-gradient(157deg, rgba(16, 151, 135, 0.664) 50%, #3ccdbcc0 0%);
 }
 
 
