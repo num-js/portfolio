@@ -4,7 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta property="og:title" content="Numan Ahmed - Portfolio" />
-	<meta property="og:image" content="https://raw.githubusercontent.com/mdnmnahmed/portfolio/master/images/front%20page.jpg" />
+	<meta property="og:image"
+		content="https://raw.githubusercontent.com/mdnmnahmed/portfolio/master/images/front%20page.jpg" />
 	<meta property="og:image:width" content="300" />
 	<meta property="og:image:height" content="300" />
 	<meta name="description" content="ReactJS | NodeJS | MERN Stack | Web Developer |" />
@@ -93,9 +94,87 @@
 							Numan Ahmed
 						</h1>
 						<div>
-							MERN Stack | Web Developer
-							<br>
-							<br>
+							<!-- <h5 id="proTxt"><span style="color: chartreuse;">MERN Stack</span> | <span style="color: rgb(255, 251, 0);">Web Developer</span></h5> -->
+
+
+
+
+							<h3>
+								<a style="color: chartreuse;" href="" class="typewrite" data-period="2000"
+									data-type='[ "MERN Stack", "WEB", "Front-End", "Back-End" ]'>
+									<span class="wrap"></span>
+								</a>
+								<span style="color: rgb(255, 251, 0);"> Developer</span>
+							</h3>
+
+
+
+							<script>
+
+								var TxtType = function (el, toRotate, period) {
+									this.toRotate = toRotate;
+									this.el = el;
+									this.loopNum = 0;
+									this.period = parseInt(period, 10) || 2000;
+									this.txt = '';
+									this.tick();
+									this.isDeleting = false;
+								};
+
+								TxtType.prototype.tick = function () {
+									var i = this.loopNum % this.toRotate.length;
+									var fullTxt = this.toRotate[i];
+
+									if (this.isDeleting) {
+										this.txt = fullTxt.substring(0, this.txt.length - 1);
+									} else {
+										this.txt = fullTxt.substring(0, this.txt.length + 1);
+									}
+
+									this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+									var that = this;
+									var delta = 200 - Math.random() * 100;
+
+									if (this.isDeleting) { delta /= 2; }
+
+									if (!this.isDeleting && this.txt === fullTxt) {
+										delta = this.period;
+										this.isDeleting = true;
+									} else if (this.isDeleting && this.txt === '') {
+										this.isDeleting = false;
+										this.loopNum++;
+										delta = 500;
+									}
+
+									setTimeout(function () {
+										that.tick();
+									}, delta);
+								};
+
+								window.onload = function () {
+									var elements = document.getElementsByClassName('typewrite');
+									for (var i = 0; i < elements.length; i++) {
+										var toRotate = elements[i].getAttribute('data-type');
+										var period = elements[i].getAttribute('data-period');
+										if (toRotate) {
+											new TxtType(elements[i], JSON.parse(toRotate), period);
+										}
+									}
+									// INJECT CSS
+									var css = document.createElement("style");
+									css.type = "text/css";
+									css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+									document.body.appendChild(css);
+								};
+
+							</script>
+
+							<!-- <div align="center">
+								<div style="background: blueviolet; width: 300px;">
+									
+								</div>
+							</div> -->
 						</div>
 						<div class="contact-buttons container py-lg-3">
 							<div style="display: flex; justify-content: center; align-items: center;">
@@ -104,7 +183,8 @@
 								<a href="https://github.com/mdnmnahmed" class="btn-dark" target="_BLANK"><i
 										class="fa fa-github"></i></a>
 								<a href="https://dev.to/mdnmnahmed" target="_BLANK">
-								  <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Numan Ahmed's DEV Profile" height="30" width="30">
+									<img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+										alt="Numan Ahmed's DEV Profile" height="30" width="30">
 								</a>
 								<a href="https://www.linkedin.com/in/mdnmnahmed/" class="btn-primary" target="_BLANK"><i
 										class="fa fa-linkedin"></i></a>
@@ -146,7 +226,7 @@
 							<div></div>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-									style="width: 70%;">
+									style="width: 70%;  font-weight: bold;">
 									C
 								</div>
 							</div>
@@ -155,8 +235,8 @@
 						<div>
 							<div></div>
 							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-									style="width: 75%;">
+								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+									style="width: 95%;  font-weight: bold;">
 									C++
 								</div>
 							</div>
@@ -166,7 +246,7 @@
 							<div></div>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-									style="width: 95%;">
+									style="width: 100%;  font-weight: bold;">
 									HTML
 								</div>
 							</div>
@@ -175,8 +255,8 @@
 						<div>
 							<div></div>
 							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-									style="width: 50%;">
+								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+									style="width: 75%;  font-weight: bold;">
 									CSS
 								</div>
 							</div>
@@ -186,17 +266,26 @@
 							<div></div>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-									style="width: 80%;">
-									Bootstrap 4
+									style="width: 80%;  font-weight: bold;">
+									Bootstrap 4/5
 								</div>
 							</div>
+							<div></div>
+							<br>
+							<div class="progress">
+								<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+									style="width: 60%;  font-weight: bold;">
+									Materialize CSS
+								</div>
+							</div>
+
 						</div>
 						<br>
 						<div>
 							<div></div>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-									style="width: 80%;">
+									style="width: 90%;  font-weight: bold; font-size:large;">
 									JavaScript
 								</div>
 							</div>
@@ -205,25 +294,33 @@
 						<div class="pl-5">
 							<div></div>
 							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated "
-									style="width: 65%;">
+								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+									style="width: 85%;  font-weight: bold;">
 									NodeJS
 								</div>
 							</div>
 							<br>
 							<div></div>
 							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-									style="width: 60%;">
+								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+									style="width: 85%;  font-weight: bold;">
 									ExpressJS
 								</div>
 							</div>
 							<br>
 							<div></div>
 							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-									style="width: 60%;">
+								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+									style="width: 80%;  font-weight: bold;">
 									ReactJS
+								</div>
+							</div>
+							<br>
+							<div></div>
+							<div class="progress">
+								<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+									style="width: 75%;  font-weight: bold;">
+									NextJS
 								</div>
 							</div>
 						</div>
@@ -232,7 +329,7 @@
 							<div></div>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-									style="width: 90%;">
+									style="width: 90%;  font-weight: bold;">
 									PHP
 								</div>
 							</div>
@@ -250,7 +347,7 @@
 						<div></div>
 						<div class="progress">
 							<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-								style="width: 85%;">
+								style="width: 85%;  font-weight: bold;">
 								MySQL
 							</div>
 						</div>
@@ -258,7 +355,7 @@
 						<div></div>
 						<div class="progress">
 							<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-								style="width: 60%;">
+								style="width: 60%;  font-weight: bold;">
 								MongoDB
 							</div>
 						</div>
@@ -272,6 +369,7 @@
 							<div style="padding-left: 50px;">
 								<div>Version Control - Git</div>
 								<div>REST API Development</div>
+								<div> <span style="font-weight: bold;">AWS</span> (S3, Lambda, Transcribe, Chime) </div>
 								<div>MVC Arcitecture</div>
 								<div>Web Scraping</div>
 							</div>
@@ -461,12 +559,14 @@
 						<div>
 							<div align="center">
 								<div align="left">
-									College : GEORGE COLLEGE (Sealdah) <br>
-									Year : 2017 - 2020 <br>
-									Percentage : 70% <br>
+									College : <span style="font-weight: bold;">George College</span><br>
+									Affiliated University : <span style="font-weight: bold;">Maulana Abdul Kalam Azad
+										University of Technology</span><br>
+									Year : <span style="font-weight: bold;">2017 - 2020 </span><br>
+									DGPA : <span style="font-weight: bold;">8.01/10 </span><br>
 									Marks :
 								</div>
-								<div style="">
+								<div>
 									<table
 										class="col-lg-10 text-center text-font-bold table-striped table-hover table-borderless shadow">
 										<tr class="bg-dark text-info pt-3 shadow">
@@ -512,6 +612,13 @@
 													target="_BLANK"><span
 														class="fa fa-external-link text-warning"></span></a> </td>
 										</tr>
+										<tr>
+											<td>6<sup>th</sup> Sem</td>
+											<td>9.93 <a class="ml-3"
+													href="https://raw.githubusercontent.com/mdnmnahmed/portfolio/master/marksheets/bca/sem-6.jpg"
+													target="_BLANK"><span
+														class="fa fa-external-link text-warning"></span></a> </td>
+										</tr>
 									</table>
 								</div>
 							</div>
@@ -524,13 +631,14 @@
 						</div>
 						<div>
 							<div>
-								School : ISLAMPUR HIGH SCHOOL <br>
-								Board : WBCHSE <br>
-								Stream : Commerce <br>
-								Marks : 68% &nbsp; <a
+								School : <span style="font-weight: bold;">ISLAMPUR HIGH SCHOOL </span><br>
+								Board : <span style="font-weight: bold;">West Bengal Council of Higher Secondary
+									Education (WBCHSE) </span><br>
+								Stream : <span style="font-weight: bold;">Commerce </span><br>
+								Marks : <span style="font-weight: bold;">68% &nbsp; </span><a title="View Marksheet"
 									href="https://raw.githubusercontent.com/mdnmnahmed/portfolio/master/marksheets/hs/HS-Marksheet.jpg"
 									target="_BLANK"><span class="fa fa-external-link text-warning"></span></a> <br>
-								Year : 2015-2017 <br>
+								Year : <span style="font-weight: bold;">2015-2017 </span><br>
 							</div>
 						</div> <!-- HS End -->
 					</div>
