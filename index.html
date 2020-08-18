@@ -31,6 +31,48 @@
 	<!-- AOS Animation -->
 	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 
+
+	<style>
+		.imgJump,
+		.txtLogo {
+			animation: MoveUpDown 2s linear infinite;
+			position: relative;
+			/* left: 0; */
+			bottom: 0;
+		}
+
+		@keyframes MoveUpDown {
+
+			0%,
+			100% {
+				bottom: 0;
+			}
+
+			50% {
+				bottom: 5px;
+			}
+		}
+
+		.divTitlesJump {
+			animation: JumpTitles 1s linear infinite;
+			position: relative;
+			/* left: 0; */
+			bottom: 0;
+		}
+
+		@keyframes JumpTitles {
+
+			0%,
+			100% {
+				bottom: 0;
+			}
+
+			50% {
+				bottom: 5px;
+			}
+		}
+	</style>
+
 </head>
 
 <body data-spy="scroll" data-target="">
@@ -40,7 +82,7 @@
 	<div class="header" id="topheader">
 		<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 			<div class="container p-2">
-				<a class="navbar-brand font-weight-bold text-white" href="#"
+				<a class="navbar-brand font-weight-bold text-white txtLogo" href="#"
 					style="font-family: Gloria Hallelujah, cursive; font-size: 25px ">
 					<span style="color: rgb(0, 255, 55)">&lt;</span>
 					<span style="color: rgb(255, 153, 0)">N_Ah</span>
@@ -87,7 +129,7 @@
 						<div class="container">
 							<div class="media" id="headerImg">
 								<img src="./images/img-1.jpg" width="90%" height="90%"
-									class="img-fluid rounded mx-5  d-lg-block">
+									class="img-fluid rounded mx-5  d-lg-block imgJump">
 							</div>
 						</div>
 					</div>
@@ -220,7 +262,7 @@
 	<!-- ********Skills Start********** -->
 	<section class="skills" id="skills">
 		<div class="container container-sm-12 heading text-center">
-			<h3 class="text-center text-white">
+			<h3 class="text-center text-white divTitlesJump">
 				SKILLS
 			</h3>
 		</div>
@@ -400,7 +442,7 @@
 	<section class="projects" id="projects">
 		<center>
 			<div class="container">
-				<h2 class="text-center text-white">
+				<h2 class="text-center text-white divTitlesJump">
 					PROJECTS
 				</h2>
 				<div class="row projects-div">
@@ -512,7 +554,7 @@
 			<div class="certifications-sub-div">
 				<br>
 				<div class="col-lg-7 col-sm-12">
-					<h3 class="text-center text-white">
+					<h3 class="text-center text-white divTitlesJump">
 						CERTIFICATIONS
 					</h3>
 					<div class="jumbotron bg-transparent shadow" style="padding: 10px;">
@@ -565,7 +607,7 @@
 			<div class="academics-sub-div">
 				<br>
 				<div class="col-lg-6 col-sm-12">
-					<h3 class="text-center text-white">
+					<h3 class="text-center text-white divTitlesJump">
 						ACADEMICS
 					</h3>
 					<div class="jumbotron bg-transparent shadow" style="padding: 10px; text-align: left;">
@@ -676,19 +718,20 @@
 		<center>
 			<div class="contact-sub-div">
 				<div class="container-12">
-					<h3 class="text-center text-white">
+					<h3 class="text-center text-white divTitlesJump">
 						<br>
 						CONTACT
 					</h3>
 					<div class="row m-0">
-						<div class="col-lg-2 col-sm-12 jumbotron m-lg-5" style="padding: 5px;">
+						<div data-aos="zoom-out-down" class="col-lg-2 col-sm-12 jumbotron m-lg-5" style="padding: 5px;">
 							<div class="view overlay zoom hoverable" style="cursor: pointer;">
 								<i class="fa fa-2x fa-home"></i>
 								<h2>Location</h2>
 								<div>Kolkata-49, West Bengal, INDIA</div>
 							</div>
 						</div>
-						<div class="col-lg-2 col-sm-12 jumbotron m-lg-5" style="padding: 5px; padding-top: 20px;">
+						<div data-aos="zoom-in-up" class="col-lg-2 col-sm-12 jumbotron m-lg-5"
+							style="padding: 5px; padding-top: 20px;">
 							<a href="mailto:mdnmnahmed@gmail.com">
 								<div class="view overlay zoom hoverable" style="cursor: pointer; color: black;">
 									<i class="fa fa-2x fa-envelope"></i>
@@ -697,7 +740,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-lg-2 col-sm-12 jumbotron m-lg-5" style="padding: 20px;">
+						<div data-aos="zoom-out-down" class="col-lg-2 col-sm-12 jumbotron m-lg-5"
+							style="padding: 20px;">
 							<a href="tel:7001959252">
 								<div class="view overlay zoom hoverable" style="cursor: pointer; color: black;">
 									<div class="single-contact text-center wow fadeInDown" data-wow-delay="0.4s">
@@ -708,7 +752,7 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-lg-2 col-sm-12 jumbotron m-lg-5" style="padding: 20px;">
+						<div data-aos="zoom-out-up" class="col-lg-2 col-sm-12 jumbotron m-lg-5" style="padding: 20px;">
 							<div class="view overlay zoom hoverable" style="cursor: pointer; color: black;">
 								<div class="single-contact text-center wow fadeInDown" data-wow-delay="0.8s">
 									<i class="fa fa-2x fa-gg"></i>
