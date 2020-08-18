@@ -28,6 +28,8 @@
 
 	<!-- Material Design Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+	<!-- AOS Animation -->
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -404,7 +406,7 @@
 				<div class="row projects-div">
 
 					<!-- ToDo-MERN Project Start -->
-					<div class="col-lg-4 col-md-4 col-sm-12" align="center">
+					<div data-aos="fade-right" class="col-lg-4 col-md-4 col-sm-12" align="center">
 						<div data-toggle="modal" data-target="#todo-task" id="proj_image" class="jumbotron p-0">
 							<div class="view overlay zoom hoverable" style="cursor: pointer;">
 								<img src="images/todo-mern.jpg" class="img-fluid">
@@ -419,7 +421,7 @@
 					<!-- ToDo-MERN Project End -->
 
 					<!-- CodingPosts Project Start -->
-					<div class="col-lg-4 col-md-4 col-sm-12" align="center">
+					<div data-aos="fade-down" class="col-lg-4 col-md-4 col-sm-12" align="center">
 						<div data-toggle="modal" data-target="#CodingPosts" id="proj_image" class="jumbotron p-0">
 							<div class="view overlay zoom hoverable" style="cursor: pointer;">
 								<img src="images/codingposts.jpg" class="img-fluid">
@@ -433,7 +435,7 @@
 					<!-- CodingPosts Project End -->
 
 					<!-- CodingTest Project Start -->
-					<div class="col-lg-4 col-md-4 col-sm-12" align="center">
+					<div data-aos="fade-left" class="col-lg-4 col-md-4 col-sm-12" align="center">
 						<div data-toggle="modal" data-target="#CodingTest" id="proj_image" class="jumbotron p-0">
 							<div class="view overlay zoom hoverable" style="cursor: pointer;">
 								<img src="images/codingtest.jpg" class="img-fluid projectImg">
@@ -446,7 +448,7 @@
 					<!-- CodingTest Project End -->
 
 					<!-- MovieSearcher Project Start -->
-					<div class="col-lg-4 col-md-4 col-sm-12" align="center">
+					<div data-aos="fade-right" class="col-lg-4 col-md-4 col-sm-12" align="center">
 						<div data-toggle="modal" data-target="#MovieSearcher" id="proj_image" class="jumbotron p-0">
 							<div class="view overlay zoom hoverable" style="cursor: pointer;">
 								<img src="images/movie searcher.jpg" class="img-fluid">
@@ -459,7 +461,7 @@
 					<!-- MovieSearcher Project End -->
 
 					<!-- BudgetControl Project Start -->
-					<div class="col-lg-4 col-md-4 col-sm-12" align="center">
+					<div data-aos="fade-up" class="col-lg-4 col-md-4 col-sm-12" align="center">
 						<div data-toggle="modal" data-target="#BudgetControl" class="jumbotron p-0">
 							<div class="view overlay zoom hoverable" style="cursor: pointer;">
 								<img src="images/budgetcontrol.jpg" class="img-fluid">
@@ -472,7 +474,7 @@
 					<!-- BudgetControl Project End -->
 
 					<!-- LearnHTMLnJS Project Start -->
-					<div class="col-lg-4 col-md-4 col-sm-12" align="center">
+					<div data-aos="fade-left" class="col-lg-4 col-md-4 col-sm-12" align="center">
 						<div data-toggle="modal" data-target="#LearnHTMLnJS" id="proj_image" class="jumbotron p-0">
 							<div class="view overlay zoom hoverable" style="cursor: pointer;">
 								<img src="images/learnhtmlnjs.jpg" class="img-fluid">
@@ -721,9 +723,8 @@
 										<a style="padding-left: 20px;"
 											href="https://www.facebook.com/mdnuman.ahmed.7982" target="_blank"><i
 												class="fa fa-facebook"></i></a>
-										<a style="padding-left: 20px;"
-											href="https://twitter.com/NumanAh43051521" target="_blank"><i
-												class="fa fa-twitter"></i></a>
+										<a style="padding-left: 20px;" href="https://twitter.com/NumanAh43051521"
+											target="_blank"><i class="fa fa-twitter"></i></a>
 										<a style="padding-left: 20px;" href="https://github.com/mdnmnahmed"
 											target="_blank"><i class="fa fa-github"></i></a>
 									</div>
@@ -1145,16 +1146,7 @@
 	</div>
 	<!--Whatsapp Modal Body End-->
 
-
-
-	<!-- Script CDN Links -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	<!-- MDB core JavaScript -->
-	<script type="text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
-
+	<!-- ************ Scripts *********** -->
 	<script>
 		goToTopBtn = document.getElementById("goToTopBtn");
 
@@ -1174,7 +1166,22 @@
 			document.body.scrollTop = 0;
 			document.documentElement.scrollTop = 0;
 		}
+	</script>
 
+	<!-- Script CDN Links -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 150,
+			duration: 1000,
+		});
 	</script>
 </body>
 
