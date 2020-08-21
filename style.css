@@ -12,6 +12,15 @@ body{
 	background: linear-gradient(#7abea7, #5cbce7);
 }
 
+
+#numanImg{
+	filter:drop-shadow(1rem 1rem 10px black);
+}
+#numanImg:hover{
+	filter:drop-shadow(2rem 1rem 20px black);
+}
+
+
 a{
 	text-decoration: none;
 }
