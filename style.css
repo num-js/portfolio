@@ -13,10 +13,10 @@ body{
 }
 
 
-#numanImg{
+.imgShadow{
 	filter:drop-shadow(1rem 1rem 10px black);
 }
-#numanImg:hover{
+.imgShadow:hover{
 	filter:drop-shadow(2rem 1rem 20px black);
 }
 
@@ -291,4 +291,10 @@ p{
 		50% {
 			bottom: 5px;
 		}
+	}
+
+
+
+	.txtShadow {
+		text-shadow: 1px 10px 10px black;
 	}
