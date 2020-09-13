@@ -33,7 +33,7 @@
 
 
 	<style>
-		
+
 	</style>
 
 </head>
@@ -66,6 +66,9 @@
 							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
+							<a class="nav-link" href="#experience">Experience</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link" href="#skills">Skills</a>
 						</li>
 						<li class="nav-item">
@@ -92,7 +95,7 @@
 						<div class="container">
 							<div class="media" id="headerImg">
 								<img id="numanImg" src="images/img-1.png" width="90%" height="90%"
-									class="img-fluid rounded mx-5  d-lg-block imgJump">
+									class="img-fluid rounded mx-5 d-lg-block imgJump">
 							</div>
 						</div>
 					</div>
@@ -103,21 +106,14 @@
 						<div>
 							<!-- <h5 id="proTxt"><span style="color: chartreuse;">MERN Stack</span> | <span style="color: rgb(255, 251, 0);">Web Developer</span></h5> -->
 
-
-
-
 							<h3>
 								<a style="color: chartreuse;" href="" class="typewrite" data-period="2000"
-									data-type='[ "MERN Stack", "WEB", "Front-End", "Back-End" ]'>
+									data-type='[ "Full Stack JS", "MERN Stack", "WEB", "Front-End", "Back-End" ]'>
 									<span class="wrap"></span>
 								</a>
 								<span style="color: rgb(255, 251, 0);"> Developer</span>
 							</h3>
-
-
-
 							<script>
-
 								var TxtType = function (el, toRotate, period) {
 									this.toRotate = toRotate;
 									this.el = el;
@@ -174,7 +170,6 @@
 									css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
 									document.body.appendChild(css);
 								};
-
 							</script>
 
 							<!-- <div align="center">
@@ -204,14 +199,12 @@
 								<a class="btn-success" data-toggle="modal" data-target="#whatsapp">
 									<i class="fa fa-whatsapp"></i>
 								</a>
-
-
-
 							</div>
 						</div>
 						<br>
 						<div class="header-buttons">
-							<a class="shadow" href="cv/CV-Numan.pdf" download target="_BLANK"><span class="fa fa-download"></span> 
+							<a class="shadow" href="cv/CV-Numan.pdf" download target="_BLANK"><span
+									class="fa fa-download"></span>
 								<b> Download CV </b>
 							</a>
 						</div>
@@ -221,6 +214,61 @@
 		</div>
 	</div>
 	<!-- ********Header End********** -->
+
+	<!-- ********Experience Start********** -->
+	<section class="skills" id="experience">
+		<div class="container container-sm-12 heading text-center">
+			<h3 class="text-center text-white divTitlesJump">
+				Experience
+			</h3>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-sm-10">
+					<div class="names jumbotron" style="padding: 15px; margin-top: 18px;">
+						<div>
+							<div>
+								<h4>Software Developer</h4>
+								<hr class="bg-danger">
+							</div>
+							<div class="pl-3">
+								<center>
+									<img src="https://avatars2.githubusercontent.com/u/2506996?s=200&v=4"
+										class="rounded-circle" width="100" />
+									<br>
+									<h3><u>SrcLogix</u></h3>
+									<div><span style="font-weight: bold">Full-Time | 3<sup>+</sup> Months</span></div>
+								</center>
+								<br>
+								<div>Project Working on: <span style="font-weight: bold">Video Call & Chat</span></div>
+								<div>Programming Technology Learning & Using:- <br>
+									<div style="font-weight: bold;" class=" pl-5">
+										ReactJS <br>
+										NextJS <br>
+										AWS [S3 | Lambda | Chime | Transcribe] <br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-sm-10">
+					<!-- Experience Image -->
+					<div class="names" style="padding: 0px;  margin: 0px;">
+						<center>
+							<img src="images/learning_img1.png" width="200" class="card-img imgJump" alt='numan' />
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+	</section>
+	<!-- ********Experience End********** -->
 
 
 	<!-- ********Skills Start********** -->
@@ -303,6 +351,16 @@
 						<div>
 							<div></div>
 							<div class="progress">
+								<div class="progress-bar progress-bar-striped"
+									style="background: rgba(128, 128, 128, 0.589); width: 80%;  font-weight: bold;">
+									PHP
+								</div>
+							</div>
+						</div>
+						<br>
+						<div>
+							<div></div>
+							<div class="progress">
 								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
 									style="width: 90%;  font-weight: bold; font-size:large;">
 									JavaScript
@@ -311,6 +369,14 @@
 						</div>
 						<br>
 						<div class="pl-5">
+							<div></div>
+							<div class="progress">
+								<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
+									style="width: 70%;  font-weight: bold;">
+									jQuery
+								</div>
+							</div>
+							<br>
 							<div></div>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
@@ -330,32 +396,46 @@
 							<div></div>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-									style="width: 80%;  font-weight: bold;">
+									style="width: 88%;  font-weight: bold;">
 									ReactJS
 								</div>
 							</div>
 							<br>
 							<div></div>
+							<sup><span class="badge badge-danger float-right shadow">New</span></sup>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-									style="width: 75%;  font-weight: bold;">
+									style="width: 80%;  font-weight: bold;">
 									NextJS
 								</div>
 							</div>
-						</div>
-						<br>
-						<div>
+							<br>
 							<div></div>
+							<sup><span class="badge badge-danger float-right">New</span></sup>
 							<div class="progress">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-									style="width: 90%;  font-weight: bold;">
-									PHP
+								<div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+									style="width: 20%;  font-weight: bold;">
+									Angular
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-sm-10">
+					<!-- Programming Image -->
+					<div class="names" style="padding: 0px;  margin: 0px;">
+						<center>
+							<div class="row">
+								<div class="col">
+									<img src="images/js-icon.png" width="200" class="card-img imgJump" alt='numan' />
+								</div>
+								<div class="col">
+									<img src="images/js-frameworks.png" class="card-img divTitlesJump" alt='numan' />
+								</div>
+							</div>
+						</center>
+					</div>
+
 					<div class="names jumbotron" style="padding: 15px;  margin-bottom: 10px;">
 						<div>
 							<div>
@@ -374,12 +454,13 @@
 						<div></div>
 						<div class="progress">
 							<div class="progress-bar progress-bar-striped progress-bar-animated bg-primary"
-								style="width: 60%;  font-weight: bold;">
+								style="width: 80%;  font-weight: bold;">
 								MongoDB
 							</div>
 						</div>
 					</div>
-					<div class="names jumbotron" style="padding: 15px;">
+
+					<div class="names jumbotron" style="padding: 15px; margin-top: 18px;">
 						<div>
 							<div>
 								Aditional Skills
@@ -388,7 +469,12 @@
 							<div style="padding-left: 50px;">
 								<div>Version Control - Git</div>
 								<div>REST API Development</div>
-								<div> <span style="font-weight: bold;">AWS</span> (S3, Lambda, Transcribe, Chime) </div>
+								<div>
+									<span style="font-weight: bold;">
+										AWS
+										<sup><small><span class="badge badge-danger">New</span></small></span></sup>
+									&nbsp; [S3 | Lambda | Transcribe | Chime | EC2]
+								</div>
 								<div>MVC Arcitecture</div>
 								<div>Web Scraping</div>
 							</div>
