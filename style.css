@@ -148,7 +148,7 @@ p{
 
 
 
-.skills{
+.git-contributions, .skills{
 	padding-top: 40px;
 	position: relative;
 	background: linear-gradient(-157deg, rgba(16, 151, 135, 0.664) 50%, #3ccdbcc0 0%);
@@ -297,4 +297,9 @@ p{
 
 	.txtShadow {
 		text-shadow: 1px 10px 10px black;
+	}
+
+	/* css for Git Git Contributions table */
+	.table-column {
+		color: white !important; 
 	}
