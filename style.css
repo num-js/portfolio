@@ -214,7 +214,8 @@ p{
 }
 
 .contact-buttons a:hover{
-	color: #50d1c0;
+	/* color: #50d1c0; */
+	color: #7b8a88;
 	background: #fff;
 	text-decoration: none;
 	box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
@@ -303,3 +304,13 @@ p{
 	.table-column {
 		color: white !important; 
 	}
+	 /* more styles of Git Cntributions sections */
+	 .calendar {
+		width: 100%;
+		font-family: Helvetica, arial;
+		border: 0.1px solid #0bedde;
+		border-radius: 10px;
+		min-height: 243px;
+		text-align: center;
+		margin: 0 auto;
+	 }
