@@ -240,7 +240,11 @@
                                         width="100" />
                                     <br>
                                     <h3><u class="txtShadow"><span class="text-danger">Src</span>Logix</u></h3>
-                                    <div><span style="font-weight: bold"> Fill-Time | 10<sup>+</sup> Months</span></div>
+                                    <div>
+                                        <span style="font-weight: bold">
+                                            Full-Time | <span id="experienceData"></span>
+                                        </span>
+                                    </div>
                                 </center>
                                 <br>
                                 <div>Projects Working on: <span style="font-weight: bold">Video Call & Chat |
@@ -1295,7 +1299,67 @@
     </div>
     <!--Whatsapp Modal Body End-->
 
-    <!-- ************ Scripts *********** -->
+
+    <!-- ************ Experience Calculate *********** -->
+    <script>
+        function calculateExperience(dateJoined) {
+            var now = new Date();
+            var today = new Date(now.getYear(), now.getMonth(), now.getDate());
+
+            var yearNow = now.getYear();
+            var monthNow = now.getMonth();
+            var dateNow = now.getDate();
+
+            var joiningData = new Date(dateJoined.substring(6, 10),
+                dateJoined.substring(0, 2) - 1,
+                dateJoined.substring(3, 5)
+            );
+
+            var yearJoin = joiningData.getYear();
+            var monthJoin = joiningData.getMonth();
+            var dateJoin = joiningData.getDate();
+            var experience = {};
+            var experienceString = "";
+
+            yearAge = yearNow - yearJoin;
+
+            if (monthNow >= monthJoin)
+                var monthAge = monthNow - monthJoin;
+            else {
+                yearAge--;
+                var monthAge = 12 + monthNow - monthJoin;
+            }
+
+            if (dateNow >= dateJoin)
+                var dateAge = dateNow - dateJoin;
+            else {
+                monthAge--;
+                var dateAge = 31 + dateNow - dateJoin;
+
+                if (monthAge < 0) {
+                    monthAge = 11;
+                    yearAge--;
+                }
+            }
+
+            experience = {
+                years: yearAge,
+                months: monthAge,
+            };
+
+            if ((experience.years > 0) && (experience.months > 0))
+                experienceString = experience.years + " year, " + experience.months+' Months<sup>+</sup>';
+
+            else if ((experience.years == 0) && (experience.months > 0))
+                experienceString = experience.months+'<sup>+</sup> Months';
+
+            return experienceString;
+        }
+
+        document.getElementById('experienceData').innerHTML = calculateExperience('07/01/2020');
+    </script>
+
+    <!-- ************ Script for Go To top of the Page *********** -->
     <script>
         goToTopBtn = document.getElementById("goToTopBtn");
 
