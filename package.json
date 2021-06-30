@@ -1,0 +1,8 @@
+{
+  "name": "Numan-Portfolio",
+  "version": "2.1.0",
+  "scripts": {
+    "push": "git push",
+    "pull": "git pull"
+  }
+}
