@@ -26,12 +26,13 @@
         @media only screen and (max-width: 768px) {
             /* For mobile phones: */
             font-size: 35px;
-            line-height: 35px;
+            line-height: 45px;
         }
     }
 
     .skill-badges {
         display: flex;
+        margin: auto;
         margin-top: 25px;
         @media only screen and (max-width: 768px) {
             /* For mobile phones: */

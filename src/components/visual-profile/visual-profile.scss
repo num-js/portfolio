@@ -55,7 +55,7 @@
       }
     }
     .current-job {
-      height: 140px;
+      height: 120px;
       width: 120px;
       border-radius: 15px;
       background: #201e1ca4;
@@ -73,9 +73,9 @@
       cursor: pointer;
       @media only screen and (max-width: 768px) {
         /* For mobile phones: */
-        animation: none;
+        // animation: none;
         align-items: center;
-        height: 120px;
+        height: 130px;
         width: 103px;
         
       }

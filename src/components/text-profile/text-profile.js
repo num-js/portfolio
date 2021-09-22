@@ -69,7 +69,7 @@ const TextProfile = () => {
         <div className="textSpace">
             <div className="text-div">
                 <p className="mainText">Hey I'm </p>
-                <p className="mainText main">Numan Ahmed</p>
+                <p className="mainText main">MD. Numan Ahmed</p>
                 <div style={{ margin: '10px auto' }}>
                     <span style={{ color: 'chartreuse', fontSize: '25px', fontWeight: 'bolder' }} href="" class="typewrite" data-period="2000"
                         data-type='[ "Full Stack", "MERN Stack", "APP", "WEB", "Front-End", "PWA", "Back-End" ]'>
