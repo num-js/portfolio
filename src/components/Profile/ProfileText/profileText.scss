@@ -62,4 +62,15 @@
             // border-radius: 100%;
         }
     }
+
+    .quote-txt {
+        margin: auto;
+        margin-top: 30px;
+        font-size: larger;
+        font-weight: 500;
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+            margin-top: 5px;
+        }
+    }
 }

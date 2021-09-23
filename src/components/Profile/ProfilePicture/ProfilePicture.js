@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Activity from '../activity/activity';
 import { withStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
-import { InfoData } from '../../assets/data/info';
+import { InfoData } from '../../../assets/data/info';
 import Fade from 'react-reveal/Fade';
 
-import './visual-profile.scss'
+import './profilePicture.scss'
+import ActiveStatusGreenDot from '../../SharedComponents/ActiveStatusGreenDot/ActiveStatusGreenDot';
 
 const PrettoSlider = withStyles({
     root: {
@@ -39,7 +39,7 @@ const PrettoSlider = withStyles({
 })(Slider);
 
 
-const VisualProfile = () => {
+const ProfilePicture = () => {
     const [year, setYear] = useState(2021)
     let data = InfoData[year];
     const [visible, setVisible] = useState(true);
@@ -53,7 +53,7 @@ const VisualProfile = () => {
             <div className="top-lable">
                 <div className="current-job" onClick={() => { if (data.minor.url) { window.open(data.minor.url, "_blank") } }}>
                     <Fade opposite when={visible}>
-                        <Activity icon={data.minor.img} inactive={data.minor.inactive} />
+                        <ActiveStatusGreenDot icon={data.minor.img} inactive={data.minor.inactive} />
                         <p className="card-title">{data.minor.title}</p>
                         <p className="card-sub">{data.minor.sub1}</p>
                         <p className="card-sub">{data.minor.sub2}</p>
@@ -62,7 +62,7 @@ const VisualProfile = () => {
                 <div className="current-job" onClick={() => { if (data.major.url) { window.open(data.major.url, "_blank") } }}>
                     <Fade opposite when={visible}>
                         <div align="center">
-                            <Activity icon={data.major.img} inactive={data.major.inactive} />
+                            <ActiveStatusGreenDot icon={data.major.img} inactive={data.major.inactive} />
                         </div>
                         <p className="card-title">{data.major.title}</p>
                         <p className="card-sub">{data.major.sub1}</p>
@@ -89,4 +89,4 @@ const VisualProfile = () => {
         </div>
     );
 }
-export default VisualProfile;
+export default ProfilePicture;

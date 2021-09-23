@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import socialMediaIconURL from '../../assets/data/socialMediaData';
-import './text-profile.scss';
+import socialMediaIconURL from '../../../assets/data/socialMediaData';
+import './profileText.scss';
 
-const TextProfile = () => {
+const ProfileText = () => {
 
     useEffect(() => {
         let prosTimer = null;
@@ -97,4 +97,4 @@ const TextProfile = () => {
     )
 }
 
-export default TextProfile;
+export default ProfileText;

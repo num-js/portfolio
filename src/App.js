@@ -1,16 +1,18 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
-import TextProfile from './components/text-profile/text-profile';
-import VisualProfile from './components/visual-profile/visual-profile';
+import ProfilePicture from './components/Profile/ProfilePicture/ProfilePicture';
+import ProfileText from './components/Profile/ProfileText/ProfileText';
+import Skills from './components/Skills/Skills';
 
 const App = () => {
     return (
         <BrowserRouter>
             <div className="App">
-                <TextProfile />
-                <VisualProfile />
+                <ProfileText />
+                <ProfilePicture />
             </div>
+            <Skills />
         </BrowserRouter>
     );
 }

@@ -21,7 +21,7 @@ export const InfoData =
     2021: {
         major: {
             title: "X2A Inc",
-            sub1: "SD1",
+            sub1: "SD 1",
             sub2: "July-2021",
             inactive: false,
             url: null,
