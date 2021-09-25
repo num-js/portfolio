@@ -5,16 +5,13 @@ import Header from './components/Header/Header';
 import ProfilePicture from './components/Profile/ProfilePicture/ProfilePicture';
 import ProfileText from './components/Profile/ProfileText/ProfileText';
 import Skills from './components/Skills/Skills';
+import RouterComponent from './RouterComponent';
 
 const App = () => {
     return (
         <BrowserRouter>
             <Header />
-            <div className="App">
-                <ProfileText />
-                <ProfilePicture />
-            </div>
-            <Skills />
+            <RouterComponent />
         </BrowserRouter>
     );
 }
