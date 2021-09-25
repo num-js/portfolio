@@ -1,5 +1,4 @@
-export const InfoData =
-{
+export const InfoData = {
     2020: {
         major: {
             title: "HacktoberFest",
