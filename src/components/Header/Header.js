@@ -1,14 +1,36 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { ACADEMICS, CONTACT_ME, EXPERIENCES, INDEX, PROJECTS, SKILLS } from '../../helpers/routesURL';
 
 const Header = () => {
 
     const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
 
     const navBarMenu = [
-        "Experiences",
-        "Skills",
-        "Projects",
-        "Contact Me"
+        {
+            label: 'Home',
+            link: INDEX
+        },
+        {
+            label: 'Experiences',
+            link: EXPERIENCES
+        },
+        {
+            label: 'Skills',
+            link: SKILLS
+        },
+        {
+            label: 'Projects',
+            link: PROJECTS
+        },
+        {
+            label: 'Academics',
+            link: ACADEMICS
+        },
+        {
+            label: 'Contact Me',
+            link: CONTACT_ME
+        },
     ];
 
     return (
@@ -31,9 +53,14 @@ const Header = () => {
                 <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${toggleMobileMenu ? '' : 'hidden'}`}>
                     <div class="text-sm lg:flex-grow">
                         {
-                            navBarMenu.map(menu => (
-                                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4 text-xl">
-                                    {menu}
+                            navBarMenu.map(({ label, link }, index) => (
+                                <a class="nav-menu block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-400 mr-4 text-xl">
+                                    <NavLink key={index}
+                                        exact to={link}
+                                        activeStyle={{ color: `rgba(219, 39, 119` }}
+                                    >
+                                        {label}
+                                    </NavLink>
                                 </a>
                             ))
                         }
