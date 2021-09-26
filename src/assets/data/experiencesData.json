@@ -1,0 +1,40 @@
+[
+    {
+        "name": "X2A",
+        "timeLine": "Aug 2021 - present",
+        "role": "Software Developer",
+        "description": "X2A is a Fin-Tech startup, based in Bengaluru, INDIA.",
+        "workingTech": {
+            "label": "Technologies working with ---",
+            "technologies": [
+                "NextJS",
+                "React Native",
+                "PWA",
+                "ReactJS",
+                "Redux-ToolKit",
+                "D3",
+                "Tailwind CSS",
+                "Redux"
+            ]
+        }
+    },
+    {
+        "name": "SrcLogicx",
+        "timeLine": "July 2020 - July 2021",
+        "role": "Full Stack Developer",
+        "description": "X2A is a Fin-Tech startup, based in Bengaluru, INDIA.",
+        "workingTech": {
+            "label": "Technologies working with ---",
+            "technologies": [
+                "NextJS",
+                "NodeJS",
+                "ReactJS",
+                "Redux",
+                "S3",
+                "AWS-Amplify",
+                "MongoDB",
+                "DynamoDB"
+            ]
+        }
+    }
+]
