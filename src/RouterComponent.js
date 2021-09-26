@@ -14,8 +14,10 @@ const RouterComponent = () => {
         <>
             <Switch>
                 <Route exact path={INDEX}>
-                    <ProfileText />
-                    <ProfilePicture />
+                    <div className="App">
+                        <ProfileText />
+                        <ProfilePicture />
+                    </div>
                 </Route>
                 <Route exact path={EXPERIENCES}>
                     <Experiences />

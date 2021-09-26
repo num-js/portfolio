@@ -8,9 +8,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <Header />
-            <div className="App">
-                <RouterComponent />
-            </div>
+            <RouterComponent />
         </BrowserRouter>
     );
 }
