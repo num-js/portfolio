@@ -27,10 +27,10 @@ const Header = () => {
             label: 'Academics',
             link: ACADEMICS
         },
-        {
-            label: 'Contact Me',
-            link: CONTACT_ME
-        },
+        // {
+        //     label: 'Contact Me',
+        //     link: CONTACT_ME
+        // },
     ];
 
     return (
