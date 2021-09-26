@@ -4,7 +4,9 @@ const Skills = () => {
     return (
         <>
             <section class="text-gray-600 body-font lg:mt-10">
-                <h1 class="text-2xl font-medium text-white title-font mb-2">Skills</h1>
+                <div align="center">
+                    <h1 class="text-2xl font-medium text-white title-font mb-2">Skills</h1>
+                </div>
                 <div align="left">
                     <div class="mt-5">
                         <div class="-my-8 divide-y-2 ">
@@ -84,19 +86,19 @@ const Skills = () => {
 
                                 <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', }}>
-                                        <img alt="numan ahmed" src="../icons/skills/bootstrap.svg" width="50%" />
-                                    </div>
-                                </div>
-
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
-                                    <div style={{ position: 'relative', }}>
                                         <img alt="numan ahmed" src="../icons/skills/html.svg" width="50%" />
                                     </div>
                                 </div>
 
                                 <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', }}>
-                                        <img alt="numan ahmed" src="../icons/skills/css.svg" width="50%" />
+                                        <img alt="numan ahmed" src="../icons/skills/tailwind-css.png" width="50%" />
+                                    </div>
+                                </div>
+
+                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                    <div style={{ position: 'relative', }}>
+                                        <img alt="numan ahmed" src="../icons/skills/git.svg" width="50%" />
                                     </div>
                                 </div>
 
