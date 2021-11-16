@@ -58,19 +58,30 @@
             height: 160px;
             width: 145px;
             border-radius: 15px;
-            background: #201e1ca4;
-            backdrop-filter: blur(40px);
             color: white;
             box-shadow: -1px 2px 17px -4px rgba(0, 0, 0, 0.54);
+
+            background: rgba(29, 30, 30, 0.3);
+            box-shadow: 0 8px 32px 0 #161414ad; 
+            backdrop-filter: blur(9px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+
             animation: shake1 10s;
             animation-iteration-count: infinite;
-            -webkit-box-shadow: -1px 2px 17px -4px rgba(0, 0, 0, 0.54);
+            // -webkit-box-shadow: -1px 2px 17px -4px rgba(0, 0, 0, 0.54);
             -moz-box-shadow: -1px 2px 17px -4px rgba(0, 0, 0, 0.54);
             padding: 15px 15px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             cursor: pointer;
+
+
+            
+
+
+            
             @media only screen and (max-width: 768px) {
                 /* For mobile phones: */
                 // animation: none;
