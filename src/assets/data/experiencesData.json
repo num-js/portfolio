@@ -1,40 +1,43 @@
 [
     {
-        "name": "X2A",
-        "timeLine": "Aug 2021 - present",
-        "role": "Software Developer",
-        "description": "X2A is a Fin-Tech startup, based in Bengaluru, INDIA.",
+        "name": "X2A-Wealth42",
+        "timeLine": "Jul 2021 - present",
+        "role": "Frontend Engineer",
+        "description": "Wealth42 a Fin-Tech startup, based in Bengaluru, INDIA.",
+        "companyLogo": "../icons/w42.png",
+        "companyURL": "https://wealth42.com/",
         "workingTech": {
             "label": "Technologies working with ---",
             "technologies": [
-                "NextJS",
-                "React Native",
-                "PWA",
                 "ReactJS",
+                "PWA",
                 "Redux-ToolKit",
-                "D3",
                 "Tailwind CSS",
-                "Redux"
+                "Redux",
+                "SendBird",
+                "Re-Chats"
             ]
-        }
+        },
+        "isLeftSideStarts": true
     },
     {
         "name": "SrcLogicx",
-        "timeLine": "July 2020 - July 2021",
+        "timeLine": "Aug 2020 - Jul 2021",
         "role": "Full Stack Developer",
         "description": "SrcLogicx is a startup related to Video/Audio Chat solutions, based in San Diego, California, US.",
+        "companyLogo": "../icons/srclogicx.png",
+        "companyURL": "https://srclogix.com/",
         "workingTech": {
             "label": "Technologies working with ---",
             "technologies": [
-                "NextJS",
-                "NodeJS",
                 "ReactJS",
+                "NodeJS",
                 "Redux",
-                "S3",
-                "AWS-Amplify",
+                "AWS-S3",
                 "MongoDB",
                 "DynamoDB"
             ]
-        }
+        },
+        "isLeftSideStarts": false
     }
 ]

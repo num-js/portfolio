@@ -72,7 +72,7 @@ const ProfileText = () => {
                 <p className="mainText main">MD. Numan Ahmed</p>
                 <div style={{ margin: '10px auto' }}>
                     <span style={{ color: 'chartreuse', fontSize: '25px', fontWeight: 'bolder' }} href="" class="typewrite" data-period="2000"
-                        data-type='[ "Full Stack", "MERN Stack", "APP", "WEB", "Front-End", "PWA", "Back-End" ]'>
+                        data-type='[ "Full Stack JS", "MERN Stack", "Front-End", "PWA", "Back-End" ]'>
                         <span class="wrap"></span>
                     </span>
                     <span class="txtShadow" style={{ color: '#fffb00', fontSize: '20px' }}> Developer</span>

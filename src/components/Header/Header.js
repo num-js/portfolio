@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { ACADEMICS, CONTACT_ME, EXPERIENCES, INDEX, PROJECTS, SKILLS } from '../../helpers/routesURL';
+import useToggleNav from '../../hooks/useToggleNav';
 
 const Header = () => {
 
-    const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
+    const { toggleMobileMenu, setToggleMobileMenu } = useToggleNav();
 
     const navBarMenu = [
         {
@@ -58,6 +59,7 @@ const Header = () => {
                                     <NavLink key={index}
                                         exact to={link}
                                         activeStyle={{ color: `rgba(219, 39, 119` }}
+                                        onClick={() => setToggleMobileMenu(false)}
                                     >
                                         {label}
                                     </NavLink>
@@ -66,7 +68,13 @@ const Header = () => {
                         }
                     </div>
                     <div>
-                        <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-pink-600 hover:text-teal-500 hover:bg-black mt-4 lg:mt-0">Download CV</a>
+                        <a
+                            download
+                            href="../assets/resume/Resume-Numan-frontend.pdf"
+                            class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-pink-600 hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"
+                        >
+                            Download CV
+                        </a>
                     </div>
                 </div>
             </nav>
