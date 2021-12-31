@@ -6,8 +6,9 @@
         "description": "Wealth42 a Fin-Tech startup, based in Bengaluru, INDIA.",
         "companyLogo": "../icons/w42.png",
         "companyURL": "https://wealth42.com/",
+        "duration": "7M",
         "workingTech": {
-            "label": "Technologies working with ---",
+            "label": "Working Tech-Stack",
             "technologies": [
                 "ReactJS",
                 "PWA",
@@ -27,8 +28,9 @@
         "description": "SrcLogicx is a startup related to Video/Audio Chat solutions, based in San Diego, California, US.",
         "companyLogo": "../icons/srclogicx.png",
         "companyURL": "https://srclogix.com/",
+        "duration": "1Y",
         "workingTech": {
-            "label": "Technologies working with ---",
+            "label": "Working Tech-Stack",
             "technologies": [
                 "ReactJS",
                 "NodeJS",
