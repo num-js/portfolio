@@ -1,0 +1,45 @@
+.imgJump,
+.txtLogo {
+  animation: MoveUpDown 2s linear infinite;
+  position: relative;
+  /* left: 0; */
+  bottom: 0;
+}
+
+@keyframes MoveUpDown {
+
+  0%,
+  100% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 5px;
+  }
+}
+
+.divTitlesJump {
+  animation: JumpTitles 1s linear infinite;
+  position: relative;
+  /* left: 0; */
+  bottom: 0;
+  text-shadow: 1px 10px 10px black;
+}
+
+@keyframes JumpTitles {
+
+  0%,
+  100% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 5px;
+  }
+}
+
+
+
+.txtShadow {
+  text-shadow: 1px 10px 10px black;
+}
