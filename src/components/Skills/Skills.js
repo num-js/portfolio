@@ -132,7 +132,7 @@ const Skills = () => {
                             <div class="md:p-2 p-1 w-1/2">
                                 <img
                                     alt="numan ahmed"
-                                    class="object-cover object-center block"
+                                    class="object-cover object-center imgJump txtLogo"
                                     src="../icons/skills/js.webp"
                                     width="50%"
                                     style={{ width: "180px", transform: "skewY(14deg)", filter: "drop-shadow(1rem -1rem 2px black)" }}
@@ -140,7 +140,7 @@ const Skills = () => {
                             </div>
                             <div class="md:p-2 p-1 w-1/2">
                                 <img
-                                    alt="numan-ahmed" class="object-cover object-center block"
+                                    alt="numan-ahmed" class="object-cover object-center block imgJump"
                                     src="../icons/skills/nextjs.png"
                                     width="50%"
                                     style={{ width: "180px", transform: "skewY(-14deg)", filter: "drop-shadow(1rem -1rem 2px black)" }}
@@ -150,9 +150,10 @@ const Skills = () => {
                                 <div className="" align="center">
                                     <img
                                         alt="numan-ahmed"
-                                        class="object-cover object-center block p-auto"
-                                        src="../icons/skills/rest-api.png"
+                                        class="object-cover object-center block p-auto imgJump"
+                                        src="../icons/skills/rest-api.svg"
                                         width="50%"
+                                        style={{ transform: "rotate(-7deg)", filter: "drop-shadow(0rem -4rem 2px black)" }}
                                     />
                                 </div>
                             </div>
@@ -161,7 +162,7 @@ const Skills = () => {
                             <div class="md:p-2 p-1 w-full">
                                 <img
                                     alt="numan-ahmed"
-                                    class="object-cover object-center block m-auto"
+                                    class="object-cover object-center block m-auto imgJump"
                                     src="../icons/skills/nodejs-full.png"
                                     width="50%"
                                 />
