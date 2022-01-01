@@ -169,14 +169,14 @@ const Skills = () => {
                             <div class="md:p-2 p-1 w-1/2">
                                 <img
                                     alt="numan-ahmed"
-                                    class="object-cover h-full object-center block"
+                                    class="object-cover object-center block"
                                     src="../icons/skills/react.webp"
                                 />
                             </div>
                             <div class="md:p-2 p-1 w-1/2">
                                 <img
                                     alt="numan-ahmed"
-                                    class=" object-cover h-full object-center block"
+                                    class=" object-cover object-center block"
                                     src="../icons/skills/nodejs.png"
                                 />
                             </div>
@@ -225,15 +225,16 @@ const Skills = () => {
                             <div class="md:p-2 p-1 w-1/2">
                                 <img
                                     alt="numan-ahmed"
-                                    class="object-cover h-full object-center block"
+                                    class="object-cover object-center block"
                                     src="../icons/skills/material-ui.png"
                                 />
                             </div>
                             <div class="md:p-2 p-1 w-1/2">
                                 <img
                                     alt="numan-ahmed"
-                                    class=" object-cover h-full object-center block"
+                                    class=" object-cover object-center block"
                                     src="../icons/skills/tailwind-css.png"
+                                    width="50%"
                                 />
                             </div>
                         </div>
@@ -281,14 +282,14 @@ const Skills = () => {
                             <div class="md:p-2 p-1 w-1/2">
                                 {/* <img
                                     alt="numan-ahmed"
-                                    class="object-cover h-full object-center block"
+                                    class="object-cover object-center block"
                                     src="../icons/skills/material-ui.png"
                                 /> */}
                             </div>
                             <div class="md:p-2 p-1 w-1/2">
                                 {/* <img
                                     alt="numan-ahmed"
-                                    class=" object-cover h-full object-center block"
+                                    class=" object-cover object-center block"
                                     src="../icons/skills/tailwind-css.png"
                                 /> */}
                             </div>
