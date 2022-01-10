@@ -10,7 +10,7 @@ const Academics = () => {
                     <h1 class="text-2xl font-medium text-white title-font mb-2">Academics</h1>
                 </div>
                 <div align="left">
-                    <div class="mt-5">
+                    <div class="px-3 mt-5">
                         <div class="-my-8 divide-y-2 divide-gray-100">
                             {
                                 academicsData.map((collegeData, index) => (
