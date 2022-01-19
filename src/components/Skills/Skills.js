@@ -72,6 +72,31 @@ const Skills = () => {
                             pic="../icons/skills/rest-api.png"
                             divStyles={{ top: '-175px', left: '10%', height: '130px', background: 'linear-gradient(120deg, white, #111827)', padding: '5px' }}
                         />
+
+                        <Tech
+                            pic="../icons/skills/mongodb.png"
+                            divStyles={{ top: '-205px', left: '60%', width: '114px', height: '100%', }}
+                        />
+
+                        <Tech
+                            pic="../icons/skills/express-js.png"
+                            divStyles={{ top: '-266px', left: '17%', height: '100%', background: '#000000' }}
+                        />
+
+                        <Tech
+                            pic="../icons/skills/aws-s3.png"
+                            divStyles={{ top: '-190px', left: '45%', height: '90px', width: '140px', padding: '8px 0px' }}
+                        />
+
+                        <Tech
+                            pic="../icons/skills/postman.svg"
+                            divStyles={{ top: '-185px', left: '20%', borderRadius: '100%', height: '90px', width: '90px' }}
+                        />
+
+                        <Tech
+                            pic="../icons/skills/socket-io.svg"
+                            divStyles={{ top: '-185px', left: '50%', borderRadius: '100%', height: '90px', width: '90px', background: 'white' }}
+                        />
                     </div>
 
                 </section>
