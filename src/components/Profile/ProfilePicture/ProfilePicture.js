@@ -15,8 +15,10 @@ const PrettoSlider = withStyles({
     thumb: {
         height: 23,
         width: 23,
+        color: 'white',
+        fontSize: '14px',
         backgroundColor: '#306344',
-        border: '5px solid currentColor',
+        border: '1px solid currentColor',
         marginTop: -8,
         marginLeft: -12,
         boxShadow: "inset 5px 1px 4px -2px rgba(0,0,0,0.16)",
@@ -40,13 +42,18 @@ const PrettoSlider = withStyles({
 
 
 const ProfilePicture = () => {
-    const [year, setYear] = useState(2021)
+    const [year, setYear] = useState(2022)
     let data = InfoData[year];
     const [visible, setVisible] = useState(true);
 
     useEffect(() => {
         setTimeout(function () { setVisible(true) }, 400);
     }, [year]);
+
+    const ThumbComponentCustom = (props) => {
+        return <span {...props}>{('' + year).slice(2, 4)}</span>;
+    }
+
     return (
         <div className="visual-bg" style={{ backgroundImage: `url('../images/my-pic.png')` }}>
             <p className="year">{year}</p>
@@ -59,6 +66,17 @@ const ProfilePicture = () => {
                         <p className="card-sub">{data.minor.sub2}</p>
                     </Fade>
                 </div>
+                {data.extra && (
+                    <div className={`current-job flat-extra`} onClick={() => { if (data.extra.url) { window.open(data.extra.url, "_blank") } }}>
+                        <Fade opposite when={visible}>
+                            <ActiveStatusGreenDot icon={data.extra.img} inactive={data.extra.inactive} />
+                            <div className="flat-con">
+                                <p className="card-title">{data.extra.title}</p>
+                                <p className="card-sub">{data.extra.sub2}</p>
+                            </div>
+                        </Fade>
+                    </div>
+                )}
                 <div className="current-job" onClick={() => { if (data.major.url) { window.open(data.major.url, "_blank") } }}>
                     <Fade opposite when={visible}>
                         <div align="center">
@@ -73,8 +91,8 @@ const ProfilePicture = () => {
             <div className="top-lable down">
                 <div className="current-job flat-large">
                     <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-                        <p className="card-sub">2020</p>
-                        <p className="card-sub">2021</p>
+                        <p className="card-sub">Timeline</p>
+                        <p className="card-sub">{year}</p>
                     </div>
                     <PrettoSlider
                         aria-label="pretto slider"
@@ -82,7 +100,9 @@ const ProfilePicture = () => {
                         onChange={(event, newValue) => { if (newValue !== year) { setVisible(false) }; setYear(newValue); }}
                         steps={1}
                         min={2020}
-                        max={2021}
+                        max={2022}
+                        defaultValue={2021}
+                        ThumbComponent={ThumbComponentCustom}
                     />
                 </div>
             </div>
