@@ -13,7 +13,7 @@ export const InfoData = {
             sub1: "Full Stack Dev",
             sub2: "July 2020",
             inactive: false,
-            url: null,
+            url: "https://srclogix.com/",
             img: "srclogicx.png"
         }
     },
@@ -23,7 +23,7 @@ export const InfoData = {
             sub1: "SDE",
             sub2: "July-2021",
             inactive: false,
-            url: null,
+            url: "https://wealth42.com/",
             img: "w42.png"
         },
         minor: {
@@ -31,7 +31,7 @@ export const InfoData = {
             sub1: "Full Stack Dev",
             sub2: "July 2021 => 1Y",
             inactive: true,
-            url: null,
+            url: "https://srclogix.com/",
             img: "srclogicx.png"
         },
         extra: {
@@ -49,7 +49,7 @@ export const InfoData = {
             sub1: "Sr. SWE",
             sub2: "Feb-2022",
             inactive: false,
-            url: null,
+            url: "https://darwinbox.com/",
             img: "dbox.png"
         },
         minor: {
@@ -57,7 +57,7 @@ export const InfoData = {
             sub1: "SDE",
             sub2: "Jan-2022 => 7M",
             inactive: true,
-            url: null,
+            url: "https://wealth42.com/",
             img: "w42.png"
         }
     },
