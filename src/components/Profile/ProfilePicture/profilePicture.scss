@@ -115,7 +115,7 @@
                 top: 28vh;
                 left: 49vw;
                 height: 65px;
-                width: 172px;
+                width: 175px;
                 animation: shake 8s;
                 animation-iteration-count: infinite;
                 flex-direction: row;
@@ -124,12 +124,12 @@
                 padding: 5px 2px;
                 @media only screen and (max-width: 768px) {
                     /* For mobile phones: */
-                    top: 60vh;
+                    top: 380px;
                     left: 5px;
                     flex-direction: column;
                     align-items: center;
-                    height: 128px;
-                    width: 103px;
+                    height: 145px;
+                    width: 90px;
                 }
             }
             .flat-con {

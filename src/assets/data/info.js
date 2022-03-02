@@ -1,8 +1,8 @@
 export const InfoData = {
     2020: {
         major: {
-            title: "HacktoberFest",
-            sub1: "Opensource",
+            title: "Hacktober Fest",
+            sub1: "",
             sub2: "Oct 2020",
             inactive: false,
             url: null,
@@ -35,7 +35,7 @@ export const InfoData = {
             img: "srclogicx.png"
         },
         extra: {
-            title: "HacktoberFest",
+            title: "Hacktober Fest",
             sub1: "Opensource",
             sub2: "Oct 2021",
             inactive: false,

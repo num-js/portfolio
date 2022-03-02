@@ -6,6 +6,7 @@ import Fade from 'react-reveal/Fade';
 
 import './profilePicture.scss'
 import ActiveStatusGreenDot from '../../SharedComponents/ActiveStatusGreenDot/ActiveStatusGreenDot';
+import useScreenWidth from '../../../hooks/useScreenWidth';
 
 const PrettoSlider = withStyles({
     root: {
@@ -42,6 +43,7 @@ const PrettoSlider = withStyles({
 
 
 const ProfilePicture = () => {
+    const screenSize = useScreenWidth();
     const [year, setYear] = useState(2022)
     let data = InfoData[year];
     const [visible, setVisible] = useState(true);
@@ -88,7 +90,7 @@ const ProfilePicture = () => {
                     </Fade>
                 </div>
             </div>
-            <div className="top-lable down">
+            <div className={`top-lable down ${screenSize === 'small' ? 'mb-10' : ''}`}>
                 <div className="current-job flat-large">
                     <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
                         <p className="card-sub">Timeline</p>

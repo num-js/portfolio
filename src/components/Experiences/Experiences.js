@@ -15,7 +15,7 @@ const Experiences = () => {
                 </div>
                 <div class="relative wrap overflow-hidden p-10 h-full">
                     {
-                        screenSize == 'large' ? (
+                        screenSize === 'large' ? (
                             <DesktopViewExperience experiencesData={experiencesData} />
                         ) : (
                                 <MobileExperience experiencesData={experiencesData} />
