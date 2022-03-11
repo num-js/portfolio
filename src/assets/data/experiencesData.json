@@ -1,8 +1,28 @@
 [
     {
+        "name": "DarwinBox",
+        "timeLine": "Feb 2022 - present",
+        "role": "Sr. SWE",
+        "description": "DarwinBox a HCM Platform, based in Hyderabad, INDIA.",
+        "companyLogo": "../icons/dbox.png",
+        "companyURL": "https://darwinbox.com/",
+        "duration": "2M",
+        "workingTech": {
+            "label": "Working Tech-Stack",
+            "technologies": [
+                "Angular",
+                "ReactJS",
+                "Redux-ToolKit",
+                "Tailwind CSS",
+                "Redux"
+            ]
+        },
+        "isLeftSideStarts": false
+    },
+    {
         "name": "X2A-Wealth42",
-        "timeLine": "Jul 2021 - present",
-        "role": "Frontend Engineer",
+        "timeLine": "Jul 2021 - Jan 2022",
+        "role": "Software Developement Engineer",
         "description": "Wealth42 a Fin-Tech startup, based in Bengaluru, INDIA.",
         "companyLogo": "../icons/w42.png",
         "companyURL": "https://wealth42.com/",
