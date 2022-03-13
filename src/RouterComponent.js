@@ -18,6 +18,11 @@ const RouterComponent = () => {
                         <ProfileText />
                         <ProfilePicture />
                     </div>
+                    <Experiences />
+                    <Skills />
+                    <Projects />
+                    <Academics />
+                    <ContactMe />
                 </Route>
                 <Route exact path={EXPERIENCES}>
                     <Experiences />
@@ -33,9 +38,6 @@ const RouterComponent = () => {
                 </Route>
                 <Route exact path={CONTACT_ME}>
                     <ContactMe />
-                </Route>
-                <Route exact path={SKILLS}>
-                    <Skills />
                 </Route>
             </Switch>
         </>
