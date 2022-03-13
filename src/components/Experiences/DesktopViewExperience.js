@@ -57,7 +57,7 @@ const DesktopViewExperience = ({ experiencesData }) => {
                                 </div>
                             </div>
                             <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-10 h-10 rounded-full">
-                                <h1 class="mx-auto text-white font-semibold text-lg">1Y</h1>
+                                <h1 class="mx-auto text-white font-semibold text-lg">{companyData.duration}</h1>
                             </div>
                             <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
                                 <h3 class="font-bold text-white text-xl">{companyData.name}</h3>
