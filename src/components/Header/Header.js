@@ -71,9 +71,9 @@ const Header = () => {
                         <a
                             download
                             href="../assets/resume/Resume-Numan-frontend.pdf"
-                            class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-pink-600 hover:text-teal-500 hover:bg-black mt-4 lg:mt-0"
+                            class="inline-block leading-none border rounded text-white border-pink-600 hover:border-white hover:text-teal-500 hover:bg-black mt-4 lg:mt-0" style={{ borderRadius: '2px' }}
                         >
-                            Download CV
+                            <div id="download-cv-btn"></div>
                         </a>
                     </div>
                 </div>
