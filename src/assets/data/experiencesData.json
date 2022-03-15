@@ -2,7 +2,7 @@
     {
         "name": "DarwinBox",
         "timeLine": "Feb 2022 - present",
-        "role": "Sr. SWE",
+        "role": "Sr. Software Engineer",
         "description": "DarwinBox a HCM Platform, based in Hyderabad, INDIA.",
         "companyLogo": "../icons/dbox.png",
         "companyURL": "https://darwinbox.com/",
@@ -13,8 +13,9 @@
                 "Angular",
                 "ReactJS",
                 "Redux-ToolKit",
-                "Tailwind CSS",
-                "Redux"
+                "Bootstrap",
+                "Redux",
+                "jQuery"
             ]
         },
         "isLeftSideStarts": false
@@ -32,11 +33,13 @@
             "technologies": [
                 "ReactJS",
                 "PWA",
+                "NextJS",
                 "Redux-ToolKit",
                 "Tailwind CSS",
                 "Redux",
                 "SendBird",
-                "Re-Chats"
+                "Re-Chats",
+                "Material-UI"
             ]
         },
         "isLeftSideStarts": true
@@ -54,6 +57,7 @@
             "technologies": [
                 "ReactJS",
                 "NodeJS",
+                "NextJS",
                 "Redux",
                 "AWS-S3",
                 "MongoDB",
