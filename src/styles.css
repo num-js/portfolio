@@ -38,8 +38,55 @@
   }
 }
 
-
-
 .txtShadow {
   text-shadow: 1px 10px 10px black;
+}
+
+/* Download CV Btn */
+#download-cv-btn {
+  width: 116px;
+  height: 30px;
+  box-shadow: 16px 14px 20px #0000008c;
+  border-radius: 0px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#download-cv-btn::before {
+  content: "";
+  background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  animation: rotate 2s linear infinite;
+}
+
+#download-cv-btn::after {
+  content: "Download CV";
+  width: 107px;
+  height: 24px;
+  background: #101010;
+  position: absolute;
+  border-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff0052;
+  box-shadow: inset 20px 20px 20px #0000008c;
+  font-size: medium;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
 }
