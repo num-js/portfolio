@@ -10,39 +10,38 @@ const SingleProject = ({ projectData }) => {
                     />
                     <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                         <h1 class="text-pink-500 text-2xl title-font font-medium mb-1">{projectData.name}</h1>
-                        <div class="flex my-4">
-                            <span class="flex items-center">
-                                <div>
-                                    <a target="_BLANK" href={projectData.demo}>
-                                        <img alt="numan ahmed" src="../icons/demo.png" />
-                                    </a>
-                                </div>
-                            </span>
-                            <span class="flex flex items-center ml-3 pl-3">
-                                <div>
-                                    <a target="_BLANK" href={projectData.code}>
-                                        <img alt="numan ahmed" src="../icons/codes.png" />
-                                    </a>
-                                </div>
-                            </span>
-                            <span class="flex flex items-center ml-3 pl-3">
-                                <div>
-                                    <a target="_BLANK" href={`${projectData.repo}`}>
-                                        <img alt="numan ahmed" src="../icons/github-small.svg" />
-                                    </a>
-                                </div>
-                            </span>
-                        </div>
-                        <p class="leading-relaxed text-white">
+                        <p class="leading-relaxed text-white my-2">
                             {projectData.description}
                         </p>
-                        <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
-                        <div class="flex mb-4">
+
+                        <div class="my-2">
                             {
                                 projectData.usedTech.map((tech, index) => (
-                                    <span class={`flex items-center ml-2 pl-2 text-green-500  ${index !== 0 ? 'border-l-2 border-gray-200' : ''}`}> {tech} </span>
+                                    <span key={index} class="inline-flex items-center justify-center px-2 py-1 mr-1 text-xs font-bold leading-none text-indigo-100 bg-pink-700 rounded">
+                                        {tech}
+                                    </span>
                                 ))
                             }
+                        </div>
+
+                        <div class="flex items-center border-b-2 border-gray-600"></div>
+
+                        <div class="flex mt-2 justify-around items-center">
+                            <span>
+                                <a target="_BLANK" href={projectData.demo}>
+                                    <img alt="numan ahmed" src="../icons/demo.png" width="80%" />
+                                </a>
+                            </span>
+                            <span>
+                                <a target="_BLANK" href={projectData.code}>
+                                    <img alt="numan ahmed" src="../icons/codes.png" width="80%" />
+                                </a>
+                            </span>
+                            <span>
+                                <a target="_BLANK" href={`${projectData.repo}`}>
+                                    <img alt="numan ahmed" src="../icons/github-small.svg" width="80%" />
+                                </a>
+                            </span>
                         </div>
                     </div>
                 </div>
