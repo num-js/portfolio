@@ -22,7 +22,7 @@ const RouterComponent = () => {
                     <Skills />
                     <Projects />
                     <Academics />
-                    <ContactMe />
+                    {/* <ContactMe /> */}
                 </Route>
                 <Route exact path={EXPERIENCES}>
                     <Experiences />

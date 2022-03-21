@@ -5,7 +5,7 @@ import College from './College';
 const Academics = () => {
     return (
         <>
-            <section class="text-gray-600 body-font lg:mt-10">
+            <section class="text-gray-600 body-font lg:mt-10 my-10 mb-32">
                 <div align="center">
                     <h1 class="text-2xl font-medium text-white title-font mb-2">Academics</h1>
                 </div>
