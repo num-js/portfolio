@@ -1,5 +1,6 @@
 [
     {
+        "icon": "college",
         "name": "George College",
         "timeLine": "2017 - 2020",
         "board": "MAKAUT",
@@ -52,11 +53,12 @@
         }
     },
     {
-        "name": "ISLAMPUR <br /> HIGH SCHOOL",
+        "icon": "12",
+        "name": "ISLAMPUR HIGH SCHOOL",
         "timeLine": "2015 - 2017",
         "board": "WBCHSE",
         "course": "HIGHER SECONDARY EDUCATION (10+2)",
-        "description": "West Bengal Council of Higher Secondary Education (WBCHSE)",
+        "description": "",
         "stream": [
             "Stream : ",
             "Commerce"
