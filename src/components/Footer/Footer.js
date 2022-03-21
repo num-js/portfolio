@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import socialMediaIconURL from '../../assets/data/socialMediaData';
 import { navBarMenu } from '../../assets/navLinks';
 
 const Footer = () => {
@@ -17,15 +19,18 @@ const Footer = () => {
                                             Md Numan Ahmed a Full Stack Developer form a small village of West Bengal, INDIA. <br />
                                             I write Front-End | Back-End | Mobile App etc.
                                         </p>
-                                        <div class="flex mt-6">
-                                            <i style={{ backgroundColor: "#3B5998" }}
-                                                class="flex items-center justify-center h-12 w-12 mr-1 rounded-full fab fill-current text-white text-xl fa-facebook-f"></i>
-                                            <i style={{ backgroundColor: "red" }}
-                                                class="flex items-center justify-center h-12 w-12 mx-1 rounded-full fas fill-current text-white text-xl fa-envelope"></i>
-                                            <i style={{ backgroundColor: "#125688" }}
-                                                class="flex items-center justify-center h-12 w-12 mx-1 rounded-full fab fill-current text-white text-xl fa-instagram"></i>
-                                            <i style={{ backgroundColor: "#55ACEE" }}
-                                                class="flex items-center justify-center h-12 w-12 mx-1 rounded-full fab fill-current text-white text-xl fa-twitter"></i>
+                                        <div class="flex mt-6 justify-evenly">
+                                            {
+                                                socialMediaIconURL.map(({ icon, link }) => (
+
+                                                    <Link to={{ pathname: link }} target="_blank">
+                                                        <div
+                                                            className="footer-social-img"
+                                                            style={{ backgroundImage: `url(${icon})` }}
+                                                        />
+                                                    </Link>
+                                                ))
+                                            }
                                         </div>
                                     </div>
                                     <div class="w-full lg:w-1/2 lg:flex lg:px-6 ">

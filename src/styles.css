@@ -90,3 +90,13 @@
     transform: rotate(-360deg);
   }
 }
+
+.footer-social-img {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+}
