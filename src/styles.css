@@ -1,102 +1,115 @@
 .imgJump,
 .txtLogo {
-  animation: MoveUpDown 2s linear infinite;
-  position: relative;
-  /* left: 0; */
-  bottom: 0;
+    animation: MoveUpDown 2s linear infinite;
+    position: relative;
+    /* left: 0; */
+    bottom: 0;
 }
 
 @keyframes MoveUpDown {
 
-  0%,
-  100% {
-    bottom: 0;
-  }
+    0%,
+    100% {
+        bottom: 0;
+    }
 
-  50% {
-    bottom: 5px;
-  }
+    50% {
+        bottom: 5px;
+    }
 }
 
 .divTitlesJump {
-  animation: JumpTitles 1s linear infinite;
-  position: relative;
-  /* left: 0; */
-  bottom: 0;
-  text-shadow: 1px 10px 10px black;
+    animation: JumpTitles 1s linear infinite;
+    position: relative;
+    /* left: 0; */
+    bottom: 0;
+    text-shadow: 1px 10px 10px black;
 }
 
 @keyframes JumpTitles {
 
-  0%,
-  100% {
-    bottom: 0;
-  }
+    0%,
+    100% {
+        bottom: 0;
+    }
 
-  50% {
-    bottom: 5px;
-  }
+    50% {
+        bottom: 5px;
+    }
 }
 
 .txtShadow {
-  text-shadow: 1px 10px 10px black;
+    text-shadow: 1px 10px 10px black;
 }
 
 /* Download CV Btn */
 #download-cv-btn {
-  width: 116px;
-  height: 30px;
-  box-shadow: 16px 14px 20px #0000008c;
-  border-radius: 0px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 116px;
+    height: 30px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 0px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #download-cv-btn::before {
-  content: "";
-  background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
-  width: 150%;
-  height: 150%;
-  position: absolute;
-  animation: rotate 2s linear infinite;
+    content: "";
+    background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
 }
 
 #download-cv-btn::after {
-  content: "Download CV";
-  width: 107px;
-  height: 24px;
-  background: #101010;
-  position: absolute;
-  border-radius: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ff0052;
-  box-shadow: inset 20px 20px 20px #0000008c;
-  font-size: medium;
-  font-family: cursive;
-  font-weight: bold;
+    content: "Download CV";
+    width: 107px;
+    height: 24px;
+    background: #101010;
+    position: absolute;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff0052;
+    box-shadow: inset 20px 20px 20px #0000008c;
+    font-size: medium;
+    font-family: cursive;
+    font-weight: bold;
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
 
-  100% {
-    transform: rotate(-360deg);
-  }
+    100% {
+        transform: rotate(-360deg);
+    }
 }
 
 .footer-social-img {
-  background-color: white;
-  height: 50px;
-  width: 50px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 100%;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+
+.glass-div {
+    border-radius: 15px;
+    color: white;
+    background: rgba(29, 30, 30, 0.3);
+    box-shadow: 0 8px 32px 0 #161414ad;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    animation: shake1 10s;
+    animation-iteration-count: infinite;
+    -moz-box-shadow: -1px 2px 17px -4px rgba(0, 0, 0, 0.54);
 }

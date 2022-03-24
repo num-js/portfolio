@@ -24,7 +24,7 @@ const Projects = () => {
                                             <div class="p-5 rounded-lg h-96 w-full bg-cover mr-30 cursor-pointer" style={{ backgroundImage: `url(${projectData.image})` }}>
                                             </div>
 
-                                            <div class={`bg-gray-800 p-5 rounded-lg min-h-64 w-80 relative -top-52 ${isLeftSide ? 'ml-auto left-32' : '-left-32'}`}
+                                            <div class={`bg-gray-800 p-5 rounded-lg min-h-64 w-80 relative -top-52 glass-div ${isLeftSide ? 'ml-auto left-32' : '-left-32'}`}
                                                 style={{ boxShadow: '0 2px 5px 0 rgb(0 0 0 / 100%), 0 2px 10px 0 rgb(0 0 0 / 100%)' }}
                                             >
                                                 <h1 class="text-pink-500 text-2xl title-font font-medium mb-1 text-center">{projectData.name}</h1>
