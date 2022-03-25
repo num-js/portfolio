@@ -48,9 +48,11 @@ const Academics = () => {
                                                 <div className="text-base font-medium text-white">
                                                     {collegeData?.description}
                                                 </div>
-                                                <div className="text-lg font-medium text-white">
-                                                    {collegeData?.stream}
-                                                </div>
+                                                {collegeData?.stream && (
+                                                    <div className="text-lg text-white">
+                                                        Stream :  <span className="font-medium">{collegeData?.stream}</span>
+                                                    </div>
+                                                )}
                                                 <span class="mt-1 text-base font-medium text-gray-500">
                                                     {collegeData?.timeLine}
                                                 </span>
