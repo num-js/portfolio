@@ -3,21 +3,22 @@ import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import socialMediaIconURL from '../../assets/data/socialMediaData';
 import { navBarMenu } from '../../assets/navLinks';
+import Logo from '../SharedComponents/ActiveStatusGreenDot/Logo';
 
 const Footer = () => {
     return (
         <>
             <div class="" style={{ backgroundColor: "#3d393961" }}>
                 <div>
-                    <div class="container mx-auto px-6 lg:px-20 py-12">
+                    <div class="container mx-auto px-3 lg:px-20 py-12">
                         <div class="lg:flex">
                             <div class="w-full lg:w-2/3">
                                 <div class="lg:flex">
                                     <div class="w-full mb-12 lg:mb-0 lg:w-1/2">
-                                        <h2 class="font-bold text-xl text-gray-100 mb-4">N_Ah</h2>
+                                        <Logo />
                                         <p class="text-gray-400">
                                             Md Numan Ahmed a Full Stack Developer form a small village of West Bengal, INDIA. <br />
-                                            I write Front-End | Back-End | Mobile App etc.
+                                            I write Front-End | Back-End | Mobile Apps | REST APIs etc.
                                         </p>
                                         <div class="flex mt-6 justify-evenly">
                                             {
@@ -88,11 +89,11 @@ const Footer = () => {
                 <div style={{ backgroundColor: "#191717ba" }}>
                     <div class="container mx-auto px-6 lg:px-20 py-6">
                         <div class="flex justify-center text-gray-300 mb-1">
-                            © 2022 &nbsp; <span class="font-bold"> N_Ah </span> &nbsp;
+                            © 2022 &nbsp; <span> <Logo icon={false} animation={false} txtSize={16} /> </span> &nbsp;
                             All rights reserved.
                         </div>
                         <div class="flex font-light justify-center text-gray-500 text-sm">
-                            <p>Designed & Developed with 💖 by <span class="font-bold">N_Ah</span></p>
+                            Designed & Developed with 💖 by  &nbsp; <span> <Logo icon={false} animation={true} txtSize={16} /> </span>
                         </div>
                     </div>
                 </div>

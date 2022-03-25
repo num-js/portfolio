@@ -72,7 +72,7 @@ const Academics = () => {
                                                                 <tr>
                                                                     {
                                                                         collegeData?.marks?.semMarks?.headerLabels.map((header, index) => (
-                                                                            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tl rounded-bl">
+                                                                            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">
                                                                                 {header}
                                                                             </th>
                                                                         ))
