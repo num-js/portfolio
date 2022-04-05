@@ -18,8 +18,8 @@ const Experiences = () => {
                         screenSize === 'large' ? (
                             <DesktopViewExperience experiencesData={experiencesData} />
                         ) : (
-                                <MobileExperience experiencesData={experiencesData} />
-                            )
+                            <MobileExperience experiencesData={experiencesData} />
+                        )
                     }
                 </div>
             </div>
