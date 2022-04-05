@@ -1,105 +1,136 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import SkillsPopover from './SkillsPopover';
 import Tech from './Tech/Tech';
+import skillsData from '../../assets/data/skillsData.json';
+import "./skills.css";
 
 const Skills = () => {
+    const [skillImgElem, setSkillImgElem] = useState(null);
+    const [skillDetails, setSkillDetails] = useState(null);
+
+    const openPopover = Boolean(skillImgElem);
+    const popoverId = openPopover ? "simple-popover" : undefined;
+
+    const showSkillPopover = (event, skillData) => {
+        if (!skillData) {
+            return;
+        }
+        setSkillImgElem(event.currentTarget);
+        setSkillDetails(skillData);
+    };
+
+    const closeSkillPopover = () => {
+        setSkillImgElem(null);
+    };
+
     return (
         <>
             <section class="text-gray-600 body-font lg:mt-10">
                 <div align="center">
                     <h1 class="text-2xl font-medium text-white title-font mb-2">Tech Stack</h1>
                 </div>
-
-                {/* <Tech /> */}
                 <section className="tech-section">
                     <div className="w-full h-full">
+                        {
+                            skillsData.map(skill => {
+                                switch (skill.type) {
+                                    case "div":
+                                        return (
+                                            <>
+                                                <Tech
+                                                    pic={skill.pic}
+                                                    divStyles={skill.styles}
+                                                    skill={skill}
+                                                    showSkillPopover={showSkillPopover}
+                                                />
+                                            </>
+                                        )
 
-                        <Tech
-                            pic="../icons/skills/nextjs.png"
-                            divStyles={{ width: '150px', height: '80px', padding: '0px 15px', top: '-6%', left: '50%' }}
-                        />
+                                    case "img":
+                                        return (
+                                            <>
+                                                <img
+                                                    alt="numan ahmed"
+                                                    class="object-cover object-center imgJump txtLogo"
+                                                    src={skill.pic}
+                                                    style={skill.styles}
+                                                    onClick={(event) => showSkillPopover(event, skill.details)}
+                                                />
+                                            </>
+                                        )
 
-                        <img
-                            alt="numan ahmed"
-                            class="object-cover object-center imgJump txtLogo"
-                            src="../icons/skills/js.webp"
-                            style={{ width: "100px", transform: "skewY(14deg)", filter: "drop-shadow(1rem -1rem 2px black)", position: 'relative', left: '60%' }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/react.webp"
-                            divStyles={{ width: '100px', height: '100px', borderRadius: '100%', background: 'linear-gradient(120deg, #1D976C, #2c3e50)', top: '-119px', left: '10%', }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/nodejs-full.png"
-                            divStyles={{ width: '200px', height: '120px', padding: '5px 15px', background: '#455d52', top: '-80px', left: '30%' }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/redux.svg"
-                            divStyles={{ width: '100px', height: '100px', borderRadius: '100%', padding: '5px 10px', top: '-50px', left: '15%', }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/material-ui.png"
-                            picHeight=''
-                            divStyles={{ width: '100px', height: '58px', top: '-145px', left: '60%', }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/github.webp"
-                            divStyles={{ borderRadius: '100%', background: 'linear-gradient(120deg, white, gray)', top: '-90px', left: '50%' }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/git.svg"
-                            divStyles={{ width: '70px', height: '70px', top: '-220px', left: '20%' }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/tailwind-css.png"
-                            divStyles={{ top: '-175px', left: '35%', width: '70px', height: '70px', borderRadius: '100%', background: 'linear-gradient(120deg, #1D976C, #2c3e50)' }}
-                        />
-
-                        <img
-                            alt="numan ahmed"
-                            class="object-cover object-center imgJump txtLogo"
-                            src="../icons/skills/vs-code.webp"
-                            style={{ width: "100px", transform: "skewY(14deg)", filter: "drop-shadow(1rem -1rem 2px black)", position: 'relative', left: '50%', top: '-165px' }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/rest-api.png"
-                            divStyles={{ top: '-175px', left: '10%', height: '130px', background: 'linear-gradient(120deg, white, #111827)', padding: '5px' }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/mongodb.png"
-                            divStyles={{ top: '-205px', left: '60%', width: '114px', height: '100%', }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/express-js.png"
-                            divStyles={{ top: '-266px', left: '17%', height: '100%', background: '#000000' }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/aws-s3.png"
-                            divStyles={{ top: '-190px', left: '45%', height: '90px', width: '140px', padding: '8px 0px' }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/postman.svg"
-                            divStyles={{ top: '-185px', left: '20%', borderRadius: '100%', height: '90px', width: '90px' }}
-                        />
-
-                        <Tech
-                            pic="../icons/skills/socket-io.svg"
-                            divStyles={{ top: '-185px', left: '50%', borderRadius: '100%', height: '90px', width: '90px', background: 'white' }}
-                        />
+                                    default:
+                                        break;
+                                }
+                            })
+                        }
                     </div>
-
                 </section>
+                {skillsData && (
+                    <SkillsPopover
+                        skillImgElem={skillImgElem}
+                        popoverId={popoverId}
+                        openPopover={openPopover}
+                        closeSkillPopover={closeSkillPopover}
+                    >
+                        <div className="pt-3">
+                            <div className="flex justify-between">
+                                <div className="text-center">
+                                    <span class="inline-flex items-center justify-center px-6 py-1 leading-none text-indigo-100 bg-pink-700 rounded ">
+                                        {skillDetails?.title}
+                                    </span>
+                                </div>
+                                <div className="text-white">
+                                    <button onClick={closeSkillPopover}>X</button>
+                                </div>
+                            </div>
+                            <div className="">
+                                <div class="repo-cards">
+                                    {
+                                        skillDetails?.projects.map(project => (
+                                            <div class="repo-card">
+                                                <div className="flex justify-between">
+                                                    <h2 class="card-title font-bold" style={{ color: '#bb86fc' }}>
+                                                        {project.title}
+                                                    </h2>
+                                                    {project.links.demo ? (
+                                                        <span className="">
+                                                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-5 h-5 flex-shrink" color="#bb86fc" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
+                                                        </span>
+                                                    ) : (
+                                                        <span className="card-title-circle"></span>
+                                                    )}
+                                                </div>
+                                                <p class="description">
+                                                    {project.description}
+                                                </p>
+                                                <div class="flex justify-around mt-2">
+                                                    {project.links.demo && (
+                                                        <span>
+                                                            <a target="_BLANK" href={project.links.demo}>
+                                                                <img alt="numan ahmed" src="../icons/demo.png" width="30px" />
+                                                            </a>
+                                                        </span>
+                                                    )}
+                                                    {project.links.code && (
+                                                        <span>
+                                                            <a target="_BLANK" href={project.links.code}>
+                                                                <img alt="numan ahmed" src="../icons/github-small.svg" width="30px" />
+                                                            </a>
+                                                        </span>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                            <div className="text-center my-4">
+                                {/* <button class="inline-flex text-gray-400 bg-gray-800 border-0  px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded">More</button> */}
+                            </div>
+                        </div>
+                    </SkillsPopover>
+                )}
             </section>
         </>
     )
