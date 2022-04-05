@@ -2,6 +2,7 @@ import React from 'react';
 import SingleProject from './SingleProject';
 import projectsData from '../../assets/data/projectsData.json';
 import useScreenWidth from '../../hooks/useScreenWidth';
+import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
 
 const Projects = () => {
     const screenSize = useScreenWidth();
@@ -36,9 +37,7 @@ const Projects = () => {
                                                 <div class="my-2">
                                                     {
                                                         projectData.usedTech.map((tech, index) => (
-                                                            <span key={index} class="inline-flex items-center justify-center px-2 py-1 mr-1 text-xs font-bold leading-none text-indigo-100 bg-pink-700 rounded">
-                                                                {tech}
-                                                            </span>
+                                                            <SkillDiv key={index} skill={tech} />
                                                         ))
                                                     }
                                                 </div>

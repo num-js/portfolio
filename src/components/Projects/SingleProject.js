@@ -1,4 +1,5 @@
 import React from 'react';
+import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
 
 const SingleProject = ({ projectData }) => {
     return (
@@ -17,9 +18,7 @@ const SingleProject = ({ projectData }) => {
                         <div class="my-2">
                             {
                                 projectData.usedTech.map((tech, index) => (
-                                    <span key={index} class="inline-flex items-center justify-center px-2 py-1 mr-1 text-xs font-bold leading-none text-indigo-100 bg-pink-700 rounded">
-                                        {tech}
-                                    </span>
+                                    <SkillDiv key={index} skill={tech} />
                                 ))
                             }
                         </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
 
 const DesktopViewExperience = ({ experiencesData }) => {
     return (
@@ -36,9 +37,7 @@ const DesktopViewExperience = ({ experiencesData }) => {
                                             {
                                                 companyData.workingTech.technologies.map((tech, index) => (
                                                     <div class="p-4 sm:w-1/4 w-1/2">
-                                                        <h1 class="inline-flex items-center justify-center px-2 py-1 mr-1 text-xs font-bold leading-none text-indigo-100 bg-pink-700 rounded">
-                                                            {tech}
-                                                        </h1>
+                                                        <SkillDiv skill={tech} />
                                                     </div>
                                                 ))
                                             }
@@ -77,9 +76,7 @@ const DesktopViewExperience = ({ experiencesData }) => {
                                             {
                                                 companyData.workingTech.technologies.map((tech, index) => (
                                                     <div class="p-4 sm:w-1/4 w-1/2">
-                                                        <h1 class="inline-flex items-center justify-center px-2 py-1 mr-1 text-xs font-bold leading-none text-indigo-100 bg-pink-700 rounded">
-                                                            {tech}
-                                                        </h1>
+                                                        <SkillDiv skill={tech} />
                                                     </div>
                                                 ))
                                             }
