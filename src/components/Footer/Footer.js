@@ -8,8 +8,10 @@ import Logo from '../SharedComponents/ActiveStatusGreenDot/Logo';
 const Footer = () => {
     return (
         <>
-            <div class="" style={{ backgroundColor: "#3d393961" }}>
-                <div>
+            <div class=""
+                style={{ backgroundColor: "#3d393961", }}
+            >
+                <div style={{ background: `url("../backgrounds/bg-circles.svg")`, backgroundPositionX: "-157%", backgroundPositionY: "6%" }}>
                     <div class="container mx-auto px-3 lg:px-20 py-12">
                         <div class="lg:flex">
                             <div class="w-full lg:w-2/3">
