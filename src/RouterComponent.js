@@ -14,7 +14,7 @@ const RouterComponent = () => {
         <>
             <Switch>
                 <Route exact path={INDEX}>
-                    <div className="App" style={{ background: `url("../backgrounds/bg-circles.svg")`, backgroundPositionX: "-157%", backgroundPositionY: "54%", backgroundRepeat: "inherit" }}>
+                    <div className="App" style={{ background: `url("../backgrounds/bg-circles.svg")`, backgroundPositionX: "-150%", backgroundPositionY: "54%", backgroundRepeat: "inherit" }}>
                         <ProfileText />
                         <ProfilePicture />
                     </div>

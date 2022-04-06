@@ -26,6 +26,7 @@ const Skills = () => {
     return (
         <>
             <section class="text-gray-600 body-font lg:mt-10">
+                
                 <div align="center">
                     <h1 class="text-2xl font-medium text-white title-font mb-2">Tech Stack</h1>
                 </div>

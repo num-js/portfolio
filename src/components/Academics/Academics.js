@@ -8,7 +8,7 @@ const Academics = () => {
             <section class="text-gray-600 body-font lg:mt-10 my-10 mb-32 lg:mx-20">
                 <div align="center" class="flex justify-center">
                     <h1 class="text-2xl font-medium text-white title-font mb-2 mr-1">
-                        Academics 
+                        Academics
                     </h1>
                     <svg version="1.1" id="svg4619" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 15 15" style={{ enableBackground: "new 0 0 15 15" }}>
                         <path id="path9" style={{ fill: "white" }} d="M7.5,1L0,4.5l2,0.9v1.7C1.4,7.3,1,7.9,1,8.5s0.4,1.2,1,1.4V10l-0.9,2.1  C0.8,13,1,14,2.5,14s1.7-1,1.4-1.9L3,10c0.6-0.3,1-0.8,1-1.5S3.6,7.3,3,7.1V5.9L7.5,8L15,4.5L7.5,1z M11.9,7.5l-4.5,2L5,8.4v0.1  c0,0.7-0.3,1.3-0.8,1.8l0.6,1.4v0.1C4.9,12.2,5,12.6,4.9,13c0.7,0.3,1.5,0.5,2.5,0.5c3.3,0,4.5-2,4.5-3L11.9,7.5L11.9,7.5z" />
@@ -40,6 +40,7 @@ const Academics = () => {
                                             <h2 class="lg:text-2xl text-xl font-medium text-pink-600 title-font mb-2">
                                                 {collegeData?.course}
                                             </h2>
+                                            <img src="../icons/small-circle.svg" className="absolute right-0" />
                                             <span class="text-base text-white">
                                                 <span className="font-medium">{collegeData?.board}</span> - {collegeData?.name}
                                             </span>
@@ -67,6 +68,7 @@ const Academics = () => {
                                                         <ExternalLink link={collegeData.marks.link} />
                                                     </div>
                                                 </div>
+
                                                 {collegeData?.marks?.semMarks && (
                                                     <div class="mt-5 lg:w-2/3 mx-auto overflow-auto">
                                                         <table class="text-left whitespace-no-wrap m-6" style={{ transform: 'rotate(-5deg)' }}>
@@ -109,6 +111,7 @@ const Academics = () => {
                             style={{ transform: 'translate(5%, -50%)', opacity: '0.9' }}
                         >
                             <img class="imgJump" src="../images/numan-learning.png" />
+                            <img src="../icons/small-circle.svg" className="absolute" />
                         </div>
                     </div>
                 </div>
