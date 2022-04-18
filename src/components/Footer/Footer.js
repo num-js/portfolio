@@ -38,8 +38,8 @@ const Footer = () => {
                                     </div>
                                     <div class="w-full lg:w-1/2 lg:flex lg:px-6 ">
                                         <div class="w-full mb-6 lg:mb-0 lg:w-1/2">
-                                            <h2 className="font-bold text-gray-100 mb-4 text-lg">Links</h2>
-                                            <ul class="text-gray-500 text-sm">
+                                            <h2 className="mb-4 text-lg font-bold text-gray-100">Links</h2>
+                                            <ul class="text-gray-300 text-sm">
                                                 {
                                                     navBarMenu.map(({ label, link }, index) => (
                                                         <li class="pt-1 pb-2 font-bold">
@@ -47,7 +47,6 @@ const Footer = () => {
                                                                 <NavLink key={index}
                                                                     exact to={link}
                                                                     activeStyle={{ color: `rgba(219, 39, 119` }}
-                                                                // onClick={() => null}
                                                                 >
                                                                     {label}
                                                                 </NavLink>
@@ -59,7 +58,7 @@ const Footer = () => {
                                         </div>
                                         <div class="w-full mb-6 lg:mb-0 lg:w-1/2">
                                             <h2 class="font-bold text-gray-100 mb-4"> Skills </h2>
-                                            <ul class="text-gray-500 text-sm">
+                                            <ul class="text-gray-300 text-sm">
                                                 <li class="pt-1 pb-2">Front-End Development</li>
                                                 <li class="pt-1 pb-2">Back-End Development</li>
                                                 <li class="pt-1 pb-2">Hybrid-App Development</li>
@@ -95,7 +94,7 @@ const Footer = () => {
                             All rights reserved.
                         </div>
                         <div class="flex font-light justify-center text-gray-500 text-sm">
-                            Designed & Developed with 💖 by  &nbsp; <span> <Logo icon={false} animation={true} txtSize={16} /> </span>
+                            Designed & Developed with ❤️ by  &nbsp; <span> <Logo icon={false} animation={true} txtSize={16} /> </span>
                         </div>
                     </div>
                 </div>
