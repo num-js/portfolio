@@ -8,9 +8,9 @@ const MobileExperience = ({ experiencesData }) => {
         experiencesData?.map((companyData) => (
             <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
                 <div class="h-full w-6 absolute inset-2 flex items-center justify-center">
-                    <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                    <div class="absolute h-full w-1 bg-gray-500"></div>
                 </div>
-                <div class="flex-shrink-0 w-10 h-10 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-500 text-white relative z-10 title-font font-medium text-sm">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-gray-500 text-white relative z-10 title-font font-medium text-sm">
                     {getDuration(companyData?.timeLine.start, companyData?.timeLine?.end)}
                 </div>
                 <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">

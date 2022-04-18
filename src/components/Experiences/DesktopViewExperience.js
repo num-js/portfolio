@@ -6,7 +6,7 @@ import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
 const DesktopViewExperience = ({ experiencesData }) => {
     return (
         <>
-            <div class="border-2-2 absolute border-opacity-20 h-full border" style={{ left: '50%' }}></div>
+            <div class="absolute h-full w-1 bg-gray-500" style={{ left: '49.8%' }}></div>
             {
                 experiencesData?.map((companyData, index) => {
                     const isLeftSide = index % 2 == 0;
@@ -19,7 +19,7 @@ const DesktopViewExperience = ({ experiencesData }) => {
                                     </a>
                                 </div>
                             </div>
-                            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-10 h-10 rounded-full">
+                            <div class="z-20 flex items-center order-1 bg-gray-500 shadow-xl w-10 h-10 rounded-full">
                                 <h1 class="mx-auto font-semibold text-lg text-white">{getDuration(companyData?.timeLine.start, companyData?.timeLine?.end)}</h1>
                             </div>
                             <div class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4"
@@ -39,7 +39,7 @@ const DesktopViewExperience = ({ experiencesData }) => {
                                     Used Tech Stack
                                     <div className="">
                                         <div class="flex flex-wrap -m-4 text-center">
-                                            {companyData?.workingTech.map((tech, index) => (
+                                            {companyData?.workingTech.map((tech) => (
                                                 <div class="p-4 sm:w-1/4 w-1/2">
                                                     <SkillDiv skill={tech} />
                                                 </div>
@@ -47,7 +47,15 @@ const DesktopViewExperience = ({ experiencesData }) => {
                                         </div>
                                     </div>
                                 </div>
+                                <div>
+                                    <a target='_blank' href={companyData?.companyURL} class="mt-3 text-pink-500 inline-flex items-center">More
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
+
                         </div>
                     )
                 })
