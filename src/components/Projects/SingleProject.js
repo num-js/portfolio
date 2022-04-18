@@ -1,11 +1,12 @@
 import React from 'react';
+import { generateRandomNumber } from '../../helpers/generateNumber';
 import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
 
 const SingleProject = ({ projectData }) => {
     return (
         <section class="text-gray-600 body-font overflow-hidden">
-            <div class="container px-5 py-10 mx-auto">
-                <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="container px-5 py-6 mx-auto">
+                <div class="lg:w-4/5 px-2 py-2 mx-auto flex flex-wrap black-shadow">
                     <img alt="numan ahmed" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
                         src={projectData.image}
                     />

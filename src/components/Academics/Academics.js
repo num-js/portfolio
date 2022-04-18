@@ -71,7 +71,7 @@ const Academics = () => {
 
                                                 {collegeData?.marks?.semMarks && (
                                                     <div class="mt-5 lg:w-2/3 mx-auto overflow-auto">
-                                                        <table class="text-left whitespace-no-wrap m-6" style={{ transform: 'rotate(-5deg)' }}>
+                                                        <table class="text-left whitespace-no-wrap m-6 black-shadow" style={{ transform: 'rotate(-5deg)' }}>
                                                             <thead>
                                                                 <tr>
                                                                     {
