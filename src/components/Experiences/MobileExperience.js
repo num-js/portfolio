@@ -1,5 +1,6 @@
 import React from 'react'
 import { generateRandomNumber } from '../../helpers/generateNumber';
+import { getDuration, getMonthNameYear } from '../../helpers/getDate';
 import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
 
 const MobileExperience = ({ experiencesData }) => {
@@ -10,7 +11,7 @@ const MobileExperience = ({ experiencesData }) => {
                     <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div class="flex-shrink-0 w-10 h-10 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-500 text-white relative z-10 title-font font-medium text-sm">
-                    {companyData?.duration}
+                    {getDuration(companyData?.timeLine.start, companyData?.timeLine?.end)}
                 </div>
                 <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                     <div class="flex-shrink-0 w-24 h-24 rounded-full inline-flex items-center justify-center">
@@ -26,7 +27,7 @@ const MobileExperience = ({ experiencesData }) => {
                                 {companyData?.name}
                             </h2>
                             <span className="mt-1 text-sm text-gray-500">
-                                {companyData?.timeLine}
+                                {getMonthNameYear(companyData?.timeLine.start)} -- {companyData?.timeLine.end === "" ? "present" : getMonthNameYear(companyData?.timeLine.end)}
                             </span>
                             <h2 class="text-pink-600 text-lg title-font font-medium">
                                 {companyData?.role}

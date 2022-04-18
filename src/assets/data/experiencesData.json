@@ -1,12 +1,14 @@
 [
     {
         "name": "DarwinBox",
-        "timeLine": "Feb 2022 - present",
+        "timeLine": {
+            "start": "2022-02",
+            "end": ""
+        },
         "role": "Sr. Software Engineer",
         "description": "DarwinBox a HCM Platform, based in Hyderabad, INDIA.",
         "companyLogo": "../icons/dbox.png",
         "companyURL": "https://darwinbox.com/",
-        "duration": "4M",
         "workingTech": [
             "Angular",
             "ReactJS",
@@ -18,12 +20,14 @@
     },
     {
         "name": "X2A-Wealth42",
-        "timeLine": "Jul 2021 - Jan 2022",
+        "timeLine": {
+            "start": "2021-07",
+            "end": "2022-01"
+        },
         "role": "Software Developement Engineer",
         "description": "Wealth42 a Fin-Tech startup, based in Bengaluru, INDIA.",
         "companyLogo": "../icons/w42.png",
         "companyURL": "https://wealth42.com/",
-        "duration": "7M",
         "workingTech": [
             "ReactJS",
             "PWA",
@@ -38,12 +42,14 @@
     },
     {
         "name": "SrcLogicx",
-        "timeLine": "Aug 2020 - Jul 2021",
+        "timeLine": {
+            "start": "2020-08-01",
+            "end": "2021-07-01"
+        },
         "role": "Full Stack Developer",
         "description": "SrcLogicx is a startup related to Video/Audio Chat solutions, based in San Diego, California, US.",
         "companyLogo": "../icons/srclogicx.png",
         "companyURL": "https://srclogix.com/",
-        "duration": "1Y",
         "workingTech": [
             "ReactJS",
             "NodeJS",

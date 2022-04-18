@@ -1,5 +1,6 @@
 import React from 'react'
 import { generateRandomNumber } from '../../helpers/generateNumber';
+import { getDuration, getMonthNameYear } from '../../helpers/getDate';
 import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
 
 const DesktopViewExperience = ({ experiencesData }) => {
@@ -19,14 +20,14 @@ const DesktopViewExperience = ({ experiencesData }) => {
                                 </div>
                             </div>
                             <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-10 h-10 rounded-full">
-                                <h1 class="mx-auto font-semibold text-lg text-white">{companyData?.duration}</h1>
+                                <h1 class="mx-auto font-semibold text-lg text-white">{getDuration(companyData?.timeLine.start, companyData?.timeLine?.end)}</h1>
                             </div>
                             <div class="order-1 rounded-lg shadow-xl w-5/12 px-6 py-4"
                                 style={{ boxShadow: `0px 0px 15px 1px rgb(${generateRandomNumber(100, 255)} ${generateRandomNumber(100, 255)} ${generateRandomNumber(100, 255)})` }}
                             >
                                 <h3 class="font-bold text-xl text-white">{companyData?.name}</h3>
                                 <span className="text-sm text-gray-300">
-                                    {companyData?.timeLine}
+                                    {getMonthNameYear(companyData?.timeLine.start)} -- {companyData?.timeLine.end === "" ? "present" : getMonthNameYear(companyData?.timeLine.end)}
                                 </span>
                                 <h3 class="font-bold text-xl text-pink-600 title-font mb-2">
                                     {companyData?.role}
