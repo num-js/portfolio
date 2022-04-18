@@ -36,7 +36,7 @@ const MobileExperience = ({ experiencesData }) => {
                             </p>
                             <div class="mt-2 font-semibold text-green-200">
                                 {companyData.workingTech.label}
-                                <div className="mx-10">
+                                <div className="mx-auto">
                                     <div class="flex flex-wrap -m-4 text-center">
                                         {
                                             companyData.workingTech.technologies.map((tech, index) => (
