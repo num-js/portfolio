@@ -10,12 +10,12 @@ const MobileExperience = ({ experiencesData }) => {
                     <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
                 </div>
                 <div class="flex-shrink-0 w-10 h-10 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-500 text-white relative z-10 title-font font-medium text-sm">
-                    {companyData.duration}
+                    {companyData?.duration}
                 </div>
                 <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
                     <div class="flex-shrink-0 w-24 h-24 rounded-full inline-flex items-center justify-center">
-                        <a target='_blank' href={companyData.companyURL}>
-                            <img className="rounded-full imgJump" src={companyData.companyLogo} />
+                        <a target='_blank' href={companyData?.companyURL}>
+                            <img className="rounded-full imgJump" src={companyData?.companyLogo} />
                         </a>
                     </div>
                     <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
@@ -23,23 +23,23 @@ const MobileExperience = ({ experiencesData }) => {
                             style={{ boxShadow: `0px 0px 15px 1px rgb(${generateRandomNumber(100, 255)} ${generateRandomNumber(100, 255)} ${generateRandomNumber(100, 255)})` }}
                         >
                             <h2 class="text-white text-lg title-font font-medium">
-                                {companyData.name}
+                                {companyData?.name}
                             </h2>
                             <span className="mt-1 text-sm text-gray-500">
-                                {companyData.timeLine}
+                                {companyData?.timeLine}
                             </span>
                             <h2 class="text-pink-600 text-lg title-font font-medium">
-                                {companyData.role}
+                                {companyData?.role}
                             </h2>
                             <p class="leading-relaxed text-base text-gray-400">
-                                {companyData.description}
+                                {companyData?.description}
                             </p>
                             <div class="mt-2 font-semibold text-green-200">
-                                {companyData.workingTech.label}
+                                Used Tech Stack
                                 <div className="mx-auto">
                                     <div class="flex flex-wrap -m-4 text-center">
                                         {
-                                            companyData.workingTech.technologies.map((tech, index) => (
+                                            companyData?.workingTech?.map((tech, index) => (
                                                 <div class="p-4 sm:w-1/4 w-1/2">
                                                     <SkillDiv skill={tech} />
                                                 </div>
@@ -48,7 +48,7 @@ const MobileExperience = ({ experiencesData }) => {
                                     </div>
                                 </div>
                             </div>
-                            <a target='_blank' href={companyData.companyURL} class="mt-3 text-pink-500 inline-flex items-center">More
+                            <a target='_blank' href={companyData?.companyURL} class="mt-3 text-pink-500 inline-flex items-center">More
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
