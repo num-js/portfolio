@@ -24,7 +24,7 @@ const SingleProject = ({ projectData }) => {
                             }
                         </div>
 
-                        <div class="flex items-center border-b-2 border-gray-600"></div>
+                        <div class="flex items-center border-b-2 border-gray-800"></div>
 
                         <div class="flex mt-2 justify-around items-center">
                             <span>
