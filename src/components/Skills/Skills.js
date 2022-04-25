@@ -3,6 +3,7 @@ import SkillsPopover from './SkillsPopover';
 import Tech from './Tech/Tech';
 import skillsData from '../../assets/data/skillsData.json';
 import "./skills.css";
+import RotatingCircle from '../SharedComponents/RotatingCircle/RotatingCircle';
 
 const Skills = () => {
     const [skillImgElem, setSkillImgElem] = useState(null);
@@ -26,47 +27,36 @@ const Skills = () => {
     return (
         <>
             <section class="text-gray-600 body-font lg:mt-10">
-                
+
                 <div align="center">
                     <h1 class="text-2xl font-medium text-white title-font mb-2">Tech Stack</h1>
                 </div>
-                <section className="tech-section">
-                    <div className="w-full h-full">
+
+                <div className="rotating-skills-section" style={{ minHeight: "65vh" }}>
+                    <div className="flex mt-40 justify-evenly rotating-skills-container">
                         {
-                            skillsData.map(skill => {
-                                switch (skill.type) {
-                                    case "div":
-                                        return (
-                                            <>
-                                                <Tech
-                                                    pic={skill.pic}
-                                                    divStyles={skill.styles}
-                                                    skill={skill}
-                                                    showSkillPopover={showSkillPopover}
-                                                />
-                                            </>
-                                        )
-
-                                    case "img":
-                                        return (
-                                            <>
-                                                <img
-                                                    alt="numan ahmed"
-                                                    class="object-cover object-center imgJump txtLogo"
-                                                    src={skill.pic}
-                                                    style={skill.styles}
-                                                    onClick={(event) => showSkillPopover(event, skill.details)}
-                                                />
-                                            </>
-                                        )
-
-                                    default:
-                                        break;
-                                }
+                            skillsData?.fullStack?.map(data => {
+                                return (
+                                    <div id={data?.id}>
+                                        <RotatingCircle data={data} showSkillPopover={showSkillPopover} />
+                                    </div>
+                                )
                             })
                         }
                     </div>
-                </section>
+                    <div className="flex mt-52 justify-evenly rotating-skills-container">
+                        {
+                            skillsData?.others?.map(data => {
+                                return (
+                                    <div id={data?.id}>
+                                        <RotatingCircle data={data} showSkillPopover={showSkillPopover} />
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+
                 {skillsData && (
                     <SkillsPopover
                         skillImgElem={skillImgElem}
@@ -78,17 +68,19 @@ const Skills = () => {
                             <div className="flex justify-between">
                                 <div className="text-center">
                                     <span class="inline-flex items-center justify-center px-6 py-1 leading-none text-indigo-100 bg-pink-700 rounded ">
-                                        {skillDetails?.title}
+                                        {skillDetails?.name}
                                     </span>
                                 </div>
-                                <div className="text-white">
-                                    <button onClick={closeSkillPopover}>X</button>
-                                </div>
+                                {skillDetails?.projects?.length ? (
+                                    <div className="text-white">
+                                        <button onClick={closeSkillPopover}>X</button>
+                                    </div>
+                                ) : null}
                             </div>
                             <div className="">
                                 <div class="repo-cards">
                                     {
-                                        skillDetails?.projects.map(project => (
+                                        skillDetails?.projects?.map(project => (
                                             <div class="repo-card">
                                                 <div className="flex justify-between">
                                                     <h2 class="card-title font-bold" style={{ color: '#bb86fc' }}>
@@ -126,12 +118,15 @@ const Skills = () => {
                                     }
                                 </div>
                             </div>
-                            <div className="text-center my-4">
+                            <div className="my-4 text-center">
                                 {/* <button class="inline-flex text-gray-400 bg-gray-800 border-0  px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded">More</button> */}
                             </div>
                         </div>
                     </SkillsPopover>
                 )}
+
+
+
             </section>
         </>
     )
