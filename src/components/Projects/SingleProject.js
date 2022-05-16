@@ -27,21 +27,21 @@ const SingleProject = ({ projectData }) => {
                         <div class="flex items-center border-b-2 border-gray-800"></div>
 
                         <div class="flex mt-2 justify-around items-center">
-                            <span>
-                                <a target="_BLANK" href={projectData.demo}>
+                            {projectData?.demo && <span>
+                                <a target="_BLANK" href={projectData?.demo}>
                                     <img alt="numan ahmed" src="../icons/demo.png" width="80%" />
                                 </a>
-                            </span>
-                            <span>
-                                <a target="_BLANK" href={projectData.code}>
+                            </span>}
+                            {projectData?.code && <span>
+                                <a target="_BLANK" href={projectData?.code}>
                                     <img alt="numan ahmed" src="../icons/codes.png" width="80%" />
                                 </a>
-                            </span>
-                            <span>
+                            </span>}
+                            {projectData.repo && <span>
                                 <a target="_BLANK" href={`${projectData.repo}`}>
                                     <img alt="numan ahmed" src="../icons/github-small.svg" width="80%" />
                                 </a>
-                            </span>
+                            </span>}
                         </div>
                     </div>
                 </div>
