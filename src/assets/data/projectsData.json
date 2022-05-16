@@ -1,6 +1,22 @@
 [
     {
+        "name": "Novies",
+        "type": "front-end",
+        "image": "../images/projects/novies.png",
+        "demo": "https://novies-info.web.app/",
+        "code": "https://github1s.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind",
+        "repo": "https://github.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind",
+        "description": "Get latest & trending🔥 Movies informations.",
+        "usedTech": [
+            "ReactJS",
+            "TailwindCSS",
+            "Redux-Toolkit",
+            "PWA"
+        ]
+    },
+    {
         "name": "Sharify",
+        "type": "front-end back-end",
         "image": "../images/projects/sharify.png",
         "demo": "https://file-sharify.vercel.app/",
         "code": "https://github1s.com/mdnmnahmed/sharify-frontend",
@@ -16,21 +32,39 @@
         ]
     },
     {
-        "name": "Novies",
-        "image": "../images/projects/novies.png",
-        "demo": "https://novies-info.web.app/",
-        "code": "https://github1s.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind",
-        "repo": "https://github.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind",
-        "description": "Get latest & trending🔥 Movies informations.",
+        "name": "TokTown-Dashboard",
+        "type": "front-end back-end company",
+        "image": "../images/projects/toktown-dashboard.png",
+        "demo": "https://dashboard.toktown.com/",
+        "code": "",
+        "repo": "",
+        "description": "Voice and Video chat & cloud meetings management console, where admin customize and manage all the settings of the meetings.",
         "usedTech": [
-            "ReactJS",
-            "TailwindCSS",
-            "Redux-Toolkit",
-            "PWA"
+            "NextJS",
+            "NodeJS",
+            "ExpressJS",
+            "MongoDB",
+            "CSS",
+            "AWS-S3"
+        ]
+    },
+    {
+        "name": "TokTown",
+        "type": "front-end company",
+        "image": "../images/projects/toktown-video.png",
+        "demo": "https://meet.toktown.com/",
+        "code": "",
+        "repo": "",
+        "description": "TokTown a customizable Voice and Video chat & cloud meetings web app using AWS-Chime SDK.",
+        "usedTech": [
+            "NextJS",
+            "CSS",
+            "AWS-Chieme"
         ]
     },
     {
         "name": "Noogle Contacts",
+        "type": "front-end back-end",
         "image": "../images/projects/noogle-contacts.png",
         "demo": "https://noogle-contacts.web.app/",
         "code": "https://github1s.com/mdnmnahmed/noogle-contacts",
@@ -45,7 +79,22 @@
         ]
     },
     {
+        "name": "Wealth42",
+        "type": "front-end company",
+        "image": "../images/projects/wealth42.png",
+        "demo": "https://wealth42.com/",
+        "code": "",
+        "repo": "",
+        "description": "Personal Finance tool that can help you manage your investments, expenses, loans, financial goals – all in one place.",
+        "usedTech": [
+            "NextJS",
+            "TailwindCSS",
+            "TypeScript"
+        ]
+    },
+    {
         "name": "CodingPosts",
+        "type": "front-end back-end",
         "image": "../images/projects/codingposts.jpg",
         "demo": "https://coding-posts.herokuapp.com/",
         "code": "https://github1s.com/mdnmnahmed/CodingPosts",
@@ -61,6 +110,7 @@
     },
     {
         "name": "ToDo-Task",
+        "type": "front-end back-end",
         "image": "../images/projects/todo-mern.jpg",
         "demo": "https://todo-task-mern.herokuapp.com/",
         "code": "https://github1s.com/mdnmnahmed/ToDo-Task",
@@ -75,6 +125,7 @@
     },
     {
         "name": "EduFun",
+        "type": "front-end",
         "image": "../images/projects/edufun.png",
         "demo": "https://edufun-webapp.web.app/",
         "code": "https://github1s.com/mdnmnahmed/edufun-webapp",
@@ -87,6 +138,7 @@
     },
     {
         "name": "Lrn Web Dev",
+        "type": "front-end",
         "image": "../images/projects/lrn-web-dev.png",
         "demo": "https://lrn-web-dev.web.app/",
         "code": "https://github1s.com/mdnmnahmed/lrnwebdev",
