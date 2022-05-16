@@ -1,5 +1,35 @@
 [
     {
+        "name": "Sharify",
+        "image": "../images/projects/sharify.png",
+        "demo": "https://file-sharify.vercel.app/",
+        "code": "https://github1s.com/mdnmnahmed/sharify-frontend",
+        "repo": "https://github.com/mdnmnahmed/sharify-frontend",
+        "description": "Fast, Easy and Reliable File Sharing.",
+        "usedTech": [
+            "NextJS",
+            "TypeScript",
+            "NodeJS",
+            "ExpressJS",
+            "Cloudinary",
+            "TailwindCSS"
+        ]
+    },
+    {
+        "name": "Novies",
+        "image": "../images/projects/novies.png",
+        "demo": "https://novies-info.web.app/",
+        "code": "https://github1s.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind",
+        "repo": "https://github.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind",
+        "description": "Get latest & trending🔥 Movies informations.",
+        "usedTech": [
+            "ReactJS",
+            "TailwindCSS",
+            "Redux-Toolkit",
+            "PWA"
+        ]
+    },
+    {
         "name": "Noogle Contacts",
         "image": "../images/projects/noogle-contacts.png",
         "demo": "https://noogle-contacts.web.app/",

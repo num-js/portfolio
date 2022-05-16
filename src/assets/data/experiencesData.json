@@ -10,7 +10,6 @@
         "companyLogo": "../icons/dbox.png",
         "companyURL": "https://darwinbox.com/",
         "workingTech": [
-            "Angular",
             "ReactJS",
             "Redux-ToolKit",
             "Bootstrap",
@@ -54,6 +53,7 @@
             "ReactJS",
             "NodeJS",
             "NextJS",
+            "ExpressJS",
             "Redux",
             "AWS-S3",
             "MongoDB",
