@@ -3,6 +3,9 @@ import SingleProject from './SingleProject';
 import projectsData from '../../assets/data/projectsData.json';
 import useScreenWidth from '../../hooks/useScreenWidth';
 import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
+import { generateRandomNumber } from '../../helpers/generateNumber';
+import { Link } from 'react-router-dom';
+import { PROJECTS } from '../../helpers/routesURL';
 
 const Projects = () => {
     const screenSize = useScreenWidth();
@@ -16,7 +19,7 @@ const Projects = () => {
 
     return (
         <>
-            <section class="text-gray-600 body-font lg:mt-10">
+            <section class="text-gray-600 body-font lg:mt-10 mb-20">
                 <div align="center">
                     <h1 class="text-2xl font-medium text-white title-font mb-2">Projects</h1>
                 </div>
@@ -116,13 +119,30 @@ const Projects = () => {
                         )
                     }
                 </div>
-
-                {/* <div>
+                <div>
                     {!showAllProjects && (
-                        <>
-                        </>
+                        <div align="center">
+                            <div class="order-1 rounded-lg shadow-xl px-4 py-2"
+                                style={{ boxShadow: `0px 0px 15px 1px rgb(${generateRandomNumber(100, 255)} ${generateRandomNumber(100, 255)} ${generateRandomNumber(100, 255)})`, width: 'fit-content' }}
+                            >
+                                <Link to={PROJECTS}>
+                                    <span class="text-l text-white">
+                                        More Projects
+                                    </span>
+                                </Link>
+                            </div>
+
+                            <div className="flex justify-between" style={{ width: '210px', position: 'relative', top: '-10px' }}>
+                                <div style={{ position: '', left: '' }}>
+                                    <img src="../icons/left-spiral-arrow.gif" alt="left-arrow" class="h-12" />
+                                </div>
+                                <div style={{ position: '', left: '' }}>
+                                    <img src="../icons/right-spiral-arrow.gif" alt="left-arrow" class="h-12" />
+                                </div>
+                            </div>
+                        </div>
                     )}
-                </div> */}
+                </div>
             </section>
         </>
     );
