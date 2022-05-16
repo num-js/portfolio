@@ -60,7 +60,7 @@ const Projects = () => {
                                                 <div class={`bg-gray-800 p-5 rounded-lg min-h-64 w-80 relative -top-52 glass-div ${isLeftSide ? 'ml-auto left-32' : '-left-32'}`}
                                                     style={{ boxShadow: '0 2px 5px 0 rgb(0 0 0 / 100%), 0 2px 10px 0 rgb(0 0 0 / 100%)' }}
                                                 >
-                                                    <h1 class="text-2xl title-font font-medium mb-1 text-center" style={{ color: '#ff0052' }}>{projectData.name}</h1>
+                                                    <h1 class="text-2xl title-font font-medium mb-1 text-center ncolor-pink">{projectData.name}</h1>
 
                                                     {!projectData.repo && <span title="company" style={{ position: 'absolute', top: '8px', left: '91%' }}>
                                                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-5 h-5 flex-shrink" color="#ff0052" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
@@ -105,7 +105,7 @@ const Projects = () => {
                             </div>
                         ) : (
                             projectsData?.filter((projectData) => (projectData?.type?.includes(projectType)))?.map((projectData, index) => {
-                                if (!showAllProjects && index === 3) {
+                                if (!showAllProjects && index >= 3) {
                                     return;
                                 }
 
@@ -116,6 +116,13 @@ const Projects = () => {
                         )
                     }
                 </div>
+
+                {/* <div>
+                    {!showAllProjects && (
+                        <>
+                        </>
+                    )}
+                </div> */}
             </section>
         </>
     );

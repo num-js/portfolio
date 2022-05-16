@@ -11,7 +11,12 @@ const SingleProject = ({ projectData }) => {
                         src={projectData.image}
                     />
                     <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                        <h1 class="text-pink-500 text-2xl title-font font-medium mb-1">{projectData.name}</h1>
+                        <div className="flex justify-between">
+                            <h1 class="text-2xl title-font font-medium mb-1 ncolor-pink">{projectData.name}</h1>
+                            {!projectData.repo && <span title="company">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-5 h-5 flex-shrink" color="#ff0052" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
+                            </span>}
+                        </div>
                         <p class="leading-relaxed text-white my-2">
                             {projectData.description}
                         </p>
