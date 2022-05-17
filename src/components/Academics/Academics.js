@@ -15,7 +15,9 @@ const Academics = () => {
                     </svg>
                 </div>
 
-                <div class="flex flex-wrap w-full lg:mx-10">
+                <div class="flex flex-wrap w-full lg:mx-10"
+                    style={{ background: `url("../backgrounds/bg-circles.svg")`, backgroundPositionX: "-124%", backgroundPositionY: "-11%" }}
+                >
                     <div class="lg:w-1/2 md:w-1/2 md:pr-10 md:py-6 m-auto">
                         <div>
 
