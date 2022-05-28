@@ -139,4 +139,17 @@
         position: relative;
         top: 400px;
     }
+
+    .rotating-circle-container {
+        animation-play-state: paused;
+    }
+
+    .rotating-circle-container .rotating-circle-text {
+        animation-play-state: paused;
+    }
+
+    .rotating-circle-container .rotating-circle .rotating-inner-circle {
+        animation-play-state: paused;
+        cursor: pointer;
+    }
 }
