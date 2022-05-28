@@ -6,6 +6,7 @@ import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
 import { generateRandomNumber } from '../../helpers/generateNumber';
 import { Link } from 'react-router-dom';
 import { PROJECTS } from '../../helpers/routesURL';
+import scrollToPosition from '../../helpers/scrollToPosition';
 
 const Projects = () => {
     const screenSize = useScreenWidth();
@@ -125,7 +126,10 @@ const Projects = () => {
                             <div class="order-1 rounded-lg shadow-xl px-4 py-2"
                                 style={{ boxShadow: `0px 0px 15px 1px rgb(${generateRandomNumber(100, 255)} ${generateRandomNumber(100, 255)} ${generateRandomNumber(100, 255)})`, width: 'fit-content' }}
                             >
-                                <Link to={PROJECTS}>
+                                <Link
+                                    to={PROJECTS}
+                                    onClick={() => scrollToPosition()}
+                                >
                                     <span class="text-l text-white">
                                         More Projects
                                     </span>
