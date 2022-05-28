@@ -5,13 +5,13 @@ import Company from './Company';
 const Experiences = () => {
     return (
         <>
-            <section class="text-gray-600 body-font lg:mt-10">
+            <section className="text-gray-600 body-font lg:mt-10">
                 <div align="center">
-                    <h1 class="text-2xl font-medium text-white title-font mb-2">Experiences</h1>
+                    <h1 className="mb-2 text-2xl font-medium text-white title-font">Experiences</h1>
                 </div>
                 <div align="left">
-                    <div class="mt-5">
-                        <div class="-my-8 divide-y-2 divide-gray-100">
+                    <div className="mt-5">
+                        <div className="-my-8 divide-y-2 divide-gray-100">
                             {
                                 experiencesData.map((companyData, index) => (
                                     <Company companyData={companyData} />

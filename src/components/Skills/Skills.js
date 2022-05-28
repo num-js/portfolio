@@ -26,10 +26,10 @@ const Skills = () => {
 
     return (
         <>
-            <section class="text-gray-600 body-font lg:mt-10">
+            <section className="text-gray-600 body-font lg:mt-10">
 
                 <div align="center">
-                    <h1 class="text-2xl font-medium text-white title-font mb-2">Tech Stack</h1>
+                    <h1 className="mb-2 text-2xl font-medium text-white title-font">Tech Stack</h1>
                 </div>
 
                 <div className="rotating-skills-section" style={{ minHeight: "65vh" }}>
@@ -67,7 +67,7 @@ const Skills = () => {
                         <div className="pt-3">
                             <div className="flex justify-between">
                                 <div className="text-center">
-                                    <span class="inline-flex items-center justify-center px-6 py-1 leading-none text-indigo-100 bg-pink-700 rounded ">
+                                    <span className="inline-flex items-center justify-center px-6 py-1 leading-none text-indigo-100 bg-pink-700 rounded ">
                                         {skillDetails?.name}
                                     </span>
                                 </div>
@@ -78,26 +78,26 @@ const Skills = () => {
                                 ) : null}
                             </div>
                             <div className="">
-                                <div class="repo-cards">
+                                <div className="repo-cards">
                                     {
                                         skillDetails?.projects?.map(project => (
-                                            <div class="repo-card">
+                                            <div className="repo-card">
                                                 <div className="flex justify-between">
-                                                    <h2 class="card-title font-bold" style={{ color: '#bb86fc' }}>
+                                                    <h2 className="font-bold card-title" style={{ color: '#bb86fc' }}>
                                                         {project.title}
                                                     </h2>
                                                     {project.links.demo ? (
                                                         <span className="">
-                                                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="w-5 h-5 flex-shrink" color="#bb86fc" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
+                                                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" className="flex-shrink w-5 h-5" color="#bb86fc" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
                                                         </span>
                                                     ) : (
                                                         <span className="card-title-circle"></span>
                                                     )}
                                                 </div>
-                                                <p class="description">
+                                                <p className="description">
                                                     {project.description}
                                                 </p>
-                                                <div class="flex justify-around mt-2">
+                                                <div className="flex justify-around mt-2">
                                                     {project.links.demo && (
                                                         <span>
                                                             <a target="_BLANK" href={project.links.demo}>
@@ -119,7 +119,7 @@ const Skills = () => {
                                 </div>
                             </div>
                             <div className="my-4 text-center">
-                                {/* <button class="inline-flex text-gray-400 bg-gray-800 border-0  px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded">More</button> */}
+                                {/* <button className="inline-flex px-6 text-gray-400 bg-gray-800 border-0 rounded focus:outline-none hover:bg-gray-700 hover:text-white">More</button> */}
                             </div>
                         </div>
                     </SkillsPopover>

@@ -15,7 +15,7 @@ const Tech = ({
 }) => {
     return (
         <>
-            <div class="square cursor-pointer"
+            <div className="cursor-pointer square"
                 style={styles}
             >
                 <img src={pic} width="100%" height={picHeight}

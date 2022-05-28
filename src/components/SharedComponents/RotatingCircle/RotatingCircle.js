@@ -18,15 +18,15 @@ const RotatingCircle = ({ data, showSkillPopover }) => {
 
     return (
         <>
-            <div class="rotating-circle-section">
-                <div class="rotating-circle-container">
-                    {/* <img class="rotating-circle-img" src="https://numan-dev.web.app/images/my-pic.png" alt="portrait" /> */}
+            <div className="rotating-circle-section">
+                <div className="rotating-circle-container">
+                    {/* <img className="rotating-circle-img" src="https://numan-dev.web.app/images/my-pic.png" alt="portrait" /> */}
                     <span className="rotating-circle-text" style={{ width: "500px", color: 'white', display: 'flex', justifyContent: 'center' }}>
                         {data?.title}
                     </span>
                     {data?.skills.map(skill => (
-                        <div class="rotating-circle">
-                            <div class="rotating-inner-circle" style={skill?.styles}
+                        <div className="rotating-circle">
+                            <div className="rotating-inner-circle" style={skill?.styles}
                                 onClick={(event) => showSkillPopover(event, skill)}
                             >
                                 <img src={skill.pic} width="100%" />

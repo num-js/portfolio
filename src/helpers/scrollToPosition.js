@@ -4,7 +4,6 @@
  * @param {Number} xPosition 
  */
 const scrollToPosition = (yPosition = 0, xPosition = 0) => {
-    console.log('Scrolling to Top');
     window.scrollTo(yPosition, xPosition);
 }
 

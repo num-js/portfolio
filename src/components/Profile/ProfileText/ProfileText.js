@@ -71,11 +71,11 @@ const ProfileText = () => {
                 <p className="mainText">Hey I'm </p>
                 <p className="mainText main">MD. Numan Ahmed</p>
                 <div style={{ margin: '10px auto' }}>
-                    <span style={{ color: 'chartreuse', fontSize: '25px', fontWeight: 'bolder' }} href="" class="typewrite" data-period="2000"
+                    <span style={{ color: 'chartreuse', fontSize: '25px', fontWeight: 'bolder' }} href="" className="typewrite" data-period="2000"
                         data-type='[ "Full Stack JS", "MERN Stack", "Front-End", "PWA", "Back-End" ]'>
-                        <span class="wrap"></span>
+                        <span className="wrap"></span>
                     </span>
-                    <span class="txtShadow" style={{ color: '#fffb00', fontSize: '20px' }}> Developer</span>
+                    <span className="txtShadow" style={{ color: '#fffb00', fontSize: '20px' }}> Developer</span>
                 </div>
             </div>
             <div className="skill-badges">

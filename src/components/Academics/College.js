@@ -5,23 +5,23 @@ const College = ({ collegeData }) => {
 
     return (
         <>
-            <div class="py-8 flex flex-wrap md:flex-nowrap">
-                <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col items-center">
-                    <span class="text-2xl font-medium title-font text-green-500"
+            <div className="flex flex-wrap py-8 md:flex-nowrap">
+                <div className="flex flex-col items-center flex-shrink-0 mb-6 md:w-64 md:mb-0">
+                    <span className="text-2xl font-medium text-green-500 title-font"
                         dangerouslySetInnerHTML={{ __html: collegeData?.name }}
                     />
-                    <span class="text-2xl font-medium text-white">
+                    <span className="text-2xl font-medium text-white">
                         {collegeData?.board}
                     </span>
-                    <span class="mt-1 text-xl text-gray-500 text-sm">
+                    <span className="mt-1 text-sm text-xl text-gray-500">
                         {collegeData?.timeLine}
                     </span>
                 </div>
-                <div class="md:flex-grow">
-                    <h2 class="text-2xl font-medium text-pink-600 title-font mb-2">
+                <div className="md:flex-grow">
+                    <h2 className="mb-2 text-2xl font-medium text-pink-600 title-font">
                         {collegeData?.course}
                     </h2>
-                    <div class="leading-relaxed text-gray-200">
+                    <div className="leading-relaxed text-gray-200">
                         <div className="text-xl font-medium text-white">
                             {collegeData?.description}
                         </div>
@@ -41,13 +41,13 @@ const College = ({ collegeData }) => {
                         </div>
                     </div>
 
-                    <div class="mt-5 lg:w-2/3 w-full mx-auto overflow-auto">
-                        <table class="table-auto w-full text-left whitespace-no-wrap">
+                    <div className="w-full mx-auto mt-5 overflow-auto lg:w-2/3">
+                        <table className="w-full text-left whitespace-no-wrap table-auto">
                             <thead>
                                 <tr>
                                     {
                                         collegeData?.marks?.semMarks?.headerLabels.map((header, index) => (
-                                            <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tl rounded-bl">
+                                            <th className="px-4 py-3 text-sm font-medium tracking-wider text-white bg-gray-800 rounded-tl rounded-bl title-font">
                                                 {header}
                                             </th>
                                         ))
@@ -58,9 +58,9 @@ const College = ({ collegeData }) => {
                                 {
                                     collegeData?.marks?.semMarks?.data.map(data => (
                                         <tr>
-                                            <td class="px-4 text-white ">{data.sem}</td>
-                                            <td class="px-4 text-white ">{data.marks}</td>
-                                            <td class="px-4 text-lg text-white">
+                                            <td className="px-4 text-white ">{data.sem}</td>
+                                            <td className="px-4 text-white ">{data.marks}</td>
+                                            <td className="px-4 text-lg text-white">
                                                 <ExternalLink link={data.link} />
                                             </td>
                                         </tr>

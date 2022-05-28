@@ -9,11 +9,11 @@ const Experiences = () => {
 
     return (
         <>
-            <div class="container mx-auto w-full h-full">
+            <div className="container w-full h-full mx-auto">
                 <div align="center">
-                    <h1 class="text-2xl font-medium text-white title-font mb-2">Experiences</h1>
+                    <h1 className="mb-2 text-2xl font-medium text-white title-font">Experiences</h1>
                 </div>
-                <div class="relative wrap overflow-hidden p-10 h-full">
+                <div className="relative h-full p-10 overflow-hidden wrap">
                     {
                         screenSize === 'large' ? (
                             <DesktopViewExperience experiencesData={experiencesData} />

@@ -18,7 +18,7 @@ const Logo = ({ icon = true, animation = true, txtSize = "25px" }) => {
                         }}
                     />
                 )}
-                <span class={`font-weight-bold text-white ${animation ? 'txtLogo' : ''}`}
+                <span className={`font-weight-bold text-white ${animation ? 'txtLogo' : ''}`}
                     style={{
                         fontFamily: "akronim, cursive",
                         fontSize: txtSize,

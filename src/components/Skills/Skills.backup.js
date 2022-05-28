@@ -3,24 +3,24 @@ import React from 'react';
 const Skills = () => {
     return (
         <>
-            <section class="text-gray-600 body-font lg:mt-10">
+            <section className="text-gray-600 body-font lg:mt-10">
                 <div align="center">
-                    <h1 class="text-2xl font-medium text-white title-font mb-2">Skills</h1>
+                    <h1 className="mb-2 text-2xl font-medium text-white title-font">Skills</h1>
                 </div>
 
                 {/* <div align="left">
-                    <div class="mt-5">
-                        <div class="-my-8 divide-y-2 ">
+                    <div className="mt-5">
+                        <div className="-my-8 divide-y-2 ">
 
-                            <div class="flex flex-wrap -mx-px overflow-hidden sm:-mx-px md:-mx-px lg:-mx-px xl:-mx-px pt-10">
+                            <div className="flex flex-wrap pt-10 -mx-px overflow-hidden sm:-mx-px md:-mx-px lg:-mx-px xl:-mx-px">
 
-                                <div class=" py-8 w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 py-8 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', left: '0%', top: '-10%' }}>
                                         <img alt="numan ahmed" src="../icons/skills/js.webp" width="50%" />
                                     </div>
                                 </div>
 
-                                <div class="py-8 w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 py-8 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative' }}>
                                         <img alt="numan ahmed" src="../icons/skills/nextjs.png" width="50%%"
                                             style={{ width: "180px", transform: "skewY(-14deg)", filter: "drop-shadow(1rem -1rem 2px black)" }}
@@ -29,37 +29,37 @@ const Skills = () => {
                                     </div>
                                 </div>
 
-                                <div class=" py-8 w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 py-8 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', left: '0%', top: '-10%' }}>
                                         <img alt="numan ahmed" src="../icons/skills/react.webp" width="50%" />
                                     </div>
                                 </div>
 
-                                <div class="w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', left: '0%' }}>
                                         <img alt="numan ahmed" src="../icons/skills/nodejs.png" width="50%" />
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', }}>
                                         <img alt="numan ahmed" src="../icons/skills/expressjs.png" width="50%" />
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative' }}>
                                         <img alt="numan ahmed" src="../icons/skills/nodejs-full.png" width="50%" />
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative' }}>
-                                        <img class="imgJump" alt="numan ahmed" src="../icons/skills/rest-api.png" width="50%" />
+                                        <img className="imgJump" alt="numan ahmed" src="../icons/skills/rest-api.png" width="50%" />
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div
                                         style={{ position: 'relative' }}
                                     >
@@ -69,49 +69,49 @@ const Skills = () => {
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', left: '50%' }}>
                                         <img alt="numan ahmed" src="../icons/skills/redux.svg" width="50%" />
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4 justify-end">
+                                <div className="justify-end w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', left: '40%', top: '10%' }}>
                                         <img alt="numan ahmed" src="../icons/skills/github.webp" width="40%" />
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', }}>
                                         <img alt="numan ahmed" src="../icons/skills/material-ui.png" width="100%" />
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', }}>
                                         <img alt="numan ahmed" src="../icons/skills/aws-s3.png" width="50%" />
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', }}>
                                         <img alt="numan ahmed" src="../icons/skills/html.svg" width="50%" />
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', }}>
                                         <img alt="numan ahmed" src="../icons/skills/tailwind-css.png" width="50%" />
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', }}>
                                         <img alt="numan ahmed" src="../icons/skills/git.svg" width="50%" />
                                     </div>
                                 </div>
 
-                                <div class=" w-1/2 overflow-hidden sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
+                                <div className="w-1/2 overflow-hidden  sm:my-px sm:px-px sm:w-1/3 md:my-px md:px-px md:w-1/3 lg:my-px lg:px-px lg:w-1/4 xl:my-px xl:px-px xl:w-1/4">
                                     <div style={{ position: 'relative', }}>
                                         <img alt="numan ahmed" src="../icons/skills/vs-code.webp" width="50%" />
                                     </div>
@@ -124,33 +124,33 @@ const Skills = () => {
             </section>
 
 
-            <section class="text-gray-400 body-font">
-                <div class="container px-5 py-24 mx-auto flex flex-wrap">
+            <section className="text-gray-400 body-font">
+                <div className="container flex flex-wrap px-5 py-24 mx-auto">
 
-                    <div class="flex flex-wrap md:-m-2 -m-1">
-                        <div class="flex flex-wrap w-1/2">
-                            <div class="md:p-2 p-1 w-1/2">
+                    <div className="flex flex-wrap -m-1 md:-m-2">
+                        <div className="flex flex-wrap w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 <img
                                     alt="numan ahmed"
-                                    class="object-cover object-center imgJump txtLogo"
+                                    className="object-cover object-center imgJump txtLogo"
                                     src="../icons/skills/js.webp"
                                     width="50%"
                                     style={{ width: "180px", transform: "skewY(14deg)", filter: "drop-shadow(1rem -1rem 2px black)" }}
                                 />
                             </div>
-                            <div class="md:p-2 p-1 w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 <img
-                                    alt="numan-ahmed" class="object-cover object-center block imgJump"
+                                    alt="numan-ahmed" className="block object-cover object-center imgJump"
                                     src="../icons/skills/nextjs.png"
                                     width="50%"
                                     style={{ width: "180px", transform: "skewY(-14deg)", filter: "drop-shadow(1rem -1rem 2px black)" }}
                                 />
                             </div>
-                            <div class="md:p-2 p-1">
+                            <div className="p-1 md:p-2">
                                 <div className="" align="center">
                                     <img
                                         alt="numan-ahmed"
-                                        class="object-cover object-center block p-auto imgJump"
+                                        className="block object-cover object-center p-auto imgJump"
                                         src="../icons/skills/rest-api.svg"
                                         width="50%"
                                         style={{ transform: "rotate(-7deg)", filter: "drop-shadow(0rem -4rem 2px black)" }}
@@ -158,82 +158,82 @@ const Skills = () => {
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-wrap w-1/2">
-                            <div class="md:p-2 p-1 w-full">
+                        <div className="flex flex-wrap w-1/2">
+                            <div className="w-full p-1 md:p-2">
                                 <img
                                     alt="numan-ahmed"
-                                    class="object-cover object-center block m-auto imgJump"
+                                    className="block object-cover object-center m-auto imgJump"
                                     src="../icons/skills/nodejs-full.png"
                                     width="50%"
                                 />
                             </div>
-                            <div class="md:p-2 p-1 w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 <img
                                     alt="numan-ahmed"
-                                    class="object-cover object-center block"
+                                    className="block object-cover object-center"
                                     src="../icons/skills/react.webp"
                                 />
                             </div>
-                            <div class="md:p-2 p-1 w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 <img
                                     alt="numan-ahmed"
-                                    class=" object-cover object-center block"
+                                    className="block object-cover object-center "
                                     src="../icons/skills/nodejs.png"
                                 />
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap md:-m-2 -m-1">
-                        <div class="flex flex-wrap w-1/2">
-                            <div class="md:p-2 p-1 w-1/2">
+                    <div className="flex flex-wrap -m-1 md:-m-2">
+                        <div className="flex flex-wrap w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 <img
                                     alt="numan ahmed"
-                                    class="object-cover object-center block"
+                                    className="block object-cover object-center"
                                     src="../icons/skills/expressjs.png"
                                     width="50%"
                                 // style={{ width: "180px", transform: "skewY(14deg)", filter: "drop-shadow(1rem -1rem 2px black)" }}
                                 />
                             </div>
-                            <div class="md:p-2 p-1 w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 <img
-                                    alt="numan-ahmed" class="object-cover object-center block"
+                                    alt="numan-ahmed" className="block object-cover object-center"
                                     src="../icons/skills/mongodb.png"
                                     width="50%"
                                 // style={{ width: "180px", transform: "skewY(14deg)", filter: "drop-shadow(-1rem -1rem 2px black)" }}
                                 />
                             </div>
-                            <div class="md:p-2 p-1">
+                            <div className="p-1 md:p-2">
                                 <div align="center">
                                     <img
                                         alt="numan-ahmed"
-                                        class="object-cover object-center block p-auto"
+                                        className="block object-cover object-center p-auto"
                                         src="../icons/skills/github.webp"
                                         width="60%"
                                     />
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-wrap w-1/2">
-                            <div class="md:p-2 p-1 w-full">
+                        <div className="flex flex-wrap w-1/2">
+                            <div className="w-full p-1 md:p-2">
                                 <img
                                     alt="numan-ahmed"
-                                    class="object-cover object-center block m-auto"
+                                    className="block object-cover object-center m-auto"
                                     src="../icons/skills/redux.svg"
                                     width="30%"
                                 />
                             </div>
-                            <div class="md:p-2 p-1 w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 <img
                                     alt="numan-ahmed"
-                                    class="object-cover object-center block"
+                                    className="block object-cover object-center"
                                     src="../icons/skills/material-ui.png"
                                 />
                             </div>
-                            <div class="md:p-2 p-1 w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 <img
                                     alt="numan-ahmed"
-                                    class=" object-cover object-center block"
+                                    className="block object-cover object-center "
                                     src="../icons/skills/tailwind-css.png"
                                     width="50%"
                                 />
@@ -241,56 +241,56 @@ const Skills = () => {
                         </div>
                     </div>
 
-                    <div class="flex flex-wrap md:-m-2 -m-1">
-                        <div class="flex flex-wrap w-1/2">
-                            <div class="md:p-2 p-1 w-1/2">
+                    <div className="flex flex-wrap -m-1 md:-m-2">
+                        <div className="flex flex-wrap w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 <img
                                     alt="numan ahmed"
-                                    class="object-cover object-center block"
+                                    className="block object-cover object-center"
                                     src="../icons/skills/git.svg"
                                     width="50%"
                                 // style={{ width: "180px", transform: "skewY(14deg)", filter: "drop-shadow(1rem -1rem 2px black)" }}
                                 />
                             </div>
-                            <div class="md:p-2 p-1 w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 <img
-                                    alt="numan-ahmed" class="object-cover object-center block"
+                                    alt="numan-ahmed" className="block object-cover object-center"
                                     src="../icons/skills/vs-code.webp"
                                     width="50%"
                                 // style={{ width: "180px", transform: "skewY(14deg)", filter: "drop-shadow(-1rem -1rem 2px black)" }}
                                 />
                             </div>
-                            <div class="md:p-2 p-1">
+                            <div className="p-1 md:p-2">
                                 <div align="center">
                                     {/* <img
                                         alt="numan-ahmed"
-                                        class="object-cover object-center block p-auto"
+                                        className="block object-cover object-center p-auto"
                                         src="../icons/skills/aws-s3.png"
                                         width="60%"
                                     /> */}
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-wrap w-1/2">
-                            <div class="md:p-2 p-1 w-full">
+                        <div className="flex flex-wrap w-1/2">
+                            <div className="w-full p-1 md:p-2">
                                 <img
                                     alt="numan-ahmed"
-                                    class="object-cover object-center block m-auto"
+                                    className="block object-cover object-center m-auto"
                                     src="../icons/skills/aws-s3.png"
                                     width="50%"
                                 />
                             </div>
-                            <div class="md:p-2 p-1 w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 {/* <img
                                     alt="numan-ahmed"
-                                    class="object-cover object-center block"
+                                    className="block object-cover object-center"
                                     src="../icons/skills/material-ui.png"
                                 /> */}
                             </div>
-                            <div class="md:p-2 p-1 w-1/2">
+                            <div className="w-1/2 p-1 md:p-2">
                                 {/* <img
                                     alt="numan-ahmed"
-                                    class=" object-cover object-center block"
+                                    className="block object-cover object-center "
                                     src="../icons/skills/tailwind-css.png"
                                 /> */}
                             </div>
