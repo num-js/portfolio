@@ -3,8 +3,7 @@ import { Route, Switch } from 'react-router';
 import Academics from './components/Academics/Academics';
 import ContactMe from './components/ContactMe/ContactMe';
 import Experiences from './components/Experiences/Experiences';
-import ProfilePicture from './components/Profile/ProfilePicture/ProfilePicture';
-import ProfileText from './components/Profile/ProfileText/ProfileText';
+import Profile from './components/Profile/Profile';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import { ACADEMICS, CONTACT_ME, EXPERIENCES, INDEX, PROJECTS, SKILLS } from './helpers/routesURL';
@@ -14,10 +13,7 @@ const RouterComponent = () => {
         <>
             <Switch>
                 <Route exact path={INDEX}>
-                    <div className="App" style={{ background: `url("../backgrounds/bg-circles.svg")`, backgroundPositionX: "-150%", backgroundPositionY: "54%", backgroundRepeat: "inherit" }}>
-                        <ProfileText />
-                        <ProfilePicture />
-                    </div>
+                    <Profile />
                     <Experiences />
                     <Skills />
                     <Projects />
