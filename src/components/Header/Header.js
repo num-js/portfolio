@@ -20,7 +20,6 @@ const Header = () => {
 
                     {/* <span className="text-xl font-semibold tracking-tight">&lt;N_Ah /&gt;</span> */}
 
-                    
                 </div>
 
                 <div className="block lg:hidden">
@@ -34,7 +33,7 @@ const Header = () => {
                     <div className="text-sm lg:flex-grow">
                         {
                             navBarMenu.map(({ label, link }, index) => (
-                                <a key={index} className="block mt-4 mr-4 text-xl text-white nav-menu lg:inline-block lg:mt-0 hover:text-gray-400">
+                                <span key={index} className="block mt-4 mr-4 text-xl text-white nav-menu lg:inline-block lg:mt-0 hover:text-gray-400">
                                     <NavLink key={index}
                                         exact to={link}
                                         activeStyle={{ color: `rgba(219, 39, 119` }}
@@ -42,7 +41,7 @@ const Header = () => {
                                     >
                                         {label}
                                     </NavLink>
-                                </a>
+                                </span>
                             ))
                         }
                     </div>
