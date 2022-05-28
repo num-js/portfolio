@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import socialMediaIconURL from '../../assets/data/socialMediaData';
 import { navBarMenu } from '../../assets/navLinks';
+import scrollToPosition from '../../helpers/scrollToPosition';
 import Logo from '../SharedComponents/ActiveStatusGreenDot/Logo';
 
 const Footer = () => {
@@ -47,6 +48,7 @@ const Footer = () => {
                                                                 <NavLink key={index}
                                                                     exact to={link}
                                                                     activeStyle={{ color: `rgba(219, 39, 119` }}
+                                                                    onClick={() => scrollToPosition()}
                                                                 >
                                                                     {label}
                                                                 </NavLink>
