@@ -5,8 +5,8 @@ import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
 
 const MobileExperience = ({ experiencesData }) => {
     return (
-        experiencesData?.map((companyData) => (
-            <div className="relative flex pb-20 mx-auto sm:items-center md:w-2/3">
+        experiencesData?.map((companyData, index) => (
+            <div key={index} className="relative flex pb-20 mx-auto sm:items-center md:w-2/3">
                 <div className="absolute flex items-center justify-center w-6 h-full inset-2">
                     <div className="absolute w-1 h-full bg-gray-500"></div>
                 </div>
@@ -41,7 +41,7 @@ const MobileExperience = ({ experiencesData }) => {
                                     <div className="flex flex-wrap -m-4 text-center">
                                         {
                                             companyData?.workingTech?.map((tech, index) => (
-                                                <div className="w-1/2 p-4 sm:w-1/4">
+                                                <div key={index} className="w-1/2 p-4 sm:w-1/4">
                                                     <SkillDiv skill={tech} />
                                                 </div>
                                             ))
@@ -50,7 +50,7 @@ const MobileExperience = ({ experiencesData }) => {
                                 </div>
                             </div>
                             <a target='_blank' href={companyData?.companyURL} className="inline-flex items-center mt-3 text-pink-500">More
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
                             </a>

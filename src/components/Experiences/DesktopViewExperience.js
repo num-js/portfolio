@@ -11,7 +11,7 @@ const DesktopViewExperience = ({ experiencesData }) => {
                 experiencesData?.map((companyData, index) => {
                     const isLeftSide = index % 2 == 0;
                     return (
-                        <div className={`mb-8 flex justify-between ${isLeftSide ? "flex-row-reverse items-center w-full left-timeline" : "items-center w-full right-timeline"}`} >
+                        <div key={index} className={`mb-8 flex justify-between ${isLeftSide ? "flex-row-reverse items-center w-full left-timeline" : "items-center w-full right-timeline"}`} >
                             <div className={`order-1 w-5/12 ${isLeftSide ? "" : "flex justify-end"}`}>
                                 <div className="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 rounded-full sm:w-32 sm:h-32 sm:mr-10">
                                     <a target='_blank' href={companyData?.companyURL}>
@@ -40,7 +40,7 @@ const DesktopViewExperience = ({ experiencesData }) => {
                                     <div className="">
                                         <div className="flex flex-wrap -m-4 text-center">
                                             {companyData?.workingTech.map((tech) => (
-                                                <div className="w-1/2 p-4 sm:w-1/4">
+                                                <div key={index} className="w-1/2 p-4 sm:w-1/4">
                                                     <SkillDiv skill={tech} />
                                                 </div>
                                             ))}
@@ -49,7 +49,7 @@ const DesktopViewExperience = ({ experiencesData }) => {
                                 </div>
                                 <div>
                                     <a target='_blank' href={companyData?.companyURL} className="inline-flex items-center mt-3 text-pink-500">More
-                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                                         </svg>
                                     </a>

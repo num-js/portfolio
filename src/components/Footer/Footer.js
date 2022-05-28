@@ -25,9 +25,8 @@ const Footer = () => {
                                         </p>
                                         <div className="flex mt-6 justify-evenly">
                                             {
-                                                socialMediaIconURL.map(({ icon, link }) => (
-
-                                                    <Link to={{ pathname: link }} target="_blank">
+                                                socialMediaIconURL.map(({ icon, link }, index) => (
+                                                    <Link key={index} to={{ pathname: link }} target="_blank">
                                                         <div
                                                             className="footer-social-img"
                                                             style={{ backgroundImage: `url(${icon})` }}
@@ -43,9 +42,10 @@ const Footer = () => {
                                             <ul className="text-sm text-gray-300">
                                                 {
                                                     navBarMenu.map(({ label, link }, index) => (
-                                                        <li className="pt-1 pb-2 font-bold">
+                                                        <li key={index} className="pt-1 pb-2 font-bold">
                                                             <a className="">
-                                                                <NavLink key={index}
+                                                                <NavLink
+                                                                    key={index}
                                                                     exact to={link}
                                                                     activeStyle={{ color: `rgba(219, 39, 119` }}
                                                                     onClick={() => scrollToPosition()}

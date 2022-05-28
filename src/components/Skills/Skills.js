@@ -35,9 +35,9 @@ const Skills = () => {
                 <div className="rotating-skills-section" style={{ minHeight: "65vh" }}>
                     <div className="flex mt-40 justify-evenly rotating-skills-container">
                         {
-                            skillsData?.fullStack?.map(data => {
+                            skillsData?.fullStack?.map((data, index) => {
                                 return (
-                                    <div id={data?.id}>
+                                    <div key={index} id={data?.id}>
                                         <RotatingCircle data={data} showSkillPopover={showSkillPopover} />
                                     </div>
                                 )
@@ -46,9 +46,9 @@ const Skills = () => {
                     </div>
                     <div className="flex mt-52 justify-evenly rotating-skills-container">
                         {
-                            skillsData?.others?.map(data => {
+                            skillsData?.others?.map((data, index) => {
                                 return (
-                                    <div id={data?.id}>
+                                    <div key={index} id={data?.id}>
                                         <RotatingCircle data={data} showSkillPopover={showSkillPopover} />
                                     </div>
                                 )
@@ -80,15 +80,15 @@ const Skills = () => {
                             <div className="">
                                 <div className="repo-cards">
                                     {
-                                        skillDetails?.projects?.map(project => (
-                                            <div className="repo-card">
+                                        skillDetails?.projects?.map((project, index) => (
+                                            <div key={index} className="repo-card">
                                                 <div className="flex justify-between">
                                                     <h2 className="font-bold card-title" style={{ color: '#bb86fc' }}>
                                                         {project.title}
                                                     </h2>
                                                     {project.links.demo ? (
                                                         <span className="">
-                                                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" className="flex-shrink w-5 h-5" color="#bb86fc" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
+                                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="flex-shrink w-5 h-5" color="#bb86fc" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
                                                         </span>
                                                     ) : (
                                                         <span className="card-title-circle"></span>

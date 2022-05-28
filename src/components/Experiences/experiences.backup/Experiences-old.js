@@ -16,7 +16,7 @@ const Experiences = () => {
                                     {
                                         experiencesData.map((companyData, index) => (
                                             companyData.isLeftSideStarts ? (
-                                                <div className="flex flex-col items-center pb-10 mx-auto mb-10 border-b border-gray-800 lg:w-3/5 sm:flex-row">
+                                                <div key={index} className="flex flex-col items-center pb-10 mx-auto mb-10 border-b border-gray-800 lg:w-3/5 sm:flex-row">
                                                     <div className="inline-flex items-center justify-center flex-shrink-0 w-20 h-20 text-green-400 bg-gray-800 rounded-full sm:w-32 sm:h-32 sm:mr-10">
                                                         <a target='_blank' href={companyData.companyURL}>
                                                             <img className="rounded-full" src={companyData.companyLogo} />
@@ -41,7 +41,7 @@ const Experiences = () => {
                                                                 <div className="flex flex-wrap -m-4 text-center">
                                                                     {
                                                                         companyData.workingTech.technologies.map((tech, index) => (
-                                                                            <div className="w-1/2 p-4 sm:w-1/4">
+                                                                            <div key={index} className="w-1/2 p-4 sm:w-1/4">
                                                                                 <h1 className="font-medium text-white title-font">
                                                                                     {tech}
                                                                                 </h1>
@@ -54,7 +54,7 @@ const Experiences = () => {
 
                                                         {/* <a className="inline-flex items-center mt-3 text-green-400">
                                                             More
-                                                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                                                             </svg>
                                                         </a> */}
@@ -81,7 +81,7 @@ const Experiences = () => {
                                                                     <div className="flex flex-wrap -m-4 text-center">
                                                                     {
                                                                         companyData.workingTech.technologies.map((tech, index) => (
-                                                                            <div className="w-1/2 p-4 sm:w-1/4">
+                                                                            <div key={index} className="w-1/2 p-4 sm:w-1/4">
                                                                                 <h1 className="font-medium text-white title-font">
                                                                                     {tech}
                                                                                 </h1>
@@ -92,7 +92,7 @@ const Experiences = () => {
                                                             </div>
                                                         </div>
                                                             {/* <a className="inline-flex items-center mt-3 text-green-400">More
-                                                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                                                            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                                                 <path d="M5 12h14M12 5l7 7-7 7"></path>
                                                             </svg>
                                                         </a> */}

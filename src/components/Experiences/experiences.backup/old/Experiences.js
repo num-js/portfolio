@@ -14,7 +14,7 @@ const Experiences = () => {
                         <div className="-my-8 divide-y-2 divide-gray-100">
                             {
                                 experiencesData.map((companyData, index) => (
-                                    <Company companyData={companyData} />
+                                    <Company key={index} companyData={companyData} />
                                 ))
                             }
                         </div>

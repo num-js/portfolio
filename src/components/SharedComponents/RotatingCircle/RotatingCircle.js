@@ -24,8 +24,8 @@ const RotatingCircle = ({ data, showSkillPopover }) => {
                     <span className="rotating-circle-text" style={{ width: "500px", color: 'white', display: 'flex', justifyContent: 'center' }}>
                         {data?.title}
                     </span>
-                    {data?.skills.map(skill => (
-                        <div className="rotating-circle">
+                    {data?.skills.map((skill, index) => (
+                        <div key={index} className="rotating-circle">
                             <div className="rotating-inner-circle" style={skill?.styles}
                                 onClick={(event) => showSkillPopover(event, skill)}
                             >

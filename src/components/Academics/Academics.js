@@ -23,7 +23,7 @@ const Academics = () => {
 
                             {
                                 academicsData.map((collegeData, index) => (
-                                    <div className={`flex relative ${index !== (academicsData.length - 1) ? 'pb-12' : 'pb-4'}`}>
+                                    <div key={index} className={`flex relative ${index !== (academicsData.length - 1) ? 'pb-12' : 'pb-4'}`}>
                                         <div className="absolute inset-0 flex items-center justify-center w-10 h-full">
                                             <div className="w-1 h-full bg-gray-800 pointer-events-none"></div>
                                         </div>
@@ -78,7 +78,7 @@ const Academics = () => {
                                                                 <tr>
                                                                     {
                                                                         collegeData?.marks?.semMarks?.headerLabels.map((header, index) => (
-                                                                            <th className="px-4 py-3 text-sm font-medium tracking-wider text-white bg-gray-800 title-font">
+                                                                            <th key={index} className="px-4 py-3 text-sm font-medium tracking-wider text-white bg-gray-800 title-font">
                                                                                 {header}
                                                                             </th>
                                                                         ))
@@ -87,8 +87,8 @@ const Academics = () => {
                                                             </thead>
                                                             <tbody>
                                                                 {
-                                                                    collegeData?.marks?.semMarks?.data.map(data => (
-                                                                        <tr>
+                                                                    collegeData?.marks?.semMarks?.data.map((data, index) => (
+                                                                        <tr key={index}>
                                                                             <td className="px-4 text-white ">{data.sem}</td>
                                                                             <td className="px-4 text-white ">{data.marks}</td>
                                                                             <td className="px-4 text-lg text-white">

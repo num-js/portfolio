@@ -67,7 +67,7 @@ const Projects = () => {
                                                     <h1 className="mb-1 text-2xl font-medium text-center title-font ncolor-pink">{projectData.name}</h1>
 
                                                     {!projectData.repo && <span title="company" style={{ position: 'absolute', top: '8px', left: '91%' }}>
-                                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" className="flex-shrink w-5 h-5" color="#ff0052" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
+                                                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="flex-shrink w-5 h-5" color="#ff0052" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
                                                     </span>}
 
                                                     <p className="my-2 leading-relaxed text-white">

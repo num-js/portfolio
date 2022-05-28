@@ -47,7 +47,7 @@ const College = ({ collegeData }) => {
                                 <tr>
                                     {
                                         collegeData?.marks?.semMarks?.headerLabels.map((header, index) => (
-                                            <th className="px-4 py-3 text-sm font-medium tracking-wider text-white bg-gray-800 rounded-tl rounded-bl title-font">
+                                            <th key={index} className="px-4 py-3 text-sm font-medium tracking-wider text-white bg-gray-800 rounded-tl rounded-bl title-font">
                                                 {header}
                                             </th>
                                         ))
@@ -57,7 +57,7 @@ const College = ({ collegeData }) => {
                             <tbody>
                                 {
                                     collegeData?.marks?.semMarks?.data.map(data => (
-                                        <tr>
+                                        <tr key={index}>
                                             <td className="px-4 text-white ">{data.sem}</td>
                                             <td className="px-4 text-white ">{data.marks}</td>
                                             <td className="px-4 text-lg text-white">

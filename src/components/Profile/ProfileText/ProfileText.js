@@ -80,8 +80,8 @@ const ProfileText = () => {
             </div>
             <div className="skill-badges">
                 {
-                    socialMediaIconURL.map(({ icon, link }) => (
-                        <Link to={{ pathname: link }} target="_blank">
+                    socialMediaIconURL.map(({ icon, link }, index) => (
+                        <Link key={index} to={{ pathname: link }} target="_blank">
                             <div
                                 className="social-links"
                                 style={{ backgroundImage: `url(${icon})` }}

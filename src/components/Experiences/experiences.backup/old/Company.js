@@ -25,7 +25,7 @@ const Company = ({ companyData }) => {
                                 <div className="flex flex-wrap -m-4 text-center">
                                     {
                                         companyData.workingTech.technologies.map((tech, index) => (
-                                            <div className="w-1/2 p-4 sm:w-1/4">
+                                            <div key={index} className="w-1/2 p-4 sm:w-1/4">
                                                 <h1 className="font-medium text-white title-font">
                                                     {tech}
                                                 </h1>
@@ -37,7 +37,7 @@ const Company = ({ companyData }) => {
                         </div>
                     </p>
                     {/* <a className="inline-flex items-center mt-4 text-green-500"> More
-                        <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M5 12h14"></path>
                             <path d="M12 5l7 7-7 7"></path>
                         </svg>
