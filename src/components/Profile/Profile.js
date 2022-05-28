@@ -1,4 +1,5 @@
 
+import ScrollingDownAnimation from '../SharedComponents/ScrollingDownAnimation';
 import ProfilePicture from './ProfilePicture/ProfilePicture';
 import ProfileText from './ProfileText/ProfileText';
 
@@ -9,6 +10,7 @@ const Profile = () => {
                 <ProfileText />
                 <ProfilePicture />
             </div>
+            <ScrollingDownAnimation hiddenSection="#experienceLabel" />
         </>
     );
 }
