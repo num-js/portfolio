@@ -58,7 +58,7 @@ const ProfilePicture = () => {
 
     return (
         <div className="visual-bg" style={{ backgroundImage: `url('../images/my-pic.png')` }}>
-            <p className="year">{year}</p>
+            <p className="year" style={{fontFamily: "akronim, cursive"}}>{year}</p>
             <div className="top-lable">
                 <div className="current-job" onClick={() => { if (data.minor.url) { window.open(data.minor.url, "_blank") } }}>
                     <Fade opposite when={visible}>
