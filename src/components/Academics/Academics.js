@@ -15,12 +15,25 @@ const Academics = () => {
                     </svg>
                 </div>
 
+                {/* <div>
+                    <div align="" className="flex justify-center">
+                        <div className={`bg-gray-800 px-4 rounded-lg w-80 absolute`}
+                            style={{ boxShadow: '0 2px 5px 0 rgb(0 0 0 / 100%), 0 2px 10px 0 rgb(0 0 0 / 100%)', left: '45%', }}
+                        >
+                            <p className="my-2 leading-relaxed text-white">
+                                I believe Degree & Marks are useless.
+                                I just have the Skills.
+                            </p>
+                            <div className="flex items-center border-b-2 border-gray-600"></div>
+                        </div>
+                    </div>
+                </div> */}
+
                 <div className="flex flex-wrap w-full lg:mx-10"
                     style={{ background: `url("../backgrounds/bg-circles.svg")`, backgroundPositionX: "-124%", backgroundPositionY: "-11%" }}
                 >
                     <div className="m-auto lg:w-1/2 md:w-1/2 md:pr-10 md:py-6">
                         <div>
-
                             {
                                 academicsData.map((collegeData, index) => (
                                     <div key={index} className={`flex relative ${index !== (academicsData.length - 1) ? 'pb-12' : 'pb-4'}`}>
@@ -42,7 +55,9 @@ const Academics = () => {
                                             <h2 className="mb-2 text-xl font-medium text-pink-600 lg:text-2xl title-font">
                                                 {collegeData?.course}
                                             </h2>
-                                            <img src="../icons/small-circle.svg" className="absolute right-0" />
+                                            <img src="../icons/small-circle.svg" className="absolute right-0"
+                                                onClick={() => null}
+                                            />
                                             <span className="text-base text-white">
                                                 <span className="font-medium">{collegeData?.board}</span> - {collegeData?.name}
                                             </span>

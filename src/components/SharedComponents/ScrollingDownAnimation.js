@@ -9,7 +9,6 @@ const ScrollingDownAnimation = ({ hiddenSection }) => {
         const observer = new IntersectionObserver(
             (entries) => {
                 setIsShowScrollingDownAnim(!entries[0]?.isIntersecting);
-                console.log('entries: ', entries);
             },
             {
                 rootMargin: '0px',
