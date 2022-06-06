@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import academicsData from '../../assets/data/academicsData.json';
+import { SKILLS } from '../../helpers/routesURL';
 import ExternalLink from '../SharedComponents/ActiveStatusGreenDot/ExternalLink';
 
 const Academics = () => {
+    const [showAcademicTag, setShowAcademicTag] = useState(true);
+
+    const toggleAcademicTag = () => {
+        setShowAcademicTag(prevState => !prevState)
+    }
+
     return (
         <>
             <section className="my-10 mb-32 text-gray-600 body-font lg:mt-10 lg:mx-20">
@@ -15,19 +23,25 @@ const Academics = () => {
                     </svg>
                 </div>
 
-                {/* <div>
-                    <div align="" className="flex justify-center">
-                        <div className={`bg-gray-800 px-4 rounded-lg w-80 absolute`}
-                            style={{ boxShadow: '0 2px 5px 0 rgb(0 0 0 / 100%), 0 2px 10px 0 rgb(0 0 0 / 100%)', left: '45%', }}
+                {showAcademicTag && (<div>
+                    <div className="flex ">
+                        <div className={`bg-gray-800 px-4 rounded-lg absolute`}
+                            style={{ boxShadow: '0 2px 5px 0 rgb(0 0 0 / 100%), 0 2px 10px 0 rgb(0 0 0 / 100%)', left: '55%', transform: 'rotate(-5deg)', }}
                         >
+                            <span className="cursor-pointer" style={{ position: 'absolute', right: '2px', top: '2px' }}
+                                onClick={toggleAcademicTag}
+                            >
+                                <img src="../icons/close-circle.svg" width="18" />
+                            </span>
                             <p className="my-2 leading-relaxed text-white">
-                                I believe Degree & Marks are useless.
-                                I just have the Skills.
+                                I believe Degree & Marks are useless. &nbsp;&nbsp;
+                                <br />
+                                I just have the <Link to={{ pathname: SKILLS }}><span class="font-bold">Skills</span></Link>.
                             </p>
                             <div className="flex items-center border-b-2 border-gray-600"></div>
                         </div>
                     </div>
-                </div> */}
+                </div>)}
 
                 <div className="flex flex-wrap w-full lg:mx-10"
                     style={{ background: `url("../backgrounds/bg-circles.svg")`, backgroundPositionX: "-124%", backgroundPositionY: "-11%" }}
@@ -55,8 +69,8 @@ const Academics = () => {
                                             <h2 className="mb-2 text-xl font-medium text-pink-600 lg:text-2xl title-font">
                                                 {collegeData?.course}
                                             </h2>
-                                            <img src="../icons/small-circle.svg" className="absolute right-0"
-                                                onClick={() => null}
+                                            <img src="../icons/small-circle.svg" className="absolute right-0 cursor-pointer"
+                                                onClick={toggleAcademicTag}
                                             />
                                             <span className="text-base text-white">
                                                 <span className="font-medium">{collegeData?.board}</span> - {collegeData?.name}
