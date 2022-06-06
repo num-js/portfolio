@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import academicsData from '../../assets/data/academicsData.json';
 import { SKILLS } from '../../helpers/routesURL';
 import ExternalLink from '../SharedComponents/ActiveStatusGreenDot/ExternalLink';
+import './academics.scss'
 
 const Academics = () => {
     const [showAcademicTag, setShowAcademicTag] = useState(true);
@@ -25,8 +26,8 @@ const Academics = () => {
 
                 {showAcademicTag && (<div>
                     <div className="flex ">
-                        <div className={`bg-gray-800 px-4 rounded-lg absolute`}
-                            style={{ boxShadow: '0 2px 5px 0 rgb(0 0 0 / 100%), 0 2px 10px 0 rgb(0 0 0 / 100%)', left: '55%', transform: 'rotate(-5deg)', }}
+                        <div className={`bg-gray-800 px-4 rounded-lg academic-tag`}
+                            style={{ boxShadow: '0 2px 5px 0 rgb(0 0 0 / 100%), 0 2px 10px 0 rgb(0 0 0 / 100%)' }}
                         >
                             <span className="cursor-pointer" style={{ position: 'absolute', right: '2px', top: '2px' }}
                                 onClick={toggleAcademicTag}
@@ -36,7 +37,7 @@ const Academics = () => {
                             <p className="my-2 leading-relaxed text-white">
                                 I believe Degree & Marks are useless. &nbsp;&nbsp;
                                 <br />
-                                I just have the <Link to={{ pathname: SKILLS }}><span class="font-bold">Skills</span></Link>.
+                                I just have the <Link to={{ pathname: SKILLS }}><span className="font-bold">Skills</span></Link>.
                             </p>
                             <div className="flex items-center border-b-2 border-gray-600"></div>
                         </div>
@@ -46,7 +47,7 @@ const Academics = () => {
                 <div className="flex flex-wrap w-full lg:mx-10"
                     style={{ background: `url("../backgrounds/bg-circles.svg")`, backgroundPositionX: "-124%", backgroundPositionY: "-11%" }}
                 >
-                    <div className="m-auto lg:w-1/2 md:w-1/2 md:pr-10 md:py-6">
+                    <div className="pl-2 m-auto lg:w-1/2 md:w-1/2 md:pr-10 md:py-6">
                         <div>
                             {
                                 academicsData.map((collegeData, index) => (
@@ -107,20 +108,20 @@ const Academics = () => {
                                                                 <tr>
                                                                     {
                                                                         collegeData?.marks?.semMarks?.headerLabels.map((header, index) => (
-                                                                            <th key={index} className="px-4 py-3 text-sm font-medium tracking-wider text-white bg-gray-800 title-font">
+                                                                            <th key={index} className="px-2 py-2 text-sm font-medium tracking-wider text-white bg-gray-800 title-font">
                                                                                 {header}
                                                                             </th>
                                                                         ))
                                                                     }
                                                                 </tr>
                                                             </thead>
-                                                            <tbody>
+                                                            <tbody className="pb-8">
                                                                 {
                                                                     collegeData?.marks?.semMarks?.data.map((data, index) => (
                                                                         <tr key={index}>
-                                                                            <td className="px-4 text-white ">{data.sem}</td>
-                                                                            <td className="px-4 text-white ">{data.marks}</td>
-                                                                            <td className="px-4 text-lg text-white">
+                                                                            <td className="px-3 text-white ">{data.sem}</td>
+                                                                            <td className="px-2 text-center text-white ">{data.marks}</td>
+                                                                            <td className="pr-2">
                                                                                 <ExternalLink link={data.link} />
                                                                             </td>
                                                                         </tr>
