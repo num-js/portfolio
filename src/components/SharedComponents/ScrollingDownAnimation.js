@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { scrollToElement } from '../../helpers/scrollToPosition';
 import '../../styles/down-arrow.css';
 
 const ScrollingDownAnimation = ({ hiddenSection }) => {
@@ -28,7 +29,7 @@ const ScrollingDownAnimation = ({ hiddenSection }) => {
             {isShowScrollingDownAnim && (
                 <div className="sticky right-0 my-6 bottom-8 -inset-x-3/4">
                     <div className="w-8">
-                        <a className="scrolling-down-link scrolling-down-arrow" />
+                        <a className="cursor-pointer scrolling-down-link scrolling-down-arrow" onClick={() => scrollToElement('experience')} />
                     </div>
                 </div>
             )}
