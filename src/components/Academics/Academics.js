@@ -32,7 +32,7 @@ const Academics = () => {
                             <span className="cursor-pointer" style={{ position: 'absolute', right: '2px', top: '2px' }}
                                 onClick={toggleAcademicTag}
                             >
-                                <img src="../icons/close-circle.svg" width="18" />
+                                <img src="../icons/close-circle.svg" width="16" />
                             </span>
                             <p className="my-2 leading-relaxed text-white">
                                 I believe Degree & Marks are useless. &nbsp;&nbsp;

@@ -72,8 +72,10 @@ const Skills = () => {
                                     </span>
                                 </div>
                                 {skillDetails?.projects?.length ? (
-                                    <div className="text-white">
-                                        <button onClick={closeSkillPopover}>X</button>
+                                    <div className="absolute right-2 top-2">
+                                        <button onClick={closeSkillPopover}>
+                                            <img src="../icons/close-circle.svg" width="18" />
+                                        </button>
                                     </div>
                                 ) : null}
                             </div>
