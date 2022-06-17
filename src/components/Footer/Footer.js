@@ -48,7 +48,6 @@ const Footer = () => {
                                                                     key={index}
                                                                     exact to={link}
                                                                     activeStyle={{ color: `rgba(219, 39, 119` }}
-                                                                    onClick={() => scrollToPosition()}
                                                                 >
                                                                     {label}
                                                                 </NavLink>

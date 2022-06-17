@@ -16,6 +16,7 @@ const Projects = () => {
 
     useEffect(() => {
         setShowAllProjects(window?.location?.href?.includes("projects"))
+        scrollToPosition();
     }, []);
 
     return (

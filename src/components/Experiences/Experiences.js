@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import experiencesData from '../../assets/data/experiencesData.json';
 import MobileExperience from './MobileExperience';
 import useScreenWidth from '../../hooks/useScreenWidth';
 import DesktopViewExperience from './DesktopViewExperience';
+import scrollToPosition from '../../helpers/scrollToPosition';
 
 const Experiences = () => {
     const screenSize = useScreenWidth();
+
+    useEffect(() => {
+        scrollToPosition();
+    }, []);
 
     return (
         <section id="experience">
