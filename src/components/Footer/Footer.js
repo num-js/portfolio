@@ -94,7 +94,7 @@ const Footer = () => {
                             © 2022 &nbsp; <span> <Logo icon={false} animation={false} txtSize={16} /> </span> &nbsp;
                             All rights reserved.
                         </div>
-                        <div className="flex justify-center text-sm font-light text-gray-500">
+                        <div className="flex justify-center text-sm font-light text-gray-300">
                             Designed & Developed with ❤️ by  &nbsp; <span> <Logo icon={false} animation={true} txtSize={16} /> </span>
                         </div>
                     </div>
