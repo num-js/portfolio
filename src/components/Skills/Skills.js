@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import SkillsPopover from './SkillsPopover';
-import Tech from './Tech/Tech';
 import skillsData from '../../assets/data/skillsData.json';
 import "./skills.css";
 import RotatingCircle from '../SharedComponents/RotatingCircle/RotatingCircle';
@@ -101,12 +100,14 @@ const Skills = () => {
                                                             {project.title}
                                                         </h2>
                                                     </div>
-                                                    {project.links.demo ? (
+                                                    {!project.links.code ? (
                                                         <span className="">
                                                             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="flex-shrink w-5 h-5" color="#bb86fc" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
                                                         </span>
                                                     ) : (
-                                                        <span className="card-title-circle"></span>
+                                                            <span
+                                                            // className="card-title-circle"
+                                                            ></span>
                                                     )}
                                                 </div>
                                                 <p className="description">
