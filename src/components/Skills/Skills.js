@@ -85,9 +85,17 @@ const Skills = () => {
                                         skillDetails?.projects?.map((project, index) => (
                                             <div key={index} className="repo-card">
                                                 <div className="flex justify-between">
-                                                    <h2 className="font-bold card-title" style={{ color: '#bb86fc' }}>
-                                                        {project.title}
-                                                    </h2>
+                                                    <div className="flex items-end">
+                                                        <span className="mr-1">
+                                                            <svg stroke="#bb86fc" fill="#bb86fc" stroke-width="0" viewBox="0 0 1024 1024" height="26px" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M880 298.4H521L403.7 186.2a8.15 8.15 0 0 0-5.5-2.2H144c-17.7 0-32 14.3-32 32v592c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V330.4c0-17.7-14.3-32-32-32zM840 768H184V256h188.5l119.6 114.4H840V768z"></path>
+                                                            </svg>
+                                                        </span>
+
+                                                        <h2 className="font-bold card-title" style={{ color: '#bb86fc' }}>
+                                                            {project.title}
+                                                        </h2>
+                                                    </div>
                                                     {project.links.demo ? (
                                                         <span className="">
                                                             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="flex-shrink w-5 h-5" color="#bb86fc" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
