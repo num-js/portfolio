@@ -21,6 +21,7 @@
     background: rgba(29, 30, 30, 0.3);
     box-shadow: 0 8px 32px 0 #161414ad;
     backdrop-filter: blur(9px);
+    min-width: 220px;
 }
 
 .repo-card .card-title {
