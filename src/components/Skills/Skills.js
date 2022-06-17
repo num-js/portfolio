@@ -4,6 +4,7 @@ import Tech from './Tech/Tech';
 import skillsData from '../../assets/data/skillsData.json';
 import "./skills.css";
 import RotatingCircle from '../SharedComponents/RotatingCircle/RotatingCircle';
+import scrollToPosition from '../../helpers/scrollToPosition';
 
 const Skills = () => {
     const [skillImgElem, setSkillImgElem] = useState(null);
@@ -23,6 +24,10 @@ const Skills = () => {
     const closeSkillPopover = () => {
         setSkillImgElem(null);
     };
+
+    useEffect(() => {
+        scrollToPosition();
+    }, []);
 
     return (
         <>

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import academicsData from '../../assets/data/academicsData.json';
 import { SKILLS } from '../../helpers/routesURL';
+import scrollToPosition from '../../helpers/scrollToPosition';
 import ExternalLink from '../SharedComponents/ActiveStatusGreenDot/ExternalLink';
 import './academics.scss'
 
@@ -11,6 +12,10 @@ const Academics = () => {
     const toggleAcademicTag = () => {
         setShowAcademicTag(prevState => !prevState)
     }
+
+    useEffect(() => {
+        scrollToPosition();
+    }, []);
 
     return (
         <>
