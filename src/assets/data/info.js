@@ -11,7 +11,7 @@ export const InfoData = {
         minor: {
             title: "SrcLogicx",
             sub1: "Full Stack Dev",
-            sub2: "Mar 2020",
+            sub2: "July 2020",
             inactive: false,
             url: "https://srclogix.com/",
             img: "srclogicx.png"
@@ -29,7 +29,7 @@ export const InfoData = {
         minor: {
             title: "SrcLogicx",
             sub1: "Full Stack Dev",
-            sub2: "July-21 => 1.5Y",
+            sub2: "July 2021 => 1Y",
             inactive: true,
             url: "https://srclogix.com/",
             img: "srclogicx.png"
