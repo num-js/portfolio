@@ -4,6 +4,7 @@ import academicsData from '../../assets/data/academicsData.json';
 import { SKILLS } from '../../helpers/routesURL';
 import scrollToPosition from '../../helpers/scrollToPosition';
 import ExternalLink from '../SharedComponents/ActiveStatusGreenDot/ExternalLink';
+import Modal from '../SharedComponents/Modal/Modal';
 import './academics.scss'
 
 const Academics = () => {
@@ -152,6 +153,8 @@ const Academics = () => {
                         </div>
                     </div>
                 </div>
+                <Modal />
+
             </section>
         </>
     );
