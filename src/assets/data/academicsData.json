@@ -10,6 +10,7 @@
         "marks": {
             "label": "DGPA : ",
             "percentage": "8.01 / 10",
+            "docTitle": "Bachelor Degree",
             "link": "https://raw.githubusercontent.com/mdnmnahmed/personal-resourses/certi/certifications/BCA-Provisional%20Certificate.jpg",
             "semMarks": {
                 "headerLabels": [
@@ -66,6 +67,7 @@
         "marks": {
             "label": "Marks : ",
             "percentage": "68%",
+            "docTitle": "Higher Secondary Result",
             "link": "https://raw.githubusercontent.com/mdnmnahmed/personal-resourses/certi/marksheets/hs/HS-Marksheet.jpg"
         }
     }
