@@ -4,6 +4,7 @@ import academicsData from '../../assets/data/academicsData.json';
 import { SKILLS } from '../../helpers/routesURL';
 import scrollToPosition from '../../helpers/scrollToPosition';
 import ExternalLink from '../SharedComponents/ActiveStatusGreenDot/ExternalLink';
+import Modal from '../SharedComponents/Modal/Modal';
 import './academics.scss'
 
 const Academics = () => {
@@ -102,7 +103,12 @@ const Academics = () => {
                                                         {collegeData.marks.percentage}
                                                     </div>
                                                     <div className="ml-5">
-                                                        <ExternalLink link={collegeData.marks.link} />
+                                                        <Modal
+                                                            buttonComponent={<img alt="numan ahmed" src="../icons/external-link.svg" width="24px" />}
+                                                            docTitle={collegeData?.marks?.docTitle}
+                                                        >
+                                                            <img src={collegeData.marks.link} />
+                                                        </Modal>
                                                     </div>
                                                 </div>
 
