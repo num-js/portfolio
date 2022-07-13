@@ -103,7 +103,12 @@ const Academics = () => {
                                                         {collegeData.marks.percentage}
                                                     </div>
                                                     <div className="ml-5">
-                                                        <ExternalLink link={collegeData.marks.link} />
+                                                        <Modal
+                                                            buttonComponent={<img alt="numan ahmed" src="../icons/external-link.svg" width="24px" />}
+                                                            docTitle={collegeData?.marks?.docTitle}
+                                                        >
+                                                            <img src={collegeData.marks.link} />
+                                                        </Modal>
                                                     </div>
                                                 </div>
 
@@ -153,8 +158,6 @@ const Academics = () => {
                         </div>
                     </div>
                 </div>
-                <Modal />
-
             </section>
         </>
     );
