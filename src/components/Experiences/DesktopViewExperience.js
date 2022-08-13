@@ -38,9 +38,9 @@ const DesktopViewExperience = ({ experiencesData }) => {
                                 <div className="mt-2 font-semibold text-green-200">
                                     Used Tech Stack
                                     <div className="">
-                                        <div className="flex flex-wrap -m-4 text-center">
+                                        <div className="flex flex-wrap text-center">
                                             {companyData?.workingTech.map((tech, index) => (
-                                                <div key={index} className="w-1/2 p-4 sm:w-1/4">
+                                                <div key={index} className="w-1/2 mb-2 sm:w-1/4">
                                                     <SkillDiv skill={tech} />
                                                 </div>
                                             ))}

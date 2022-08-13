@@ -11,9 +11,10 @@
         "companyURL": "https://darwinbox.com/",
         "workingTech": [
             "ReactJS",
-            "Redux-ToolKit",
-            "Bootstrap",
+            "NodeJS",
             "Redux",
+            "SCSS",
+            "Bootstrap",
             "jQuery"
         ]
     },
