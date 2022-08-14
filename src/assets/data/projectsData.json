@@ -9,7 +9,7 @@
         "description": "Get latest & trending🔥 Movies informations.",
         "usedTech": [
             "ReactJS",
-            "TailwindCSS",
+            "Tailwind CSS",
             "Redux-Toolkit",
             "PWA"
         ]
@@ -28,7 +28,7 @@
             "NodeJS",
             "ExpressJS",
             "Cloudinary",
-            "TailwindCSS"
+            "Tailwind CSS"
         ]
     },
     {
@@ -88,7 +88,7 @@
         "description": "Personal Finance tool that can help you manage your investments, expenses, loans, financial goals – all in one place.",
         "usedTech": [
             "NextJS",
-            "TailwindCSS",
+            "Tailwind CSS",
             "TypeScript"
         ]
     },

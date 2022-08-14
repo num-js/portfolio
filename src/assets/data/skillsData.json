@@ -218,7 +218,7 @@
         "others": [
             {
                 "id": "others",
-                "title": "Other Tools",
+                "title": "Other-Tools",
                 "skills": [
                     {
                         "name": "VS Code",
