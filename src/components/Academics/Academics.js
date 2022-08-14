@@ -43,7 +43,7 @@ const Academics = () => {
                             <p className="my-2 leading-relaxed text-white">
                                 I believe Degree & Marks are useless. &nbsp;&nbsp;
                                 <br />
-                                I just have the <Link to={{ pathname: SKILLS }}><span className="font-bold">Skills</span></Link>.
+                                I have the <Link to={{ pathname: SKILLS }}><span className="font-bold underline">Skills</span>. 😎</Link>
                             </p>
                             <div className="flex items-center border-b-2 border-gray-600"></div>
                         </div>
@@ -72,30 +72,34 @@ const Academics = () => {
                                                 )
                                             }
                                         </div>
-                                        <div className="flex-grow pl-4">
-                                            <h2 className="mb-2 text-xl font-medium text-pink-600 lg:text-2xl title-font">
+                                        <div className="flex-grow pl-4 text-base">
+                                            <h2 className="mb-2 font-medium text-pink-600 lg:text-base title-font">
                                                 {collegeData?.course}
                                             </h2>
                                             <img src="../icons/small-circle.svg" className="absolute right-0 cursor-pointer"
                                                 onClick={toggleAcademicTag}
                                             />
-                                            <span className="text-base text-white">
-                                                <span className="font-medium">{collegeData?.board}</span> - {collegeData?.name}
+                                            <div className="font-medium text-white ">
+                                                {collegeData?.board}
+                                            </div>
+
+                                            <span className="text-gray-400 ">
+                                                {collegeData?.name}
                                             </span>
 
                                             <div className="leading-relaxed text-gray-200">
-                                                <div className="text-base font-medium text-white">
+                                                <div className="font-medium text-white ">
                                                     {collegeData?.description}
                                                 </div>
                                                 {collegeData?.stream && (
-                                                    <div className="text-lg text-white">
+                                                    <div className="text-gray-400 ">
                                                         Stream :  <span className="font-medium">{collegeData?.stream}</span>
                                                     </div>
                                                 )}
-                                                <span className="mt-1 text-base font-medium text-gray-500">
+                                                <span className="mt-1 font-medium text-gray-500">
                                                     {collegeData?.timeLine}
                                                 </span>
-                                                <div className="flex text-base font-medium">
+                                                <div className="flex font-medium">
                                                     <div className="">
                                                         {collegeData.marks.label}
                                                     </div>

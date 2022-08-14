@@ -3,7 +3,7 @@
         "icon": "college",
         "name": "George College",
         "timeLine": "2017 - 2020",
-        "board": "MAKAUT",
+        "board": "Maulana Abul Kalam Azad University of Technology (MAKAUT)",
         "course": "BACHELOR OF COMPUTER APPLICATION (BCA)",
         "description": "",
         "stream": null,
@@ -55,9 +55,9 @@
     },
     {
         "icon": "12",
-        "name": "ISLAMPUR HIGH SCHOOL",
+        "name": "Islampur High School",
         "timeLine": "2015 - 2017",
-        "board": "WBCHSE",
+        "board": "West Bengal Council of Higher Secondary Education (WBCHSE)",
         "course": "HIGHER SECONDARY EDUCATION (10+2)",
         "description": "",
         "stream": [
