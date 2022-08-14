@@ -36,7 +36,7 @@ const Header = () => {
                                 <span key={index} className="block mt-4 mr-4 text-xl text-white nav-menu lg:inline-block lg:mt-0 hover:text-gray-400">
                                     <NavLink key={index}
                                         exact to={link}
-                                        activeStyle={{ color: `rgba(219, 39, 119` }}
+                                        activeStyle={{ color: `rgba(219, 39, 119`, fontWeight: '700' }}
                                         onClick={() => setToggleMobileMenu(false)}
                                     >
                                         {label}
