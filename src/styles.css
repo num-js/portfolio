@@ -58,16 +58,16 @@
 #download-cv-btn::before {
     content: "";
     background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
-    width: 150%;
-    height: 150%;
+    width: 300px;
+    height: 200px;
     position: absolute;
     animation: rotate 2s linear infinite;
 }
 
 #download-cv-btn::after {
     content: "Download CV";
-    width: 107px;
-    height: 24px;
+    width: 111px;
+    height: 27px;
     background: #101010;
     position: absolute;
     border-radius: 0px;
