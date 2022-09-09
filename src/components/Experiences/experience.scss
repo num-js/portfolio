@@ -1,16 +1,6 @@
-// html,
-// body {
-//   background-color: #222c32;
-//   height: 100%;
-//   font-family: "Open Sans", sans-serif;
-//   box-sizing: border-box;
-// }
-
 .cd-container {
   // width: 90%;
-  // max-width: 1080px;
   margin: 0 auto;
-  // background: #2b343a;
   padding: 0 10%;
   border-radius: 2px;
 }
@@ -21,16 +11,10 @@
   clear: both;
 }
 
-/* -------------------------------- 
-
-Main components 
-
--------------------------------- */
-
 #cd-timeline {
   position: relative;
   padding: 2em 0;
-  margin-top: 2em;
+  // margin-top: 2em;
   margin-bottom: 2em;
 }
 
