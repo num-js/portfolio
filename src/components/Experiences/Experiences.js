@@ -4,6 +4,8 @@ import useScreenWidth from '../../hooks/useScreenWidth';
 import scrollToPosition from '../../helpers/scrollToPosition';
 import './experience.scss';
 import { getDuration, getMonthNameYear } from '../../helpers/getDate';
+import { SectionHeader } from '../SharedComponents';
+
 const Experiences = () => {
     const screenSize = useScreenWidth();
 
@@ -15,9 +17,10 @@ const Experiences = () => {
         <>
             <section id="experience">
                 <div className="container w-full h-full mx-auto">
-                    <div align="center">
-                        <h1 className="mb-2 text-2xl font-medium text-white title-font" id="experienceLabel">Experiences</h1>
-                    </div>
+                    <SectionHeader
+                        sectionTitle="Experiences"
+                        sectionId="experienceLabel"
+                    />
 
                     <div id="cd-timeline" class="cd-container">
                         {
