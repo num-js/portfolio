@@ -4,6 +4,7 @@ import skillsData from '../../assets/data/skillsData.json';
 import "./skills.css";
 import RotatingCircle from '../SharedComponents/RotatingCircle/RotatingCircle';
 import scrollToPosition from '../../helpers/scrollToPosition';
+import { SectionHeader } from '../SharedComponents/index.js';
 
 const Skills = () => {
     const [skillImgElem, setSkillImgElem] = useState(null);
@@ -32,9 +33,9 @@ const Skills = () => {
         <>
             <section className="text-gray-600 body-font lg:mt-10">
 
-                <div align="center">
-                    <h1 className="mb-2 text-2xl font-medium text-white title-font">Tech Stack</h1>
-                </div>
+                <SectionHeader
+                    sectionTitle="Tech Stack"
+                />
 
                 <div className="rotating-skills-section" style={{ minHeight: "65vh" }}>
                     <div className="flex mt-40 justify-evenly rotating-skills-container">

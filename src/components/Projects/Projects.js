@@ -7,6 +7,7 @@ import { generateRandomNumber } from '../../helpers/generateNumber';
 import { Link } from 'react-router-dom';
 import { PROJECTS } from '../../helpers/routesURL';
 import scrollToPosition from '../../helpers/scrollToPosition';
+import { SectionHeader } from '../SharedComponents';
 
 const Projects = () => {
     const screenSize = useScreenWidth();
@@ -22,9 +23,10 @@ const Projects = () => {
     return (
         <>
             <section className="mb-20 text-gray-600 body-font lg:mt-10">
-                <div align="center">
-                    <h1 className="mb-2 text-2xl font-medium text-white title-font">Projects</h1>
-                </div>
+                <SectionHeader
+                    sectionTitle="Projects"
+                />
+
 
                 <div>
                     {showAllProjects && (
