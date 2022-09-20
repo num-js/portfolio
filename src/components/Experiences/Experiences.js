@@ -27,7 +27,7 @@ const Experiences = () => {
                             experiencesData?.map((companyData, index) => (
                                 <div class="cd-timeline-block">
                                     <div class="cd-timeline-img cd-picture">
-                                        <span class="flex justify-center align-middle text-lg font-semibold text-white">
+                                        <span class="flex justify-center align-middle text-white">
                                             {getDuration(companyData?.timeLine.start, companyData?.timeLine?.end)}
                                         </span>
                                     </div>
