@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react';
 import SingleProject from './SingleProject';
 import projectsData from '../../assets/data/projectsData.json';
 import useScreenWidth from '../../hooks/useScreenWidth';
-import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
 import { generateRandomNumber } from '../../helpers/generateNumber';
 import { Link } from 'react-router-dom';
 import { PROJECTS } from '../../helpers/routesURL';
 import scrollToPosition from '../../helpers/scrollToPosition';
-import { SectionHeader } from '../SharedComponents';
+import { SectionHeader, SkillsView } from '../SharedComponents';
 
 const Projects = () => {
     const screenSize = useScreenWidth();
@@ -78,11 +77,7 @@ const Projects = () => {
                                                     </p>
 
                                                     <div className="my-2">
-                                                        {
-                                                            projectData.usedTech.map((tech, index) => (
-                                                                <SkillDiv key={index} skill={tech} />
-                                                            ))
-                                                        }
+                                                        {<SkillsView skills={projectData.usedTech} />}
                                                     </div>
 
                                                     <div className="flex items-center border-b-2 border-gray-600"></div>

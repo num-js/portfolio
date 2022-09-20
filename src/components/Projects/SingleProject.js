@@ -1,6 +1,5 @@
 import React from 'react';
-import { generateRandomNumber } from '../../helpers/generateNumber';
-import SkillDiv from '../SharedComponents/ActiveStatusGreenDot/SkillDiv';
+import { SkillsView } from '../SharedComponents';
 
 const SingleProject = ({ projectData }) => {
     return (
@@ -22,11 +21,7 @@ const SingleProject = ({ projectData }) => {
                         </p>
 
                         <div className="my-2">
-                            {
-                                projectData.usedTech.map((tech, index) => (
-                                    <SkillDiv key={index} skill={tech} />
-                                ))
-                            }
+                            {<SkillsView skills={projectData.usedTech} />}
                         </div>
 
                         <div className="flex items-center border-b-2 border-gray-800"></div>

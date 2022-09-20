@@ -4,7 +4,7 @@ import useScreenWidth from '../../hooks/useScreenWidth';
 import scrollToPosition from '../../helpers/scrollToPosition';
 import './experience.scss';
 import { getDuration, getMonthNameYear } from '../../helpers/getDate';
-import { SectionHeader } from '../SharedComponents';
+import { SectionHeader, SkillsView } from '../SharedComponents';
 
 const Experiences = () => {
     const screenSize = useScreenWidth();
@@ -62,11 +62,7 @@ const Experiences = () => {
                                             </div>
                                         </div>
                                         <p> {companyData?.description} </p>
-                                        <ul class="content-skills">
-                                            {companyData?.workingTech.map((tech, index) => (
-                                                <li>{tech}</li>
-                                            ))}
-                                        </ul>
+                                        <SkillsView skills={companyData?.workingTech} />
                                     </div>
                                 </div>
                             ))
