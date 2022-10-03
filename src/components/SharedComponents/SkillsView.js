@@ -1,11 +1,11 @@
 import React from 'react';
 import './skillsView.scss';
 
-const SkillsView = ({ skills }) => {
+const SkillsView = ({ skills, viewStyles }) => {
     return (
         <ul className="skills-view">
             {skills.map((skill, index) => (
-                <li key={index}>{skill}</li>
+                <li style={viewStyles} key={index}>{skill}</li>
             ))}
         </ul>
     );
