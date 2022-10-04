@@ -9,6 +9,9 @@ import Logo from '../SharedComponents/ActiveStatusGreenDot/Logo';
 const Footer = () => {
     return (
         <>
+            <div class="relative" style={{ top: '-55px', left: '90%' }}>
+                <img src="../images/plant-blue.svg" className="absolute" />
+            </div>
             <div className=""
                 style={{ backgroundColor: "#3d393961", }}
             >
