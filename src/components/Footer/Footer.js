@@ -9,6 +9,9 @@ import Logo from '../SharedComponents/ActiveStatusGreenDot/Logo';
 const Footer = () => {
     return (
         <>
+            <div class="flex justify-end mr-20">
+                <img src="../images/plant-blue.svg" />
+            </div>
             <div className=""
                 style={{ backgroundColor: "#3d393961", }}
             >
