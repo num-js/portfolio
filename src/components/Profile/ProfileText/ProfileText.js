@@ -75,7 +75,7 @@ const ProfileText = () => {
                         data-type='[ "Full Stack JS", "MERN Stack", "Front-End", "PWA", "Back-End" ]'>
                         <span className="wrap"></span>
                     </span>
-                    <span className="txtShadow" style={{ color: '#fffb00', fontSize: '20px' }}> Developer</span>
+                    <span className="txtShadow" style={{ color: '#fffb00', fontSize: '22px' }}> Developer</span>
                 </div>
             </div>
             <div className="skill-badges">
