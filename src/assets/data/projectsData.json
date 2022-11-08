@@ -10,8 +10,8 @@
         "usedTech": [
             "ReactJS",
             "Tailwind CSS",
-            "Redux-Toolkit",
-            "PWA"
+            "PWA",
+            "Redux-Toolkit"
         ]
     },
     {
@@ -43,8 +43,8 @@
             "NextJS",
             "NodeJS",
             "ExpressJS",
-            "MongoDB",
             "CSS",
+            "MongoDB",
             "AWS-S3"
         ]
     },
