@@ -178,3 +178,58 @@
         transform: translate(0px, 0px) rotate(0deg);
     }
 }
+
+// Profile Image Circle Start
+.circle-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    border-color: #7b36b4;
+    border-style: solid;
+    border-width: 1px;
+    animation: circular 3s ease infinite;
+}
+
+.pp {
+    content: "";
+    display: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 340px;
+    width: 340px;
+    position: absolute;
+    background-size: cover;
+    border-radius: 100%;
+    box-shadow: 0px 0px 28px #374894, inset 0 0 20px #0004ff;
+}
+
+@keyframes circular {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 0px 0px 8px #374894, inset 0 0 8px #0004ff;
+    }
+    25% {
+        box-shadow: 0px 0px 16px #2e48b9, inset 5px 5px 16px #8c00ff;
+    }
+    50% {
+        box-shadow: 0px 0px 30px #002efd, inset 10px 10px 60px #7b36b4;
+    }
+    75% {
+        box-shadow: 0px 0px 16px #2e48b9, inset 5px 5px 16px #7b36b4;
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 0px 0px 8px #374894, inset 0 0 8px #0004ff;
+    }
+}
+//*** Profile Image Circle End
