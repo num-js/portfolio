@@ -59,6 +59,14 @@ export const InfoData = {
             inactive: true,
             url: "https://wealth42.com/",
             img: "w42.png"
-        }
+        },
+        extra: {
+            title: "Hacktober Fest",
+            sub1: "Opensource",
+            sub2: "Oct 2022",
+            inactive: false,
+            url: null,
+            img: "hacktober-2022.png"
+        },
     },
 }
