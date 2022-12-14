@@ -21,19 +21,29 @@ const RouterComponent = () => {
                     {/* <ContactMe /> */}
                 </Route>
                 <Route exact path={EXPERIENCES}>
-                    <Experiences />
+                    <div class="nmt-70">
+                        <Experiences />
+                    </div>
                 </Route>
                 <Route exact path={SKILLS}>
-                    <Skills />
+                    <div class="nmt-70">
+                        <Skills />
+                    </div>
                 </Route>
                 <Route exact path={PROJECTS}>
-                    <Projects />
+                    <div class="nmt-70">
+                        <Projects />
+                    </div>
                 </Route>
                 <Route exact path={ACADEMICS}>
-                    <Academics />
+                    <div class="nmt-70">
+                        <Academics />
+                    </div>
                 </Route>
                 <Route exact path={CONTACT_ME}>
-                    <ContactMe />
+                    <div class="nmt-70">
+                        <ContactMe />
+                    </div>
                 </Route>
             </Switch>
         </>

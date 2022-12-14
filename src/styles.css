@@ -133,3 +133,25 @@
 .modal-bg-blur {
     background: #000000b3;
 }
+
+.nblue-box-shadow {
+    box-shadow: 0 8px 32px 0 rgb(78 35 146 / 68%);
+}
+
+.nbody-bg {
+    background: #111827;
+}
+
+.nblur-bg-30 {
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+.nblur-bg-9 {
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+}
+
+.nmt-70 {
+    margin-top: 70px;
+}
