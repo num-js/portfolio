@@ -31,6 +31,11 @@ const Experiences = () => {
                                             {getDuration(companyData?.timeLine.start, companyData?.timeLine?.end)}
                                         </span>
                                     </div>
+
+                                    <div class="cd-timeline-pic">
+                                        <img src={companyData.sidePic.url} width="250" />
+                                    </div>
+
                                     <div class="cd-timeline-content">
                                         <div class="flex items-center">
                                             <div>
