@@ -26,14 +26,15 @@ const Experiences = () => {
                         {
                             experiencesData?.map((companyData, index) => (
                                 <div class="cd-timeline-block">
+
+                                    <div class="cd-timeline-pic">
+                                        <img src={companyData.sidePic.url} width="280" />
+                                    </div>
+
                                     <div class="cd-timeline-img cd-picture">
                                         <span class="flex justify-center align-middle text-white">
                                             {getDuration(companyData?.timeLine.start, companyData?.timeLine?.end)}
                                         </span>
-                                    </div>
-
-                                    <div class="cd-timeline-pic">
-                                        <img src={companyData.sidePic.url} width="250" />
                                     </div>
 
                                     <div class="cd-timeline-content">

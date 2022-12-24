@@ -240,11 +240,13 @@
 }
 
 .cd-timeline-pic {
-  float: right;
+  position: absolute;
+  right: 0;
 }
 
 .cd-timeline-block:nth-child(even) .cd-timeline-pic {
-  float: left;
+  position: absolute;
+  left: 0;
 }
 
 @media (max-width: 500px) {
