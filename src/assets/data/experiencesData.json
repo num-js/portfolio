@@ -16,7 +16,11 @@
             "SCSS",
             "Bootstrap",
             "jQuery"
-        ]
+        ],
+        "sidePic": {
+            "url": "../images/num-planning.svg",
+            "styles": ""
+        }
     },
     {
         "name": "X2A-Wealth42",
@@ -38,7 +42,11 @@
             "SendBird",
             "Re-Chats",
             "Material-UI"
-        ]
+        ],
+        "sidePic": {
+            "url": "../images/num-analytics.svg",
+            "styles": ""
+        }
     },
     {
         "name": "SrcLogicx",
@@ -59,6 +67,10 @@
             "AWS-S3",
             "MongoDB",
             "DynamoDB"
-        ]
+        ],
+        "sidePic": {
+            "url": "../images/num-with-rocket.svg",
+            "styles": ""
+        }
     }
 ]

@@ -238,3 +238,19 @@
     text-align: right;
   }
 }
+
+.cd-timeline-pic {
+  position: absolute;
+  right: 0;
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-pic {
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 500px) {
+  .cd-timeline-pic {
+    display: none;
+  }
+}
