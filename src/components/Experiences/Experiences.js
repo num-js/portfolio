@@ -37,7 +37,7 @@ const Experiences = () => {
                                         </span>
                                     </div>
 
-                                    <div class="cd-timeline-content">
+                                    <div class="cd-timeline-content nbg-glass">
                                         <div class="flex items-center">
                                             <div>
                                                 <a target="_blank" href={companyData?.companyURL}>
@@ -50,7 +50,7 @@ const Experiences = () => {
                                                     <span class="flex align-middle">
                                                         <span>
                                                             <img width="16" class="mr-2 "
-                                                                src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/000000/external-Developer-programming-and-development-those-icons-lineal-color-those-icons.png"
+                                                                src="../icons/num-lappy-icon.png"
                                                             />
                                                         </span>
                                                         <span>{companyData?.role}</span>
@@ -58,7 +58,7 @@ const Experiences = () => {
                                                     <span class="flex align-middle">
                                                         <span>
                                                             <img width="16" class="mr-2 "
-                                                                src="https://img.icons8.com/color/48/000000/calendar--v1.png"
+                                                                src="../icons/calendar-icon.png"
                                                             />
                                                         </span>
                                                         <span>{getMonthNameYear(companyData?.timeLine.start)} -- {companyData?.timeLine.end === "" ? "present" : getMonthNameYear(companyData?.timeLine.end)}</span>

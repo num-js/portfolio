@@ -77,7 +77,7 @@ const Projects = () => {
                                                     </p>
 
                                                     <div className="my-2">
-                                                        {<SkillsView skills={projectData.usedTech} viewStyles={{ background: "#000000b5", color: "white" }} />}
+                                                        {<SkillsView skills={projectData.usedTech} />}
                                                     </div>
 
                                                     <div className="flex items-center border-b-2 border-gray-600"></div>

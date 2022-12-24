@@ -155,3 +155,12 @@
 .nmt-70 {
     margin-top: 70px;
 }
+
+.nbg-glass {
+    border-radius: 7px;
+    box-shadow: -1px 2px 17px -4px rgb(0 0 0 / 54%);
+    background: rgba(29, 30, 30, 0.3);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
