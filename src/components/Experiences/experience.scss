@@ -102,12 +102,13 @@
   position: relative;
   margin-left: 60px;
   margin-right: 12px;
-  background: #333c42;
-  border-radius: 2px;
+  // background: #333c42;
+  // border-radius: 2px;
   padding: 1em;
 
   .timeline-content-info {
-    background: #2b343a;
+    background: #111213;
+    border-bottom: 0.2px solid gray;
     padding: 5px 10px;
     color: rgba(255, 255, 255, 0.7);
     font-size: 12px;
