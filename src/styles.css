@@ -164,3 +164,7 @@
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+.nd-text-shadow-black {
+    text-shadow: 0 0 5px black;
+}
