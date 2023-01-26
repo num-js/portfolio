@@ -74,3 +74,17 @@
         }
     }
 }
+
+.txt-gradient {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0rem 0rem 3px black);
+}
+
+.txt-gradient-1 {
+    background-image: linear-gradient(279deg,#20C23C,#375AFE 50%,#20c1bc);
+}
+.txt-gradient-2 {
+    background-image: linear-gradient(63deg, #20c23c, #375afe 50%, #20c1bc);
+}
