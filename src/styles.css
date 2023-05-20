@@ -162,7 +162,7 @@
     background: rgba(29, 30, 30, 0.3);
     backdrop-filter: blur(9px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
 .nd-text-shadow-black {
