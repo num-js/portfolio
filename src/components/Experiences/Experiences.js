@@ -32,7 +32,7 @@ const Experiences = () => {
                                     </div>
 
                                     <div class="cd-timeline-img cd-picture">
-                                        <span class="flex justify-center align-middle text-white">
+                                        <span class="time-duration flex justify-center align-middle text-white text-xs">
                                             {getDuration(companyData?.timeLine.start, companyData?.timeLine?.end)}
                                         </span>
                                     </div>
