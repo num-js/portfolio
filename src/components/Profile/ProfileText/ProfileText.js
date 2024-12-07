@@ -70,12 +70,12 @@ const ProfileText = () => {
             <div className="text-div">
                 <p className="mainText txt-gradient txt-gradient-1">Hey I'm </p>
                 <p className="mainText main txt-gradient txt-gradient-2">MD. Numan Ahmed</p>
-                <div style={{ margin: '10px auto' }}>
-                    <span style={{ color: 'chartreuse', fontSize: '25px', fontWeight: 'bolder' }} href="" className="typewrite" data-period="2000"
-                        data-type='[ "Full Stack JS", "MERN Stack", "Front-End", "PWA", "Back-End" ]'>
+                <div className="font-serif typing-txt-div" style={{ margin: '10px auto' }}>
+                    <span style={{ color: 'chartreuse', fontWeight: 'bolder' }} href="" className="typewrite" data-period="2000"
+                        data-type='[ "Full Stack", "Front-End", "Back-End" ]'>
                         <span className="wrap"></span>
                     </span>
-                    <span className="txtShadow" style={{ color: '#fffb00', fontSize: '20px' }}> Developer</span>
+                    <span className="txtShadow" style={{ color: '#fffb00' }}> Developer</span>
                 </div>
             </div>
             <div className="skill-badges">
@@ -90,7 +90,7 @@ const ProfileText = () => {
                     ))
                 }
             </div>
-            <div className="quote-txt">
+            <div className="font-serif quote-txt">
                 <h3>I write <span style={{ color: 'chartreuse' }}>Code</span>, that lives on the <span style={{ color: '#fffb00' }}>Web</span>.</h3>
             </div>
         </div>
