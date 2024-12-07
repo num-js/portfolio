@@ -7,6 +7,7 @@ import Fade from 'react-reveal/Fade';
 import './profilePicture.scss'
 import ActiveStatusGreenDot from '../../SharedComponents/ActiveStatusGreenDot/ActiveStatusGreenDot';
 import useScreenWidth from '../../../hooks/useScreenWidth';
+import { getCurrentYear } from '../../../helpers/getDate';
 
 const PrettoSlider = withStyles({
     root: {
@@ -40,7 +41,7 @@ const PrettoSlider = withStyles({
         borderRadius: 4,
     },
 })(Slider);
-const currentYear = new Date().getFullYear().toString();
+const currentYear = getCurrentYear();
 
 function getYearData(selectedYear) {
     let infoData = InfoData[selectedYear];
@@ -125,6 +126,7 @@ const ProfilePicture = () => {
                         ThumbComponent={ThumbComponentCustom}
                     />
                 </div>
+                <div id="heroSectionEnd"> &nbsp; </div>
             </div>
         </div>
     );
