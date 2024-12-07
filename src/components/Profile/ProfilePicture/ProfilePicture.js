@@ -40,13 +40,21 @@ const PrettoSlider = withStyles({
         borderRadius: 4,
     },
 })(Slider);
+const currentYear = new Date().getFullYear().toString();
 
+function getYearData(selectedYear) {
+    let infoData = InfoData[selectedYear];
+    if (!infoData) {
+        infoData = InfoData[2025];
+    }
+    return infoData;
+}
 
 const ProfilePicture = () => {
     const screenSize = useScreenWidth();
-    const [year, setYear] = useState(2023)
-    let data = InfoData[year];
+    const [year, setYear] = useState(currentYear);
     const [visible, setVisible] = useState(true);
+    let data = getYearData(year);
 
     useEffect(() => {
         setTimeout(function () { setVisible(true) }, 400);
@@ -64,14 +72,17 @@ const ProfilePicture = () => {
             </div>
             <p className="year" style={{ fontFamily: "akronim, cursive" }}>{year}</p>
             <div className="top-lable">
-                <div className="current-job" onClick={() => { if (data.minor.url) { window.open(data.minor.url, "_blank") } }}>
-                    <Fade opposite when={visible}>
-                        <ActiveStatusGreenDot icon={data.minor.img} inactive={data.minor.inactive} />
-                        <p className="card-title">{data.minor.title}</p>
-                        <p className="card-sub">{data.minor.sub1}</p>
-                        <p className="card-sub">{data.minor.sub2}</p>
-                    </Fade>
-                </div>
+                {data.minor && (
+                    <div className="current-job" onClick={() => { if (data.minor.url) { window.open(data.minor.url, "_blank") } }}>
+                        <Fade opposite when={visible}>
+                            <ActiveStatusGreenDot icon={data.minor.img} inactive={data.minor.inactive} />
+                            <p className="card-title">{data.minor.title}</p>
+                            <p className="card-sub">{data.minor.sub1}</p>
+                            <p className="card-sub">{data.minor.sub2}</p>
+                        </Fade>
+                    </div>
+                )}
+
                 {data.extra && (
                     <div className={`current-job flat-extra`} onClick={() => { if (data.extra.url) { window.open(data.extra.url, "_blank") } }}>
                         <Fade opposite when={visible}>
@@ -83,16 +94,19 @@ const ProfilePicture = () => {
                         </Fade>
                     </div>
                 )}
-                <div className="current-job" onClick={() => { if (data.major.url) { window.open(data.major.url, "_blank") } }}>
-                    <Fade opposite when={visible}>
-                        <div align="center">
-                            <ActiveStatusGreenDot icon={data.major.img} inactive={data.major.inactive} />
-                        </div>
-                        <p className="card-title">{data.major.title}</p>
-                        <p className="card-sub">{data.major.sub1}</p>
-                        <p className="card-sub">{data.major.sub2}</p>
-                    </Fade>
-                </div>
+
+                {data.major && (
+                    <div className="current-job" onClick={() => { if (data.major.url) { window.open(data.major.url, "_blank") } }}>
+                        <Fade opposite when={visible}>
+                            <div align="center">
+                                <ActiveStatusGreenDot icon={data.major.img} inactive={data.major.inactive} />
+                            </div>
+                            <p className="card-title">{data.major.title}</p>
+                            <p className="card-sub">{data.major.sub1}</p>
+                            <p className="card-sub">{data.major.sub2}</p>
+                        </Fade>
+                    </div>
+                )}
             </div>
             <div className={`top-lable down`}>
                 <div className={`current-job flat-large ${screenSize === 'small' ? 'mb-10' : ''}`}>
@@ -106,8 +120,8 @@ const ProfilePicture = () => {
                         onChange={(event, newValue) => { if (newValue !== year) { setVisible(false) }; setYear(newValue); }}
                         steps={1}
                         min={2020}
-                        max={2023}
-                        defaultValue={2023}
+                        max={currentYear?.toString()}
+                        defaultValue={currentYear?.toString()}
                         ThumbComponent={ThumbComponentCustom}
                     />
                 </div>
