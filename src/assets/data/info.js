@@ -78,6 +78,58 @@ export const InfoData = {
             url: "https://darwinbox.com/",
             img: "dbox.png"
         },
+        extra: {
+            title: "Wealth42",
+            sub1: "SDE",
+            sub2: "Jan-2022 => 7M",
+            inactive: true,
+            url: "https://wealth42.com/",
+            img: "w42.png"
+        },
+        minor: {
+            title: "Hacktober Fest",
+            sub1: "Opensource",
+            sub2: "Oct 2023",
+            inactive: false,
+            url: null,
+            img: "hacktober-2022.png"
+        },
+    },
+    2024: {
+        major: {
+            title: "DarwinBox",
+            sub1: "Sr. SWE",
+            sub2: "Feb-2022",
+            inactive: false,
+            url: "https://darwinbox.com/",
+            img: "dbox.png"
+        },
+        extra: {
+            title: "Wealth42",
+            sub1: "SDE",
+            sub2: "Jan-2022 => 7M",
+            inactive: true,
+            url: "https://wealth42.com/",
+            img: "w42.png"
+        },
+        minor: {
+            title: "Hacktober Fest",
+            sub1: "Opensource",
+            sub2: "Oct 2024",
+            inactive: false,
+            url: null,
+            img: "hacktober-2022.png"
+        },
+    },
+    2025: {
+        major: {
+            title: "DarwinBox",
+            sub1: "Sr. SWE",
+            sub2: "Feb-2022",
+            inactive: false,
+            url: "https://darwinbox.com/",
+            img: "dbox.png"
+        },
         minor: {
             title: "Wealth42",
             sub1: "SDE",

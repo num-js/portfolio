@@ -24,7 +24,7 @@
   top: 0;
   left: 25px;
   height: 100%;
-  width: 4px;
+  width: 6px;
   background: #333c42;
 }
 
@@ -36,7 +36,7 @@
 
   #cd-timeline::before {
     left: 50%;
-    margin-left: -2px;
+    margin-left: 2px;
   }
 }
 
@@ -80,21 +80,32 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #333c42, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 0 0 4px #333c42,
+    inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
   line-height: 1.75rem;
   background: #2b343a;
 }
 
+.cd-timeline-img .time-duration {
+  margin-top: 8px;
+}
+
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     left: 50%;
     margin-left: -15px;
     margin-top: 15px;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
+
+    .time-duration {
+      margin-top: 12px;
+    }
   }
 }
 
