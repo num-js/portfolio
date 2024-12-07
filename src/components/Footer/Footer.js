@@ -5,6 +5,7 @@ import socialMediaIconURL from '../../assets/data/socialMediaData';
 import { navBarMenu } from '../../assets/navLinks';
 import scrollToPosition from '../../helpers/scrollToPosition';
 import Logo from '../SharedComponents/ActiveStatusGreenDot/Logo';
+import { getCurrentYear } from '../../helpers/getDate';
 
 const Footer = () => {
     return (
@@ -93,12 +94,14 @@ const Footer = () => {
                 {/* Footer bottom */}
                 <div style={{ backgroundColor: "#191717ba" }}>
                     <div className="container px-6 py-6 mx-auto lg:px-20">
-                        <div className="flex justify-center mb-1 text-gray-300">
-                            © 2022 &nbsp; <span> <Logo icon={false} animation={false} txtSize={16} /> </span> &nbsp;
+                        <div className="flex justify-center mb-1 font-serif text-gray-300">
+                            © 2020 - {getCurrentYear()}  &nbsp; <span> <Logo icon={false} animation={false} txtSize={16} /> </span> &nbsp;
                             All rights reserved.
                         </div>
-                        <div className="flex justify-center text-sm font-light text-gray-300">
-                            Designed & Developed with ❤️ by  &nbsp; <span> <Logo icon={false} animation={true} txtSize={16} /> </span>
+                        <div className="flex justify-center font-mono text-sm font-light text-gray-300">
+                            Designed & Developed with
+                            <img alt="numan ahmed" src="../images/num_heart.gif" width="20px" />
+                            by  &nbsp; <span> <Logo icon={false} animation={true} txtSize={16} /> </span>
                         </div>
                     </div>
                 </div>

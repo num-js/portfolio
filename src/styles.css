@@ -168,3 +168,7 @@
 .nd-text-shadow-black {
     text-shadow: 0 0 5px black;
 }
+
+.font-akronim {
+    font-family: akronim, cursive;
+}
