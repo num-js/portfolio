@@ -69,4 +69,22 @@ export const InfoData = {
             img: "hacktober-2022.png"
         },
     },
+    2023: {
+        major: {
+            title: "DarwinBox",
+            sub1: "Sr. SWE",
+            sub2: "Feb-2022",
+            inactive: false,
+            url: "https://darwinbox.com/",
+            img: "dbox.png"
+        },
+        minor: {
+            title: "Wealth42",
+            sub1: "SDE",
+            sub2: "Jan-2022 => 7M",
+            inactive: true,
+            url: "https://wealth42.com/",
+            img: "w42.png"
+        },
+    },
 }

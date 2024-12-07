@@ -44,7 +44,7 @@ const PrettoSlider = withStyles({
 
 const ProfilePicture = () => {
     const screenSize = useScreenWidth();
-    const [year, setYear] = useState(2022)
+    const [year, setYear] = useState(2023)
     let data = InfoData[year];
     const [visible, setVisible] = useState(true);
 
@@ -106,8 +106,8 @@ const ProfilePicture = () => {
                         onChange={(event, newValue) => { if (newValue !== year) { setVisible(false) }; setYear(newValue); }}
                         steps={1}
                         min={2020}
-                        max={2022}
-                        defaultValue={2021}
+                        max={2023}
+                        defaultValue={2023}
                         ThumbComponent={ThumbComponentCustom}
                     />
                 </div>
