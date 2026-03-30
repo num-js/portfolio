@@ -244,3 +244,12 @@
     }
 }
 //*** Profile Image Circle End
+
+#heroSectionEnd {
+    position: absolute;
+    margin-top: 100px;
+    @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        margin-top: 30px;
+    }
+}

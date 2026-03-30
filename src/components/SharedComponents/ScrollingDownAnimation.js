@@ -29,7 +29,7 @@ const ScrollingDownAnimation = ({ hiddenSection }) => {
             {isShowScrollingDownAnim && (
                 <div className="sticky right-0 my-6 bottom-8 -inset-x-3/4">
                     <div className="w-8">
-                        <a className="cursor-pointer scrolling-down-link scrolling-down-arrow" onClick={() => scrollToElement('experience')} />
+                        <a className="cursor-pointer scrolling-down-link scrolling-down-arrow" onClick={() => scrollToElement('heroSectionEnd')} />
                     </div>
                 </div>
             )}

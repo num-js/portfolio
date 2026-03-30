@@ -36,3 +36,7 @@ export const getMonthNameYear = (date) => {
     const splitDate = date.toDateString().split(' ')
     return splitDate[1] + "-" + splitDate[3]
 }
+
+export const getCurrentYear = () => {
+    return new Date().getFullYear().toString();
+}

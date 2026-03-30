@@ -6,6 +6,7 @@ import { InfoData } from '../../../assets/data/info';
 import './profilePicture.scss'
 import ActiveStatusGreenDot from '../../SharedComponents/ActiveStatusGreenDot/ActiveStatusGreenDot';
 import useScreenWidth from '../../../hooks/useScreenWidth';
+import { getCurrentYear } from '../../../helpers/getDate';
 
 const PrettoSlider = styled(Slider)({
     color: '#52af77',
@@ -134,6 +135,7 @@ const ProfilePicture = () => {
                         slots={{ thumb: ThumbComponentCustom }}
                     />
                 </div>
+                <div id="heroSectionEnd"> &nbsp; </div>
             </div>
         </div>
     );
