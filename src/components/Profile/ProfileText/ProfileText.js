@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import socialMediaIconURL from '../../../assets/data/socialMediaData';
 import './profileText.scss';
 
@@ -56,7 +55,6 @@ const ProfileText = () => {
                 new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
-        // INJECT CSS
         var css = document.createElement("style");
         css.type = "text/css";
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
@@ -71,7 +69,7 @@ const ProfileText = () => {
                 <p className="mainText txt-gradient txt-gradient-1">Hey I'm </p>
                 <p className="mainText main txt-gradient txt-gradient-2">MD. Numan Ahmed</p>
                 <div style={{ margin: '10px auto' }}>
-                    <span style={{ color: 'chartreuse', fontSize: '25px', fontWeight: 'bolder' }} href="" className="typewrite" data-period="2000"
+                    <span style={{ color: 'chartreuse', fontSize: '25px', fontWeight: 'bolder' }} className="typewrite" data-period="2000"
                         data-type='[ "Full Stack JS", "MERN Stack", "Front-End", "PWA", "Back-End" ]'>
                         <span className="wrap"></span>
                     </span>
@@ -81,12 +79,12 @@ const ProfileText = () => {
             <div className="skill-badges">
                 {
                     socialMediaIconURL.map(({ icon, link }, index) => (
-                        <Link key={index} to={{ pathname: link }} target="_blank">
+                        <a key={index} href={link} target="_blank" rel="noreferrer">
                             <div
                                 className="social-links"
                                 style={{ backgroundImage: `url(${icon})` }}
                             />
-                        </Link>
+                        </a>
                     ))
                 }
             </div>

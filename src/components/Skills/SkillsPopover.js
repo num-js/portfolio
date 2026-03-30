@@ -1,5 +1,5 @@
 import React from 'react';
-import Popover from '@material-ui/core/Popover';
+import Popover from '@mui/material/Popover';
 
 const SkillsPopover = ({ skillImgElem, popoverId, openPopover, closeSkillPopover, children }) => {
     return (
