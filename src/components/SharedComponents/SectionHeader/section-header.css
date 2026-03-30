@@ -1,0 +1,18 @@
+.sec-header-div {
+    align-items: center;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    position: relative;
+    width: 350px;
+    /* width: 50%; */
+}
+
+.sec-header-txt {
+    margin: 0;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+}

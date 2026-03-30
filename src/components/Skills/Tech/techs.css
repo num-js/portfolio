@@ -1,0 +1,70 @@
+.tech-section {
+    display: flex;
+    justify-content: center;
+}
+
+.square {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    animation: upDownAnim 10s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+@keyframes upDownAnim {
+
+    0%,
+    100% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+/* Background circles start */
+.circle-1 {
+    opacity: 0.8;
+    animation-timing-function: cubic-bezier(0.54, 0.085, 0.5, 0.92);
+    animation-iteration-count: infinite;
+    animation-name: float;
+    -webkit-animation-name: float;
+    animation-duration: 6s;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+
+    0% {
+        -webkit-transform: rotateX(0deg) translateY(0px);
+        -moz-transform: rotateX(0deg) translateY(0px);
+        -ms-transform: rotateX(0deg) translateY(0px);
+        -o-transform: rotateX(0deg) translateY(0px);
+        transform: rotateX(0deg) translateY(0px);
+    }
+
+    50% {
+        -webkit-transform: rotateX(0deg) translateY(1px) translateX(5px);
+        -moz-transform: rotateX(0deg) translateY(10px) translateX(5px);
+        -ms-transform: rotateX(0deg) translateY(30px) translateX(5px);
+        -o-transform: rotateX(0deg) translateY(40px) translateX(5px);
+        transform: rotateX(0deg) translateY(10px) translateX(5px);
+    }
+
+    100% {
+        -webkit-transform: rotateX(0deg) translateY(0px) translateX(1px);
+        -moz-transform: rotateX(0deg) translateY(0px) translateX(1px);
+        -ms-transform: rotateX(0deg) translateY(0px) translateX(1px);
+        -o-transform: rotateX(0deg) translateY(0px) translateX(1px);
+        transform: rotateX(0deg) translateY(0px) translateX(1px);
+    }
+
+}

@@ -1,6 +1,6 @@
 const socialMediaIconURL = [
     {
-        icon: "../icons/social-media/github.png",
+        icon: "../icons/skills/github.webp",
         link: "https://github.com/mdnmnahmed"
     },
     {

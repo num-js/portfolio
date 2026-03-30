@@ -1,6 +1,121 @@
 [
     {
+        "name": "CollegePath",
+        "type": "front-end",
+        "image": "../images/projects/college-path.png",
+        "demo": "https://collegepath.in",
+        "code": "",
+        "repo": "",
+        "description": "Developed a student-focused platform that simplifies the college admission journey by providing guidance, course discovery, and application support in one place.",
+        "usedTech": [
+            "React",
+            "Shadcn",
+            "Motion",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "name": "AI-Computer Training Center",
+        "type": "front-end back-end",
+        "image": "../images/projects/aictc.png",
+        "demo": "https://collegepath.in",
+        "code": "",
+        "repo": "",
+        "description": "AICTC Platform is a web application for an offline computer training institute, enabling students to apply for admissions and track their attendance digitally. It includes a comprehensive admin panel to manage courses, students, fees, and overall institute operations efficiently.",
+        "usedTech": [
+            "Next.js",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "name": "Al-Madad Welfare Society",
+        "type": "front-end",
+        "image": "../images/projects/al-madad-welfare-society.png",
+        "demo": "https://almadadwelfaresociety.com",
+        "code": "",
+        "repo": "",
+        "description": "Build a fully responsive website for an NGO focused on uplifting underprivileged communities through initiatives in education, healthcare, and social welfare.",
+        "usedTech": [
+            "React",
+            "Shadcn",
+            "Motion",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "isVisible": false,
+        "name": "Novies",
+        "type": "front-end",
+        "image": "../images/projects/novies.png",
+        "demo": "https://novies-info.web.app/",
+        "code": "https://github1s.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind",
+        "repo": "https://github.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind",
+        "description": "Get latest & trending🔥 Movies informations.",
+        "usedTech": [
+            "ReactJS",
+            "Tailwind CSS",
+            "PWA",
+            "Redux-Toolkit"
+        ]
+    },
+    {
+        "isVisible": false,
+        "name": "Sharify",
+        "type": "front-end back-end",
+        "image": "../images/projects/sharify.png",
+        "demo": "https://file-sharify.vercel.app/",
+        "code": "https://github1s.com/mdnmnahmed/sharify-frontend",
+        "repo": "https://github.com/mdnmnahmed/sharify-frontend",
+        "description": "Fast, Easy and Reliable File Sharing.",
+        "usedTech": [
+            "NextJS",
+            "TypeScript",
+            "NodeJS",
+            "ExpressJS",
+            "Cloudinary",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "isVisible": false,
+        "name": "TokTown-Dashboard",
+        "type": "front-end back-end company",
+        "image": "../images/projects/toktown-dashboard.png",
+        "demo": "https://dashboard.toktown.com/",
+        "code": "",
+        "repo": "",
+        "description": "Voice and Video chat & cloud meetings management console, where admin customize and manage all the settings of the meetings.",
+        "usedTech": [
+            "NextJS",
+            "NodeJS",
+            "ExpressJS",
+            "CSS",
+            "MongoDB",
+            "AWS-S3"
+        ]
+    },
+    {
+        "isVisible": false,
+        "name": "TokTown",
+        "type": "front-end company",
+        "image": "../images/projects/toktown-video.png",
+        "demo": "https://meet.toktown.com/",
+        "code": "",
+        "repo": "",
+        "description": "TokTown a customizable Voice and Video chat & cloud meetings web app using AWS-Chime SDK.",
+        "usedTech": [
+            "NextJS",
+            "CSS",
+            "AWS-Chieme"
+        ]
+    },
+    {
+        "isVisible": false,
         "name": "Noogle Contacts",
+        "type": "front-end back-end",
         "image": "../images/projects/noogle-contacts.png",
         "demo": "https://noogle-contacts.web.app/",
         "code": "https://github1s.com/mdnmnahmed/noogle-contacts",
@@ -15,7 +130,24 @@
         ]
     },
     {
+        "isVisible": false,
+        "name": "Wealth42",
+        "type": "front-end company",
+        "image": "../images/projects/wealth42.png",
+        "demo": "https://wealth42.com/",
+        "code": "",
+        "repo": "",
+        "description": "Personal Finance tool that can help you manage your investments, expenses, loans, financial goals – all in one place.",
+        "usedTech": [
+            "NextJS",
+            "Tailwind CSS",
+            "TypeScript"
+        ]
+    },
+    {
+        "isVisible": false,
         "name": "CodingPosts",
+        "type": "front-end back-end",
         "image": "../images/projects/codingposts.jpg",
         "demo": "https://coding-posts.herokuapp.com/",
         "code": "https://github1s.com/mdnmnahmed/CodingPosts",
@@ -30,7 +162,9 @@
         ]
     },
     {
+        "isVisible": false,
         "name": "ToDo-Task",
+        "type": "front-end back-end",
         "image": "../images/projects/todo-mern.jpg",
         "demo": "https://todo-task-mern.herokuapp.com/",
         "code": "https://github1s.com/mdnmnahmed/ToDo-Task",
@@ -44,7 +178,9 @@
         ]
     },
     {
+        "isVisible": false,
         "name": "EduFun",
+        "type": "front-end",
         "image": "../images/projects/edufun.png",
         "demo": "https://edufun-webapp.web.app/",
         "code": "https://github1s.com/mdnmnahmed/edufun-webapp",
@@ -56,7 +192,9 @@
         ]
     },
     {
+        "isVisible": false,
         "name": "Lrn Web Dev",
+        "type": "front-end",
         "image": "../images/projects/lrn-web-dev.png",
         "demo": "https://lrn-web-dev.web.app/",
         "code": "https://github1s.com/mdnmnahmed/lrnwebdev",

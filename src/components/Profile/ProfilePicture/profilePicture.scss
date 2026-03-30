@@ -1,8 +1,8 @@
 .visual-bg {
-    height: 450px;
-    width: 450px;
+    height: 360px;
+    width: 350px;
     border-radius: 50%;
-    background-position: center;
+    // background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -37,15 +37,16 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        width: 135%;
+        width: 140%;
         margin-top: -10%;
         @media only screen and (max-width: 768px) {
             /* For mobile phones: */
             width: 100%;
-            margin-top: 85%;
+            // margin-top: 85%;
+            margin-top: 240px;
         }
         &.down {
-            margin-bottom: 7%;
+            // margin-bottom: 7%;
             margin-left: 30%;
             justify-content: center;
             @media only screen and (max-width: 768px) {
@@ -58,19 +59,25 @@
             height: 160px;
             width: 145px;
             border-radius: 15px;
-            background: #201e1ca4;
-            backdrop-filter: blur(40px);
             color: white;
             box-shadow: -1px 2px 17px -4px rgba(0, 0, 0, 0.54);
+
+            background: rgba(29, 30, 30, 0.3);
+            box-shadow: 0 8px 32px 0 #161414ad;
+            backdrop-filter: blur(9px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+
             animation: shake1 10s;
             animation-iteration-count: infinite;
-            -webkit-box-shadow: -1px 2px 17px -4px rgba(0, 0, 0, 0.54);
+            // -webkit-box-shadow: -1px 2px 17px -4px rgba(0, 0, 0, 0.54);
             -moz-box-shadow: -1px 2px 17px -4px rgba(0, 0, 0, 0.54);
             padding: 15px 15px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             cursor: pointer;
+
             @media only screen and (max-width: 768px) {
                 /* For mobile phones: */
                 // animation: none;
@@ -97,18 +104,40 @@
             }
             &.flat-large {
                 animation: none;
-                height: 77px;
-                width: 225px;
-                padding: 15px 35px;
+                height: 65px;
+                width: 204px;
+                padding: 7px 22px;
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
+            }
+            &.flat-extra {
+                position: absolute;
+                top: 28vh;
+                left: 49vw;
+                height: 65px;
+                width: 190px;
+                animation: shake 8s;
+                animation-iteration-count: infinite;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 5px 2px;
+                @media only screen and (max-width: 768px) {
+                    /* For mobile phones: */
+                    top: 380px;
+                    left: 5px;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 145px;
+                    width: 90px;
+                }
             }
             .flat-con {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                margin-left: 20px;
+                margin-left: 4px;
                 @media only screen and (max-width: 768px) {
                     /* For mobile phones: */
                     align-items: center;
@@ -147,5 +176,80 @@
     }
     100% {
         transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+
+// Profile Image Circle Start
+.circle-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    border-color: #7b36b4;
+    border-style: solid;
+    border-width: 1px;
+    animation: circular 3s ease infinite;
+    @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        height: 270px;
+        width: 270px;
+        animation-play-state: paused;
+    }
+}
+
+.pp {
+    content: "";
+    display: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 340px;
+    width: 340px;
+    position: absolute;
+    background-size: cover;
+    border-radius: 100%;
+    box-shadow: 0px 0px 28px #374894, inset 0 0 20px #0004ff;
+    @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        height: 270px;
+        width: 270px;
+    }
+}
+
+@keyframes circular {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 0px 0px 8px #374894, inset 0 0 8px #0004ff;
+    }
+    25% {
+        box-shadow: 0px 0px 16px #2e48b9, inset 5px 5px 16px #8c00ff;
+    }
+    50% {
+        box-shadow: 0px 0px 30px #002efd, inset 10px 10px 60px #7b36b4;
+    }
+    75% {
+        box-shadow: 0px 0px 16px #2e48b9, inset 5px 5px 16px #7b36b4;
+    }
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 0px 0px 8px #374894, inset 0 0 8px #0004ff;
+    }
+}
+//*** Profile Image Circle End
+
+#heroSectionEnd {
+    position: absolute;
+    margin-top: 100px;
+    @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        margin-top: 30px;
     }
 }

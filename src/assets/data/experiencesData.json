@@ -1,40 +1,76 @@
 [
     {
-        "name": "X2A",
-        "timeLine": "Aug 2021 - present",
-        "role": "Software Developer",
-        "description": "X2A is a Fin-Tech startup, based in Bengaluru, INDIA.",
-        "workingTech": {
-            "label": "Technologies working with ---",
-            "technologies": [
-                "NextJS",
-                "React Native",
-                "PWA",
-                "ReactJS",
-                "Redux-ToolKit",
-                "D3",
-                "Tailwind CSS",
-                "Redux"
-            ]
+        "name": "DarwinBox",
+        "timeLine": {
+            "start": "2022-02",
+            "end": ""
+        },
+        "role": "Sr. Software Engineer",
+        "description": "DarwinBox a HCM Platform, based in Hyderabad, INDIA.",
+        "companyLogo": "../icons/dbox.png",
+        "companyURL": "https://darwinbox.com/",
+        "workingTech": [
+            "ReactJS",
+            "NodeJS",
+            "Redux",
+            "SCSS",
+            "Bootstrap",
+            "jQuery"
+        ],
+        "sidePic": {
+            "url": "../images/num-planning.svg",
+            "styles": ""
+        }
+    },
+    {
+        "name": "X2A-Wealth42",
+        "timeLine": {
+            "start": "2021-07",
+            "end": "2022-01"
+        },
+        "role": "Software Engineer",
+        "description": "Wealth42 a Fin-Tech startup, based in Bengaluru, INDIA.",
+        "companyLogo": "../icons/w42.png",
+        "companyURL": "https://wealth42.com/",
+        "workingTech": [
+            "ReactJS",
+            "PWA",
+            "NextJS",
+            "Redux-ToolKit",
+            "Tailwind CSS",
+            "Redux",
+            "SendBird",
+            "Re-Chats",
+            "Material-UI"
+        ],
+        "sidePic": {
+            "url": "../images/num-analytics.svg",
+            "styles": ""
         }
     },
     {
         "name": "SrcLogicx",
-        "timeLine": "July 2020 - July 2021",
+        "timeLine": {
+            "start": "2020-08-01",
+            "end": "2021-07-01"
+        },
         "role": "Full Stack Developer",
-        "description": "X2A is a Fin-Tech startup, based in Bengaluru, INDIA.",
-        "workingTech": {
-            "label": "Technologies working with ---",
-            "technologies": [
-                "NextJS",
-                "NodeJS",
-                "ReactJS",
-                "Redux",
-                "S3",
-                "AWS-Amplify",
-                "MongoDB",
-                "DynamoDB"
-            ]
+        "description": "SrcLogicx is a startup related to Video/Audio Chat solutions, based in San Diego, California, US.",
+        "companyLogo": "../icons/srclogicx.png",
+        "companyURL": "https://srclogix.com/",
+        "workingTech": [
+            "ReactJS",
+            "NodeJS",
+            "NextJS",
+            "ExpressJS",
+            "Redux",
+            "AWS-S3",
+            "MongoDB",
+            "DynamoDB"
+        ],
+        "sidePic": {
+            "url": "../images/num-with-lappy-flowers.svg",
+            "styles": ""
         }
     }
 ]

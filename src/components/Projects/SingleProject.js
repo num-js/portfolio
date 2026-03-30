@@ -1,48 +1,47 @@
 import React from 'react';
+import { SkillsView } from '../SharedComponents';
 
 const SingleProject = ({ projectData }) => {
     return (
-        <section class="text-gray-600 body-font overflow-hidden">
-            <div class="container px-5 py-10 mx-auto">
-                <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                    <img alt="numan ahmed" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+        <section className="overflow-hidden text-gray-600 body-font">
+            <div className="container px-5 py-6 mx-auto">
+                <div className="flex flex-wrap px-2 py-2 mx-auto lg:w-4/5 black-shadow">
+                    <img alt="numan ahmed" className="object-cover object-center w-full h-64 rounded lg:w-1/2 lg:h-auto"
                         src={projectData.image}
                     />
-                    <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                        <h1 class="text-pink-500 text-2xl title-font font-medium mb-1">{projectData.name}</h1>
-                        <div class="flex my-4">
-                            <span class="flex items-center">
-                                <div>
-                                    <a target="_BLANK" href={projectData.demo}>
-                                        <img alt="numan ahmed" src="../icons/demo.png" />
-                                    </a>
-                                </div>
-                            </span>
-                            <span class="flex flex items-center ml-3 pl-3">
-                                <div>
-                                    <a target="_BLANK" href={projectData.code}>
-                                        <img alt="numan ahmed" src="../icons/codes.png" />
-                                    </a>
-                                </div>
-                            </span>
-                            <span class="flex flex items-center ml-3 pl-3">
-                                <div>
-                                    <a target="_BLANK" href={`${projectData.repo}`}>
-                                        <img alt="numan ahmed" src="../icons/github-small.svg" />
-                                    </a>
-                                </div>
-                            </span>
+                    <div className="w-full mt-6 lg:w-1/2 lg:pl-10 lg:py-6 lg:mt-0">
+                        <div className="flex justify-between">
+                            <h1 className="mb-1 text-2xl font-medium title-font ncolor-pink">{projectData.name}</h1>
+                            {!projectData.repo && <span title="company">
+                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="flex-shrink w-5 h-5" color="#ff0052" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
+                            </span>}
                         </div>
-                        <p class="leading-relaxed text-white">
+                        <p className="my-2 leading-relaxed text-white">
                             {projectData.description}
                         </p>
-                        <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
-                        <div class="flex mb-4">
-                            {
-                                projectData.usedTech.map((tech, index) => (
-                                    <span class={`flex items-center ml-2 pl-2 text-green-500  ${index !== 0 ? 'border-l-2 border-gray-200' : ''}`}> {tech} </span>
-                                ))
-                            }
+
+                        <div className="my-2">
+                            {<SkillsView skills={projectData.usedTech} />}
+                        </div>
+
+                        <div className="flex items-center border-b-2 border-gray-800"></div>
+
+                        <div className="flex items-center justify-around mt-2">
+                            {projectData?.demo && <span>
+                                <a target="_BLANK" href={projectData?.demo}>
+                                    <img alt="numan ahmed" src="../icons/demo.png" width="80%" />
+                                </a>
+                            </span>}
+                            {projectData?.code && <span>
+                                <a target="_BLANK" href={projectData?.code}>
+                                    <img alt="numan ahmed" src="../icons/codes.png" width="80%" />
+                                </a>
+                            </span>}
+                            {projectData.repo && <span>
+                                <a target="_BLANK" href={`${projectData.repo}`}>
+                                    <img alt="numan ahmed" src="../icons/github-small.svg" width="80%" />
+                                </a>
+                            </span>}
                         </div>
                     </div>
                 </div>

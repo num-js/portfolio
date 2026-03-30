@@ -1,0 +1,266 @@
+    {
+        "fullStack": [
+            {
+                "id": "front-end",
+                "title": "Front-End",
+                "skills": [
+                    {
+                        "name": "Next.js",
+                        "pic": "../icons/skills/nextjs.png",
+                        "projects": [
+                            {
+                                "title": "TokTown",
+                                "description": "TokTown is a customizable voice and video meetings solution.",
+                                "links": {
+                                    "demo": "https://meet.toktown.com/",
+                                    "code": ""
+                                }
+                            },
+                            {
+                                "title": "TokTown Dashboard",
+                                "description": "TokTown Management console to create Meetings, Meeting logs etc.",
+                                "links": {
+                                    "demo": "https://dashboard.toktown.com/",
+                                    "code": ""
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "React.js",
+                        "pic": "../icons/skills/react.webp",
+                        "projects": [
+                            {
+                                "title": "Noogle-Contacts",
+                                "description": "Contact saving & managing web app.",
+                                "links": {
+                                    "demo": "https://noogle-contacts.web.app/",
+                                    "code": "https://github.com/mdnmnahmed/noogle-contacts"
+                                }
+                            },
+                            {
+                                "title": "Novies",
+                                "description": "Movies Information & Details.",
+                                "links": {
+                                    "demo": "https://novies-info.web.app/",
+                                    "code": "https://github.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind"
+                                }
+                            },
+                            {
+                                "title": "Portfolio",
+                                "description": "My Portfolio website.",
+                                "links": {
+                                    "demo": "https://numan-dev.web.app/"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Redux",
+                        "pic": "../icons/skills/redux.svg",
+                        "projects": [
+                            {
+                                "title": "Novies",
+                                "description": "Movies Information & Details.",
+                                "links": {
+                                    "demo": "https://novies-info.web.app/",
+                                    "code": "https://github.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Material-UI",
+                        "pic": "../icons/skills/material-ui.svg",
+                        "projects": [
+                            {
+                                "title": "Portfolio",
+                                "description": "My Portfolio website.",
+                                "links": {
+                                    "demo": "https://numan-dev.web.app/"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Tailwind CSS",
+                        "pic": "../icons/skills/tailwind-css.png",
+                        "projects": [
+                            {
+                                "title": "Novies",
+                                "description": "Movies Information & Details.",
+                                "links": {
+                                    "demo": "https://novies-info.web.app/",
+                                    "code": "https://github.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind"
+                                }
+                            },
+                            {
+                                "title": "Portfolio",
+                                "description": "My Portfolio website.",
+                                "links": {
+                                    "demo": "https://numan-dev.web.app/"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "JavaScript",
+                        "pic": "../icons/skills/js.webp",
+                        "projects": [
+                            {
+                                "title": "Weather",
+                                "description": "Weather App - to check Weather of any City",
+                                "links": {
+                                    "demo": "https://mdnmnahmed.github.io/Weather-App/",
+                                    "code": "https://github.com/mdnmnahmed/Weather-App"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "back-end",
+                "title": "Back-End",
+                "skills": [
+                    {
+                        "name": "Node.js",
+                        "pic": "../icons/skills/nodejs.png",
+                        "projects": [
+                            {
+                                "title": "Noogle-Contacts",
+                                "description": "Contact saving & managing web app.",
+                                "links": {
+                                    "demo": "https://noogle-contacts.web.app/",
+                                    "code": "https://github.com/mdnmnahmed/noogle-contacts-backend"
+                                }
+                            },
+                            {
+                                "title": "Sharify",
+                                "description": "Share Files anywhere with no size limits.",
+                                "links": {
+                                    "demo": "https://file-sharify.vercel.app/",
+                                    "code": "https://github.com/mdnmnahmed/sharify-backend"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Express.js",
+                        "pic": "../icons/skills/expressjs.png",
+                        "projects": [
+                            {
+                                "title": "Noogle-Contacts",
+                                "description": "Contact saving & managing web app.",
+                                "links": {
+                                    "demo": "https://noogle-contacts.web.app/",
+                                    "code": "https://github.com/mdnmnahmed/noogle-contacts-backend"
+                                }
+                            },
+                            {
+                                "title": "Sharify",
+                                "description": "Share Files anywhere with no size limits.",
+                                "links": {
+                                    "demo": "https://file-sharify.vercel.app/",
+                                    "code": "https://github.com/mdnmnahmed/sharify-backend"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "MongoDB",
+                        "pic": "../icons/skills/mongodb.png",
+                        "projects": [
+                            {
+                                "title": "Noogle-Contacts",
+                                "description": "Contact saving & managing web app.",
+                                "links": {
+                                    "demo": "https://noogle-contacts.web.app/",
+                                    "code": "https://github.com/mdnmnahmed/noogle-contacts-backend"
+                                }
+                            },
+                            {
+                                "title": "Sharify",
+                                "description": "Share Files anywhere with no size limits.",
+                                "links": {
+                                    "demo": "https://file-sharify.vercel.app/",
+                                    "code": "https://github.com/mdnmnahmed/sharify-backend"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Socket IO",
+                        "pic": "../icons/skills/socket-io.svg",
+                        "styles": {
+                            "background": "linear-gradient(120deg, white, gray)"
+                        },
+                        "projects": []
+                    },
+                    {
+                        "name": "AWS-S3",
+                        "pic": "../icons/skills/aws-s3.png",
+                        "projects": []
+                    },
+                    {
+                        "name": "Rest API",
+                        "pic": "../icons/skills/rest-api.png",
+                        "styles": {
+                            "background": "linear-gradient(120deg, white, gray)"
+                        },
+                        "projects": [
+                            
+                        ]
+                    }
+                ]
+            }
+        ],
+        "others": [
+            {
+                "id": "others",
+                "title": "Other-Tools",
+                "skills": [
+                    {
+                        "name": "VS Code",
+                        "pic": "../icons/skills/vs-code.webp"
+                    },
+                    {
+                        "name": "Postman",
+                        "pic": "../icons/skills/postman.svg"
+                    },
+                    {
+                        "name": "Git",
+                        "pic": "../icons/skills/git.svg"
+                    },
+                    {
+                        "name": "GitHub",
+                        "pic": "../icons/skills/github.webp",
+                        "styles": {
+                            "background": "linear-gradient(120deg, white, gray)"
+                        }
+                    },
+                    {
+                        "name": "Jira",
+                        "pic": "../icons/skills/jira.svg"
+                    },
+                    {
+                        "name": "PWA",
+                        "pic": "../icons/skills/pwa.svg",
+                        "styles": {
+                            "background": "linear-gradient(120deg, white, gray)"
+                        },
+                        "projects": [
+                            {
+                                "title": "Novies",
+                                "description": "Movies Information & Details.",
+                                "links": {
+                                    "demo": "https://novies-info.web.app/",
+                                    "code": "https://github.com/mdnmnahmed/Novies-pwa-redux_toolkit-tailwind"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }

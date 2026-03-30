@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import socialMediaIconURL from '../../../assets/data/socialMediaData';
 import './profileText.scss';
 
@@ -56,7 +55,6 @@ const ProfileText = () => {
                 new TxtType(elements[i], JSON.parse(toRotate), period);
             }
         }
-        // INJECT CSS
         var css = document.createElement("style");
         css.type = "text/css";
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
@@ -68,29 +66,29 @@ const ProfileText = () => {
     return (
         <div className="textSpace">
             <div className="text-div">
-                <p className="mainText">Hey I'm </p>
-                <p className="mainText main">MD. Numan Ahmed</p>
-                <div style={{ margin: '10px auto' }}>
-                    <span style={{ color: 'chartreuse', fontSize: '25px', fontWeight: 'bolder' }} href="" class="typewrite" data-period="2000"
-                        data-type='[ "Full Stack", "MERN Stack", "APP", "WEB", "Front-End", "PWA", "Back-End" ]'>
-                        <span class="wrap"></span>
+                <p className="mainText txt-gradient txt-gradient-1">Hey I'm </p>
+                <p className="mainText main txt-gradient txt-gradient-2">MD. Numan Ahmed</p>
+                <div className="font-serif typing-txt-div" style={{ margin: '10px auto' }}>
+                    <span style={{ color: 'chartreuse', fontWeight: 'bolder' }} href="" className="typewrite" data-period="2000"
+                        data-type='[ "Full Stack", "Front-End", "Back-End" ]'>
+                        <span className="wrap"></span>
                     </span>
-                    <span class="txtShadow" style={{ color: '#fffb00', fontSize: '20px' }}> Developer</span>
+                    <span className="txtShadow" style={{ color: '#fffb00' }}> Developer</span>
                 </div>
             </div>
             <div className="skill-badges">
                 {
-                    socialMediaIconURL.map(({ icon, link }) => (
-                        <Link to={{ pathname: link }} target="_blank">
+                    socialMediaIconURL.map(({ icon, link }, index) => (
+                        <a key={index} href={link} target="_blank" rel="noreferrer">
                             <div
                                 className="social-links"
                                 style={{ backgroundImage: `url(${icon})` }}
                             />
-                        </Link>
+                        </a>
                     ))
                 }
             </div>
-            <div className="quote-txt">
+            <div className="font-serif quote-txt">
                 <h3>I write <span style={{ color: 'chartreuse' }}>Code</span>, that lives on the <span style={{ color: '#fffb00' }}>Web</span>.</h3>
             </div>
         </div>

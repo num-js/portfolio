@@ -1,38 +1,142 @@
 export const InfoData = {
     2020: {
         major: {
-            title: "HacktoberFest",
-            sub1: "Opensource",
+            title: "Hacktober Fest",
+            sub1: "",
             sub2: "Oct 2020",
             inactive: false,
             url: null,
-            img: "hacktober.png"
+            img: "hacktober-2020.png"
         },
         minor: {
             title: "SrcLogicx",
-            sub1: "Full Stack Developer",
+            sub1: "Full Stack Dev",
             sub2: "July 2020",
             inactive: false,
-            url: null,
+            url: "https://srclogix.com/",
             img: "srclogicx.png"
         }
     },
     2021: {
         major: {
-            title: "X2A Inc",
-            sub1: "SD 1",
+            title: "Wealth42",
+            sub1: "SDE",
             sub2: "July-2021",
             inactive: false,
-            url: null,
+            url: "https://wealth42.com/",
             img: "w42.png"
         },
         minor: {
             title: "SrcLogicx",
-            sub1: "Full Stack Developer",
+            sub1: "Full Stack Dev",
             sub2: "July 2021 => 1Y",
             inactive: true,
-            url: null,
+            url: "https://srclogix.com/",
             img: "srclogicx.png"
-        }
+        },
+        extra: {
+            title: "Hacktober Fest",
+            sub1: "Opensource",
+            sub2: "Oct 2021",
+            inactive: false,
+            url: null,
+            img: "hacktober-2021.png"
+        },
+    },
+    2022: {
+        major: {
+            title: "DarwinBox",
+            sub1: "Sr. SWE",
+            sub2: "Feb-2022",
+            inactive: false,
+            url: "https://darwinbox.com/",
+            img: "dbox.png"
+        },
+        minor: {
+            title: "Wealth42",
+            sub1: "SDE",
+            sub2: "Jan-2022 => 7M",
+            inactive: true,
+            url: "https://wealth42.com/",
+            img: "w42.png"
+        },
+        extra: {
+            title: "Hacktober Fest",
+            sub1: "Opensource",
+            sub2: "Oct 2022",
+            inactive: false,
+            url: null,
+            img: "hacktober-2022.png"
+        },
+    },
+    2023: {
+        major: {
+            title: "DarwinBox",
+            sub1: "Sr. SWE",
+            sub2: "Feb-2022",
+            inactive: false,
+            url: "https://darwinbox.com/",
+            img: "dbox.png"
+        },
+        extra: {
+            title: "Wealth42",
+            sub1: "SDE",
+            sub2: "Jan-2022 => 7M",
+            inactive: true,
+            url: "https://wealth42.com/",
+            img: "w42.png"
+        },
+        minor: {
+            title: "Hacktober Fest",
+            sub1: "Opensource",
+            sub2: "Oct 2023",
+            inactive: false,
+            url: null,
+            img: "hacktober-2022.png"
+        },
+    },
+    2024: {
+        major: {
+            title: "DarwinBox",
+            sub1: "Sr. SWE",
+            sub2: "Feb-2022",
+            inactive: false,
+            url: "https://darwinbox.com/",
+            img: "dbox.png"
+        },
+        extra: {
+            title: "Wealth42",
+            sub1: "SDE",
+            sub2: "Jan-2022 => 7M",
+            inactive: true,
+            url: "https://wealth42.com/",
+            img: "w42.png"
+        },
+        minor: {
+            title: "Hacktober Fest",
+            sub1: "Opensource",
+            sub2: "Oct 2024",
+            inactive: false,
+            url: null,
+            img: "hacktober-2022.png"
+        },
+    },
+    2025: {
+        major: {
+            title: "DarwinBox",
+            sub1: "Sr. SWE",
+            sub2: "Feb-2022",
+            inactive: false,
+            url: "https://darwinbox.com/",
+            img: "dbox.png"
+        },
+        minor: {
+            title: "Wealth42",
+            sub1: "SDE",
+            sub2: "Jan-2022 => 7M",
+            inactive: true,
+            url: "https://wealth42.com/",
+            img: "w42.png"
+        },
     },
 }
