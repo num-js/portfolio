@@ -99,7 +99,7 @@ const Projects = () => {
 
                                                     {projectData?.demo && <span>
                                                         <a target="_BLANK" href={projectData?.demo}>
-                                                            <AnimatedHoverButton btnTxt={'View Demo'} />
+                                                            <AnimatedHoverButton btnTxt={'View Demo'} btnClass={"mt-3"} />
                                                         </a>
                                                     </span>}
 
