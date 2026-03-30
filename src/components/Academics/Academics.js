@@ -43,7 +43,7 @@ const Academics = () => {
                             <p className="my-2 leading-relaxed text-white">
                                 I believe Degree & Marks are useless. &nbsp;&nbsp;
                                 <br />
-                                I have the <Link to={{ pathname: SKILLS }}><span className="font-bold underline">Skills</span>. 😎</Link>
+                                I have the <Link to={SKILLS}><span className="font-bold underline">Skills</span>. 😎</Link>
                             </p>
                             <div className="flex items-center border-b-2 border-gray-600"></div>
                         </div>
