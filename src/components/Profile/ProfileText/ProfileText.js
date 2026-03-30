@@ -69,7 +69,7 @@ const ProfileText = () => {
                 <p className="mainText txt-gradient txt-gradient-1">Hey I'm </p>
                 <p className="mainText main txt-gradient txt-gradient-2">MD. Numan Ahmed</p>
                 <div style={{ margin: '10px auto' }}>
-                    <span style={{ color: 'chartreuse', fontSize: '25px', fontWeight: 'bolder' }} href="" className="typewrite" data-period="2000"
+                    <span style={{ color: 'chartreuse', fontSize: '25px', fontWeight: 'bolder' }} className="typewrite" data-period="2000"
                         data-type='[ "Full Stack JS", "MERN Stack", "Front-End", "PWA", "Back-End" ]'>
                         <span className="wrap"></span>
                     </span>
