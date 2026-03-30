@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { PROJECTS } from '../../helpers/routesURL';
 import scrollToPosition from '../../helpers/scrollToPosition';
 import { SectionHeader, SkillsView } from '../SharedComponents';
+import AnimatedHoverButton from '../shared/AnimatedHoverButton';
 
 const Projects = () => {
     const screenSize = useScreenWidth();
@@ -30,17 +31,17 @@ const Projects = () => {
                 <div>
                     {showAllProjects && (
                         <div className="flex flex-col w-full pt-8 text-center">
-                            <div className="flex mx-auto overflow-hidden border-2 rounded nborder-pink">
+                            <div className="flex mx-auto overflow-hidden border-2 rounded border-[#52af77]">
                                 <button
-                                    className={`py-1 px-4 text-white focus:outline-none ${projectType === "" ? 'nbg-pink' : ''}`}
+                                    className={`py-1 px-4 text-white focus:outline-none ${projectType === "" ? 'bg-[#52af77]' : ''}`}
                                     onClick={() => setProjectType('')}
                                 > &nbsp; &nbsp;  All &nbsp; &nbsp; </button>
                                 <button
-                                    className={`py-1 px-4 text-white focus:outline-none ${projectType === "front-end" ? 'nbg-pink' : ''}`}
+                                    className={`py-1 px-4 text-white focus:outline-none ${projectType === "front-end" ? 'bg-[#52af77]' : ''}`}
                                     onClick={() => setProjectType('front-end')}
                                 >FrontEnd</button>
                                 <button
-                                    className={`py-1 px-4 text-white focus:outline-none ${projectType === "back-end" ? 'nbg-pink' : ''}`}
+                                    className={`py-1 px-4 text-white focus:outline-none ${projectType === "back-end" ? 'bg-[#52af77]' : ''}`}
                                     onClick={() => setProjectType('back-end')}
                                 >BackEnd</button>
                             </div>
@@ -53,17 +54,17 @@ const Projects = () => {
                         screenSize === 'large' ? (
                             <div className="container px-10 mx-auto mt-8 lg:px-60">
                                 {
-                                    projectsData?.filter((projectData) => (projectData?.type?.includes(projectType)))?.map((projectData, index) => {
+                                    projectsData?.filter((projectData) => (projectData?.isVisible !== false && projectData?.type?.includes(projectType)))?.map((projectData, index) => {
                                         const isLeftSide = index % 2 == 0;
                                         if (!showAllProjects && index >= 3) {
                                             return;
                                         }
                                         return (
-                                            <div key={index} className={`-mb-36 ${isLeftSide ? 'mr-32' : 'ml-32'}`}>
+                                            <div key={index} className={`-mb-36 ${isLeftSide ? 'mr-24' : 'ml-24'}`}>
                                                 <div className="w-full p-5 bg-cover rounded-lg cursor-pointer h-96 mr-30" style={{ backgroundImage: `url(${projectData.image})` }}>
                                                 </div>
 
-                                                <div className={`bg-gray-800 p-5 rounded-lg min-h-64 w-80 relative -top-52 glass-div ${isLeftSide ? 'ml-auto left-32' : '-left-32'}`}
+                                                <div className={`bg-gray-800 p-5 rounded-lg w-80 relative -top-52 glass-div ${isLeftSide ? 'ml-auto left-32' : '-left-32'}`}
                                                     style={{ boxShadow: '0 2px 5px 0 rgb(0 0 0 / 100%), 0 2px 10px 0 rgb(0 0 0 / 100%)' }}
                                                 >
                                                     <div className="flex justify-between">
@@ -71,11 +72,11 @@ const Projects = () => {
                                                             <h1 className="mb-1 text-xl font-medium title-font nd-text-shadow-black">{projectData.name}</h1>
                                                         </div>
                                                         <div className="flex justify-between">
-                                                            {projectData?.demo && <span>
+                                                            {/* {projectData?.demo && <span>
                                                                 <a target="_BLANK" href={projectData?.demo}>
                                                                     <img alt="numan ahmed" src="../icons/demo.png" width="30" />
                                                                 </a>
-                                                            </span>}
+                                                            </span>} */}
                                                             {projectData.repo && <span className="ml-4">
                                                                 <a target="_BLANK" href={`${projectData.repo}`}>
                                                                     <img alt="numan ahmed" src="../icons/github-small.svg" width="30" />
@@ -86,13 +87,22 @@ const Projects = () => {
 
                                                     <div className="flex items-center border-b-2 border-gray-600"></div>
 
-                                                    <p className="my-2 leading-relaxed text-white">
+                                                    <p className="my-2 leading-relaxed text-white text-sm">
                                                         {projectData.description}
                                                     </p>
 
                                                     <div className="mt-2">
                                                         {<SkillsView skills={projectData.usedTech} />}
                                                     </div>
+
+                                                    {/* <div className="flex items-center border-b-2 border-gray-600 mt-4"></div> */}
+
+                                                    {projectData?.demo && <span>
+                                                        <a target="_BLANK" href={projectData?.demo}>
+                                                            <AnimatedHoverButton btnTxt={'View Demo'} />
+                                                        </a>
+                                                    </span>}
+
                                                 </div>
                                             </div>
                                         )
