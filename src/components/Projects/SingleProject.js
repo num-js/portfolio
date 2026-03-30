@@ -1,5 +1,6 @@
 import React from 'react';
 import { SkillsView } from '../SharedComponents';
+import AnimatedHoverButton from '../shared/AnimatedHoverButton';
 
 const SingleProject = ({ projectData }) => {
     return (
@@ -11,12 +12,12 @@ const SingleProject = ({ projectData }) => {
                     />
                     <div className="w-full mt-6 lg:w-1/2 lg:pl-10 lg:py-6 lg:mt-0">
                         <div className="flex justify-between">
-                            <h1 className="mb-1 text-2xl font-medium title-font ncolor-pink">{projectData.name}</h1>
-                            {!projectData.repo && <span title="company">
+                            <h1 className="mb-1 text-2xl font-medium title-font text-white">{projectData.name}</h1>
+                            {/* {!projectData.repo && <span title="company">
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" className="flex-shrink w-5 h-5" color="#ff0052" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path><path d="M22 4L12 14.01l-3-3"></path></svg>
-                            </span>}
+                            </span>} */}
                         </div>
-                        <p className="my-2 leading-relaxed text-white">
+                        <p className="my-2 leading-relaxed text-white text-sm">
                             {projectData.description}
                         </p>
 
@@ -27,21 +28,21 @@ const SingleProject = ({ projectData }) => {
                         <div className="flex items-center border-b-2 border-gray-800"></div>
 
                         <div className="flex items-center justify-around mt-2">
-                            {projectData?.demo && <span>
-                                <a target="_BLANK" href={projectData?.demo}>
-                                    <img alt="numan ahmed" src="../icons/demo.png" width="80%" />
+                            {projectData?.demo && <span className="w-full">
+                                <a target="_BLANK" className="my-2" href={projectData?.demo}>
+                                    <AnimatedHoverButton btnTxt={'View Demo'} btnClass={""} />
                                 </a>
                             </span>}
-                            {projectData?.code && <span>
+                            {/* {projectData?.code && <span>
                                 <a target="_BLANK" href={projectData?.code}>
                                     <img alt="numan ahmed" src="../icons/codes.png" width="80%" />
                                 </a>
-                            </span>}
-                            {projectData.repo && <span>
+                            </span>} */}
+                            {/* {projectData.repo && <span>
                                 <a target="_BLANK" href={`${projectData.repo}`}>
                                     <img alt="numan ahmed" src="../icons/github-small.svg" width="80%" />
                                 </a>
-                            </span>}
+                            </span>} */}
                         </div>
                     </div>
                 </div>
