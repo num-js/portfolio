@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { Routes, Route } from 'react-router-dom';
 import Academics from './components/Academics/Academics';
 import ContactMe from './components/ContactMe/ContactMe';
 import Experiences from './components/Experiences/Experiences';
@@ -11,41 +11,43 @@ import { ACADEMICS, CONTACT_ME, EXPERIENCES, INDEX, PROJECTS, SKILLS } from './h
 const RouterComponent = () => {
     return (
         <>
-            <Switch>
-                <Route exact path={INDEX}>
-                    <Profile />
-                    <Experiences />
-                    <Skills />
-                    <Projects />
-                    <Academics />
-                    {/* <ContactMe /> */}
-                </Route>
-                <Route exact path={EXPERIENCES}>
-                    <div class="nmt-70">
+            <Routes>
+                <Route path={INDEX} element={
+                    <>
+                        <Profile />
+                        <Experiences />
+                        <Skills />
+                        <Projects />
+                        <Academics />
+                        {/* <ContactMe /> */}
+                    </>
+                } />
+                <Route path={EXPERIENCES} element={
+                    <div className="nmt-70">
                         <Experiences />
                     </div>
-                </Route>
-                <Route exact path={SKILLS}>
-                    <div class="nmt-70">
+                } />
+                <Route path={SKILLS} element={
+                    <div className="nmt-70">
                         <Skills />
                     </div>
-                </Route>
-                <Route exact path={PROJECTS}>
-                    <div class="nmt-70">
+                } />
+                <Route path={PROJECTS} element={
+                    <div className="nmt-70">
                         <Projects />
                     </div>
-                </Route>
-                <Route exact path={ACADEMICS}>
-                    <div class="nmt-70">
+                } />
+                <Route path={ACADEMICS} element={
+                    <div className="nmt-70">
                         <Academics />
                     </div>
-                </Route>
-                <Route exact path={CONTACT_ME}>
-                    <div class="nmt-70">
+                } />
+                <Route path={CONTACT_ME} element={
+                    <div className="nmt-70">
                         <ContactMe />
                     </div>
-                </Route>
-            </Switch>
+                } />
+            </Routes>
         </>
     );
 }
