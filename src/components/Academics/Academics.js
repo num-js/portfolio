@@ -39,9 +39,9 @@ const Academics = () => {
                                 <img src="../images/num_heart.gif" width="28" alt="Md Numan Ahmed" />
                             </span>
                             <p className="my-2 leading-relaxed text-white">
-                                I believe Degree & Marks are useless. &nbsp;&nbsp;
+                                Degree can't fix bugs. &nbsp;&nbsp;
                                 <br />
-                                I have the <Link to={SKILLS}><span className="font-bold underline">Skills</span>. 😎</Link>
+                                My <Link to={SKILLS}><span className="font-bold underline">Skills</span> can. 😎</Link>
                             </p>
                             <div className="flex items-center border-b-2 border-gray-600"></div>
                         </div>
