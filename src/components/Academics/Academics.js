@@ -11,9 +11,9 @@ import './academics.scss'
 const Academics = () => {
     const [showAcademicTag, setShowAcademicTag] = useState(true);
 
-    const toggleAcademicTag = () => {
-        setShowAcademicTag(prevState => !prevState)
-    }
+    // const toggleAcademicTag = () => {
+    //     setShowAcademicTag(prevState => !prevState)
+    // }
 
     useEffect(() => {
         scrollToPosition();
@@ -35,10 +35,8 @@ const Academics = () => {
                         <div className={`bg-gray-800 px-4 rounded-lg academic-tag`}
                             style={{ boxShadow: '0 2px 5px 0 rgb(0 0 0 / 100%), 0 2px 10px 0 rgb(0 0 0 / 100%)' }}
                         >
-                            <span className="cursor-pointer" style={{ position: 'absolute', right: '2px', top: '2px' }}
-                                onClick={toggleAcademicTag}
-                            >
-                                <img src="../icons/close-circle.svg" width="16" />
+                            <span className="cursor-pointer" style={{ position: 'absolute', right: '-5px', top: '-10px' }}>
+                                <img src="../images/num_heart.gif" width="28" alt="Md Numan Ahmed" />
                             </span>
                             <p className="my-2 leading-relaxed text-white">
                                 I believe Degree & Marks are useless. &nbsp;&nbsp;
@@ -76,9 +74,7 @@ const Academics = () => {
                                             <h2 className="mb-2 font-medium text-pink-600 lg:text-base title-font">
                                                 {collegeData?.course}
                                             </h2>
-                                            <img src="../icons/small-circle.svg" className="absolute right-0 cursor-pointer"
-                                                onClick={toggleAcademicTag}
-                                            />
+                                            <img src="../icons/small-circle.svg" className="absolute right-0 cursor-pointer"/>
                                             <div className="font-medium text-white ">
                                                 {collegeData?.board}
                                             </div>
