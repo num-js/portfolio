@@ -1,16 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import socialMediaIconURL from '../../assets/data/socialMediaData';
 import { navBarMenu } from '../../assets/navLinks';
-import scrollToPosition from '../../helpers/scrollToPosition';
 import Logo from '../SharedComponents/ActiveStatusGreenDot/Logo';
 import { getCurrentYear } from '../../helpers/getDate';
 
 const Footer = () => {
     return (
         <>
-            <div class="flex justify-end mr-20">
+            <div className="flex justify-end mr-20">
                 <img src="../images/plant-blue.svg" />
             </div>
             <div className=""
@@ -30,12 +28,12 @@ const Footer = () => {
                                         <div className="flex mt-6 justify-evenly">
                                             {
                                                 socialMediaIconURL.map(({ icon, link }, index) => (
-                                                    <Link key={index} to={{ pathname: link }} target="_blank">
+                                                    <a key={index} href={link} target="_blank" rel="noreferrer">
                                                         <div
                                                             className="footer-social-img"
                                                             style={{ backgroundImage: `url(${icon})` }}
                                                         />
-                                                    </Link>
+                                                    </a>
                                                 ))
                                             }
                                         </div>
@@ -47,15 +45,13 @@ const Footer = () => {
                                                 {
                                                     navBarMenu.map(({ label, link }, index) => (
                                                         <li key={index} className="pt-1 pb-2 font-bold">
-                                                            <a className="">
-                                                                <NavLink
-                                                                    key={index}
-                                                                    exact to={link}
-                                                                    activeStyle={{ color: `rgba(219, 39, 119` }}
-                                                                >
-                                                                    {label}
-                                                                </NavLink>
-                                                            </a>
+                                                            <NavLink
+                                                                key={index}
+                                                                to={link}
+                                                                style={({ isActive }) => isActive ? { color: 'rgba(219, 39, 119)' } : {}}
+                                                            >
+                                                                {label}
+                                                            </NavLink>
                                                         </li>
                                                     ))
                                                 }

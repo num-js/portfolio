@@ -1,20 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { withStyles } from '@material-ui/core/styles';
-import Slider from '@material-ui/core/Slider';
+import { styled } from '@mui/material/styles';
+import Slider from '@mui/material/Slider';
 import { InfoData } from '../../../assets/data/info';
-import Fade from 'react-reveal/Fade';
 
 import './profilePicture.scss'
 import ActiveStatusGreenDot from '../../SharedComponents/ActiveStatusGreenDot/ActiveStatusGreenDot';
 import useScreenWidth from '../../../hooks/useScreenWidth';
 import { getCurrentYear } from '../../../helpers/getDate';
 
-const PrettoSlider = withStyles({
-    root: {
-        color: '#52af77',
-        height: 8,
-    },
-    thumb: {
+const PrettoSlider = styled(Slider)({
+    color: '#52af77',
+    height: 8,
+    '& .MuiSlider-thumb': {
         height: 24,
         width: 24,
         color: 'white',
@@ -24,24 +21,30 @@ const PrettoSlider = withStyles({
         marginTop: -8,
         marginLeft: -12,
         boxShadow: "inset 5px 1px 4px -2px rgba(0,0,0,0.16)",
-        '&:focus, &:hover, &$active': {
+        '&:focus, &:hover, &.Mui-active': {
             boxShadow: "inset 5px 1px 4px -2px rgba(0,0,0,0.16)",
         },
     },
-    active: {},
-    valueLabel: {
+    '& .MuiSlider-valueLabel': {
         left: 'calc(-50% + 4px)',
     },
-    track: {
+    '& .MuiSlider-track': {
         height: 6,
         borderRadius: 4,
     },
-    rail: {
+    '& .MuiSlider-rail': {
         height: 6,
         borderRadius: 4,
     },
-})(Slider);
-const currentYear = getCurrentYear();
+});
+
+const FadeWhen = ({ when, children }) => (
+    <div style={{ transition: 'opacity 0.4s ease', opacity: when ? 1 : 0 }}>
+        {children}
+    </div>
+);
+
+const currentYear = new Date().getFullYear().toString();
 
 function getYearData(selectedYear) {
     let infoData = InfoData[selectedYear];
@@ -61,9 +64,15 @@ const ProfilePicture = () => {
         setTimeout(function () { setVisible(true) }, 400);
     }, [year]);
 
-    const ThumbComponentCustom = (props) => {
-        return <span {...props}>{('' + year).slice(2, 4)}</span>;
-    }
+    const ThumbComponentCustom = React.forwardRef(function ThumbComponentCustom(props, ref) {
+        const { children, ...other } = props;
+        return (
+            <span {...other} ref={ref}>
+                {('' + year).slice(2, 4)}
+                {children}
+            </span>
+        );
+    });
 
     return (
         <div className="visual-bg">
@@ -75,37 +84,37 @@ const ProfilePicture = () => {
             <div className="top-lable">
                 {data.minor && (
                     <div className="current-job" onClick={() => { if (data.minor.url) { window.open(data.minor.url, "_blank") } }}>
-                        <Fade opposite when={visible}>
+                        <FadeWhen when={visible}>
                             <ActiveStatusGreenDot icon={data.minor.img} inactive={data.minor.inactive} />
                             <p className="card-title">{data.minor.title}</p>
                             <p className="card-sub">{data.minor.sub1}</p>
                             <p className="card-sub">{data.minor.sub2}</p>
-                        </Fade>
+                        </FadeWhen>
                     </div>
                 )}
 
                 {data.extra && (
                     <div className={`current-job flat-extra`} onClick={() => { if (data.extra.url) { window.open(data.extra.url, "_blank") } }}>
-                        <Fade opposite when={visible}>
+                        <FadeWhen when={visible}>
                             <ActiveStatusGreenDot icon={data.extra.img} inactive={data.extra.inactive} />
                             <div className="flat-con">
                                 <p className="card-title">{data.extra.title}</p>
                                 <p className="card-sub">{data.extra.sub2}</p>
                             </div>
-                        </Fade>
+                        </FadeWhen>
                     </div>
                 )}
 
                 {data.major && (
                     <div className="current-job" onClick={() => { if (data.major.url) { window.open(data.major.url, "_blank") } }}>
-                        <Fade opposite when={visible}>
+                        <FadeWhen when={visible}>
                             <div align="center">
                                 <ActiveStatusGreenDot icon={data.major.img} inactive={data.major.inactive} />
                             </div>
                             <p className="card-title">{data.major.title}</p>
                             <p className="card-sub">{data.major.sub1}</p>
                             <p className="card-sub">{data.major.sub2}</p>
-                        </Fade>
+                        </FadeWhen>
                     </div>
                 )}
             </div>
@@ -119,11 +128,11 @@ const ProfilePicture = () => {
                         aria-label="pretto slider"
                         value={year}
                         onChange={(event, newValue) => { if (newValue !== year) { setVisible(false) }; setYear(newValue); }}
-                        steps={1}
+                        step={1}
                         min={2020}
-                        max={currentYear?.toString()}
-                        defaultValue={currentYear?.toString()}
-                        ThumbComponent={ThumbComponentCustom}
+                        max={parseInt(currentYear)}
+                        defaultValue={parseInt(currentYear)}
+                        slots={{ thumb: ThumbComponentCustom }}
                     />
                 </div>
                 <div id="heroSectionEnd"> &nbsp; </div>

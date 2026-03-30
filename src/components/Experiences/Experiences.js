@@ -22,42 +22,42 @@ const Experiences = () => {
                         sectionId="experienceLabel"
                     />
 
-                    <div id="cd-timeline" class="cd-container">
+                    <div id="cd-timeline" className="cd-container">
                         {
                             experiencesData?.map((companyData, index) => (
-                                <div class="cd-timeline-block">
+                                <div key={index} className="cd-timeline-block">
 
-                                    <div class="cd-timeline-pic">
-                                        <img src={companyData.sidePic.url} width="280" />
+                                    <div className="cd-timeline-pic">
+                                        <img alt={companyData?.name} src={companyData.sidePic.url} width="280" />
                                     </div>
 
-                                    <div class="cd-timeline-img cd-picture">
-                                        <span class="time-duration flex justify-center align-middle text-white text-xs">
+                                    <div className="cd-timeline-img cd-picture">
+                                        <span className="time-duration flex justify-center align-middle text-white text-xs">
                                             {getDuration(companyData?.timeLine.start, companyData?.timeLine?.end)}
                                         </span>
                                     </div>
 
-                                    <div class="cd-timeline-content nbg-glass">
-                                        <div class="flex items-center">
+                                    <div className="cd-timeline-content nbg-glass">
+                                        <div className="flex items-center">
                                             <div>
-                                                <a target="_blank" href={companyData?.companyURL}>
-                                                    <img width="60" class="rounded-full" src={companyData?.companyLogo} />
+                                                <a target="_blank" rel="noreferrer" href={companyData?.companyURL}>
+                                                    <img width="60" className="rounded-full" alt={companyData?.name} src={companyData?.companyLogo} />
                                                 </a>
                                             </div>
                                             <div className="w-full ml-4">
                                                 <h2>{companyData?.name}</h2>
-                                                <div class="timeline-content-info flex justify-between flex-wrap">
-                                                    <span class="flex align-middle">
+                                                <div className="timeline-content-info flex justify-between flex-wrap">
+                                                    <span className="flex align-middle">
                                                         <span>
-                                                            <img width="16" class="mr-2 "
+                                                            <img width="16" className="mr-2" alt="role"
                                                                 src="../icons/num-lappy-icon.png"
                                                             />
                                                         </span>
                                                         <span>{companyData?.role}</span>
                                                     </span>
-                                                    <span class="flex align-middle">
+                                                    <span className="flex align-middle">
                                                         <span>
-                                                            <img width="16" class="mr-2 "
+                                                            <img width="16" className="mr-2" alt="calendar"
                                                                 src="../icons/calendar-icon.png"
                                                             />
                                                         </span>
