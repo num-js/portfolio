@@ -1,5 +1,4 @@
-import React from 'react'
-import './techs.css'
+import React from 'react';
 
 const Tech = ({
     pic,
@@ -11,19 +10,23 @@ const Tech = ({
         ...divStyles,
     },
     skill,
-    showSkillPopover
+    showSkillPopover,
 }) => {
     return (
-        <>
-            <div className="cursor-pointer square"
-                style={styles}
-            >
-                <img src={pic} width="100%" height={picHeight}
-                    onClick={(event) => showSkillPopover(event, skill.details)}
-                />
-            </div>
-        </>
-    )
-}
+        <div
+            className="relative cursor-pointer rounded-2xl border border-white/15 bg-surface-glass shadow-glass backdrop-blur-[5px] animate-up-down-tech"
+            style={styles}
+        >
+            <img
+                src={pic}
+                width="100%"
+                height={picHeight}
+                alt=""
+                className="h-full w-full object-cover"
+                onClick={(event) => showSkillPopover(event, skill.details)}
+            />
+        </div>
+    );
+};
 
 export default Tech;

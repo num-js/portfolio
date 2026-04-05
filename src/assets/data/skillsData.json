@@ -192,9 +192,6 @@
                     {
                         "name": "Socket IO",
                         "pic": "../icons/skills/socket-io.svg",
-                        "styles": {
-                            "background": "linear-gradient(120deg, white, gray)"
-                        },
                         "projects": []
                     },
                     {
@@ -205,12 +202,7 @@
                     {
                         "name": "Rest API",
                         "pic": "../icons/skills/rest-api.png",
-                        "styles": {
-                            "background": "linear-gradient(120deg, white, gray)"
-                        },
-                        "projects": [
-                            
-                        ]
+                        "projects": []
                     }
                 ]
             }
@@ -234,10 +226,7 @@
                     },
                     {
                         "name": "GitHub",
-                        "pic": "../icons/skills/github.webp",
-                        "styles": {
-                            "background": "linear-gradient(120deg, white, gray)"
-                        }
+                        "pic": "../icons/skills/github.webp"
                     },
                     {
                         "name": "Jira",
@@ -246,9 +235,6 @@
                     {
                         "name": "PWA",
                         "pic": "../icons/skills/pwa.svg",
-                        "styles": {
-                            "background": "linear-gradient(120deg, white, gray)"
-                        },
                         "projects": [
                             {
                                 "title": "Novies",

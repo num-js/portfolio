@@ -6,7 +6,7 @@ const SingleProject = ({ projectData }) => {
     return (
         <section className="overflow-hidden text-white/70 body-font">
             <div className="container px-5 py-6 mx-auto">
-                <div className="flex flex-wrap px-2 py-2 mx-auto lg:w-4/5 glass-div">
+                <div className="mx-auto flex flex-wrap rounded-2xl border border-white/[0.18] bg-surface-glass/90 px-2 py-2 text-white shadow-glass backdrop-blur-xl lg:w-4/5">
                     <img alt="numan ahmed" className="object-cover object-center w-full h-64 rounded lg:w-1/2 lg:h-auto"
                         src={projectData.image}
                     />

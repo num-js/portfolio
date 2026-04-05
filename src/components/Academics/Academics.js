@@ -6,7 +6,6 @@ import scrollToPosition from '../../helpers/scrollToPosition';
 import { SectionHeader } from '../SharedComponents';
 import ExternalLink from '../SharedComponents/ActiveStatusGreenDot/ExternalLink';
 import Modal from '../SharedComponents/Modal/Modal';
-import './academics.scss'
 
 const Academics = () => {
     const [showAcademicTag, setShowAcademicTag] = useState(true);
@@ -32,8 +31,7 @@ const Academics = () => {
 
                 {showAcademicTag && (<div>
                     <div className="flex ">
-                        <div className="glass-div px-4 academic-tag"
-                        >
+                        <div className="absolute left-[55%] -rotate-2 rounded-2xl border border-white/[0.18] bg-surface-glass/90 px-4 text-white shadow-glass backdrop-blur-xl max-md:relative max-md:left-1/2 max-md:mb-7 max-md:mt-2.5 max-md:min-w-fit max-md:-translate-x-1/2 max-md:rotate-[353deg]">
                             <span className="cursor-pointer" style={{ position: 'absolute', right: '-5px', top: '-10px' }}>
                                 <img src="../images/num_heart.gif" width="28" alt="Md Numan Ahmed" />
                             </span>
@@ -56,7 +54,7 @@ const Academics = () => {
                                 academicsData.map((collegeData, index) => (
                                     <div key={index} className={`flex relative ${index !== (academicsData.length - 1) ? 'pb-12' : 'pb-4'}`}>
                                         <div className="absolute inset-0 flex items-center justify-center w-10 h-full">
-                                            <div className="w-1 h-full bg-[var(--color-timeline-rail)] pointer-events-none"></div>
+                                            <div className="pointer-events-none h-full w-1 bg-timeline-rail"></div>
                                         </div>
                                         <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-primary rounded-full ring-2 ring-primary/40">
                                             {
@@ -113,12 +111,18 @@ const Academics = () => {
 
                                                 {collegeData?.marks?.semMarks && (
                                                     <div className="mx-auto mt-5 overflow-auto lg:w-2/3">
-                                                        <table className="m-6 text-left whitespace-no-wrap black-shadow" style={{ transform: 'rotate(-5deg)' }}>
+                                                        <table
+                                                            className="m-6 whitespace-nowrap text-left shadow-black-deep"
+                                                            style={{ transform: 'rotate(-5deg)' }}
+                                                        >
                                                             <thead>
                                                                 <tr>
                                                                     {
                                                                         collegeData?.marks?.semMarks?.headerLabels.map((header, index) => (
-                                                                            <th key={index} className="px-2 py-2 text-sm font-medium tracking-wider text-white bg-[var(--color-surface-card)] title-font border-b border-white/10">
+                                                                            <th
+                                                                                key={index}
+                                                                                className="title-font border-b border-white/10 bg-surface-card px-2 py-2 text-sm font-medium tracking-wider text-white"
+                                                                            >
                                                                                 {header}
                                                                             </th>
                                                                         ))
@@ -152,7 +156,11 @@ const Academics = () => {
                         <div className="relative top-1/2"
                             style={{ transform: 'translate(5%, -50%)', opacity: '0.9' }}
                         >
-                            <img className="imgJump" src="../images/numan-learning.png" />
+                            <img
+                                className="relative animate-move-up-down"
+                                src="../images/numan-learning.png"
+                                alt=""
+                            />
                             <img src="../icons/small-circle.svg" className="absolute" />
                         </div>
                     </div>

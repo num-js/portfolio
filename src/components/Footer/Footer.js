@@ -9,9 +9,9 @@ const Footer = () => {
     return (
         <>
             <div className="flex justify-end mr-20">
-                <img src="../images/plant-blue.svg" />
+                <img src="../images/plant-blue.svg" alt="" />
             </div>
-            <div className="footer-surface">
+            <div className="border-t border-white/[0.06] bg-surface-glass/90 backdrop-blur-md">
                 <div style={{ background: `url("../backgrounds/bg-circles.svg")`, backgroundPositionX: "-157%", backgroundPositionY: "6%" }}>
                     <div className="container px-3 py-12 mx-auto lg:px-20">
                         <div className="lg:flex">
@@ -28,7 +28,7 @@ const Footer = () => {
                                                 socialMediaIconURL.map(({ icon, link }, index) => (
                                                     <a key={index} href={link} target="_blank" rel="noreferrer">
                                                         <div
-                                                            className="footer-social-img"
+                                                            className="h-[50px] w-[50px] rounded-full bg-white bg-cover bg-center bg-no-repeat"
                                                             style={{ backgroundImage: `url(${icon})` }}
                                                         />
                                                     </a>
@@ -44,9 +44,10 @@ const Footer = () => {
                                                     navBarMenu.map(({ label, link }, index) => (
                                                         <li key={index} className="pt-1 pb-2 font-bold">
                                                             <NavLink
-                                                                key={index}
                                                                 to={link}
-                                                                style={({ isActive }) => isActive ? { color: 'var(--color-primary)' } : {}}
+                                                                className={({ isActive }) =>
+                                                                    isActive ? 'text-primary' : 'text-inherit'
+                                                                }
                                                             >
                                                                 {label}
                                                             </NavLink>
@@ -76,7 +77,7 @@ const Footer = () => {
                                     Subscribe my weely Newsletter to get updates about Tech.
                                 </div>
                                 <div className="flex">
-                                    <input type="text" className="px-2 rounded-l focus:outline-none border border-white/10 text-white placeholder:text-white/40 bg-[var(--color-surface-card)]" placeholder="numan@gmail.com" />
+                                    <input type="text" className="rounded-l border border-white/10 bg-surface-card px-2 text-white placeholder:text-white/40 focus:outline-none" placeholder="numan@gmail.com" />
                                     <button className="px-4 py-2 text-white rounded-r focus:outline-none bg-primary hover:brightness-110 transition-all border border-primary">Subscribe</button>
                                 </div>
                             </div>
@@ -85,7 +86,7 @@ const Footer = () => {
                 </div>
 
                 {/* Footer bottom */}
-                <div className="footer-bottom">
+                <div className="border-t border-white/[0.06] bg-[rgba(6,13,24,0.92)]">
                     <div className="container px-6 py-6 mx-auto lg:px-20">
                         <div className="flex justify-center mb-1 font-serif text-white/65">
                             © 2020 - {getCurrentYear()}  &nbsp; <span> <Logo icon={false} animation={false} txtSize={16} /> </span> &nbsp;

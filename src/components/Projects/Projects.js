@@ -30,7 +30,7 @@ const Projects = () => {
                 <div>
                     {showAllProjects && (
                         <div className="flex flex-col w-full pt-8 text-center">
-                            <div className="flex mx-auto overflow-hidden border-2 rounded-md border-primary bg-[var(--color-surface-card)]">
+                            <div className="mx-auto flex overflow-hidden rounded-md border-2 border-primary bg-surface-card">
                                 <button
                                     className={`py-1 px-4 text-white focus:outline-none transition-colors ${projectType === "" ? 'bg-primary text-background' : 'hover:bg-white/5'}`}
                                     onClick={() => setProjectType('')}
@@ -63,11 +63,16 @@ const Projects = () => {
                                                 <div className="w-full p-5 bg-cover rounded-lg cursor-pointer h-96 mr-30" style={{ backgroundImage: `url(${projectData.image})` }}>
                                                 </div>
 
-                                                <div className={`p-5 rounded-lg w-80 relative -top-52 glass-div ${isLeftSide ? 'ml-auto left-32' : '-left-32'}`}
+                                                <div
+                                                    className={`relative -top-52 w-80 rounded-2xl border border-white/[0.18] bg-surface-glass/90 p-5 text-white shadow-glass backdrop-blur-xl ${
+                                                        isLeftSide ? 'left-32 ml-auto' : '-left-32'
+                                                    }`}
                                                 >
                                                     <div className="flex justify-between">
                                                         <div>
-                                                            <h1 className="mb-1 text-xl font-medium title-font nd-text-shadow-black">{projectData.name}</h1>
+                                                            <h1 className="title-font mb-1 text-xl font-medium drop-shadow-[0_0_5px_rgba(0,0,0,0.9)]">
+                                                                {projectData.name}
+                                                            </h1>
                                                         </div>
                                                         <div className="flex justify-between">
                                                             {/* {projectData?.demo && <span>
@@ -123,7 +128,7 @@ const Projects = () => {
                 <div>
                     {!showAllProjects && (
                         <div align="center">
-                            <div className="order-1 px-4 py-2 rounded-lg border border-primary/40 bg-[var(--color-surface-glass)] shadow-[0_0_20px_var(--color-primary-glow)]"
+                            <div className="order-1 rounded-lg border border-primary/40 bg-surface-glass/90 px-4 py-2 shadow-primary-glow backdrop-blur-md"
                                 style={{ width: 'fit-content' }}
                             >
                                 <Link
