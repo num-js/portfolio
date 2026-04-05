@@ -94,22 +94,23 @@
     }
 }
 
-// "N" monogram letter
-.monogram {
-    font-size: 140px;
-    font-weight: 800;
-    color: rgba(255, 255, 255, 0.9);
-    letter-spacing: -4px;
-    font-family: 'Arial', sans-serif;
-    user-select: none;
-    text-shadow: 0 0 30px rgba(0, 212, 200, 0.2);
+// Profile photo inside the circle
+.pp {
+    width: 308px;
+    height: 308px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     @media only screen and (max-width: 1024px) {
-        font-size: 110px;
+        width: 255px;
+        height: 255px;
     }
 
     @media only screen and (max-width: 768px) {
-        font-size: 90px;
+        width: 210px;
+        height: 210px;
     }
 }
 

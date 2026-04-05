@@ -58,7 +58,7 @@ const ProfilePicture = () => {
             <div className="circle-div">
                 <div className="circle-outer"></div>
                 <div className="circle-inner">
-                    <span className="monogram">N</span>
+                    <div className="pp" style={{ backgroundImage: `url('../images/my-pic.png')` }}></div>
                 </div>
             </div>
 
