@@ -1,3 +1,14 @@
+// Global app color variables
+:root {
+    --color-primary: #00d4c8;
+    --color-bg: #060d18;
+    --color-surface: rgba(8, 20, 35, 0.75);
+    --color-border: rgba(0, 212, 200, 0.18);
+    --color-text: #ffffff;
+    --color-text-muted: rgba(255, 255, 255, 0.6);
+}
+
+// Legacy .App class kept for any other usages
 .App {
     color: white;
     min-height: 98vh;
@@ -5,6 +16,7 @@
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+
     @media only screen and (max-width: 768px) {
         justify-content: flex-start;
         flex-direction: column;

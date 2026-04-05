@@ -3,39 +3,25 @@ import { styled } from '@mui/material/styles';
 import Slider from '@mui/material/Slider';
 import { InfoData } from '../../../assets/data/info';
 
-import './profilePicture.scss'
+import './profilePicture.scss';
 import ActiveStatusGreenDot from '../../SharedComponents/ActiveStatusGreenDot/ActiveStatusGreenDot';
 import useScreenWidth from '../../../hooks/useScreenWidth';
-import { getCurrentYear } from '../../../helpers/getDate';
 
 const PrettoSlider = styled(Slider)({
-    color: '#52af77',
-    height: 8,
+    color: '#00d4c8',
+    height: 6,
     '& .MuiSlider-thumb': {
         display: 'none',
-        // height: 24,
-        // width: 24,
-        // color: 'white',
-        // fontSize: '14px',
-        // backgroundColor: '#306344',
-        // border: '1px solid currentColor',
-        // marginTop: -8,
-        // marginLeft: -12,
-        // boxShadow: "inset 5px 1px 4px -2px rgba(0,0,0,0.16)",
-        // '&:focus, &:hover, &.Mui-active': {
-        //     boxShadow: "inset 5px 1px 4px -2px rgba(0,0,0,0.16)",
-        // },
-    },
-    '& .MuiSlider-valueLabel': {
-        left: 'calc(-50% + 4px)',
     },
     '& .MuiSlider-track': {
-        height: 6,
+        height: 5,
         borderRadius: 4,
+        background: 'linear-gradient(90deg, #00d4c8, #00a8e0)',
     },
     '& .MuiSlider-rail': {
-        height: 6,
+        height: 5,
         borderRadius: 4,
+        backgroundColor: 'rgba(255,255,255,0.12)',
     },
 });
 
@@ -62,29 +48,26 @@ const ProfilePicture = () => {
     let data = getYearData(year);
 
     useEffect(() => {
-        setTimeout(function () { setVisible(true) }, 400);
+        setTimeout(function () { setVisible(true); }, 400);
     }, [year]);
-
-    const ThumbComponentCustom = React.forwardRef(function ThumbComponentCustom(props, ref) {
-        const { children, ...other } = props;
-        return (
-            <span {...other} ref={ref}>
-                {('' + year).slice(2, 4)}
-                {children}
-            </span>
-        );
-    });
 
     return (
         <div className="visual-bg">
+            <p className="year-ghost" style={{ fontFamily: "akronim, cursive" }}>{year}</p>
+
             <div className="circle-div">
-                <div className="circle"></div>
-                <div className="pp" style={{ backgroundImage: `url('../images/my-pic.png')` }}></div>
+                <div className="circle-outer"></div>
+                <div className="circle-inner">
+                    <span className="monogram">N</span>
+                </div>
             </div>
-            <p className="year" style={{ fontFamily: "akronim, cursive" }}>{year}</p>
+
             <div className="top-lable">
                 {data.minor && (
-                    <div className="current-job" onClick={() => { if (data.minor.url) { window.open(data.minor.url, "_blank") } }}>
+                    <div
+                        className="career-card"
+                        onClick={() => { if (data.minor.url) { window.open(data.minor.url, "_blank"); } }}
+                    >
                         <FadeWhen when={visible}>
                             <ActiveStatusGreenDot icon={data.minor.img} inactive={data.minor.inactive} />
                             <p className="card-title">{data.minor.title}</p>
@@ -95,7 +78,10 @@ const ProfilePicture = () => {
                 )}
 
                 {data.extra && (
-                    <div className={`current-job flat-extra`} onClick={() => { if (data.extra.url) { window.open(data.extra.url, "_blank") } }}>
+                    <div
+                        className="career-card extra-card"
+                        onClick={() => { if (data.extra.url) { window.open(data.extra.url, "_blank"); } }}
+                    >
                         <FadeWhen when={visible}>
                             <ActiveStatusGreenDot icon={data.extra.img} inactive={data.extra.inactive} />
                             <div className="flat-con">
@@ -107,9 +93,12 @@ const ProfilePicture = () => {
                 )}
 
                 {data.major && (
-                    <div className="current-job" onClick={() => { if (data.major.url) { window.open(data.major.url, "_blank") } }}>
+                    <div
+                        className="career-card"
+                        onClick={() => { if (data.major.url) { window.open(data.major.url, "_blank"); } }}
+                    >
                         <FadeWhen when={visible}>
-                            <div align="center">
+                            <div style={{ textAlign: 'center' }}>
                                 <ActiveStatusGreenDot icon={data.major.img} inactive={data.major.inactive} />
                             </div>
                             <p className="card-title">{data.major.title}</p>
@@ -119,26 +108,30 @@ const ProfilePicture = () => {
                     </div>
                 )}
             </div>
-            <div className={`top-lable down`}>
-                <div className={`current-job flat-large ${screenSize === 'small' ? 'mb-10' : ''}`}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+
+            <div className="timeline-row">
+                <div className={`timeline-card ${screenSize === 'small' ? 'mb-10' : ''}`}>
+                    <div className="timeline-header">
                         <p className="card-sub">Timeline</p>
-                        <p className="card-sub">{year}</p>
+                        <p className="card-sub timeline-year">{year}</p>
                     </div>
                     <PrettoSlider
-                        aria-label="pretto slider"
+                        aria-label="career timeline"
                         value={year}
-                        onChange={(event, newValue) => { if (newValue !== year) { setVisible(false) }; setYear(newValue); }}
+                        onChange={(event, newValue) => {
+                            if (newValue !== year) { setVisible(false); }
+                            setYear(newValue);
+                        }}
                         step={1}
                         min={2020}
                         max={parseInt(currentYear)}
                         defaultValue={parseInt(currentYear)}
-                        slots={{ thumb: ThumbComponentCustom }}
                     />
                 </div>
-                <div id="heroSectionEnd"> &nbsp; </div>
+                <div id="heroSectionEnd">&nbsp;</div>
             </div>
         </div>
     );
-}
+};
+
 export default ProfilePicture;
