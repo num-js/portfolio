@@ -50,10 +50,10 @@
     &--left {
         width: 340px;
         height: 340px;
-        background: radial-gradient(circle, rgba(0, 90, 80, 0.55) 0%, transparent 70%);
+        background: radial-gradient(circle, #1dffe9 0%, transparent 70%);
         left: -60px;
-        bottom: 0;
-        opacity: 0.4;
+        top: 0;
+        opacity: 0.6;
     }
 
     &--right {
@@ -62,7 +62,7 @@
         background: radial-gradient(circle, rgba(0, 130, 70, 0.4) 0%, transparent 70%);
         right: -80px;
         bottom: -80px;
-        opacity: 0.35;
+        opacity: 0.6;
     }
 }
 
