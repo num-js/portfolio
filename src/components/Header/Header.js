@@ -3,55 +3,58 @@ import { NavLink } from 'react-router-dom';
 import { navBarMenu } from '../../assets/navLinks';
 import useToggleNav from '../../hooks/useToggleNav';
 import Logo from '../SharedComponents/ActiveStatusGreenDot/Logo';
+import './header.scss';
 
 const Header = () => {
-
     const { toggleMobileMenu, setToggleMobileMenu } = useToggleNav();
 
     return (
-        <>
-            <nav className="fixed top-0 z-50 flex flex-wrap items-center justify-between w-full px-6 py-4 nblue-box-shadow nblur-bg-30">
-                <div className="flex items-center flex-shrink-0 mr-6 text-white">
+        <nav className="site-header">
+            <div className="header-inner">
+                <div className="header-logo">
                     <Logo />
                 </div>
 
-                <div className="block lg:hidden">
-                    <button className="flex items-center px-3 py-2 text-white border border-white rounded hover:border-pink-600 hover:text-pink-600"
-                        onClick={() => setToggleMobileMenu(prev => !prev)}
+                <button
+                    className="mobile-menu-btn"
+                    aria-label="Toggle menu"
+                    onClick={() => setToggleMobileMenu(prev => !prev)}
+                >
+                    <span className={`hamburger ${toggleMobileMenu ? 'open' : ''}`}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+
+                <div className={`header-nav-wrap ${toggleMobileMenu ? 'is-open' : ''}`}>
+                    <ul className="header-nav">
+                        {navBarMenu.map(({ label, link }, index) => (
+                            <li key={index}>
+                                <NavLink
+                                    to={link}
+                                    className={({ isActive }) =>
+                                        `nav-link ${isActive ? 'nav-link--active' : ''}`
+                                    }
+                                    onClick={() => setToggleMobileMenu(false)}
+                                >
+                                    {label}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <a
+                        download
+                        href="../assets/resume/Resume-Numan-frontend.pdf"
+                        className="cv-btn"
                     >
-                        <svg className="w-3 h-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
-                    </button>
+                        Download CV
+                    </a>
                 </div>
-                <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${toggleMobileMenu ? '' : 'hidden'}`}>
-                    <div className="text-sm lg:flex-grow">
-                        {
-                            navBarMenu.map(({ label, link }, index) => (
-                                <span key={index} className="block mt-4 mr-4 text-xl text-white nav-menu lg:inline-block lg:mt-0 hover:text-gray-400">
-                                    <NavLink
-                                        key={index}
-                                        to={link}
-                                        style={({ isActive }) => isActive ? { color: 'rgba(219, 39, 119)', fontWeight: '700' } : {}}
-                                        onClick={() => setToggleMobileMenu(false)}
-                                    >
-                                        {label}
-                                    </NavLink>
-                                </span>
-                            ))
-                        }
-                    </div>
-                    <div>
-                        <a
-                            download
-                            href="../assets/resume/Resume-Numan-frontend.pdf"
-                            className="inline-block mt-4 leading-none text-white border border-pink-600 rounded hover:border-white hover:text-teal-500 hover:bg-black lg:mt-0" style={{ borderRadius: '2px' }}
-                        >
-                            <div id="download-cv-btn"></div>
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </>
+            </div>
+        </nav>
     );
-}
+};
 
 export default Header;
