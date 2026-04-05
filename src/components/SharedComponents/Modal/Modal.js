@@ -1,45 +1,48 @@
 import React, { useEffect, useState } from 'react';
-import './modal.css';
-
 
 const Modal = ({ children, buttonComponent, docTitle }) => {
     const [showModal, setShowModal] = useState(false);
 
-    useEffect(() => {
-    }, []);
+    useEffect(() => {}, []);
 
     return (
         <>
             <div onClick={() => setShowModal(true)} className="cursor-pointer">
-                {buttonComponent ? buttonComponent : (
-                    <div className='nbg-pink text-white rounded font-bold p-2'>Open Modal</div>
+                {buttonComponent ? (
+                    buttonComponent
+                ) : (
+                    <div className="rounded bg-primary p-2 font-bold text-white">Open Modal</div>
                 )}
             </div>
 
-            <div className={`main-modal modal-bg-blur fixed w-full h-100 inset-0 z-50 overflow-hidden animated fadeIn faster ${showModal ? 'fadeIn flex justify-center items-center' : 'hidden fadeOut'}`}>
-                <div className="border border-teal-500 shadow-lg modal-container bg-gray-800 w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto" style={{ maxHeight: '90vh' }}>
+            <div
+                className={`main-modal fixed inset-0 z-50 h-full w-full overflow-hidden bg-black/70 transition-opacity duration-300 ${
+                    showModal ? 'flex items-center justify-center opacity-100' : 'pointer-events-none hidden opacity-0'
+                }`}
+            >
+                <div
+                    className="modal-container z-50 mx-auto w-11/12 max-h-[90vh] overflow-y-auto rounded-lg border border-primary/40 bg-surface shadow-lg md:max-w-md"
+                    style={{ maxHeight: '90vh' }}
+                >
                     <div className="modal-content text-left">
-                        <div className="flex justify-between items-center py-2 pl-2">
+                        <div className="flex items-center justify-between py-2 pl-2">
                             <p>{docTitle}</p>
-                            <div className="text-right cursor-pointer z-50"
+                            <div
+                                className="relative -top-1.5 right-1 z-50 cursor-pointer text-right"
                                 onClick={() => setShowModal(false)}
-                                style={{
-                                    position: 'relative',
-                                    top: '-7px',
-                                    right: '5px',
-                                }}
+                                onKeyDown={(e) => e.key === 'Enter' && setShowModal(false)}
+                                role="button"
+                                tabIndex={0}
                             >
                                 <img src="../icons/close-circle.svg" alt="close" width="16" />
                             </div>
                         </div>
-                        <div>
-                            {children}
-                        </div>
+                        <div>{children}</div>
                     </div>
                 </div>
             </div>
         </>
     );
-}
+};
 
 export default Modal;

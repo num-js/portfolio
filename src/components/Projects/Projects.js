@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import SingleProject from './SingleProject';
 import projectsData from '../../assets/data/projectsData.json';
 import useScreenWidth from '../../hooks/useScreenWidth';
-import { generateRandomNumber } from '../../helpers/generateNumber';
 import { Link } from 'react-router-dom';
 import { PROJECTS } from '../../helpers/routesURL';
 import scrollToPosition from '../../helpers/scrollToPosition';
@@ -31,17 +30,17 @@ const Projects = () => {
                 <div>
                     {showAllProjects && (
                         <div className="flex flex-col w-full pt-8 text-center">
-                            <div className="flex mx-auto overflow-hidden border-2 rounded border-[#52af77]">
+                            <div className="mx-auto flex overflow-hidden rounded-md border-2 border-primary bg-surface-card">
                                 <button
-                                    className={`py-1 px-4 text-white focus:outline-none ${projectType === "" ? 'bg-[#52af77]' : ''}`}
+                                    className={`py-1 px-4 text-white focus:outline-none transition-colors ${projectType === "" ? 'bg-primary text-background' : 'hover:bg-white/5'}`}
                                     onClick={() => setProjectType('')}
                                 > &nbsp; &nbsp;  All &nbsp; &nbsp; </button>
                                 <button
-                                    className={`py-1 px-4 text-white focus:outline-none ${projectType === "front-end" ? 'bg-[#52af77]' : ''}`}
+                                    className={`py-1 px-4 text-white focus:outline-none transition-colors border-l border-white/10 ${projectType === "front-end" ? 'bg-primary text-background' : 'hover:bg-white/5'}`}
                                     onClick={() => setProjectType('front-end')}
                                 >FrontEnd</button>
                                 <button
-                                    className={`py-1 px-4 text-white focus:outline-none ${projectType === "back-end" ? 'bg-[#52af77]' : ''}`}
+                                    className={`py-1 px-4 text-white focus:outline-none transition-colors border-l border-white/10 ${projectType === "back-end" ? 'bg-primary text-background' : 'hover:bg-white/5'}`}
                                     onClick={() => setProjectType('back-end')}
                                 >BackEnd</button>
                             </div>
@@ -64,12 +63,16 @@ const Projects = () => {
                                                 <div className="w-full p-5 bg-cover rounded-lg cursor-pointer h-96 mr-30" style={{ backgroundImage: `url(${projectData.image})` }}>
                                                 </div>
 
-                                                <div className={`bg-gray-800 p-5 rounded-lg w-80 relative -top-52 glass-div ${isLeftSide ? 'ml-auto left-32' : '-left-32'}`}
-                                                    style={{ boxShadow: '0 2px 5px 0 rgb(0 0 0 / 100%), 0 2px 10px 0 rgb(0 0 0 / 100%)' }}
+                                                <div
+                                                    className={`relative -top-52 w-80 rounded-2xl border border-white/[0.18] bg-surface-glass/90 p-5 text-white shadow-glass backdrop-blur-xl ${
+                                                        isLeftSide ? 'left-32 ml-auto' : '-left-32'
+                                                    }`}
                                                 >
                                                     <div className="flex justify-between">
                                                         <div>
-                                                            <h1 className="mb-1 text-xl font-medium title-font nd-text-shadow-black">{projectData.name}</h1>
+                                                            <h1 className="title-font mb-1 text-xl font-medium drop-shadow-[0_0_5px_rgba(0,0,0,0.9)]">
+                                                                {projectData.name}
+                                                            </h1>
                                                         </div>
                                                         <div className="flex justify-between">
                                                             {/* {projectData?.demo && <span>
@@ -85,7 +88,7 @@ const Projects = () => {
                                                         </div>
                                                     </div>
 
-                                                    <div className="flex items-center border-b-2 border-gray-600"></div>
+                                                    <div className="flex items-center border-b border-white/10"></div>
 
                                                     <p className="my-2 leading-relaxed text-white text-sm">
                                                         {projectData.description}
@@ -125,8 +128,8 @@ const Projects = () => {
                 <div>
                     {!showAllProjects && (
                         <div align="center">
-                            <div className="order-1 px-4 py-2 rounded-lg shadow-xl"
-                                style={{ boxShadow: `0px 0px 15px 1px rgb(${generateRandomNumber(100, 255)} ${generateRandomNumber(100, 255)} ${generateRandomNumber(100, 255)})`, width: 'fit-content' }}
+                            <div className="order-1 rounded-lg border border-primary/40 bg-surface-glass/90 px-4 py-2 shadow-primary-glow backdrop-blur-md"
+                                style={{ width: 'fit-content' }}
                             >
                                 <Link
                                     to={PROJECTS}
