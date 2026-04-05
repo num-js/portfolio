@@ -4,54 +4,82 @@ import { navBarMenu } from '../../assets/navLinks';
 import useToggleNav from '../../hooks/useToggleNav';
 import Logo from '../SharedComponents/ActiveStatusGreenDot/Logo';
 
-const Header = () => {
+const navLinkBase =
+    'relative text-[0.95rem] font-normal text-white/75 tracking-wide py-1 no-underline transition-colors duration-200 ' +
+    'after:absolute after:bottom-[-2px] after:left-0 after:h-0.5 after:w-0 after:rounded-sm after:bg-primary after:transition-all after:duration-200 ' +
+    'hover:text-white hover:after:w-full ' +
+    'max-md:block max-md:w-full max-md:border-b max-md:border-white/[0.06] max-md:py-2.5 max-md:text-base';
 
+const navLinkActive = 'text-primary font-medium after:w-full';
+
+const Header = () => {
     const { toggleMobileMenu, setToggleMobileMenu } = useToggleNav();
 
     return (
-        <>
-            <nav className="fixed top-0 z-50 flex flex-wrap items-center justify-between w-full px-6 py-4 nblue-box-shadow nblur-bg-30">
-                <div className="flex items-center flex-shrink-0 mr-6 text-white">
+        <nav className="fixed inset-x-0 top-0 z-[100] border-b border-white/[0.06] bg-header-bar backdrop-blur-xl">
+            <div className="mx-auto flex max-w-content items-center justify-between px-10 py-3.5 max-lg:px-6 max-md:flex-wrap max-md:px-5 max-md:py-3">
+                <div className="shrink-0">
                     <Logo />
                 </div>
 
-                <div className="block lg:hidden">
-                    <button className="flex items-center px-3 py-2 text-white border border-white rounded hover:border-pink-600 hover:text-pink-600"
-                        onClick={() => setToggleMobileMenu(prev => !prev)}
+                <button
+                    type="button"
+                    className="hidden cursor-pointer border-none bg-transparent p-1 max-md:flex max-md:items-center max-md:justify-center"
+                    aria-label="Toggle menu"
+                    aria-expanded={toggleMobileMenu}
+                    onClick={() => setToggleMobileMenu((prev) => !prev)}
+                >
+                    <span className="flex w-[22px] flex-col gap-[5px]">
+                        <span
+                            className={`block h-0.5 rounded-sm bg-white/80 transition-all duration-200 origin-center ${
+                                toggleMobileMenu ? 'translate-y-[7px] rotate-45' : ''
+                            }`}
+                        />
+                        <span
+                            className={`block h-0.5 rounded-sm bg-white/80 transition-all duration-200 ${
+                                toggleMobileMenu ? 'opacity-0' : ''
+                            }`}
+                        />
+                        <span
+                            className={`block h-0.5 rounded-sm bg-white/80 transition-all duration-200 origin-center ${
+                                toggleMobileMenu ? '-translate-y-[7px] -rotate-45' : ''
+                            }`}
+                        />
+                    </span>
+                </button>
+
+                <div
+                    className={`flex items-center gap-9 max-md:w-full max-md:flex-col max-md:items-stretch max-md:gap-0 max-md:py-3 max-md:pb-4 ${
+                        toggleMobileMenu ? 'max-md:flex' : 'max-md:hidden'
+                    }`}
+                >
+                    <ul className="m-0 flex list-none items-center gap-7 p-0 max-md:w-full max-md:flex-col max-md:items-stretch max-md:gap-0">
+                        {navBarMenu.map(({ label, link }, index) => (
+                            <li key={index}>
+                                <NavLink
+                                    to={link}
+                                    className={({ isActive }) =>
+                                        `${navLinkBase} ${isActive ? navLinkActive : ''}`
+                                    }
+                                    onClick={() => setToggleMobileMenu(false)}
+                                >
+                                    {label}
+                                </NavLink>
+                            </li>
+                        ))}
+                    </ul>
+
+                    <a
+                        download
+                        href="../assets/resume/Resume-Numan-frontend.pdf"
+                        className="inline-flex shrink-0 items-center justify-center rounded-md border border-white/70 bg-transparent px-5 py-1.5 text-[0.88rem] font-medium tracking-wide text-white no-underline transition-all duration-200 hover:border-primary hover:bg-primary/10 hover:text-primary hover:shadow-[0_0_16px_rgba(0,212,200,0.25)] max-md:mt-3.5 max-md:self-start"
                     >
-                        <svg className="w-3 h-3 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
-                    </button>
+                        Download CV
+                    </a>
                 </div>
-                <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${toggleMobileMenu ? '' : 'hidden'}`}>
-                    <div className="text-sm lg:flex-grow">
-                        {
-                            navBarMenu.map(({ label, link }, index) => (
-                                <span key={index} className="block mt-4 mr-4 text-xl text-white nav-menu lg:inline-block lg:mt-0 hover:text-gray-400">
-                                    <NavLink
-                                        key={index}
-                                        to={link}
-                                        style={({ isActive }) => isActive ? { color: 'rgba(219, 39, 119)', fontWeight: '700' } : {}}
-                                        onClick={() => setToggleMobileMenu(false)}
-                                    >
-                                        {label}
-                                    </NavLink>
-                                </span>
-                            ))
-                        }
-                    </div>
-                    <div>
-                        <a
-                            download
-                            href="../assets/resume/Resume-Numan-frontend.pdf"
-                            className="inline-block mt-4 leading-none text-white border border-pink-600 rounded hover:border-white hover:text-teal-500 hover:bg-black lg:mt-0" style={{ borderRadius: '2px' }}
-                        >
-                            <div id="download-cv-btn"></div>
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </>
+            </div>
+        </nav>
     );
-}
+};
 
 export default Header;

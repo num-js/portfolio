@@ -23,27 +23,27 @@ const RouterComponent = () => {
                     </>
                 } />
                 <Route path={EXPERIENCES} element={
-                    <div className="nmt-70">
+                    <div className="mt-header">
                         <Experiences />
                     </div>
                 } />
                 <Route path={SKILLS} element={
-                    <div className="nmt-70">
+                    <div className="mt-header">
                         <Skills />
                     </div>
                 } />
                 <Route path={PROJECTS} element={
-                    <div className="nmt-70">
+                    <div className="mt-header">
                         <Projects />
                     </div>
                 } />
                 <Route path={ACADEMICS} element={
-                    <div className="nmt-70">
+                    <div className="mt-header">
                         <Academics />
                     </div>
                 } />
                 <Route path={CONTACT_ME} element={
-                    <div className="nmt-70">
+                    <div className="mt-header">
                         <ContactMe />
                     </div>
                 } />

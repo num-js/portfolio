@@ -1,42 +1,140 @@
-import React, { useEffect } from 'react';
-import './rotating-circle.css';
+import React, { useMemo } from 'react';
 
+const iconShell =
+    'flex shrink-0 items-center justify-center rounded-full border border-primary/40 bg-[rgba(12,22,38,0.92)] p-2 shadow-lg shadow-black/40 ring-1 ring-white/5 backdrop-blur-sm transition-all duration-200 hover:border-primary hover:bg-primary/10 hover:shadow-primary-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-primary';
+
+function useSanitizedSkillStyle(skill) {
+    return useMemo(() => {
+        if (!skill?.styles || typeof skill.styles !== 'object') {
+            return undefined;
+        }
+        const rest = { ...skill.styles };
+        delete rest.background;
+        return Object.keys(rest).length ? rest : undefined;
+    }, [skill?.styles]);
+}
+
+function SkillIconButton({ skill, showSkillPopover, className = '', style: sizeStyle }) {
+    const extraStyle = useSanitizedSkillStyle(skill);
+    return (
+        <button
+            type="button"
+            className={`${iconShell} ${className}`}
+            style={{ ...extraStyle, ...sizeStyle }}
+            onClick={(e) => showSkillPopover(e, skill)}
+            aria-label={skill.name}
+        >
+            <img src={skill.pic} alt="" className="h-8 w-8 object-contain" />
+        </button>
+    );
+}
+
+/**
+ * Orbit radius: leave margin so icon circles (≈56px) do not overlap label or each other.
+ * Chord for n icons ≈ 2*r*sin(π/n); for n=6 need r large enough vs icon diameter.
+ */
+function getOrbitRadius(n, stage, iconSize) {
+    const half = stage / 2;
+    const clearance = iconSize / 2 + 16;
+    const maxR = half - clearance;
+    if (n < 2) {
+        return Math.max(48, Math.min(maxR, 72));
+    }
+    const minChord = iconSize + 12;
+    const minRFromN = minChord / (2 * Math.sin(Math.PI / n));
+    return Math.max(52, Math.min(maxR, Math.max(minRFromN, maxR - 6)));
+}
+
+/**
+ * Tech cluster: rotating orbit; counter-rotate on inner wrapper only (keeps logos upright).
+ */
 const RotatingCircle = ({ data, showSkillPopover }) => {
+    const skills = data?.skills ?? [];
+    const n = skills.length;
 
-    useEffect(() => {
-        let angle = 360 / 6;
-        let finalAngle = -360;
-        const circleContainer = document.querySelectorAll(".rotating-circle");
-        circleContainer.forEach(circle => {
-            finalAngle -= 60;
-            circle.style.transform = `rotate(${angle}deg)`;
-            circle.style.setProperty("--start-angle-of-rotation", `-${angle}deg`);
-            circle.style.setProperty("--end-angle-of-rotation", `${finalAngle}deg`);
-            angle += 60;
+    if (n === 0) {
+        return null;
+    }
+
+    const iconSm = 52;
+    const iconLg = 58;
+    const stageSm = 260;
+    const stageLg = 304;
+    const rSm = getOrbitRadius(n, stageSm, iconSm);
+    const rLg = getOrbitRadius(n, stageLg, iconLg);
+
+    const orbitArm = (rPx, iconSize) =>
+        skills.map((skill, i) => {
+            const angleDeg = (360 / n) * i - 90;
+            return (
+                <div
+                    key={i}
+                    className="absolute left-0 top-0 overflow-visible"
+                    style={{
+                        width: 0,
+                        height: 0,
+                        // transform: `rotate(${angleDeg}deg) translateY(-${rPx}px) rotate(${-angleDeg}deg)`,
+                        transform: `rotate(${angleDeg}deg) translateY(-${rPx}px)`,
+                        transformOrigin: 'center center',
+                    }}
+                >
+                    <div className="-translate-x-1/2 -translate-y-1/2">
+                        <div className="inline-flex origin-center animate-orbit-slow-reverse group-hover/stage:[animation-play-state:paused]">
+                            <SkillIconButton
+                                skill={skill}
+                                showSkillPopover={showSkillPopover}
+                                className="pointer-events-auto"
+                                style={{ width: iconSize, height: iconSize, minWidth: iconSize, minHeight: iconSize }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            );
         });
-    }, []);
 
     return (
-        <>
-            <div className="rotating-circle-section">
-                <div className="rotating-circle-container">
-                    {/* <img className="rotating-circle-img" src="https://numan-dev.web.app/images/my-pic.png" alt="portrait" /> */}
-                    <span className="rotating-circle-text" style={{ width: "500px", color: 'white', display: 'flex', justifyContent: 'center' }}>
-                        {data?.title}
+        <div className="flex w-full shrink-0 flex-col items-center" id={data?.id}>
+            <div className="group/stage w-full max-w-[300px] px-2 lg:hidden">
+                <div className="mb-5 flex w-full justify-center">
+                    <span className="flex min-h-11 min-w-[8.5rem] items-center justify-center rounded-lg border border-white/20 bg-page/80 px-4 py-2 text-center text-sm font-semibold uppercase leading-normal tracking-wide text-white shadow-md backdrop-blur-sm">
+                        {data.title}
                     </span>
-                    {data?.skills.map((skill, index) => (
-                        <div key={index} className="rotating-circle">
-                            <div className="rotating-inner-circle" style={skill?.styles}
-                                onClick={(event) => showSkillPopover(event, skill)}
-                            >
-                                <img src={skill.pic} width="100%" />
-                            </div>
+                </div>
+                <div
+                    className="relative mx-auto shrink-0"
+                    style={{ width: stageSm, height: stageSm }}
+                >
+                    <div
+                        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                        aria-hidden
+                    >
+                        <div className="relative h-0 w-0 origin-center animate-orbit-slow group-hover/stage:[animation-play-state:paused]">
+                            {orbitArm(rSm, iconSm)}
                         </div>
-                    ))}
+                    </div>
                 </div>
             </div>
-        </>
-    )
-}
+
+            <div
+                className="group/stage relative mx-auto hidden shrink-0 lg:block"
+                style={{ width: stageLg, height: stageLg }}
+            >
+                <div className="pointer-events-none absolute left-1/2 top-1/2 z-20 flex w-[min(100%,11rem)] -translate-x-1/2 -translate-y-1/2 items-center justify-center">
+                    <span className="flex items-center justify-center rounded-lg border border-white/20 bg-page/80 px-4 py-1 text-center text-xs font-semibold uppercase leading-normal tracking-wide text-white shadow-md backdrop-blur-md xl:min-h-[2rem] xl:text-sm">
+                        {data.title}
+                    </span>
+                </div>
+                <div
+                    className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                    aria-hidden
+                >
+                    <div className="relative h-0 w-0 origin-center animate-orbit-slow group-hover/stage:[animation-play-state:paused]">
+                        {orbitArm(rLg, iconLg)}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default RotatingCircle;
