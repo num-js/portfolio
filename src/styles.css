@@ -57,7 +57,7 @@
 
 #download-cv-btn::before {
     content: "";
-    background-image: conic-gradient(#ff0052 20deg, transparent 120deg);
+    background-image: conic-gradient(var(--color-primary) 20deg, transparent 120deg);
     width: 300px;
     height: 200px;
     position: absolute;
@@ -68,13 +68,13 @@
     content: "Download CV";
     width: 111px;
     height: 27px;
-    background: #101010;
+    background: var(--color-bg-elevated);
     position: absolute;
     border-radius: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ff0052;
+    color: var(--color-primary);
     box-shadow: inset 20px 20px 20px #0000008c;
     font-size: medium;
     font-family: cursive;
@@ -102,13 +102,13 @@
 }
 
 .glass-div {
-    border-radius: 15px;
-    color: white;
-    background: rgba(29, 30, 30, 0.3);
-    box-shadow: 0 8px 32px 0 #161414ad;
+    border-radius: var(--radius-lg);
+    color: var(--color-text);
+    background: var(--color-surface-glass);
+    box-shadow: var(--shadow-glass);
     backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    -webkit-backdrop-filter: blur(var(--blur-glass));
+    border: 1px solid var(--color-border-muted);
     animation: shake1 10s;
     animation-iteration-count: infinite;
     -moz-box-shadow: -1px 2px 17px -4px rgba(0, 0, 0, 0.54);
@@ -119,15 +119,15 @@
 }
 
 .nbg-pink {
-    background-color: #ff0052;
+    background-color: var(--color-primary);
 }
 
 .nborder-pink {
-    border-color: #ff0052;
+    border-color: var(--color-primary);
 }
 
 .ncolor-pink {
-    color: #ff0052;
+    color: var(--color-primary);
 }
 
 .modal-bg-blur {
@@ -135,11 +135,11 @@
 }
 
 .nblue-box-shadow {
-    box-shadow: 0 8px 32px 0 rgb(78 35 146 / 68%);
+    box-shadow: 0 8px 32px 0 var(--color-primary-glow);
 }
 
 .nbody-bg {
-    background: #111827;
+    background: var(--color-bg);
 }
 
 .nblur-bg-30 {
@@ -157,12 +157,12 @@
 }
 
 .nbg-glass {
-    border-radius: 7px;
-    box-shadow: -1px 2px 17px -4px rgb(0 0 0 / 54%);
-    background: rgba(29, 30, 30, 0.3);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    background: var(--color-surface-glass);
     backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(20px);
-    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+    -webkit-backdrop-filter: blur(var(--blur-glass));
+    border: 1px solid var(--color-border-subtle);
 }
 
 .nd-text-shadow-black {

@@ -5,11 +5,11 @@
 
 .square {
     position: relative;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-surface-glass);
     backdrop-filter: blur(5px);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
+    box-shadow: var(--shadow-glass);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
     animation: upDownAnim 10s linear infinite;
     animation-delay: calc(-1s * var(--i));
 }

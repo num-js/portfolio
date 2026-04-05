@@ -32,8 +32,7 @@ const Academics = () => {
 
                 {showAcademicTag && (<div>
                     <div className="flex ">
-                        <div className={`bg-gray-800 px-4 rounded-lg academic-tag`}
-                            style={{ boxShadow: '0 2px 5px 0 rgb(0 0 0 / 100%), 0 2px 10px 0 rgb(0 0 0 / 100%)' }}
+                        <div className="glass-div px-4 academic-tag"
                         >
                             <span className="cursor-pointer" style={{ position: 'absolute', right: '-5px', top: '-10px' }}>
                                 <img src="../images/num_heart.gif" width="28" alt="Md Numan Ahmed" />
@@ -43,7 +42,7 @@ const Academics = () => {
                                 <br />
                                 My <Link to={SKILLS}><span className="font-bold underline">Skills</span> can. 😎</Link>
                             </p>
-                            <div className="flex items-center border-b-2 border-gray-600"></div>
+                            <div className="flex items-center border-b border-white/10"></div>
                         </div>
                     </div>
                 </div>)}
@@ -57,9 +56,9 @@ const Academics = () => {
                                 academicsData.map((collegeData, index) => (
                                     <div key={index} className={`flex relative ${index !== (academicsData.length - 1) ? 'pb-12' : 'pb-4'}`}>
                                         <div className="absolute inset-0 flex items-center justify-center w-10 h-full">
-                                            <div className="w-1 h-full bg-gray-800 pointer-events-none"></div>
+                                            <div className="w-1 h-full bg-[var(--color-timeline-rail)] pointer-events-none"></div>
                                         </div>
-                                        <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-green-500 rounded-full">
+                                        <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-primary rounded-full ring-2 ring-primary/40">
                                             {
                                                 collegeData?.icon === "college" ? (<svg version="1.1" id="svg4619" x="0px" y="0px" width="22px" height="22px" viewBox="0 0 15 15" style={{ enableBackground: "new 0 0 15 15" }}>
                                                     <path id="path9" style={{ fill: "white" }} d="M7.5,1L0,4.5l2,0.9v1.7C1.4,7.3,1,7.9,1,8.5s0.4,1.2,1,1.4V10l-0.9,2.1  C0.8,13,1,14,2.5,14s1.7-1,1.4-1.9L3,10c0.6-0.3,1-0.8,1-1.5S3.6,7.3,3,7.1V5.9L7.5,8L15,4.5L7.5,1z M11.9,7.5l-4.5,2L5,8.4v0.1  c0,0.7-0.3,1.3-0.8,1.8l0.6,1.4v0.1C4.9,12.2,5,12.6,4.9,13c0.7,0.3,1.5,0.5,2.5,0.5c3.3,0,4.5-2,4.5-3L11.9,7.5L11.9,7.5z" />
@@ -71,7 +70,7 @@ const Academics = () => {
                                             }
                                         </div>
                                         <div className="flex-grow pl-4 text-base">
-                                            <h2 className="mb-2 font-medium text-pink-600 lg:text-base title-font">
+                                            <h2 className="mb-2 font-medium text-primary lg:text-base title-font">
                                                 {collegeData?.course}
                                             </h2>
                                             <img src="../icons/small-circle.svg" className="absolute right-0 cursor-pointer"/>
@@ -79,11 +78,11 @@ const Academics = () => {
                                                 {collegeData?.board}
                                             </div>
 
-                                            <span className="text-gray-400 ">
+                                            <span className="text-white/55">
                                                 {collegeData?.name}
                                             </span>
 
-                                            <div className="leading-relaxed text-gray-200">
+                                            <div className="leading-relaxed text-white/80">
                                                 <div className="font-medium text-white ">
                                                     {collegeData?.description}
                                                 </div>
@@ -92,7 +91,7 @@ const Academics = () => {
                                                         Stream :  <span className="font-medium">{collegeData?.stream}</span>
                                                     </div>
                                                 )}
-                                                <span className="mt-1 font-medium text-gray-500">
+                                                <span className="mt-1 font-medium text-white/50">
                                                     {collegeData?.timeLine}
                                                 </span>
                                                 <div className="flex font-medium">
@@ -119,7 +118,7 @@ const Academics = () => {
                                                                 <tr>
                                                                     {
                                                                         collegeData?.marks?.semMarks?.headerLabels.map((header, index) => (
-                                                                            <th key={index} className="px-2 py-2 text-sm font-medium tracking-wider text-white bg-gray-800 title-font">
+                                                                            <th key={index} className="px-2 py-2 text-sm font-medium tracking-wider text-white bg-[var(--color-surface-card)] title-font border-b border-white/10">
                                                                                 {header}
                                                                             </th>
                                                                         ))

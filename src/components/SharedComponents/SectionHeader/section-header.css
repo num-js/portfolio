@@ -15,4 +15,8 @@
     right: auto;
     bottom: auto;
     left: auto;
+    color: var(--color-primary);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 24px var(--color-primary-glow);
 }

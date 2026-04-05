@@ -22,15 +22,15 @@ const Logo = ({ icon = true, animation = true, txtSize = "25px" }) => {
                     style={{
                         fontFamily: "akronim, cursive",
                         fontSize: txtSize,
-                        textShadow: "1px 10px 10px black"
+                        textShadow: "0 0 24px rgba(0, 212, 200, 0.2)"
                     }}
                 >
-                    <span style={{ color: "#00ff37" }}>&lt; </span>
-                    <span style={{ color: "#ff9900" }}>N</span>
-                    <span style={{ color: "blue" }}>_</span>
-                    <span style={{ color: "#ff9900" }}>Ah</span>
-                    <span style={{ color: "white" }}> /</span>
-                    <span style={{ color: "#00ff37" }}>&gt;</span>
+                    <span style={{ color: "var(--color-primary)" }}>&lt; </span>
+                    <span style={{ color: "var(--color-text)" }}>N</span>
+                    <span style={{ color: "var(--color-accent-blue)" }}>_</span>
+                    <span style={{ color: "var(--color-text)" }}>Ah</span>
+                    <span style={{ color: "var(--color-primary-dim)" }}> /</span>
+                    <span style={{ color: "var(--color-primary)" }}>&gt;</span>
                 </span>
             </div>
         </Link>

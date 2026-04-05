@@ -5,17 +5,17 @@
     left: 0;
     right: 0;
     z-index: 100;
-    background: rgba(6, 13, 24, 0.75);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--color-header-bg);
+    backdrop-filter: blur(var(--blur-glass));
+    -webkit-backdrop-filter: blur(var(--blur-glass));
+    border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: var(--layout-max);
     margin: 0 auto;
     padding: 14px 40px;
 
@@ -76,7 +76,7 @@
 .nav-link {
     font-size: 0.95rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--color-text-secondary);
     text-decoration: none;
     letter-spacing: 0.02em;
     padding: 4px 0;
@@ -90,13 +90,13 @@
         left: 0;
         width: 0;
         height: 2px;
-        background: #00d4c8;
+        background: var(--color-primary);
         border-radius: 2px;
         transition: width 0.25s ease;
     }
 
     &:hover {
-        color: #fff;
+        color: var(--color-text);
 
         &::after {
             width: 100%;
@@ -104,7 +104,7 @@
     }
 
     &--active {
-        color: #00d4c8;
+        color: var(--color-primary);
         font-weight: 500;
 
         &::after {
@@ -117,7 +117,7 @@
         padding: 10px 0;
         font-size: 1rem;
         width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        border-bottom: 1px solid var(--color-border-subtle);
     }
 }
 
@@ -129,10 +129,10 @@
     padding: 7px 20px;
     font-size: 0.88rem;
     font-weight: 500;
-    color: #fff;
+    color: var(--color-text);
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     text-decoration: none;
     letter-spacing: 0.03em;
     white-space: nowrap;
@@ -140,10 +140,10 @@
     flex-shrink: 0;
 
     &:hover {
-        background: rgba(0, 212, 200, 0.12);
-        border-color: #00d4c8;
-        color: #00d4c8;
-        box-shadow: 0 0 16px rgba(0, 212, 200, 0.2);
+        background: var(--color-primary-soft);
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+        box-shadow: 0 0 16px var(--color-primary-glow);
     }
 
     @media only screen and (max-width: 768px) {
@@ -176,7 +176,7 @@
     span {
         display: block;
         height: 2px;
-        background: rgba(255, 255, 255, 0.8);
+        background: var(--color-text-secondary);
         border-radius: 2px;
         transition: all 0.25s ease;
         transform-origin: center;

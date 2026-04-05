@@ -4,9 +4,9 @@ import AnimatedHoverButton from '../shared/AnimatedHoverButton';
 
 const SingleProject = ({ projectData }) => {
     return (
-        <section className="overflow-hidden text-gray-600 body-font">
+        <section className="overflow-hidden text-white/70 body-font">
             <div className="container px-5 py-6 mx-auto">
-                <div className="flex flex-wrap px-2 py-2 mx-auto lg:w-4/5 black-shadow">
+                <div className="flex flex-wrap px-2 py-2 mx-auto lg:w-4/5 glass-div">
                     <img alt="numan ahmed" className="object-cover object-center w-full h-64 rounded lg:w-1/2 lg:h-auto"
                         src={projectData.image}
                     />
@@ -25,7 +25,7 @@ const SingleProject = ({ projectData }) => {
                             {<SkillsView skills={projectData.usedTech} />}
                         </div>
 
-                        <div className="flex items-center border-b-2 border-gray-800"></div>
+                        <div className="flex items-center border-b border-white/10"></div>
 
                         <div className="flex items-center justify-around mt-2">
                             {projectData?.demo && <span className="w-full">

@@ -1,16 +1,61 @@
-// Global app color variables
+// Design system (aligned with Header + Hero)
 :root {
     --color-primary: #00d4c8;
+    --color-primary-dim: rgba(0, 212, 200, 0.75);
+    --color-primary-soft: rgba(0, 212, 200, 0.12);
+    --color-primary-soft-strong: rgba(0, 212, 200, 0.18);
+    --color-primary-border: rgba(0, 212, 200, 0.35);
+    --color-primary-glow: rgba(0, 212, 200, 0.25);
+    --color-accent-blue: #00a8e0;
+
     --color-bg: #060d18;
+    --color-bg-elevated: #0d1f35;
+    --color-header-bg: rgba(6, 13, 24, 0.75);
+
     --color-surface: rgba(8, 20, 35, 0.75);
+    --color-surface-glass: rgba(8, 20, 35, 0.5);
+    --color-surface-card: rgba(8, 20, 35, 0.72);
+
     --color-border: rgba(0, 212, 200, 0.18);
+    --color-border-subtle: rgba(255, 255, 255, 0.06);
+    --color-border-light: rgba(255, 255, 255, 0.15);
+    --color-border-muted: rgba(255, 255, 255, 0.18);
+
     --color-text: #ffffff;
-    --color-text-muted: rgba(255, 255, 255, 0.6);
+    --color-text-secondary: rgba(255, 255, 255, 0.75);
+    --color-text-muted: rgba(255, 255, 255, 0.65);
+    --color-text-dim: rgba(255, 255, 255, 0.6);
+
+    --color-timeline-rail: #1a3344;
+    --color-timeline-node: #0f2438;
+    --color-timeline-arrow: #1a3344;
+
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.45);
+    --shadow-card: -1px 2px 17px -4px rgba(0, 0, 0, 0.45);
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 15px;
+
+    --layout-max: 1200px;
+    --header-height: 70px;
+    --blur-glass: 20px;
+}
+
+.footer-surface {
+    background: var(--color-surface-glass);
+    border-top: 1px solid var(--color-border-subtle);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.footer-bottom {
+    background: rgba(6, 13, 24, 0.92);
+    border-top: 1px solid var(--color-border-subtle);
 }
 
 // Legacy .App class kept for any other usages
 .App {
-    color: white;
+    color: var(--color-text);
     min-height: 98vh;
     display: flex;
     justify-content: space-evenly;
