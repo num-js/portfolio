@@ -73,17 +73,17 @@ const ProfileText = () => {
 
     return (
         <div className="z-[2] flex max-w-[480px] flex-col items-start max-md:max-w-full max-md:items-center max-md:px-5 max-md:text-center">
-            <div className="mb-2 text-[1.4rem] font-normal tracking-wide text-primary max-md:text-[1.1rem]">
+            <div className="mb-2 text-[1.4rem] font-normal tracking-wide text-primary max-md:text-[1.1rem] text-left w-full">
                 Hey I'm
             </div>
 
             <div className="mb-4 flex flex-col items-start max-md:items-center">
                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-[3.8rem] font-extrabold leading-[1.05] tracking-tight text-transparent drop-shadow-[0_0_18px_rgba(0,212,200,0.35)] max-lg:text-5xl max-md:text-[2.4rem] max-[480px]:text-[2rem]">
-                    MD. Numan
+                    MD. Numan Ahmed
                 </span>
-                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-[3.8rem] font-extrabold leading-[1.05] tracking-tight text-transparent drop-shadow-[0_0_18px_rgba(0,212,200,0.35)] max-lg:text-5xl max-md:text-[2.4rem] max-[480px]:text-[2rem]">
+                {/* <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-[3.8rem] font-extrabold leading-[1.05] tracking-tight text-transparent drop-shadow-[0_0_18px_rgba(0,212,200,0.35)] max-lg:text-5xl max-md:text-[2.4rem] max-[480px]:text-[2rem]">
                     Ahmed
-                </span>
+                </span> */}
             </div>
 
             <div className="mb-5 flex items-center font-mono text-xl font-medium text-white max-md:flex-wrap max-md:justify-center max-md:text-base">

@@ -64,12 +64,12 @@ const ProfilePicture = () => {
 
     return (
         <div className="relative z-[2] flex h-[380px] w-[380px] flex-col items-center justify-center max-lg:h-80 max-lg:w-80 max-md:mt-10 max-md:h-[280px] max-md:w-[280px]">
-            <p
+            {/* <p
                 className="pointer-events-none absolute -right-20 -top-[60px] z-[-1] m-0 animate-float select-none text-[140px] text-white/[0.05] max-md:-right-8 max-md:-top-10 max-md:text-[90px]"
                 style={{ fontFamily: 'akronim, cursive' }}
             >
                 {year}
-            </p>
+            </p> */}
 
             <div className="absolute flex items-center justify-center">
                 <div className={circleOuter} />
@@ -81,7 +81,7 @@ const ProfilePicture = () => {
                 </div>
             </div>
 
-            <div className="z-[5] -mt-[18%] flex w-[130%] flex-row items-start justify-between max-lg:w-[120%] max-md:mt-[200px] max-md:w-full">
+            <div className="z-[5] -mt-[18%] flex w-[130%] flex-row items-start justify-between max-lg:w-[120%] max-md:mt-[340px] max-md:w-full">
                 {data.minor && (
                     <div
                         className={`${careerCardBase} min-h-[130px] w-[140px] animate-float-down`}
@@ -148,10 +148,10 @@ const ProfilePicture = () => {
                 )}
             </div>
 
-            <div className="z-[5] mt-20 flex flex-col items-center max-md:mt-5">
+            <div className="z-[5] mt-28 flex flex-col items-center max-md:mt-5">
                 <div
                     className={`flex w-[210px] flex-col items-center justify-around rounded-[14px] border border-primary/20 bg-surface p-2.5 px-5 backdrop-blur-md ${
-                        screenSize === 'small' ? 'mb-10' : ''
+                        screenSize === 'small' ? '' : ''
                     }`}
                 >
                     <div className="mb-1 flex w-full justify-between">

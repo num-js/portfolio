@@ -45,7 +45,7 @@ const Profile = () => {
                         />
                     ))}
                 </div>
-                <div className="relative z-[2] mx-auto flex w-full max-w-content flex-row items-center justify-between gap-10 px-10 py-10 max-lg:gap-5 max-lg:px-10 max-md:flex-col max-md:gap-0 max-md:px-5 max-md:pb-20 max-md:pt-8 box-border">
+                <div className="relative z-[2] mx-auto flex w-full max-w-content flex-row items-center justify-between gap-10 px-10 pb-10 max-lg:gap-2 max-lg:px-10 max-md:flex-col max-md:gap-0 max-md:px-5 max-md:pb-20 max-md:pt-0 box-border mt-0 pt-0">
                     <ProfileText />
                     <ProfilePicture />
                 </div>

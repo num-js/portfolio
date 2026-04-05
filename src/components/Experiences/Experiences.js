@@ -25,9 +25,9 @@ const Experiences = () => {
 
                     <div
                         id="cd-timeline"
-                        className="relative mx-auto mb-8 px-[10%] py-8 after:clear-both after:table after:content-[''] min-[1170px]:mb-12 min-[1170px]:mt-12
-                            before:absolute before:left-[25px] before:top-0 before:h-full before:w-1.5 before:bg-timeline-rail before:content-['']
-                            min-[1170px]:before:left-1/2 min-[1170px]:before:ml-0.5"
+                        className="relative mx-auto mb-8 px-4 py-8 after:clear-both after:table after:content-[''] min-[1170px]:mb-12 min-[1170px]:mt-12 min-[1170px]:px-[10%]
+                            before:absolute before:top-0 before:h-full before:w-1.5 before:bg-timeline-rail before:content-['']
+                            before:left-[27px] min-[1170px]:before:left-[49.8%]"
                     >
                         {experiencesData?.map((companyData, index) => {
                             const isEven = index % 2 === 1;
@@ -48,7 +48,8 @@ const Experiences = () => {
                                         />
                                     </div>
 
-                                    <div className="absolute left-3 top-2 flex flex-col items-center overflow-visible min-[1170px]:left-1/2 min-[1170px]:top-[15px] min-[1170px]:mt-4 min-[1170px]:-translate-x-1/2">
+                                    {/* Mobile: node centered on rail (rail center 30px from timeline; content starts pl-4 → 14px + -translate-x-1/2) */}
+                                    <div className="absolute left-[14px] top-2 flex flex-col items-center overflow-visible -translate-x-1/2 min-[1170px]:left-1/2 min-[1170px]:top-[15px]">
                                         <div className="flex justify-center items-center h-[30px] w-[30px] shrink-0 rounded-full bg-timeline-node shadow-[0_0_0_4px_#1a3344,inset_0_2px_0_rgba(0,0,0,0.08),0_3px_0_4px_rgba(0,0,0,0.05)] min-[1170px]:h-10 min-[1170px]:w-10">
                                             <span className="max-w-[4.5rem] text-center text-[10px] leading-tight text-white min-[1170px]:text-xs">
                                                 {getDuration(
