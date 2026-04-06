@@ -85,9 +85,9 @@ const ProfileText = () => {
             </div>
 
             <div className="mb-4 flex flex-col items-start max-md:items-center">
-                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-[3.8rem] font-extrabold leading-[1.05] tracking-tight text-transparent drop-shadow-[0_0_18px_rgba(0,212,200,0.35)] max-lg:text-5xl max-md:text-[2.4rem] max-[480px]:text-[2rem]">
+                <h1 className="m-0 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-[3.8rem] font-extrabold leading-[1.05] tracking-tight text-transparent drop-shadow-[0_0_18px_rgba(0,212,200,0.35)] max-lg:text-5xl max-md:text-[2.4rem] max-[480px]:text-[2rem]">
                     MD. Numan Ahmed
-                </span>
+                </h1>
             </div>
 
             <div className="mb-5 flex items-center font-mono text-xl font-medium text-white max-md:flex-wrap max-md:justify-center max-md:text-base">
@@ -103,9 +103,10 @@ const ProfileText = () => {
             </div>
 
             <p className="mb-7 max-w-[400px] text-[0.95rem] font-normal leading-relaxed text-white/65 max-md:mb-5 max-md:max-w-[320px] max-md:text-[0.9rem]">
-                I write <span className="font-semibold text-primary">Code</span>, that lives on the{' '}
-                <span className="font-semibold text-primary">Web</span>. Building digital experiences with focus on
-                modern UI and performance.
+                I&apos;m <strong className="font-semibold text-white/85">Md Numan Ahmed</strong>, a software engineer and
+                full stack developer from India. I write <span className="font-semibold text-primary">code</span> for
+                the <span className="font-semibold text-primary">web</span> — frontend engineering, backends, and
+                polished UI with strong performance.
             </p>
 
             <div className="flex flex-wrap gap-3 max-md:justify-center">

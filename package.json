@@ -11,6 +11,7 @@
     "gh-pages": "^3.2.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-helmet-async": "^3.0.0",
     "react-router-dom": "^6.30.3",
     "react-transition-group": "^4.4.5",
     "sass": "^1.99.0",
