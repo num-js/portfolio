@@ -70,7 +70,7 @@ export const InfoData: Record<number, YearData> = {
         minor: {
             title: 'Wealth42',
             sub1: 'SDE',
-            sub2: 'Jan-2022 => 7M',
+            sub2: 'Jan-2022',
             inactive: true,
             url: 'https://wealth42.com/',
             img: 'w42.png',
@@ -96,7 +96,7 @@ export const InfoData: Record<number, YearData> = {
         extra: {
             title: 'Wealth42',
             sub1: 'SDE',
-            sub2: 'Jan-2022 => 7M',
+            sub2: 'Jan-2022',
             inactive: true,
             url: 'https://wealth42.com/',
             img: 'w42.png',
@@ -122,7 +122,7 @@ export const InfoData: Record<number, YearData> = {
         extra: {
             title: 'Wealth42',
             sub1: 'SDE',
-            sub2: 'Jan-2022 => 7M',
+            sub2: 'Jan-2022',
             inactive: true,
             url: 'https://wealth42.com/',
             img: 'w42.png',
@@ -148,7 +148,7 @@ export const InfoData: Record<number, YearData> = {
         minor: {
             title: 'Wealth42',
             sub1: 'SDE',
-            sub2: 'Jan-2022 => 7M',
+            sub2: 'Jan-2022',
             inactive: true,
             url: 'https://wealth42.com/',
             img: 'w42.png',

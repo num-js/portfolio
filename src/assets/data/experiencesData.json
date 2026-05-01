@@ -6,16 +6,21 @@
             "end": ""
         },
         "role": "Sr. Software Engineer",
-        "description": "DarwinBox a HCM Platform, based in Hyderabad, INDIA.",
+        "description": "Built and scaled enterprise HR modules (Recruitment, Payroll, Onboarding, Talent Intelligence) used by 1000+ organizations. Improved performance of data-heavy admin dashboards by ~80% using lazy loading, API debouncing, caching and chunked data rendering. Delivered complex features with a focus on scalability, performance, and clean architecture. Led code reviews and mentoring for junior engineers, improving team code quality and delivery speed. Contributed to frontend architecture decisions for large-scale applications.",
         "companyLogo": "../icons/dbox.png",
         "companyURL": "https://darwinbox.com/",
         "workingTech": [
             "ReactJS",
-            "NodeJS",
+            "Angular",
+            "Typescript",
+            "Node.js",
+            "Express.js",
             "Redux",
+            "RxJS",
             "SCSS",
             "Bootstrap",
-            "jQuery"
+            "jQuery",
+            "MongoDB"
         ],
         "sidePic": {
             "url": "../images/num-planning.svg",
