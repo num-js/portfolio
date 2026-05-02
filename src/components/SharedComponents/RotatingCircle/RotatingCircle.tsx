@@ -32,7 +32,7 @@ function SkillIconButton({ skill, showSkillPopover, className = '', style: sizeS
             onClick={(e) => showSkillPopover(e, skill)}
             aria-label={skill.name}
         >
-            <img src={skill.pic} alt="" className="h-8 w-8 object-contain" />
+            <img src={skill.pic} alt="" className="object-contain" />
         </button>
     );
 }
@@ -84,13 +84,18 @@ const RotatingCircle = ({ data, showSkillPopover }: RotatingCircleProps) => {
                     }}
                 >
                     <div className="-translate-x-1/2 -translate-y-1/2">
-                        <div className="inline-flex origin-center animate-orbit-slow-reverse group-hover/stage:[animation-play-state:paused]">
-                            <SkillIconButton
-                                skill={skill}
-                                showSkillPopover={showSkillPopover}
-                                className="pointer-events-auto"
-                                style={{ width: iconSize, height: iconSize, minWidth: iconSize, minHeight: iconSize }}
-                            />
+                        <div
+                            className="inline-flex origin-center"
+                            style={{ transform: `rotate(${-angleDeg}deg)` }}
+                        >
+                            <div className="inline-flex origin-center animate-orbit-slow-reverse group-hover/stage:[animation-play-state:paused]">
+                                <SkillIconButton
+                                    skill={skill}
+                                    showSkillPopover={showSkillPopover}
+                                    className="pointer-events-auto"
+                                    style={{ width: iconSize, height: iconSize, minWidth: iconSize, minHeight: iconSize }}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
