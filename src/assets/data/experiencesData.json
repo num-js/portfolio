@@ -6,7 +6,13 @@
             "end": ""
         },
         "role": "Sr. Software Engineer",
-        "description": "Built and scaled enterprise HR modules (Recruitment, Payroll, Onboarding, Talent Intelligence) used by 1000+ organizations. Improved performance of data-heavy admin dashboards by ~80% using lazy loading, API debouncing, caching and chunked data rendering. Delivered complex features with a focus on scalability, performance, and clean architecture. Led code reviews and mentoring for junior engineers, improving team code quality and delivery speed. Contributed to frontend architecture decisions for large-scale applications.",
+        "description": "<p>Built and scaled <strong>enterprise HR modules</strong> (Recruitment, Payroll, Onboarding, Talent Intelligence) used by <strong>1000+ organizations</strong>.</p>",
+        "bulletPoints": [
+            "Improved performance of <strong>data-heavy admin dashboards</strong> by <strong>~80%</strong> using <strong>lazy loading</strong>, <strong>API debouncing</strong>, <strong>caching</strong> and <strong>chunked data rendering</strong>.",
+            "Delivered complex features with a focus on <strong>scalability</strong>, <strong>performance</strong>, and <strong>clean architecture</strong>.",
+            "Led <strong>code reviews</strong> and <strong>mentoring</strong> for junior engineers, improving team code quality and delivery speed.",
+            "Contributed to <strong>frontend architecture</strong> decisions for large-scale applications."
+        ],
         "companyLogo": "../icons/dbox.png",
         "companyURL": "https://darwinbox.com/",
         "workingTech": [
@@ -34,7 +40,11 @@
             "end": "2022-01"
         },
         "role": "Software Engineer",
-        "description": "Wealth42 a Fin-Tech startup, based in Bengaluru, INDIA.",
+        "description": "<p><strong>Wealth42</strong> is an investment platform that simplifies wealth management for retail investors through <strong>data-driven insights</strong> and <strong>seamless digital onboarding</strong>.</p>",
+        "bulletPoints": [
+            "Developed a <strong>Financial Analytics Dashboard</strong> using <strong>functional programming</strong> principles and interactive charts-based data visualization, transforming complex portfolio and market data into clear, actionable insights for retail investors.",
+            "Built the <strong>Wealth42.com</strong> platform end-to-end — including a complete <strong>user onboarding</strong> flow and a <strong>reusable component system</strong> — reducing development effort by <strong>~60%</strong> and enforcing <strong>UI consistency</strong> across the entire product."
+        ],
         "companyLogo": "../icons/w42.png",
         "companyURL": "https://wealth42.com/",
         "workingTech": [
@@ -60,7 +70,11 @@
             "end": "2021-07-01"
         },
         "role": "Full Stack Developer",
-        "description": "SrcLogicx is a startup related to Video/Audio Chat solutions, based in San Diego, California, US.",
+        "description": "<p><strong>SrcLogicx</strong> is a software development company that builds custom <strong>digital products</strong> and <strong>SaaS solutions</strong> for clients across <strong>communication</strong>, <strong>enterprise</strong>, and <strong>productivity</strong> domains.</p>",
+        "bulletPoints": [
+            "Developed a scalable, <strong>cloud-based video meeting platform</strong> integrating <strong>AWS Chime</strong> for real-time communication and <strong>AWS S3</strong> for media storage, supporting <strong>100+ concurrent attendees</strong> with stable, <strong>low-latency performance</strong> across sessions.",
+            "Built a <strong>meeting management dashboard</strong> with a reusable <strong>React</strong> component architecture and <strong>HubSpot</strong> integration, streamlining meeting workflows, improving <strong>UX</strong>, and significantly reducing feature implementation time through <strong>shared component patterns</strong>."
+        ],
         "companyLogo": "../icons/srclogicx.png",
         "companyURL": "https://srclogix.com/",
         "workingTech": [
