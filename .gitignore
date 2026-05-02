@@ -12,10 +12,8 @@
 /build
 
 # firebase
-.github
 .firebase
-.firebaserc
-firebase.json
+firebase-debug.log
 
 # misc
 .DS_Store
