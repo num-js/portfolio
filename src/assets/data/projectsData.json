@@ -1,12 +1,29 @@
 [
     {
-        "name": "CollegePath",
+        "name": "Struct-UI",
         "type": "front-end",
-        "image": "../images/projects/college-path.png",
-        "demo": "https://collegepath.in",
+        "image": "../images/projects/struct-ui.png",
+        "demo": "https://ui-struct.vercel.app",
+        "code": "https://github.com/TheUndefinedCoders/struct-ui",
+        "repo": "https://github.com/TheUndefinedCoders/struct-ui",
+        "description": "Struct-UI is a collection of reusable UI components for React applications. It is built with Shadcn, Motion, and Tailwind CSS.",
+        "usedTech": [
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+            "Shadcn",
+            "Motion",
+            "TypeScript"
+        ]
+    },
+    {
+        "name": "Al-Madad Welfare Society",
+        "type": "front-end",
+        "image": "../images/projects/al-madad-welfare-society.png",
+        "demo": "https://almadadwelfaresociety.com",
         "code": "",
         "repo": "",
-        "description": "Developed a student-focused platform that simplifies the college admission journey by providing guidance, course discovery, and application support in one place.",
+        "description": "Build a fully responsive website for an NGO focused on uplifting underprivileged communities through initiatives in education, healthcare, and social welfare.",
         "usedTech": [
             "React",
             "Shadcn",
@@ -18,7 +35,7 @@
         "name": "AI-Computer Training Center",
         "type": "front-end back-end",
         "image": "../images/projects/aictc.png",
-        "demo": "https://collegepath.in",
+        "demo": "https://aictc.vercel.app",
         "code": "",
         "repo": "",
         "description": "AICTC Platform is a web application for an offline computer training institute, enabling students to apply for admissions and track their attendance digitally. It includes a comprehensive admin panel to manage courses, students, fees, and overall institute operations efficiently.",
@@ -31,13 +48,13 @@
         ]
     },
     {
-        "name": "Al-Madad Welfare Society",
+        "name": "CollegePath",
         "type": "front-end",
-        "image": "../images/projects/al-madad-welfare-society.png",
-        "demo": "https://almadadwelfaresociety.com",
+        "image": "../images/projects/college-path.png",
+        "demo": "https://collegepath.in",
         "code": "",
         "repo": "",
-        "description": "Build a fully responsive website for an NGO focused on uplifting underprivileged communities through initiatives in education, healthcare, and social welfare.",
+        "description": "Developed a student-focused platform that simplifies the college admission journey by providing guidance, course discovery, and application support in one place.",
         "usedTech": [
             "React",
             "Shadcn",
