@@ -7,6 +7,7 @@ import { PROJECTS } from '../../helpers/routesURL';
 import scrollToPosition from '../../helpers/scrollToPosition';
 import { SectionHeader, SkillsView } from '../SharedComponents';
 import AnimatedHoverButton from '../shared/AnimatedHoverButton';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 
 type ProjectEntry = (typeof projectsData)[number];
 
@@ -24,6 +25,7 @@ const Projects = () => {
     return (
         <>
             <section className="mb-20 text-gray-600 body-font lg:mt-10">
+                <TooltipProvider delayDuration={250} skipDelayDuration={120}>
                 <SectionHeader sectionTitle="Projects" />
 
                 <div>
@@ -76,10 +78,12 @@ const Projects = () => {
                                     }
                                     return (
                                         <div key={index} className={`-mb-36 ${isLeftSide ? 'mr-24' : 'ml-24'}`}>
-                                            <div
-                                                className="w-full p-5 bg-cover rounded-lg cursor-pointer h-96 mr-30"
-                                                style={{ backgroundImage: `url(${projectData.image})` }}
-                                            ></div>
+                                            <a href={projectData.demo} target="_blank" rel="noreferrer">
+                                                <div
+                                                    className="w-full p-5 bg-cover rounded-lg cursor-pointer h-96 mr-30"
+                                                    style={{ backgroundImage: `url(${projectData.image})` }}
+                                                ></div>
+                                            </a>
 
                                             <div
                                                 className={`relative -top-52 w-80 rounded-2xl border border-white/[0.18] bg-surface-glass/90 p-5 text-white shadow-glass backdrop-blur-xl ${
@@ -88,16 +92,21 @@ const Projects = () => {
                                             >
                                                 <div className="flex justify-between">
                                                     <div>
-                                                        <h1 className="title-font mb-1 text-xl font-medium drop-shadow-[0_0_5px_rgba(0,0,0,0.9)]">
+                                                        <h1 className=" text-primary title-font mb-1 text-xl font-medium drop-shadow-[0_0_5px_rgba(0,0,0,0.9)]">
                                                             {projectData.name}
                                                         </h1>
                                                     </div>
                                                     <div className="flex justify-between">
                                                         {projectData.repo && (
                                                             <span className="ml-4">
-                                                                <a target="_blank" rel="noreferrer" href={`${projectData.repo}`}>
-                                                                    <img alt="numan ahmed" src="../icons/github-small.svg" width="30" />
-                                                                </a>
+                                                                <Tooltip>
+                                                                    <TooltipTrigger asChild>
+                                                                        <a href={projectData.repo} target="_blank" rel="noreferrer" aria-label="View Code">
+                                                                            <img alt="GitHub" src="../icons/github-small.svg" width="30" />
+                                                                        </a>
+                                                                    </TooltipTrigger>
+                                                                    <TooltipContent side="top">View Code</TooltipContent>
+                                                                </Tooltip>
                                                             </span>
                                                         )}
                                                     </div>
@@ -163,6 +172,7 @@ const Projects = () => {
                         </div>
                     )}
                 </div>
+                </TooltipProvider>
             </section>
         </>
     );

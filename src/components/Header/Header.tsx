@@ -68,7 +68,7 @@ const Header = () => {
 
                     <a
                         download
-                        href="../assets/resume/Resume-Numan-frontend.pdf"
+                        href="../assets/resume/Md_Numan_Ahmed_Resume.pdf"
                         className="inline-flex shrink-0 items-center justify-center rounded-md border border-white/70 bg-transparent px-5 py-1.5 text-[0.88rem] font-medium tracking-wide text-white no-underline transition-all duration-200 hover:border-primary hover:bg-primary/10 hover:text-primary hover:shadow-[0_0_16px_rgba(0,212,200,0.25)] max-md:mt-3.5 max-md:self-start"
                     >
                         Download CV
