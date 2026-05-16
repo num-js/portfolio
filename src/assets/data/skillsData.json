@@ -6,7 +6,7 @@
                 "skills": [
                     {
                         "name": "Next.js",
-                        "pic": "../icons/skills/nextjs.png",
+                        "pic": "../icons/skills/nextjs.svg",
                         "projects": [
                             {
                                 "title": "TokTown",
@@ -54,6 +54,11 @@
                                 }
                             }
                         ]
+                    },
+                    {
+                        "name": "Angular",
+                        "pic": "../icons/skills/angular.svg",
+                        "projects": []
                     },
                     {
                         "name": "Redux",

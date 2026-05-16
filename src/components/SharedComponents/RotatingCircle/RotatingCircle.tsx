@@ -1,5 +1,6 @@
 import { useMemo, type CSSProperties, type MouseEvent } from 'react';
 import type { OrbitSkill, RotatingCircleData } from '../../../types/skillsData';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../../ui/tooltip';
 
 const iconShell =
     'flex shrink-0 items-center justify-center rounded-full border border-primary/40 bg-[rgba(12,22,38,0.92)] p-2 shadow-lg shadow-black/40 ring-1 ring-white/5 backdrop-blur-sm transition-all duration-200 hover:border-primary hover:bg-primary/10 hover:shadow-primary-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-primary';
@@ -25,15 +26,20 @@ type SkillIconButtonProps = {
 function SkillIconButton({ skill, showSkillPopover, className = '', style: sizeStyle }: SkillIconButtonProps) {
     const extraStyle = useSanitizedSkillStyle(skill);
     return (
-        <button
-            type="button"
-            className={`${iconShell} ${className}`}
-            style={{ ...extraStyle, ...sizeStyle }}
-            onClick={(e) => showSkillPopover(e, skill)}
-            aria-label={skill.name}
-        >
-            <img src={skill.pic} alt="" className="h-8 w-8 object-contain" />
-        </button>
+        <Tooltip>
+            <TooltipTrigger asChild>
+                <button
+                    type="button"
+                    className={`${iconShell} ${className}`}
+                    style={{ ...extraStyle, ...sizeStyle }}
+                    onClick={(e) => showSkillPopover(e, skill)}
+                    aria-label={skill.name}
+                >
+                    <img src={skill.pic} alt="" className="object-contain" />
+                </button>
+            </TooltipTrigger>
+            <TooltipContent side="top">{skill.name}</TooltipContent>
+        </Tooltip>
     );
 }
 
@@ -84,13 +90,18 @@ const RotatingCircle = ({ data, showSkillPopover }: RotatingCircleProps) => {
                     }}
                 >
                     <div className="-translate-x-1/2 -translate-y-1/2">
-                        <div className="inline-flex origin-center animate-orbit-slow-reverse group-hover/stage:[animation-play-state:paused]">
-                            <SkillIconButton
-                                skill={skill}
-                                showSkillPopover={showSkillPopover}
-                                className="pointer-events-auto"
-                                style={{ width: iconSize, height: iconSize, minWidth: iconSize, minHeight: iconSize }}
-                            />
+                        <div
+                            className="inline-flex origin-center"
+                            style={{ transform: `rotate(${-angleDeg}deg)` }}
+                        >
+                            <div className="inline-flex origin-center animate-orbit-slow-reverse group-hover/stage:[animation-play-state:paused]">
+                                <SkillIconButton
+                                    skill={skill}
+                                    showSkillPopover={showSkillPopover}
+                                    className="pointer-events-auto"
+                                    style={{ width: iconSize, height: iconSize, minWidth: iconSize, minHeight: iconSize }}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,7 +109,8 @@ const RotatingCircle = ({ data, showSkillPopover }: RotatingCircleProps) => {
         });
 
     return (
-        <div className="flex w-full shrink-0 flex-col items-center" id={data?.id}>
+        <TooltipProvider delayDuration={250} skipDelayDuration={120}>
+            <div className="flex w-full shrink-0 flex-col items-center" id={data?.id}>
             <div className="group/stage w-full max-w-[300px] px-2 lg:hidden">
                 <div className="mb-5 flex w-full justify-center">
                     <span className="flex min-h-11 min-w-[8.5rem] items-center justify-center rounded-lg border border-white/20 bg-page/80 px-4 py-2 text-center text-sm font-semibold uppercase leading-normal tracking-wide text-white shadow-md backdrop-blur-sm">
@@ -132,7 +144,8 @@ const RotatingCircle = ({ data, showSkillPopover }: RotatingCircleProps) => {
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
+        </TooltipProvider>
     );
 };
 
